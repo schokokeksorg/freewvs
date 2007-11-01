@@ -1,0 +1,15 @@
+[eGroupWare]
+url=http://www.egroupware.org/
+safe=1.4.002
+vuln=CVE-2007-5091
+file=setup.inc.php
+variable=$setup_info['phpgwapi']['version']
+subdir=2
+
+[more.groupware]
+url=http://www.moregroupware.com/
+safe=
+vuln=CVE-2006-4906
+file=version.inc.php
+variable=$gwversion_number
+subdir=1

@@ -1,0 +1,25 @@
+[phpBB]
+url=http://www.phpbb.com
+safe=2.0.22
+vuln=CVE-2006-6421
+file=CHANGELOG.html
+variable=Changes since
+add_minor=1
+subdir=1
+
+[DeluxeBB]
+url=http://www.deluxebb.com/
+safe=
+vuln=CVE-2006-5154
+file=header.php
+variable=$versionname
+subdir=0
+extra_match=DeluxeBB
+
+[PunBB]
+url=http://punbb.org/
+safe=1.2.15
+vuln=CVE-2007-2235
+file=install.php
+variable=$punbb_version
+subdir=0

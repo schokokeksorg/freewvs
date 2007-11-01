@@ -1,0 +1,7 @@
+[cpDynaLinks]
+url=http://www.cplinks.com/cpdynalinks/
+safe=
+vuln=CVE-2007-5408
+file=version.php
+variable=$cplinks_version
+subdir=0

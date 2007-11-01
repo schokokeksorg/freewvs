@@ -1,0 +1,81 @@
+[WebsiteBaker]
+url=http://www.websitebaker.org/
+safe=2.6.5
+vuln=CVE-2007-0527
+file=version.php
+variable=VERSION
+extra_match=Website Baker Project
+subdir=3
+
+[toendaCMS]
+url=http://www.toendacms.com/
+safe=
+vuln=CVE-2007-1872
+file=tcms_version.xml
+variable=release
+subdir=2
+
+[Drupal]
+url=http://www.drupal.org/
+safe=5.3
+# it's truly 4.7.7, but detected as 4.7.8
+old_safe=4.7.8
+vuln=CVE-2007-5416
+file=system.module
+variable=define('VERSION'
+subdir=2
+
+[PHPNuke]
+url=http://phpnuke.org/
+# I'm not really sure about that, but 8.0 is at least vulnerable
+# Versions pre 8.0 aren't easily detectable
+safe=8.1
+vuln=CVE-2007-1519
+file=version.php
+variable=$version_number
+extra_match=PHP-Nuke $version_number
+subdir=2
+
+[Typo3]
+url=http://typo3.org/
+safe=4.0.7
+vuln=http://wiki.typo3.org/index.php/TYPO3_4.0.7
+file=config_default.php
+variable=$TYPO_VERSION
+subdir=1
+
+[Joomla]
+url=http://www.joomla.org/
+safe=1.0.13
+vuln=CVE-2007-4189
+file=version.php
+variable=var $RELEASE,var $DEV_LEVEL
+extra_match=@package Joomla
+subdir=1
+
+[Mambo]
+url=http://www.source.mambo-foundation.org/
+safe=4.6.2
+vuln=CVE-2007-0374
+file=version.php
+variable=var $RELEASE,var $DEV_LEVEL
+extra_match=@package Mambo
+subdir=1
+
+[w-agorsa]
+url=http://www.w-agora.net/
+safe=
+vuln=CVE-2007-0607
+file=misc_func.php
+variable=$v =
+subdir=1
+extra_match=w-agora version $v
+
+[MODx]
+url=http://www.modxcms.com/
+safe=
+vuln=CVE-2007-5371
+file=version.inc.php
+variable=$version
+subdir=2
+extra_match=$full_appname = 'MODx'
