@@ -18,12 +18,12 @@ subdir=2
 [Drupal]
 url=http://www.drupal.org/
 safe=5.3
-# it's truly 4.7.7, but detected as 4.7.8
+# it's truly 4.7.8, but detected as 4.7.8
 old_safe=4.7.8
 vuln=CVE-2007-5416
 file=system.module
 variable=define('VERSION'
-subdir=2
+subdir=1
 
 [PHPNuke]
 url=http://phpnuke.org/
