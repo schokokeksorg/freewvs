@@ -18,8 +18,7 @@ subdir=2
 [Drupal]
 url=http://www.drupal.org/
 safe=5.3
-# it's truly 4.7.8, but detected as 4.7.8
-old_safe=4.7.8
+old_safe=4.7.8,4.7.9
 vuln=CVE-2007-5416
 file=system.module
 variable=define('VERSION'
