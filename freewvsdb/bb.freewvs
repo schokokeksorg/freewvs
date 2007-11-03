@@ -23,3 +23,11 @@ vuln=CVE-2007-2235
 file=install.php
 variable=$punbb_version
 subdir=0
+
+[UseBB]
+url=http://www.usebb.net/
+safe=1.0.8
+vuln=CVE-2007-3963
+file=common.php
+variable=USEBB_VERSION
+subdir=1
