@@ -1,7 +1,7 @@
 [phpMyAdmin]
 url=http://www.phpmyadmin.net/
-safe=2.11.2.1
-vuln=http://www.digitrustgroup.com/advisories/tdg-advisory071108a.html
+safe=2.11.2.2
+vuln=PMASA-2007-7
 file=Config.class.php
 variable=PMA_VERSION
 subdir=1
