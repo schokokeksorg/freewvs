@@ -25,7 +25,8 @@ subdir=1
 [b2evolution]
 url=http://b2evolution.net/
 safe=1.9.2
-vuln=http://b2evolution.net/news/2007/01/22/b2evo_1_8_7_and_1_9_2_released
+old_safe=1.8.7
+vuln=CVE-2007-0175
 file=_application.php
 variable=$app_version
 extra_match=This is b2evolution
@@ -34,7 +35,7 @@ subdir=2
 [nucleuscms]
 url=http://www.nucleuscms.org/
 safe=3.24
-vuln=http://www.nucleuscms.org/item/3044
+vuln=CVE-2006-6920
 file=globalfunctions.php
 variable=$nucleus['version']
 subdir=2
