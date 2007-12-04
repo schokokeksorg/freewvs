@@ -78,3 +78,13 @@ file=version.inc.php
 variable=$version
 subdir=2
 extra_match=$full_appname = 'MODx'
+
+[PostNuke]
+# This one is a hell to detect, not sure for how many versions this works
+url=http://www.postnuke.com
+safe=
+vuln=CVE-2007-0385
+file=global.php
+variable=_MESSAGE_00_a
+subdir=2
+extra_match=http://www.pn-cms.de
