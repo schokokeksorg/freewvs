@@ -101,3 +101,12 @@ file=lib.inc.php
 variable=$appVersion
 subdir=1
 extra_match=phpPgAdmin
+
+[FTP Admin]
+url=http://ftpadmin.sourceforge.net/
+safe=
+vuln=CVE-2007-6234
+file=session_start.php
+variable=VERSION
+subdir=0
+extra_match=define("TITLE", "FTP Admin");
