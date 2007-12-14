@@ -1,0 +1,7 @@
+[s9y mycalendar]
+url=http://www.s9y.org
+safe=0.13
+vuln=http://www.hboeck.de/archives/572-Some-XSS-issues-in-Serendipity-found.html
+file=serendipity_event_mycalendar.php
+variable=$propbag->add('version'
+subdir=0
