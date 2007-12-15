@@ -40,3 +40,20 @@ file=version.php
 variable=APPLICATION_VERSION
 subdir=1
 extra_match=define('APPLICATION', 'Vanilla');
+
+[Simple Machines Forum]
+url=http://www.simplemachines.org/
+safe=
+vuln=CVE-2007-5943
+file=index.php
+variable=$forum_version
+subdir=0
+extra_match=SMF: Simple Machines Forum
+
+[MyBB]
+url=http://www.mybboard.net/
+safe=1.2.6
+vuln=CVE-2007-2211
+file=class_core.php
+variable=$version
+subdir=1
