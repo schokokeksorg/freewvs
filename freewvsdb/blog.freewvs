@@ -48,3 +48,11 @@ file=version.ini
 variable=conf_current_version
 subdir=1
 extra_match=[sblog_version_info]
+
+[Movable Type]
+url=http://www.movabletype.com/
+safe=3.34
+vuln=CVE-2007-3342
+file=mt.php
+variable=VERSION_ID
+subdir=1
