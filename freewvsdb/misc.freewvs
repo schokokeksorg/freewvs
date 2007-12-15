@@ -110,3 +110,11 @@ file=session_start.php
 variable=VERSION
 subdir=0
 extra_match=define("TITLE", "FTP Admin");
+
+[RoundCube]
+url=http://roundcube.net
+safe=
+vuln=CVE-2007-6321
+file=index.php
+variable=RCMAIL_VERSION
+subdir=0
