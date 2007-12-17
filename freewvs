@@ -116,9 +116,12 @@ for dir in args:
               findversion='.'.join(findversion)
 
             if not (versioncompare(item['safe'].split('.'),findversion.split('.'))) or item['old_safe'].count(findversion)>0:
-              if opts.ALL: vulnprint(item['name'],findversion,"ok","",mfile,item['subdir'])
+              if opts.ALL:
+                print "File "+mfile
+                vulnprint(item['name'],findversion,"ok","",mfile,item['subdir'])
             else:
-                vulnprint (item['name'],findversion,item['safe'],item['vuln'],mfile,item['subdir'])
+              print "File "+mfile
+              vulnprint (item['name'],findversion,item['safe'],item['vuln'],mfile,item['subdir'])
 
           else:
             if opts.DEBUG: print "regexp failed for "+item['name']+" on "+mfile
