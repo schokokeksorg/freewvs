@@ -18,7 +18,7 @@ subdir=1
 [PmWiki]
 url=http://www.pmwiki.org/
 safe=2.1.23
-vuln=http://www.ush.it/2006/01/24/pmwiki-multiple-vulnerabilities/
+vuln=CVE-2006-0479
 file=version.php
 variable=$Version
 extra_match=pmwiki
