@@ -117,10 +117,10 @@ for dir in args:
 
             if not (versioncompare(item['safe'].split('.'),findversion.split('.'))) or item['old_safe'].count(findversion)>0:
               if opts.ALL:
-                print "File "+mfile
+                if opts.DEBUG: print "File "+mfile
                 vulnprint(item['name'],findversion,"ok","",mfile,item['subdir'])
             else:
-              print "File "+mfile
+              if opts.DEBUG: print "File "+mfile
               vulnprint (item['name'],findversion,item['safe'],item['vuln'],mfile,item['subdir'])
 
           else:
