@@ -55,8 +55,8 @@ subdir=1
 
 [Mambo]
 url=http://www.source.mambo-foundation.org/
-safe=4.6.2
-vuln=CVE-2007-0374
+safe=4.6.3
+vuln=CVE-2007-6455
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Mambo
