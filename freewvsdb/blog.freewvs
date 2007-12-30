@@ -8,8 +8,8 @@ subdir=0
 
 [Wordpress]
 url=http://www.wordpress.org/
-safe=2.3.1
-vuln=CVE-2007-5710
+safe=2.3.2
+vuln=http://wordpress.org/development/2007/12/wordpress-232/
 file=version.php
 variable=$wp_version
 subdir=1
