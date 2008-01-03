@@ -57,3 +57,11 @@ vuln=CVE-2007-2211
 file=class_core.php
 variable=$version
 subdir=1
+
+[Phorum]
+url=http://www.phorum.org/
+safe=5.1.22
+vuln=CVE-2007-2339
+file=common.php
+variable=define( "PHORUM"
+subdir=0
