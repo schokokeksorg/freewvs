@@ -118,3 +118,12 @@ vuln=CVE-2007-6321
 file=index.php
 variable=RCMAIL_VERSION
 subdir=0
+
+[Moodle]
+url=http://www.moodle.org/
+safe=1.8.2
+vuln=CVE-2007-3555
+file=version.php
+variable=$release
+subdir=0
+extra_match=MOODLE VERSION INFORMATION
