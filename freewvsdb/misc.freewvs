@@ -127,3 +127,11 @@ file=version.php
 variable=$release
 subdir=0
 extra_match=MOODLE VERSION INFORMATION
+
+[cacti]
+url=http://www.cacti.net/
+safe=0.8.7
+vuln=CVE-2007-6035
+file=global.php
+variable=$config["cacti_version"]
+subdir=1
