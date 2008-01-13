@@ -16,27 +16,29 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.    See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program.    If not, see <http://www.gnu.org/licenses/>.
 
 import ConfigParser, os, glob, pprint, re, optparse, sys
 
 
-def versioncompare(safe_version,find_version):
-  if safe_version==[""]: return True
-  for i in range(min(len(find_version),len(safe_version))):
-    if int(find_version[i])<int(safe_version[i]):
-      return True
-    if int(find_version[i])>int(safe_version[i]):
-      return False
-  return (len(find_version)<len(safe_version))
+def versioncompare(safe_version, find_version):
+    if safe_version == [""]:
+        return True
+    for i in range(min(len(find_version), len(safe_version))):
+        if int(find_version[i])<int(safe_version[i]):
+            return True
+        if int(find_version[i])>int(safe_version[i]):
+            return False
+    return (len(find_version)<len(safe_version))
 
-def vulnprint(appname,version,safeversion,vuln,filename,subdir):
-  appdir='/'.join(os.path.abspath(filename).split('/')[:-1-subdir])
-  print "%(appname)s %(version)s (%(safeversion)s) %(vuln)s %(appdir)s" % vars()
+def vulnprint(appname, version, safeversion, vuln, vfilename, subdir):
+    appdir = '/'.join(os.path.abspath(vfilename).split('/')[:-1-subdir])
+    print "%(appname)s %(version)s (%(safeversion)s) %(vuln)s %(appdir)s" \
+          % vars()
 
 pp = pprint.PrettyPrinter(indent=4)
 
@@ -45,7 +47,8 @@ parser = optparse.OptionParser()
 parser.add_option("-a", "--all", action="store_true", dest="ALL",
                   help="Show all webapps found, not just vulnerable")
 parser.add_option("-d", "--debug", action="store_true", dest="DEBUG",
-                  help="Show lots of debugging output, mainly useful for development")
+                  help="Show lots of debugging output, mainly useful"+ \
+                  "for development")
 opts, args = parser.parse_args()
 
 # Parse vulnerability database
@@ -56,72 +59,92 @@ config.read(glob.glob(os.path.dirname(sys.argv[0])+'/freewvsdb/*.freewvs'))
 
 vdb = []
 for sect in config.sections():
-  item={}
+    item = {}
 
-  # base options
-  item['name']=sect
-  item['safe']=config.get(sect,'safe')
-  item['file']=config.get(sect,'file')
-  item['vuln']=config.get(sect,'vuln')
-  item['subdir']=int(config.get(sect,'subdir'))
+    # base options
+    item['name'] = sect
+    item['safe'] = config.get(sect, 'safe')
+    item['file'] = config.get(sect, 'file')
+    item['vuln'] = config.get(sect, 'vuln')
+    item['subdir'] = int(config.get(sect, 'subdir'))
 
-  # match magic
-  item['variable']=[]
-  for var in config.get(sect,'variable').split(","):
-        item['variable'].append(re.compile(re.escape(var)+r"[^0-9.]*[.]*([0-9.]*[0-9])[^0-9.]"))
+    # match magic
+    item['variable'] = []
+    for var in config.get(sect,'variable').split(","):
+        item['variable'].append(re.compile(re.escape(var)+
+                                r"[^0-9.]*[.]*([0-9.]*[0-9])[^0-9.]"))
 
-  # optional options
-  if config.has_option(sect,'extra_match'): item['extra_match']=config.get(sect,'extra_match')
-  else: item['extra_match']=False
-  if config.has_option(sect,'add_minor'): item['add_minor']=config.get(sect,'add_minor')
-  else: item['add_minor']=False
-  if config.has_option(sect,'old_safe'): item['old_safe']=config.get(sect,'old_safe').split(",")
-  else: item['old_safe']=[]
+    # optional options
+    if config.has_option(sect,'extra_match'):
+        item['extra_match'] = config.get(sect,'extra_match')
+    else:
+        item['extra_match'] = False
+    if config.has_option(sect,'add_minor'):
+        item['add_minor'] = config.get(sect,'add_minor')
+    else:
+        item['add_minor'] = False
+    if config.has_option(sect,'old_safe'):
+        item['old_safe'] = config.get(sect,'old_safe').split(",")
+    else:
+        item['old_safe'] = []
 
-  vdb.append(item)
-if opts.DEBUG: pp.pprint(vdb)
+    vdb.append(item)
+if opts.DEBUG:
+    pp.pprint(vdb)
 
 
 # start the search
 
-for dir in args:
-  for root,NULL,files in os.walk(dir):
-    for filename in files:
-      for item in vdb:
-        if filename == item['file']:
-          mfile=os.path.join(root,filename)
-          file=open(mfile)
-          filestr=file.read()
-          file.close()
+for fdir in args:
+    for root, NULL, files in os.walk(fdir):
+        for filename in files:
+            for item in vdb:
+                if filename == item['file']:
+                    mfile = os.path.join(root, filename)
+                    file = open(mfile)
+                    filestr = file.read()
+                    file.close()
 
-          if item['extra_match']: ematch=(filestr.find(item['extra_match'])!=-1)
-          else: ematch=True
+                    if item['extra_match']:
+                        ematch = (filestr.find(item['extra_match']) != -1)
+                    else:
+                        ematch = True
 
-          findversion=[]
-          for var in item['variable']:
-            var = var.search(filestr)
-            if not var:
-              findversion=False
-              break
-            else:
-              findversion.append(var.group(1))
+                    findversion = []
+                    for var in item['variable']:
+                        var = var.search(filestr)
+                        if not var:
+                            findversion = False
+                            break
+                        else:
+                            findversion.append(var.group(1))
 
-          if findversion and ematch:
-            findversion='.'.join(findversion)
+                    if findversion and ematch:
+                        findversion = '.'.join(findversion)
 
-            # Very ugly phpbb workaround
-            if item['add_minor']:
-              findversion=findversion.split('.')
-              findversion[-1]=str(int(findversion[-1])+int(item['add_minor']))
-              findversion='.'.join(findversion)
+                        # Very ugly phpbb workaround
+                        if item['add_minor']:
+                            findversion = findversion.split('.')
+                            findversion[-1] = str(int(findversion[-1])+
+                                            int(item['add_minor']))
+                            findversion = '.'.join(findversion)
 
-            if not (versioncompare(item['safe'].split('.'),findversion.split('.'))) or item['old_safe'].count(findversion)>0:
-              if opts.ALL:
-                if opts.DEBUG: print "File "+mfile
-                vulnprint(item['name'],findversion,"ok","",mfile,item['subdir'])
-            else:
-              if opts.DEBUG: print "File "+mfile
-              vulnprint (item['name'],findversion,item['safe'],item['vuln'],mfile,item['subdir'])
+                        if not (versioncompare(item['safe'].split('.'), \
+                                findversion.split('.'))) or \
+                                item['old_safe'].count(findversion)>0:
+                            if opts.ALL:
+                                if opts.DEBUG:
+                                    print "File "+mfile
+                                vulnprint(item['name'], findversion, \
+                                          "ok", "", mfile, item['subdir'])
+                        else:
+                            if opts.DEBUG:
+                                print "File "+mfile
+                            vulnprint (item['name'], findversion, \
+                                       item['safe'], item['vuln'], \
+                                       mfile, item['subdir'])
 
-          else:
-            if opts.DEBUG: print "regexp failed for "+item['name']+" on "+mfile
+                    else:
+                        if opts.DEBUG:
+                            print "regexp failed for " + \
+                                  item['name'] + " on " + mfile
