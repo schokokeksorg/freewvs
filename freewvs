@@ -22,8 +22,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.    If not, see <http://www.gnu.org/licenses/>.
 
-import ConfigParser, os, glob, pprint, re, optparse, sys
+import ConfigParser, os, glob, pprint, re, optparse, sys, gettext
 
+gettext.textdomain('freewvs')
+_ = gettext.gettext
 
 def versioncompare(safe_version, find_version):
     if safe_version == [""]:
@@ -35,10 +37,21 @@ def versioncompare(safe_version, find_version):
             return False
     return (len(find_version)<len(safe_version))
 
-def vulnprint(appname, version, safeversion, vuln, vfilename, subdir):
+def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, fancy):
     appdir = '/'.join(os.path.abspath(vfilename).split('/')[:-1-subdir])
-    print "%(appname)s %(version)s (%(safeversion)s) %(vuln)s %(appdir)s" \
-          % vars()
+    if fancy:
+        print _("Directory: %(appdir)s") % vars()
+        print _("Vulnerable %(appname)s %(version)s found, please update to "+ \
+                "%(safeversion)s or above.") % vars()
+        if vuln[:3] == "CVE":
+            print _("http://cve.mitre.org/cgi-bin/cvename.cgi?name=%(vuln)s"
+                    % vars())
+        else:
+            print (vuln)
+        print
+    else:
+        print "%(appname)s %(version)s (%(safeversion)s) %(vuln)s %(appdir)s" \
+              % vars()
 
 pp = pprint.PrettyPrinter(indent=4)
 
@@ -49,6 +62,8 @@ parser.add_option("-a", "--all", action="store_true", dest="ALL",
 parser.add_option("-d", "--debug", action="store_true", dest="DEBUG",
                   help="Show lots of debugging output, mainly useful"+ \
                   "for development")
+parser.add_option("-f", "--fancy", action="store_true", dest="FANCY",
+                  help="Show more fancy output")
 opts, args = parser.parse_args()
 
 # Parse vulnerability database
@@ -136,13 +151,14 @@ for fdir in args:
                                 if opts.DEBUG:
                                     print "File "+mfile
                                 vulnprint(item['name'], findversion, \
-                                          "ok", "", mfile, item['subdir'])
+                                          "ok", "", mfile, item['subdir'], \
+                                          opts.FANCY)
                         else:
                             if opts.DEBUG:
                                 print "File "+mfile
                             vulnprint (item['name'], findversion, \
                                        item['safe'], item['vuln'], \
-                                       mfile, item['subdir'])
+                                       mfile, item['subdir'], opts.FANCY)
 
                     else:
                         if opts.DEBUG:
