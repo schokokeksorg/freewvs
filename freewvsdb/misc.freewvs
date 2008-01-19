@@ -15,13 +15,21 @@ variable=$version
 extra_match=SquirrelMail version number
 subdir=1
 
-[Mantis]
+[Mantis-deprecated]
 url=http://www.mantisbt.org/
 safe=1.1.1
 vuln=http://www.mantisbt.org/blog/?p=18
 file=config_defaults_inc.php
 variable=$g_mantis_version
 subdir=0
+
+[Mantis]
+url=http://www.mantisbt.org/
+safe=1.1.1
+vuln=http://www.mantisbt.org/blog/?p=18
+file=constant_inc.php
+variable=MANTIS_VERSION
+subdir=1
 
 [Bugzilla3]
 url=http://www.bugzilla.org/
