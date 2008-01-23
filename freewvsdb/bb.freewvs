@@ -18,8 +18,8 @@ extra_match=DeluxeBB
 
 [PunBB]
 url=http://punbb.org/
-safe=1.2.15
-vuln=CVE-2007-2235
+safe=1.2.16
+vuln=http://punbb.org/download/changelogs/1.2.15_to_1.2.16.txt
 file=install.php
 variable=$punbb_version
 subdir=0
