@@ -9,7 +9,7 @@ subdir=0
 [Gallery]
 url=http://gallery.menalto.com/
 safe=2.2.4
-vuln=name=CVE-2007-6687
+vuln=CVE-2007-6687
 file=module.inc
 variable=setGalleryVersion
 subdir=2
