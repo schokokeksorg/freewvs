@@ -9,8 +9,9 @@ subdir=1
 
 [DeluxeBB]
 url=http://www.deluxebb.com/
+# 1.1 as of 2008-01-27
 safe=
-vuln=CVE-2006-5154
+vuln=CVE-2008-0439
 file=header.php
 variable=$versionname
 subdir=0
@@ -43,6 +44,7 @@ extra_match=define('APPLICATION', 'Vanilla');
 
 [Simple Machines Forum]
 url=http://www.simplemachines.org/
+# 1.1.4 as of 2008-01-27
 safe=
 vuln=CVE-2007-5943
 file=index.php
