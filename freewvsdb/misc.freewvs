@@ -143,3 +143,11 @@ vuln=CVE-2007-6035
 file=global.php
 variable=$config["cacti_version"]
 subdir=1
+
+[gnopaste]
+url=http://gnopaste.sf.net/
+safe=0.5.4
+vuln=CVE-2006-2834
+file=install.php
+variable=$_SESSION['page_title'] = 'gnopaste
+subdir=0
