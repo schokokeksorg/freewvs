@@ -2,7 +2,7 @@
 url=http://phprisk.org/
 safe=
 # 1.9.7 as of 20080205
-vuln=
+vuln=CVE-2008-0144
 file=install.php
 variable=$version
 subdir=0
