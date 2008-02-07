@@ -6,6 +6,14 @@ file=serendipity_event_mycalendar.php
 variable=$propbag->add('version'
 subdir=0
 
+[s9y freetag]
+url=http://www.s9y.org
+safe=2.96
+vuln=http://bitsploit.de/archives/659-XSS-Schwachstelle-in-Serendpity-Plugin-Freetag.html
+file=serendipity_event_freetag.php
+variable=$propbag->add('version'
+subdir=0
+
 [squirrelmail gpg]
 url=http://www.squirrelmail.org/plugin_view.php?id=153
 safe=2.1
