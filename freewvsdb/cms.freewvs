@@ -46,8 +46,9 @@ subdir=1
 
 [Joomla]
 url=http://www.joomla.org/
-safe=1.0.13
-vuln=CVE-2007-4189
+safe=1.5.1
+old_safe=1.0.14
+vuln=http://www.joomla.org/content/view/4560/1/
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
