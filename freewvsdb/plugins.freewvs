@@ -9,7 +9,7 @@ subdir=0
 [s9y freetag]
 url=http://www.s9y.org
 safe=2.96
-vuln=http://bitsploit.de/archives/659-XSS-Schwachstelle-in-Serendpity-Plugin-Freetag.html
+vuln=CVE-2008-0751
 file=serendipity_event_freetag.php
 variable=$propbag->add('version'
 subdir=0
