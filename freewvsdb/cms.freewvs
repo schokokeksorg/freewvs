@@ -47,7 +47,7 @@ subdir=1
 [Joomla]
 url=http://www.joomla.org/
 safe=1.5.1
-old_safe=1.0.14
+old_safe=1.0.15
 vuln=http://www.joomla.org/content/view/4560/1/
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
