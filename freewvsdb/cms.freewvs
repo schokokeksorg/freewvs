@@ -63,7 +63,7 @@ variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Mambo
 subdir=1
 
-[w-agorsa]
+[w-Agora]
 url=http://www.w-agora.net/
 safe=
 vuln=CVE-2007-0607
