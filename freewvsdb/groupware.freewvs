@@ -1,7 +1,7 @@
 [eGroupWare]
 url=http://www.egroupware.org/
-safe=1.4.002
-vuln=CVE-2007-5091
+safe=1.4.003
+vuln=http://www.egroupware.org/
 file=setup.inc.php
 variable=$setup_info['phpgwapi']['version']
 subdir=2
