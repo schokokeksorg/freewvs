@@ -34,7 +34,7 @@ subdir=1
 [Bugzilla3]
 url=http://www.bugzilla.org/
 safe=3.1.2
-old_safe=3.0.2,2.22.3,2.20.5
+old_safe=3.0.3,3.0.2,2.22.3,2.20.5
 vuln=CVE-2007-5038
 file=Constants.pm
 variable=BUGZILLA_VERSION
