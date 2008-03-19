@@ -65,6 +65,7 @@ subdir=1
 
 [w-Agora]
 url=http://www.w-agora.net/
+# last release 4.2.1 in 2006-07-12
 safe=
 vuln=CVE-2007-0607
 file=misc_func.php
