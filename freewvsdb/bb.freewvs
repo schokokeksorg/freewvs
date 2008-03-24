@@ -20,7 +20,7 @@ extra_match=DeluxeBB
 [PunBB]
 url=http://punbb.org/
 safe=1.2.17
-vuln=http://sektioneins.de/advisories/SE-2008-01.txt
+vuln=CVE-2008-1485
 file=install.php
 variable=$punbb_version
 subdir=0
@@ -63,7 +63,7 @@ subdir=1
 [Phorum]
 url=http://www.phorum.org/
 safe=5.2.6
-vuln=http://www.phorum.org/phorum5/read.php?64,126815,126815
+vuln=CVE-2008-1486
 file=common.php
 variable=define( "PHORUM"
 subdir=0

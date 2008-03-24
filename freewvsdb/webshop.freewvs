@@ -1,7 +1,7 @@
 [FreeWebshop]
 url=http://www.freewebshop.org/
 safe=2.2.7
-vuln=http://www.freewebshop.org/?Downloads:Fixes
+vuln=CVE-2007-6711
 file=subs.inc.php
 variable=$version
 subdir=1

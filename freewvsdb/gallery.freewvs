@@ -33,7 +33,7 @@ subdir=1
 [LinPHA]
 url=http://linpha.sourceforge.net
 safe=1.3.3
-vuln=http://linpha.sourceforge.net/wiki/index.php/Release_Notes#Version_1.3.3
+vuln=CVE-2008-1487
 file=upgrade.php
 variable=$version
 subdir=1
