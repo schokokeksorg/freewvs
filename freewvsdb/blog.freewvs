@@ -57,3 +57,12 @@ vuln=CVE-2007-3342
 file=mt.php
 variable=VERSION_ID
 subdir=1
+
+[artmedic weblog]
+url=http://www.artmedic-phpscripts.de/
+safe=
+# 1.0 as of 20080325
+vuln=CVE-2008-0798
+file=artmedic_index.php
+variable=# artmedic weblog
+subdir=0
