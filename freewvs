@@ -41,7 +41,7 @@ def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, fancy):
     appdir = '/'.join(os.path.abspath(vfilename).split('/')[:-1-subdir])
     if fancy:
         print _("Directory: %(appdir)s") % vars()
-	if safeversion!="ok":
+        if safeversion!="ok":
             print _("Vulnerable %(appname)s %(version)s found, please update to " \
                     "%(safeversion)s or above.") % vars()
             if vuln[:3] == "CVE":
