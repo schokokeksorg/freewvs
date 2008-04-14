@@ -1,6 +1,6 @@
 [WebsiteBaker]
 url=http://www.websitebaker.org/
-safe=2.6.5
+safe=2.6.6
 vuln=CVE-2007-0527
 file=version.php
 variable=VERSION
