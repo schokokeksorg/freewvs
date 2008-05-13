@@ -33,18 +33,18 @@ subdir=1
 
 [Bugzilla3]
 url=http://www.bugzilla.org/
-safe=3.1.2
-old_safe=3.0.3,3.0.2,2.22.3,2.20.5
-vuln=CVE-2007-5038
+safe=3.1.4
+old_safe=3.0.4,2.22.4,2.20.6
+vuln=CVE-2008-2104
 file=Constants.pm
 variable=BUGZILLA_VERSION
 subdir=1
 
 [Bugzilla2]
 url=http://www.bugzilla.org/
-safe=3.1.2
-old_safe=3.0.2,2.22.3,2.20.5
-vuln=CVE-2007-5038
+safe=3.1.4
+old_safe=3.0.4,2.22.4,2.20.6
+vuln=CVE-2008-2104
 file=Config.pm
 variable=$Bugzilla::Config::VERSION
 subdir=1
