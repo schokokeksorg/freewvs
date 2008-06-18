@@ -68,3 +68,11 @@ vuln=CVE-2008-1486
 file=common.php
 variable=define( "PHORUM"
 subdir=0
+
+[wBB]
+url=http://www.woltlab.com/
+safe=3.0.6
+vuln=CVE-2008-1716
+file=config.inc.php
+variable=define('PACKAGE_VERSION',
+subdir=0
