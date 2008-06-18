@@ -17,8 +17,8 @@ subdir=1
 
 [Mantis-deprecated]
 url=http://www.mantisbt.org/
-safe=1.1.1
-vuln=CVE-2008-0404
+safe=1.1.2
+vuln=CVE-2008-2276
 file=config_defaults_inc.php
 variable=$g_mantis_version
 subdir=0
