@@ -129,8 +129,8 @@ subdir=0
 
 [Moodle]
 url=http://www.moodle.org/
-safe=1.8.4
-vuln=name=CVE-2008-0123
+safe=1.8.5
+vuln=http://docs.moodle.org/en/Release_Notes#Moodle_1.8.5
 file=version.php
 variable=$release
 subdir=0
