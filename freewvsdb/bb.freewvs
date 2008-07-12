@@ -1,8 +1,8 @@
 [phpBB]
 url=http://www.phpbb.com
-safe=3.0.1
+safe=3.0.2
 old_safe=2.0.23
-vuln=CVE-2008-1766
+vuln=http://www.phpbb.com/community/viewtopic.php?f=14&t=1059565
 file=CHANGELOG.html
 variable=Changes since
 add_minor=1
