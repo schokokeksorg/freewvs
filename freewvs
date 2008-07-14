@@ -42,8 +42,12 @@ def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, fancy):
     if fancy:
         print _("Directory: %(appdir)s") % vars()
         if safeversion!="ok":
-            print _("Vulnerable %(appname)s %(version)s found, please update to " \
-                    "%(safeversion)s or above.") % vars()
+            if safeversion!="":
+                print _("Vulnerable %(appname)s %(version)s found, please update to " \
+                        "%(safeversion)s or above.") % vars()
+            else:
+                print _("Vulnerable %(appname)s %(version)s found, no fixed version available." \
+                        ) % vars()
             if vuln[:3] == "CVE":
                 print _("http://cve.mitre.org/cgi-bin/cvename.cgi?name=%(vuln)s") \
                         % vars()
