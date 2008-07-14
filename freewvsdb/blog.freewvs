@@ -67,7 +67,7 @@ file=artmedic_index.php
 variable=# artmedic weblog
 subdir=0
 
-[Dotclear]
+[DotClear]
 url=http://www.dotclear.net/
 safe=1.2.8
 vuln=http://www.dotclear.net/blog/post/2008/04/18/Dotclear-128
