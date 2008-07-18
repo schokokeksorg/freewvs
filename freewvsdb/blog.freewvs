@@ -9,7 +9,7 @@ subdir=0
 [Wordpress]
 url=http://www.wordpress.org/
 safe=2.6
-vuln=http://trac.wordpress.org/ticket/7220
+vuln=CVE-2008-2392
 file=version.php
 variable=$wp_version
 subdir=1
@@ -70,7 +70,7 @@ subdir=0
 [DotClear]
 url=http://www.dotclear.net/
 safe=1.2.8
-vuln=http://www.dotclear.net/blog/post/2008/04/18/Dotclear-128
+vuln=CVE-2008-3232
 file=LISEZMOI.txt
 variable=DotClear
 subdir=0

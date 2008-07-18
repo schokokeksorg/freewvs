@@ -2,7 +2,7 @@
 url=http://www.phpbb.com
 safe=3.0.2
 old_safe=2.0.23
-vuln=http://www.phpbb.com/community/viewtopic.php?f=14&t=1059565
+vuln=CVE-2008-3224
 file=CHANGELOG.html
 variable=Changes since
 add_minor=1
