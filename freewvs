@@ -163,8 +163,16 @@ for fdir in args:
                         else:
                             if opts.DEBUG:
                                 print "File "+mfile
+                            safev=""
+                            for ver in item['old_safe']:
+                                if (versioncompare(ver.split('.'), \
+                                    findversion.split('.') ) ):
+                                    safev=ver
+                            if safev=="":
+                                safev=item['safe']
+
                             vulnprint (item['name'], findversion, \
-                                       item['safe'], item['vuln'], \
+                                       safev, item['vuln'], \
                                        mfile, item['subdir'], opts.FANCY)
 
                     else:
