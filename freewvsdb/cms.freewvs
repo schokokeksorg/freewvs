@@ -54,6 +54,17 @@ variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
 subdir=1
 
+# 1.5 has changed identification
+[Joomla]
+url=http://www.joomla.org/
+safe=1.5.4
+old_safe=1.0.15
+vuln=CVE-2008-3225
+file=version.php
+variable=var $RELEASE,var $DEV_LEVEL
+extra_match=@package	Joomla.Framework
+subdir=1
+
 [Mambo]
 url=http://www.source.mambo-foundation.org/
 safe=4.6.5
