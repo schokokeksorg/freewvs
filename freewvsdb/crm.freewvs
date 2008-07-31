@@ -1,0 +1,7 @@
+[vtigerCRM]
+url=http://www.vtiger.de
+safe=5.0.4
+vuln=http://wiki.vtiger.com/index.php/Vtiger_CRM_5.0.4_-_Release_Notes
+file=vtigerversion.php
+variable=$vtiger_current_version
+subdir=0
