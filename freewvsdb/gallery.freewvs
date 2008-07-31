@@ -24,8 +24,8 @@ subdir=0
 
 [PhpWebGallery]
 url=http://www.phpwebgallery.net/
-safe=1.7.1
-vuln=CVE-2007-5012
+safe=1.7.2
+vuln=http://bugs.phpwebgallery.net/changelog_page.php
 file=constants.php
 variable=PHPWG_VERSION
 subdir=1
