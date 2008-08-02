@@ -104,3 +104,13 @@ file=global.php
 variable=_MESSAGE_00_a
 subdir=2
 extra_match=http://www.pn-cms.de
+
+[Contenido]
+url=http://www.contenido.org/
+safe=4.8.7
+old_safe=4.6.24
+vuln=http://www.contenido.org/
+file=config.misc.php
+variable=$cfg['version']
+subdir=1
+extra_match=Contenido Misc Configurations
