@@ -46,9 +46,9 @@ subdir=1
 
 [Joomla]
 url=http://www.joomla.org/
-safe=1.5.4
+safe=1.5.6
 old_safe=1.0.15
-vuln=CVE-2008-3225
+vuln=http://developer.joomla.org/security/news/241-20080801-core-password-remind-functionality.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
