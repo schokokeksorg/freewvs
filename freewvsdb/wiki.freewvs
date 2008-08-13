@@ -26,8 +26,8 @@ subdir=1
 
 [TikiWiki]
 url=http://tikiwiki.org/
-safe=1.9.10.1
-vuln=CVE-2008-1047
+safe=2.0
+vuln=http://info.tikiwiki.org/tiki-read_article.php?articleId=35
 file=README
 variable=version
 extra_match=Tiki! The wiki
