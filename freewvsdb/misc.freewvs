@@ -15,7 +15,8 @@ variable=$version
 extra_match=SquirrelMail version number
 subdir=1
 
-[Mantis-deprecated]
+# old mantis versions behave different
+[Mantis]
 url=http://www.mantisbt.org/
 safe=1.1.2
 vuln=CVE-2008-2276
@@ -25,8 +26,8 @@ subdir=0
 
 [Mantis]
 url=http://www.mantisbt.org/
-safe=1.1.1
-vuln=CVE-2008-0404    
+safe=1.1.2
+vuln=CVE-2008-2276
 file=constant_inc.php
 variable=MANTIS_VERSION
 subdir=1
