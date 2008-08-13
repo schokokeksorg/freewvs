@@ -63,7 +63,7 @@ vuln=http://developer.joomla.org/security/news/241-20080801-core-password-remind
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
-subdir=1
+subdir=2
 
 [Mambo]
 url=http://www.source.mambo-foundation.org/
