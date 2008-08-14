@@ -168,7 +168,7 @@ for fdir in args:
                                 if (versioncompare(ver.split('.'), \
                                     findversion.split('.') ) and \
                                     versioncompare(ver.split('.'), \
-                                    ver.split('.')) ):
+                                    safev.split('.')) ):
                                     safev=ver
                             if safev=="":
                                 safev=item['safe']
