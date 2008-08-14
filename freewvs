@@ -166,7 +166,7 @@ for fdir in args:
                             safev=""
                             for ver in item['old_safe']:
                                 if (versioncompare(ver.split('.'), \
-                                    findversion.split('.') ) && \
+                                    findversion.split('.') ) AND \
                                     versioncompare(ver.split('.'), \
                                     ver.split('.')) ):
                                     safev=ver
