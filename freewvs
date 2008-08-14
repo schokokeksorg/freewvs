@@ -163,7 +163,7 @@ for fdir in args:
                         else:
                             if opts.DEBUG:
                                 print "File "+mfile
-                            safev="0"
+                            safev="9999"
                             for ver in item['old_safe']:
                                 if (versioncompare(ver.split('.'), \
                                     findversion.split('.') ) and \
