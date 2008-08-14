@@ -170,7 +170,7 @@ for fdir in args:
                                     not versioncompare(ver.split('.'), \
                                     safev.split('.')) ):
                                     safev=ver
-                            if safev=="":
+                            if safev=="9999":
                                 safev=item['safe']
 
                             vulnprint (item['name'], findversion, \
