@@ -1,4 +1,4 @@
-[s9y mycalendar]
+[Serendipity-mycalendar]
 url=http://www.s9y.org
 safe=0.13
 vuln=CVE-2007-6390
@@ -6,7 +6,7 @@ file=serendipity_event_mycalendar.php
 variable=$propbag->add('version'
 subdir=0
 
-[s9y freetag]
+[Serendipity-freetag]
 url=http://www.s9y.org
 safe=2.96
 vuln=CVE-2008-0751
@@ -14,7 +14,7 @@ file=serendipity_event_freetag.php
 variable=$propbag->add('version'
 subdir=0
 
-[squirrelmail gpg]
+[SquirrelMail-gpg]
 url=http://www.squirrelmail.org/plugin_view.php?id=153
 safe=2.1
 vuln=CVE-2007-3779

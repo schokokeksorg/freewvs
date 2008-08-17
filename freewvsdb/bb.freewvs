@@ -43,7 +43,7 @@ variable=APPLICATION_VERSION
 subdir=1
 extra_match=define('APPLICATION', 'Vanilla');
 
-[Simple Machines Forum]
+[Simple_Machines_Forum]
 url=http://www.simplemachines.org/
 safe=1.1.5
 vuln=CVE-2008-3073

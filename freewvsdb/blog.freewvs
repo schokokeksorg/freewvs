@@ -50,7 +50,7 @@ variable=conf_current_version
 subdir=1
 extra_match=[sblog_version_info]
 
-[Movable Type]
+[Movable_Type]
 url=http://www.movabletype.com/
 safe=3.34
 vuln=CVE-2007-3342
@@ -58,7 +58,7 @@ file=mt.php
 variable=VERSION_ID
 subdir=1
 
-[artmedic weblog]
+[artmedic_weblog]
 url=http://www.artmedic-phpscripts.de/
 safe=
 # 1.0 as of 20080325
