@@ -16,8 +16,8 @@ subdir=2
 
 [Coppermine]
 url=http://coppermine-gallery.net/
-safe=1.4.18
-vuln=CVE-2008-1841
+safe=1.4.19
+vuln=CVE-2008-3486
 file=versioncheck.php
 variable=Coppermine version
 subdir=0
