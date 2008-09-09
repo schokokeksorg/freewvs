@@ -21,7 +21,7 @@ extra_match=DeluxeBB
 [PunBB]
 url=http://punbb.org/
 safe=1.2.20
-vuln=http://punbb.informer.com/
+vuln=CVE-2008-3968
 file=install.php
 variable=$punbb_version
 subdir=0
@@ -55,7 +55,7 @@ extra_match=SMF: Simple Machines Forum
 [MyBB]
 url=http://www.mybboard.net/
 safe=1.4.1
-vuln=http://community.mybboard.net/showthread.php?tid=36022
+vuln=CVE-2008-3965
 file=class_core.php
 variable=$version
 subdir=1
