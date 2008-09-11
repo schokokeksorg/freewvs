@@ -46,9 +46,9 @@ subdir=1
 
 [Joomla]
 url=http://www.joomla.org/
-safe=1.5.6
+safe=1.5.7
 old_safe=1.0.15
-vuln=CVE-2008-3681
+vuln=http://www.joomla.org/announcements/release-news/5212-joomla-157-security-release-now-available.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
