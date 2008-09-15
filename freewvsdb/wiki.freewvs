@@ -9,8 +9,8 @@ subdir=1
 
 [TWiki]
 url=http://twiki.org/
-safe=4.1.1
-vuln=CVE-2007-0669
+safe=4.2.3
+vuln=http://www.kb.cert.org/vuls/id/362012
 file=TWiki.pm
 variable=$RELEASE
 subdir=1
