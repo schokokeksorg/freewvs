@@ -8,8 +8,8 @@ subdir=0
 
 [Gallery]
 url=http://gallery.menalto.com/
-safe=2.2.5
-vuln=CVE-2008-2720
+safe=2.2.6
+vuln=CVE-2008-3662
 file=module.inc
 variable=setGalleryVersion
 subdir=2
