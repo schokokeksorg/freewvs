@@ -114,3 +114,11 @@ file=config.misc.php
 variable=$cfg['version']
 subdir=1
 extra_match=Contenido Misc Configurations
+
+[SilverStripe]
+url=http://www.silverstripe.com
+safe=2.0.1
+vuln=CVE-2007-2321
+file=silverstripe_version
+variable=
+subdir=0
