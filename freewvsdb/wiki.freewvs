@@ -1,7 +1,7 @@
 [MediaWiki]
 url=http://www.mediawiki.org/
-safe=1.13.1
-old_safe=1.11.2,1.12.2
+safe=1.13.2
+old_safe=1.11.2,1.12.1
 vuln=http://svn.wikimedia.org/svnroot/mediawiki/tags/REL1_13_2/phase3/RELEASE-NOTES
 file=DefaultSettings.php
 variable=$wgVersion
