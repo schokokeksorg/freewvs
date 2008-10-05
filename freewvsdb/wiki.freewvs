@@ -2,7 +2,7 @@
 url=http://www.mediawiki.org/
 safe=1.13.2
 old_safe=1.11.2,1.12.1
-vuln=http://svn.wikimedia.org/svnroot/mediawiki/tags/REL1_13_2/phase3/RELEASE-NOTES
+vuln=CVE-2008-4408
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
