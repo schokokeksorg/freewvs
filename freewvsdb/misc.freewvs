@@ -160,3 +160,11 @@ vuln=CVE-2008-1165
 file=class.flyspray.php
 variable=var $version
 subdir=1
+
+[phpMyID]
+url=http://siege.org/projects/phpMyID
+safe=
+vuln=http://seclists.org/bugtraq/2008/Oct/0009.html
+file=MyID.php
+variable=@version
+subdir=0
