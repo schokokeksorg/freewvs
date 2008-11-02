@@ -44,7 +44,7 @@ file=config_default.php
 variable=$TYPO_VERSION
 subdir=1
 
-[Joomla]
+[Joomla-deprecated]
 url=http://www.joomla.org/
 safe=1.5.7
 old_safe=1.0.15

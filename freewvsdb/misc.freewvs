@@ -17,7 +17,7 @@ extra_match=SquirrelMail version number
 subdir=1
 
 # old mantis versions behave different
-[Mantis]
+[Mantis-deprecated]
 url=http://www.mantisbt.org/
 safe=1.1.4
 vuln=CVE-2008-4687
