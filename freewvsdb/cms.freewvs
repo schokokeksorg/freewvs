@@ -57,9 +57,9 @@ subdir=1
 # 1.5 has changed identification
 [Joomla]
 url=http://www.joomla.org/
-safe=1.5.7
+safe=1.5.8
 old_safe=1.0.15
-vuln=CVE-2008-4105
+vuln=http://developer.joomla.org/security/news/283-20081101-core-comcontent-xss-vulnerability.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
