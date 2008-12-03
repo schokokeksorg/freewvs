@@ -54,8 +54,8 @@ extra_match=SMF: Simple Machines Forum
 
 [MyBB]
 url=http://www.mybboard.net/
-safe=1.4.3
-vuln=CVE-2008-4928
+safe=1.4.4
+vuln=http://secunia.com/Advisories/32880/
 file=class_core.php
 variable=$version
 subdir=1
