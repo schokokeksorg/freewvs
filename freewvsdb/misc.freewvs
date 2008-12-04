@@ -9,8 +9,8 @@ subdir=1
 
 [SquirrelMail]
 url=http://www.squirrelmail.org/
-safe=1.4.16
-vuln=CVE-2008-3663
+safe=1.4.17
+vuln=CVE-2008-2379
 file=strings.php
 variable=$version
 extra_match=SquirrelMail version number
