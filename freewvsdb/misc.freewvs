@@ -166,7 +166,7 @@ subdir=1
 [phpMyID]
 url=http://siege.org/projects/phpMyID
 safe=
-vuln=http://seclists.org/bugtraq/2008/Oct/0009.html
+vuln=CVE-2008-4730
 file=MyID.php
 variable=@version
 subdir=0
