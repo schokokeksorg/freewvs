@@ -6,6 +6,8 @@ vuln=CVE-2008-5249
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
+download=http://download.wikimedia.org/mediawiki/1.13/mediawiki-__VERSION__.tar.gz
+upgradeinstructions=http://www.mediawiki.org/wiki/Upgrade
 
 [TWiki]
 url=http://twiki.org/
