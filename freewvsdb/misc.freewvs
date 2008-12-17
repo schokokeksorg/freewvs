@@ -2,7 +2,7 @@
 url=http://www.phpmyadmin.net/
 safe=3.1.1
 old_safe=2.11.9.4
-vuln=http://www.phpmyadmin.net/home_page/security/PMASA-2008-10.php
+vuln=CVE-2008-5621
 file=Config.class.php
 variable=PMA_VERSION
 subdir=1
@@ -133,7 +133,7 @@ subdir=0
 url=http://www.moodle.org/
 safe=1.9.3
 old_safe=1.8.7,1.7.6,1.6.8
-vuln=http://moodle.org/mod/forum/discuss.php?d=108590
+vuln=CVE-2008-5432
 file=version.php
 variable=$release
 subdir=0

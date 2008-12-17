@@ -21,7 +21,7 @@ extra_match=DeluxeBB
 [PunBB]
 url=http://punbb.org/
 safe=1.3.2
-vuln=http://punbb.informer.com/
+vuln=CVE-2008-5433
 file=install.php
 variable=$punbb_version
 subdir=0
