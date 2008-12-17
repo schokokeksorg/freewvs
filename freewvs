@@ -37,9 +37,12 @@ def versioncompare(safe_version, find_version):
             return False
     return (len(find_version)<len(safe_version))
 
-def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, fancy):
+def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, style = None):
     appdir = '/'.join(os.path.abspath(vfilename).split('/')[:-1-subdir])
-    if fancy:
+    if not style:
+        print "%(appname)s %(version)s (%(safeversion)s) %(vuln)s %(appdir)s" \
+              % vars()
+    elif style=='fancy':
         print _("Directory: %(appdir)s") % vars()
         if safeversion!="ok":
             if safeversion!="":
@@ -56,9 +59,19 @@ def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, fancy):
         else:
             print _("%(appname)s %(version)s found." ) % vars()
         print
-    else:
-        print "%(appname)s %(version)s (%(safeversion)s) %(vuln)s %(appdir)s" \
-              % vars()
+    elif style=='xml':
+        state = 'vulnerable'
+        if safeversion == 'ok':
+            state = 'ok'
+        print '  <app state="%s">' % state
+        print '    <appname>%s</appname>' % appname
+        print '    <version>%s</version>' % version
+        print '    <directory>%s</directory>' % appdir
+        if state == 'vulnerable':
+            print '    <safeversion>%s</safeversion>' % safeversion
+            print '    <vulninfo>%s</vulninfo>' % vuln
+        print '  </app>'
+
 
 pp = pprint.PrettyPrinter(indent=4)
 
@@ -69,8 +82,10 @@ parser.add_option("-a", "--all", action="store_true", dest="ALL",
 parser.add_option("-d", "--debug", action="store_true", dest="DEBUG",
                   help="Show lots of debugging output, mainly useful"+ \
                   "for development")
-parser.add_option("-f", "--fancy", action="store_true", dest="FANCY",
+parser.add_option("-f", "--fancy", action="store_const", dest="OUTPUT", const="fancy",
                   help="Show more fancy output")
+parser.add_option("-x", "--xml", action="store_const", dest="OUTPUT", const="xml",
+                  help="Output results as XML")
 opts, args = parser.parse_args()
 
 # Parse vulnerability database
@@ -114,6 +129,9 @@ for sect in config.sections():
 if opts.DEBUG:
     pp.pprint(vdb)
 
+if opts.OUTPUT == 'xml':
+  print '<?xml version="1.0" ?>'
+  print '<freewvs>'
 
 # start the search
 
@@ -159,7 +177,7 @@ for fdir in args:
                                     print "File "+mfile
                                 vulnprint(item['name'], findversion, \
                                           "ok", "", mfile, item['subdir'], \
-                                          opts.FANCY)
+                                          opts.OUTPUT)
                         else:
                             if opts.DEBUG:
                                 print "File "+mfile
@@ -175,9 +193,12 @@ for fdir in args:
 
                             vulnprint (item['name'], findversion, \
                                        safev, item['vuln'], \
-                                       mfile, item['subdir'], opts.FANCY)
+                                       mfile, item['subdir'], opts.OUTPUT)
 
                     else:
                         if opts.DEBUG:
                             print "regexp failed for " + \
                                   item['name'] + " on " + mfile
+
+if opts.OUTPUT == 'xml':
+  print '</freewvs>'
