@@ -23,6 +23,7 @@
 # along with this program.    If not, see <http://www.gnu.org/licenses/>.
 
 import ConfigParser, os, glob, pprint, re, optparse, sys, gettext
+from xml.sax.saxutils import escape
 
 gettext.textdomain('freewvs')
 _ = gettext.gettext
@@ -64,12 +65,12 @@ def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, style = No
         if safeversion == 'ok':
             state = 'ok'
         print '  <app state="%s">' % state
-        print '    <appname>%s</appname>' % appname
-        print '    <version>%s</version>' % version
-        print '    <directory>%s</directory>' % appdir
+        print '    <appname>%s</appname>' % escape(appname)
+        print '    <version>%s</version>' % escape(version)
+        print '    <directory>%s</directory>' % escape(appdir)
         if state == 'vulnerable':
-            print '    <safeversion>%s</safeversion>' % safeversion
-            print '    <vulninfo>%s</vulninfo>' % vuln
+            print '    <safeversion>%s</safeversion>' % escape(safeversion)
+            print '    <vulninfo>%s</vulninfo>' % escape(vuln)
         print '  </app>'
 
 
