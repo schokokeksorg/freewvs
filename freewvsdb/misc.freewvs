@@ -170,3 +170,11 @@ vuln=CVE-2008-4730
 file=MyID.php
 variable=@version
 subdir=0
+
+[phplist]
+url=http://www.phplist.com/
+safe=2.10.8
+vuln=http://www.phplist.com/?lid=273
+file=connect.php
+variable=define("VERSION"
+subdir=1
