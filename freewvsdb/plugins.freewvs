@@ -21,3 +21,13 @@ vuln=CVE-2007-3779
 file=gpg_pref_functions.php
 variable=$GPG_VERSION
 subdir=0
+
+
+[Drupal-Views]
+url=http://drupal.org/project/views
+safe=2.2
+vuln=http://drupal.org/node/348321
+file=views.module
+variable=version = 6.x-
+
+
