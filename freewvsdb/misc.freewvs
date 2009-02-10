@@ -131,9 +131,9 @@ subdir=0
 
 [Moodle]
 url=http://www.moodle.org/
-safe=1.9.3
-old_safe=1.8.7,1.7.6,1.6.8
-vuln=CVE-2008-5432
+safe=1.9.4
+old_safe=1.8.8,1.7.7,1.6.9
+vuln=CVE-2009-0502
 file=version.php
 variable=$release
 subdir=0
