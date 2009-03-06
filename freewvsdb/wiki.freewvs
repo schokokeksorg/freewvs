@@ -2,7 +2,7 @@
 url=http://www.mediawiki.org/
 safe=1.13.4
 old_safe=1.6.12,1.12.4
-vuln=http://lists.wikimedia.org/pipermail/mediawiki-announce/2009-February/000083.html
+vuln=CVE-2009-0737
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
