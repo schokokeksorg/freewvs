@@ -22,7 +22,7 @@ old_safe=5.15,5.16
 vuln=http://drupal.org/node/358957
 file=system.module
 variable=define('VERSION'
-subdir=1
+subdir=2
 
 [PHPNuke]
 url=http://phpnuke.org/
