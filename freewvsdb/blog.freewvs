@@ -34,8 +34,8 @@ subdir=2
 
 [nucleuscms]
 url=http://www.nucleuscms.org/
-safe=3.32
-vuln=CVE-2008-0497
+safe=3.40
+vuln=http://www.nucleuscms.org/index.php/item/3051
 file=globalfunctions.php
 variable=$nucleus['version']
 subdir=2
