@@ -52,8 +52,8 @@ extra_match=[sblog_version_info]
 
 [Movable_Type]
 url=http://www.movabletype.com/
-safe=3.34
-vuln=CVE-2007-3342
+safe=4.34
+vuln=CVE-2009-0752
 file=mt.php
 variable=VERSION_ID
 subdir=1
