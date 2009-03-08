@@ -69,8 +69,8 @@ subdir=0
 
 [DotClear]
 url=http://www.dotclear.net/
-safe=1.2.8
-vuln=CVE-2008-3232
+safe=2.1.5
+vuln=http://fr.dotclear.org/blog/post/2009/02/05/Dotclear-2.1.5
 file=LISEZMOI.txt
 variable=DotClear
 subdir=0
