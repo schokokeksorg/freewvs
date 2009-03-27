@@ -28,8 +28,8 @@ subdir=1
 
 [TikiWiki]
 url=http://tikiwiki.org/
-safe=2.2
-vuln=CVE-2008-5318
+safe=2.3
+vuln=http://info.tikiwiki.org/tiki-read_article.php?articleId=51
 file=README
 variable=version
 extra_match=Tiki! The wiki
