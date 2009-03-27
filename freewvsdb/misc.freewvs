@@ -121,13 +121,21 @@ variable=VERSION
 subdir=0
 extra_match=define("TITLE", "FTP Admin");
 
-[RoundCube]
+[RoundCube-deprecated]
 url=http://roundcube.net
-safe=
-vuln=CVE-2007-6321
+safe=0.2.1
+vuln=http://sourceforge.net/forum/forum.php?forum_id=927958
 file=index.php
 variable=RCMAIL_VERSION
 subdir=0
+
+[RoundCube]
+url=http://roundcube.net
+safe=0.2.1
+vuln=http://sourceforge.net/forum/forum.php?forum_id=927958
+file=iniset.php
+variable=RCMAIL_VERSION
+subdir=2
 
 [Moodle]
 url=http://www.moodle.org/
