@@ -139,9 +139,9 @@ subdir=2
 
 [Moodle]
 url=http://www.moodle.org/
-safe=1.9.4
-old_safe=1.8.8,1.7.7,1.6.9
-vuln=CVE-2009-0502
+safe=1.9.5
+old_safe=1.8.9,1.7.7,1.6.9
+vuln=http://www.securityfocus.com/archive/1/502231/30/0/threaded
 file=version.php
 variable=$release
 subdir=0
