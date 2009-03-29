@@ -46,9 +46,9 @@ subdir=1
 
 [Joomla-deprecated]
 url=http://www.joomla.org/
-safe=1.5.9
+safe=1.5.10
 old_safe=1.0.15
-vuln=CVE-2008-4122
+vuln=http://developer.joomla.org/security/news/293-20090301-core-multiple-xsscsrf.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
@@ -57,9 +57,9 @@ subdir=1
 # 1.5 has changed identification
 [Joomla]
 url=http://www.joomla.org/
-safe=1.5.9
+safe=1.5.10
 old_safe=1.0.15
-vuln=CVE-2008-4122
+vuln=http://developer.joomla.org/security/news/293-20090301-core-multiple-xsscsrf.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
