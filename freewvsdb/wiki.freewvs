@@ -29,7 +29,7 @@ subdir=1
 [TikiWiki]
 url=http://tikiwiki.org/
 safe=2.3
-vuln=http://info.tikiwiki.org/tiki-read_article.php?articleId=51
+vuln=CVE-2009-1204
 file=README
 variable=version
 extra_match=Tiki! The wiki
