@@ -29,11 +29,3 @@ vuln=CVE-2008-6020
 file=views.info
 variable=version = "6.x
 subdir=0
-
-[Serendipity-Linklift]
-url=http://www.linklift.de/
-safe=2.11
-vuln=http://wiki.schokokeks.org/Problem_mit_Linklift
-file=serendipity_plugin_endage.php
-variable=LL_PLUGIN_VERSION
-subdir=0
