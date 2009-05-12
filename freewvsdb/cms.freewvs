@@ -86,8 +86,8 @@ extra_match=w-agora version $v
 
 [MODx]
 url=http://www.modxcms.com/
-safe=0.9.6.2
-vuln=CVE-2008-0094
+safe=0.9.6.3
+vuln=http://modxcms.com/about/blog/rthrash/another-year-for-modx-and-a-new-release.html
 file=version.inc.php
 variable=$version
 subdir=2
