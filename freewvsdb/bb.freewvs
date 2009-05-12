@@ -36,8 +36,8 @@ subdir=1
 
 [Vanilla]
 url=http://www.getvanilla.com/
-safe=1.1.5
-vuln=CVE-2008-3760
+safe=1.1.6
+vuln=http://lussumo.com/docs/doku.php?id=vanilla:releasenotes
 file=version.php
 variable=APPLICATION_VERSION
 subdir=1
