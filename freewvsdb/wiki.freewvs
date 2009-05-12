@@ -11,8 +11,8 @@ upgradeinstructions=http://www.mediawiki.org/wiki/Upgrade
 
 [TWiki]
 url=http://twiki.org/
-safe=4.2.4
-vuln=CVE-2008-5305
+safe=4.3.1
+vuln=CVE-2009-1339
 file=TWiki.pm
 variable=$RELEASE
 subdir=1
