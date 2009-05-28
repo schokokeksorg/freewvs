@@ -36,8 +36,8 @@ subdir=1
 
 [Vanilla]
 url=http://www.getvanilla.com/
-safe=1.1.6
-vuln=http://lussumo.com/docs/doku.php?id=vanilla:releasenotes
+safe=1.1.8
+vuln=http://gsasec.blogspot.com/2009/05/vanilla-v117-cross-site-scripting.html
 file=version.php
 variable=APPLICATION_VERSION
 subdir=1
