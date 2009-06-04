@@ -62,8 +62,8 @@ subdir=1
 
 [Phorum]
 url=http://www.phorum.org/
-safe=5.2.10
-vuln=CVE-2009-0488
+safe=5.2.11
+vuln=http://www.securityfocus.com/archive/1/503867/30/60/threaded
 file=common.php
 variable=define( "PHORUM"
 subdir=0
