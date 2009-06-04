@@ -70,8 +70,8 @@ subdir=0
 
 [wBB]
 url=http://www.woltlab.com/
-safe=3.0.6
-vuln=CVE-2008-1716
+safe=3.0.9
+vuln=http://www.securityfocus.com/archive/1/503867/30/60/threaded
 file=config.inc.php
 variable=define('PACKAGE_VERSION',
 subdir=0
