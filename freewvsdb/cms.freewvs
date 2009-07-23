@@ -46,9 +46,9 @@ subdir=1
 
 [Joomla-deprecated]
 url=http://www.joomla.org/
-safe=1.5.12
+safe=1.5.13
 old_safe=1.0.15
-vuln=http://www.joomla.org/announcements/release-news/5242-joomla-1512-released.html
+vuln=http://www.joomla.org/announcements/release-news/5243-joomla-1513-security-release-now-available.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
@@ -57,9 +57,9 @@ subdir=1
 # 1.5 has changed identification
 [Joomla]
 url=http://www.joomla.org/
-safe=1.5.12
+safe=1.5.13
 old_safe=1.0.15
-vuln=http://www.joomla.org/announcements/release-news/5242-joomla-1512-released.html
+vuln=http://www.joomla.org/announcements/release-news/5243-joomla-1513-security-release-now-available.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
