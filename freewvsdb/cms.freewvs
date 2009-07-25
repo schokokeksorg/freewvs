@@ -122,7 +122,7 @@ file=silverstripe_version
 variable=
 subdir=0
 
-[SilverStripe]
+[CMSMadeSimple]
 url=http://www.cmsmadesimple.org/
 safe=1.5
 vuln=2008-5642
