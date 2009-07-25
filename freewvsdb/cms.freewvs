@@ -121,3 +121,11 @@ vuln=CVE-2007-2321
 file=silverstripe_version
 variable=
 subdir=0
+
+[SilverStripe]
+url=http://www.cmsmadesimple.org/
+safe=1.5
+vuln=2008-5642
+file=version.php
+variable=$CMS_VERSION
+subdir=0
