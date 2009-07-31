@@ -54,8 +54,8 @@ extra_match=SMF: Simple Machines Forum
 
 [MyBB]
 url=http://www.mybboard.net/
-safe=1.4.7
-vuln=http://community.mybboard.net/thread-51349.html
+safe=1.4.8
+vuln=http://blog.mybboard.net/2009/06/26/mybb-148-released-maintenance-security-release/
 file=class_core.php
 variable=$version
 subdir=1
