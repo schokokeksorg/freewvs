@@ -20,8 +20,8 @@ extra_match=DeluxeBB
 
 [PunBB]
 url=http://punbb.org/
-safe=1.3.3
-vuln=http://punbb.informer.com/forums/topic/21516/punbb-133/
+safe=1.3.4
+vuln=http://punbb.informer.com/forums/topic/21669/punbb-134/
 file=install.php
 variable=$punbb_version
 subdir=0
