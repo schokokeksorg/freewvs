@@ -106,9 +106,8 @@ extra_match=http://www.pn-cms.de
 
 [Contenido]
 url=http://www.contenido.org/
-safe=4.8.7
-old_safe=4.6.24
-vuln=http://www.contenido.org/
+safe=4.8.11
+vuln=http://forum.contenido.org/viewtopic.php?f=25&t=23254
 file=config.misc.php
 variable=$cfg['version']
 subdir=1
