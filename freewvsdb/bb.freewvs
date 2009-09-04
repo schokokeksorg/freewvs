@@ -78,8 +78,8 @@ subdir=0
 
 [FluxBB]
 url=http://fluxbb.org/
-safe=1.2.21
-vuln=http://fluxbb.org/forums/topic/2310/fluxbb-1221-released/
+safe=1.2.22
+vuln=http://fluxbb.org/forums/topic/3222/fluxbb1222-released/
 file=install.php
 variable=$fluxbb_version
 subdir=1
