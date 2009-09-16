@@ -17,9 +17,9 @@ subdir=2
 
 [Drupal]
 url=http://www.drupal.org/
-safe=6.13
-old_safe=5.19
-vuln=http://drupal.org/drupal-6.13
+safe=6.14
+old_safe=5.20
+vuln=http://drupal.org/node/579482
 file=system.module
 variable=define('VERSION'
 subdir=2
