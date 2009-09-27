@@ -123,8 +123,8 @@ subdir=0
 
 [CMSMadeSimple]
 url=http://www.cmsmadesimple.org/
-safe=1.5
-vuln=2008-5642
+safe=1.6.3
+vuln=http://blog.cmsmadesimple.org/2009/08/05/announcing-cmsms-163-touho/
 file=version.php
 variable=$CMS_VERSION
 subdir=0
