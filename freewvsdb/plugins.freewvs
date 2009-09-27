@@ -9,7 +9,7 @@ subdir=0
 [Serendipity-freetag]
 url=http://www.s9y.org
 safe=3.09
-vuln=http://blog.s9y.org/archives/210-Security-update-for-Freetag-Plugin.html
+vuln=CVE-2009-3337
 file=serendipity_event_freetag.php
 variable=$propbag->add('version'
 subdir=0
