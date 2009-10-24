@@ -53,16 +53,16 @@ extra_match=SMF: Simple Machines Forum
 
 [MyBB]
 url=http://www.mybboard.net/
-safe=1.4.8
-vuln=http://blog.mybboard.net/2009/06/26/mybb-148-released-maintenance-security-release/
+safe=1.4.9
+vuln=http://blog.mybboard.net/2009/09/21/mybb-1-4-9-released-security-update/
 file=class_core.php
 variable=$version
 subdir=1
 
 [Phorum]
 url=http://www.phorum.org/
-safe=5.2.12
-vuln=http://www.phorum.org/phorum5/read.php?64,139411
+safe=5.2.13
+vuln=http://www.staff-lounge.com/phorum-5-2-13-released-no-replies-17873/
 file=common.php
 variable=define( "PHORUM"
 subdir=0
