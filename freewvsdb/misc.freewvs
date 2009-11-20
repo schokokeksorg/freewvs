@@ -139,9 +139,8 @@ subdir=2
 
 [Moodle]
 url=http://www.moodle.org/
-safe=1.9.5
-old_safe=1.8.9,1.7.7,1.6.9
-vuln=http://www.securityfocus.com/archive/1/502231/30/0/threaded
+safe=1.9.6
+vuln=http://moodle.org/mod/forum/discuss.php?d=136886&parent=597608
 file=version.php
 variable=$release
 subdir=0
