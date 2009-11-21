@@ -1,7 +1,7 @@
 [WebsiteBaker]
 url=http://www.websitebaker.org/
-safe=2.6.6
-vuln=CVE-2007-0527
+safe=2.8
+vuln=http://start.websitebaker2.org/de/wb-2.8.php
 file=version.php
 variable=VERSION
 extra_match=Website Baker Project
