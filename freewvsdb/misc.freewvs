@@ -194,3 +194,12 @@ file=Version.php
 variable=const VERSION
 subdir=1
 extra_match=final class Piwik_Version
+
+[phpWishlist]
+url=http://phpwishlist.sourceforge.net/
+safe=0.1.15
+vuln=CVE-2005-2203
+file=header.inc.php
+variable=$version
+subdir=1
+extra_match=* Wishlist -
