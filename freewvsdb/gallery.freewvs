@@ -38,3 +38,12 @@ file=upgrade.php
 variable=$version
 subdir=1
 extra_match=$inst_linpha_not_work_correctly
+
+[mig]
+url=http://mig.sourceforge.net/
+safe=1.5.0
+vuln=CVE-2005-2603
+file=index.php
+variable=$version
+subdir=0
+extra_match=Mig - A general purpose photo gallery management system.
