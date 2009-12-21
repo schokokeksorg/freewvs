@@ -189,7 +189,7 @@ subdir=1
 [Piwik]
 url=http://piwik.org/
 safe=0.5
-vuln=http://www.sektioneins.de/en/advisories/advisory-032009-piwik-cookie-unserialize-vulnerability/
+vuln=CVE-2009-4137
 file=Version.php
 variable=const VERSION
 subdir=1
