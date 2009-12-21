@@ -44,8 +44,8 @@ extra_match=define('APPLICATION', 'Vanilla');
 
 [Simple_Machines_Forum]
 url=http://www.simplemachines.org/
-safe=1.1.10
-vuln=http://www.simplemachines.org/community/index.php?P=7fab6bc07fa390d199c766145772899f&topic=324169.0
+safe=1.1.11
+vuln=http://www.simplemachines.org/community/index.php?P=76ef1d7a6521312ab4dcf4e8b10daae0&topic=351341.0
 file=index.php
 variable=$forum_version
 subdir=0
