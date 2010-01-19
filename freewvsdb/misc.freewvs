@@ -211,3 +211,11 @@ vuln=http://awstats.sourceforge.net/docs/awstats_changelog.txt
 file=awstats.pl
 variable=$VERSION  =
 subdir=0
+
+[phpMyFAQ]
+url=http://www.phpmyfaq.de/
+safe=2.5.5
+vuln=http://www.phpmyfaq.de/advisory_2009-12-01.php
+file=phpmyfaq.spec
+variable=version
+subdir=1
