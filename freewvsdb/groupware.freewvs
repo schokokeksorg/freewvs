@@ -1,3 +1,12 @@
+[Horde-groupware]
+url=http://www.horde.org/
+file=bundle.php
+variable=BUNDLE_VERSION
+extra_match='Horde Groupware'
+safe=1.2.5
+vuln=CVE-2009-3701
+subdir=1
+
 [eGroupWare]
 url=http://www.egroupware.org/
 safe=1.4.004
