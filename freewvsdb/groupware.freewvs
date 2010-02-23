@@ -9,8 +9,8 @@ subdir=1
 
 [eGroupWare]
 url=http://www.egroupware.org/
-safe=1.4.004
-vuln=CVE-2008-2041
+safe=1.6.002
+vuln=http://www.egroupware.org/news?category_id=200&item=74
 file=setup.inc.php
 variable=$setup_info['phpgwapi']['version']
 subdir=2
