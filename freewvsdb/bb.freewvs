@@ -1,6 +1,7 @@
 [phpBB]
 url=http://www.phpbb.com
 safe=3.0.5
+latest=3.0.6
 vuln=http://www.phpbb.com/community/viewtopic.php?f=14&t=1625005
 file=CHANGELOG.html
 variable=Changes since
@@ -9,8 +10,7 @@ subdir=1
 
 [DeluxeBB]
 url=http://www.deluxebb.com/
-# 1.1 as of 2008-01-27
-safe=
+safe=1.3
 vuln=CVE-2008-0439
 file=header.php
 variable=$versionname
@@ -36,6 +36,7 @@ subdir=1
 [Vanilla]
 url=http://www.getvanilla.com/
 safe=1.1.8
+latest=1.1.10
 vuln=http://gsasec.blogspot.com/2009/05/vanilla-v117-cross-site-scripting.html
 file=version.php
 variable=APPLICATION_VERSION
@@ -62,6 +63,7 @@ subdir=1
 [Phorum]
 url=http://www.phorum.org/
 safe=5.2.13
+latest=5.2.14
 vuln=http://www.staff-lounge.com/phorum-5-2-13-released-no-replies-17873/
 file=common.php
 variable=define( "PHORUM"
