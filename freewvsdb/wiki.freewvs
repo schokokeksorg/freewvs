@@ -1,7 +1,7 @@
 [MediaWiki]
 url=http://www.mediawiki.org/
-safe=1.15.2
-vuln=http://lists.wikimedia.org/pipermail/mediawiki-announce/2010-March/000088.html
+safe=1.15.3
+vuln=https://bugzilla.wikimedia.org/show_bug.cgi?id=23076
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
