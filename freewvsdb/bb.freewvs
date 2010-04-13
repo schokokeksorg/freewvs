@@ -1,7 +1,7 @@
 [phpBB]
 url=http://www.phpbb.com
 safe=3.0.5
-latest=3.0.6
+latest=3.0.7
 vuln=http://www.phpbb.com/community/viewtopic.php?f=14&t=1625005
 file=CHANGELOG.html
 variable=Changes since
@@ -54,8 +54,8 @@ extra_match=SMF: Simple Machines Forum
 
 [MyBB]
 url=http://www.mybboard.net/
-safe=1.4.11
-vuln=http://blog.mybboard.net/2009/12/29/mybb-1-4-11-released-minor-patch-security-update/
+safe=1.4.12
+vuln=http://blog.mybboard.net/2010/04/13/mybb-1-4-12-released-security-maintenance-update/
 file=class_core.php
 variable=$version
 subdir=1
