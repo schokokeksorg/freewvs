@@ -46,7 +46,6 @@ subdir=1
 [Joomla-deprecated]
 url=http://www.joomla.org/
 safe=1.5.15
-old_safe=1.0.15
 vuln=http://developer.joomla.org/security/news/305-20091103-core-front-end-editor-issue-.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
@@ -57,7 +56,6 @@ subdir=1
 [Joomla]
 url=http://www.joomla.org/
 safe=1.5.15
-old_safe=1.0.15
 vuln=http://developer.joomla.org/security/news/305-20091103-core-front-end-editor-issue-.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
