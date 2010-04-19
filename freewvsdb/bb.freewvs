@@ -1,8 +1,7 @@
 [phpBB]
 url=http://www.phpbb.com
-safe=3.0.5
-latest=3.0.7
-vuln=http://www.phpbb.com/community/viewtopic.php?f=14&t=1625005
+safe=3.0.7
+vuln=http://www.phpbb.com/community/viewtopic.php?f=14&t=2014195
 file=CHANGELOG.html
 variable=Changes since
 add_minor=1
