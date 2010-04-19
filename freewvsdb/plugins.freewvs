@@ -24,8 +24,8 @@ subdir=0
 
 [Drupal-Views]
 url=http://drupal.org/project/views
-safe=2.6
-vuln=CVE-2009-2076
+safe=2.9
+vuln=http://drupal.org/node/765022
 file=views.info
 variable=version = "6.x
 subdir=0
