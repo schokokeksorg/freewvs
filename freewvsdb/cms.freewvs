@@ -114,8 +114,8 @@ extra_match=Contenido Misc Configurations
 
 [SilverStripe]
 url=http://www.silverstripe.com
-safe=2.3.1
-vuln=CVE-2009-1433
+safe=2.3.7
+vuln=http://open.silverstripe.org/wiki/ChangeLog/2.3.7
 file=silverstripe_version
 variable=
 subdir=0
