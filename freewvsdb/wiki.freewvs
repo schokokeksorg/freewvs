@@ -27,8 +27,9 @@ subdir=1
 
 [TikiWiki]
 url=http://tikiwiki.org/
-safe=2.4
-vuln=http://info.tikiwiki.org/tiki-read_article.php?articleId=53
+safe=4.2
+old_safe=3.5
+vuln=http://info.tikiwiki.org/article86-Tiki-Announces-3-5-and-4-2-Releases
 file=README
 variable=version
 extra_match=Tiki! The wiki
