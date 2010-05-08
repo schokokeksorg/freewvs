@@ -120,8 +120,8 @@ subdir=0
 
 [CMSMadeSimple]
 url=http://www.cmsmadesimple.org/
-safe=1.6.3
-vuln=http://blog.cmsmadesimple.org/2009/08/05/announcing-cmsms-163-touho/
+safe=1.7.1
+vuln=CVE-2010-1482
 file=version.php
 variable=$CMS_VERSION
 subdir=0
