@@ -18,8 +18,8 @@ subdir=1
 
 [PmWiki]
 url=http://www.pmwiki.org/
-safe=2.2.2
-vuln=http://www.mail-archive.com/pmwiki-announce@pmichaud.com/msg00018.html
+safe=2.2.16
+vuln=CVE-2010-1481
 file=version.php
 variable=$Version
 extra_match=pmwiki
