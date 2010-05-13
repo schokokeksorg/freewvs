@@ -115,8 +115,9 @@ url=http://www.silverstripe.com
 safe=2.3.7
 vuln=http://open.silverstripe.org/wiki/ChangeLog/2.3.7
 file=silverstripe_version
-variable=
-subdir=0
+variable=/open/modules/cms/
+subdir=1
+extra_match=/open/modules/cms/
 
 [CMSMadeSimple]
 url=http://www.cmsmadesimple.org/
