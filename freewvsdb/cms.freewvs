@@ -126,3 +126,11 @@ vuln=CVE-2010-1482
 file=version.php
 variable=$CMS_VERSION
 subdir=0
+
+[e107]
+url=http://e107.org/
+safe=0.7.20
+vuln=http://e107.org/e107_plugins/forum/forum_viewtopic.php?196978
+file=ver.php
+variable=$e107info['e107_version']
+subdir=0
