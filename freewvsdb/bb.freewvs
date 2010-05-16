@@ -61,9 +61,9 @@ subdir=1
 
 [Phorum]
 url=http://www.phorum.org/
-safe=5.2.13
-latest=5.2.14
-vuln=http://www.staff-lounge.com/phorum-5-2-13-released-no-replies-17873/
+safe=5.2.15
+latest=5.2.15
+vuln=http://www.facebook.com/note.php?note_id=371190874581
 file=common.php
 variable=define( "PHORUM"
 subdir=0
