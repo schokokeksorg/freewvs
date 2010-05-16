@@ -15,7 +15,7 @@ variable=return '
 subdir=1
 
 [zencart]
-url=http://www.magentocommerce.com/
+url=http://www.zen-cart.com/
 safe=1.3.9
 vuln=CVE-2009-2254
 file=paypaldp.php
