@@ -45,8 +45,8 @@ subdir=1
 
 [Joomla-deprecated]
 url=http://www.joomla.org/
-safe=1.5.16
-vuln=http://www.joomla.org/announcements/release-news/5259-joomla-1516-released.html
+safe=1.5.18
+vuln=http://developer.joomla.org/security/news/314-20100501-core-xss-vulnerabilities-in-back-end.html?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+JoomlaSecurityNews+%28Joomla!+Security+News%29
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
@@ -55,8 +55,8 @@ subdir=1
 # 1.5 has changed identification
 [Joomla]
 url=http://www.joomla.org/
-safe=1.5.16
-vuln=http://www.joomla.org/announcements/release-news/5259-joomla-1516-released.html
+safe=1.5.18
+vuln=http://developer.joomla.org/security/news/314-20100501-core-xss-vulnerabilities-in-back-end.html?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+JoomlaSecurityNews+%28Joomla!+Security+News%29
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
