@@ -1,7 +1,7 @@
 [MediaWiki]
 url=http://www.mediawiki.org/
-safe=1.15.4
-vuln=http://lists.wikimedia.org/pipermail/mediawiki-announce/2010-May/000091.html
+safe=1.15.5
+vuln=http://svn.wikimedia.org/svnroot/mediawiki/tags/REL1_15_5/phase3/RELEASE-NOTES
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
