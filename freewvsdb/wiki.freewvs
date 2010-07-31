@@ -1,7 +1,8 @@
 [MediaWiki]
 url=http://www.mediawiki.org/
 safe=1.15.5
-vuln=http://svn.wikimedia.org/svnroot/mediawiki/tags/REL1_15_5/phase3/RELEASE-NOTES
+latest=0.16.0
+vuln=CVE-2010-2787
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
