@@ -113,8 +113,8 @@ extra_match=Contenido Misc Configurations
 
 [SilverStripe]
 url=http://www.silverstripe.com
-safe=2.3.7
-vuln=http://open.silverstripe.org/wiki/ChangeLog/2.3.7
+safe=2.4.1
+vuln=http://www.silverstripe.org/security-releases/
 file=silverstripe_version
 variable=/open/modules/cms/
 subdir=1
