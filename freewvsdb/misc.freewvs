@@ -189,7 +189,7 @@ subdir=1
 [Piwik]
 url=http://piwik.org/
 safe=0.6.4
-vuln=http://piwik.org/blog/2010/07/piwik-0-6-4-security-advisory/
+vuln=CVE-2010-2786
 file=Version.php
 variable=const VERSION
 subdir=1

@@ -123,7 +123,7 @@ extra_match=/open/modules/cms/
 [CMSMadeSimple]
 url=http://www.cmsmadesimple.org/
 safe=1.8.1
-vuln=http://www.cmsmadesimple.org/2010/07/3/announcing-cms-made-simple-1-8-1-mankara/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+cmsmadesimple%2Fblog+%28CMS+Made+Simple%29
+vuln=CVE-2010-2797
 file=version.php
 variable=$CMS_VERSION
 subdir=0
