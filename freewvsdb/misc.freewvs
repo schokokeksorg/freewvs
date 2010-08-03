@@ -20,7 +20,7 @@ subdir=1
 [Mantis-deprecated]
 url=http://www.mantisbt.org/
 safe=1.2.2
-vuln=http://www.mantisbt.org/blog/?p=113
+vuln=CVE-2010-2802
 file=config_defaults_inc.php
 variable=$g_mantis_version
 subdir=0
@@ -28,7 +28,7 @@ subdir=0
 [Mantis]
 url=http://www.mantisbt.org/
 safe=1.2.2
-vuln=http://www.mantisbt.org/blog/?p=113
+vuln=CVE-2010-2802
 file=constant_inc.php
 variable=MANTIS_VERSION
 subdir=1

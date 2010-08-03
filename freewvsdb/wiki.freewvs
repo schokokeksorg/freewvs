@@ -12,7 +12,7 @@ upgradeinstructions=http://www.mediawiki.org/wiki/Upgrade
 [TWiki]
 url=http://twiki.org/
 safe=4.3.2
-vuln=http://twiki.org/cgi-bin/view/Codev/SecurityAuditTokenBasedCsrfFix
+vuln=CVE-2009-4898
 file=TWiki.pm
 variable=$RELEASE
 subdir=1
