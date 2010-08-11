@@ -17,12 +17,13 @@ subdir=2
 
 [Drupal]
 url=http://www.drupal.org/
-safe=6.16
-old_safe=5.22
+safe=6.18
+old_safe=5.23
 vuln=http://drupal.org/node/731710
 file=system.module
 variable=define('VERSION'
 subdir=2
+latest=6.19
 
 [PHPNuke]
 url=http://phpnuke.org/
