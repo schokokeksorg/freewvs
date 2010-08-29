@@ -1,7 +1,7 @@
 [Serendipity]
 url=http://www.s9y.org/
-safe=1.5.3
-vuln=CVE-2010-1916
+safe=1.5.4
+vuln=http://www.htbridge.ch/advisory/xss_vulnerability_in_serendipity.html
 file=serendipity_config.inc.php
 variable=$serendipity['version']
 subdir=0
