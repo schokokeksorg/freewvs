@@ -19,7 +19,7 @@ extra_match=DeluxeBB
 [PunBB]
 url=http://punbb.org/
 safe=1.3.4
-vuln=http://punbb.informer.com/forums/topic/21669/punbb-134/
+vuln=CVE-2009-4894
 file=install.php
 variable=$punbb_version
 subdir=0
