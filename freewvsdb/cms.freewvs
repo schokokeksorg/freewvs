@@ -38,17 +38,17 @@ subdir=2
 
 [Typo3]
 url=http://typo3.org/
-safe=4.4.1
-old_safe=4.3.4
-vuln=http://typo3.org/teams/security/security-bulletins/typo3-sa-2010-012/
+safe=4.4.4
+old_safe=4.3.7
+vuln=http://typo3.org/teams/security/security-bulletins/typo3-sa-2010-020/
 file=config_default.php
 variable=$TYPO_VERSION
 subdir=1
 
 [Joomla-deprecated]
 url=http://www.joomla.org/
-safe=1.5.20
-vuln=http://www.joomla.org/announcements/release-news/5284-joomla-1520-released.html
+safe=1.5.21
+vuln=http://www.joomla.org/announcements/release-news/5300-joomla-1521-released.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
@@ -57,8 +57,8 @@ subdir=1
 # 1.5 has changed identification
 [Joomla]
 url=http://www.joomla.org/
-safe=1.5.20
-vuln=http://www.joomla.org/announcements/release-news/5284-joomla-1520-released.html
+safe=1.5.21
+vuln=http://www.joomla.org/announcements/release-news/5300-joomla-1521-released.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
@@ -106,6 +106,7 @@ extra_match=http://www.pn-cms.de
 [Contenido]
 url=http://www.contenido.org/
 safe=4.8.11
+latest=4.8.13
 vuln=http://forum.contenido.org/viewtopic.php?f=25&t=23254
 file=config.misc.php
 variable=$cfg['version']
@@ -114,7 +115,7 @@ extra_match=Contenido Misc Configurations
 
 [SilverStripe]
 url=http://www.silverstripe.com
-safe=2.4.1
+safe=2.4.2
 vuln=http://www.silverstripe.org/security-releases/
 file=silverstripe_version
 variable=/open/modules/cms/
