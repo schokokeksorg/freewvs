@@ -26,26 +26,36 @@ subdir=0
 
 [UseBB]
 url=http://www.usebb.net/
-safe=1.0.10
-vuln=http://www.usebb.net/community/topic.php?id=2388
+safe=1.0.11
+vuln=http://www.usebb.net/community/topic.php?id=2501
 file=common.php
 variable=USEBB_VERSION
 subdir=1
 
 [Vanilla]
-url=http://www.getvanilla.com/
-safe=1.1.8
-latest=1.1.10
-vuln=http://gsasec.blogspot.com/2009/05/vanilla-v117-cross-site-scripting.html
+url=http://vanillaforums.com/
+safe=2.0.10
+latest=2.0.11
+vuln=http://vanillaforums.org/discussion/13119/vanilla-2.0.10-released/p1
 file=version.php
 variable=APPLICATION_VERSION
 subdir=1
 extra_match=define('APPLICATION', 'Vanilla');
 
+[Vanilla2]
+url=http://vanillaforums.com/
+safe=2.0.10
+latest=2.0.11
+vuln=http://vanillaforums.org/discussion/13119/vanilla-2.0.10-released/p1
+file=index.php
+variable=APPLICATION_VERSION
+subdir=0
+extra_match=define('APPLICATION', 'Vanilla');
+
 [Simple_Machines_Forum]
 url=http://www.simplemachines.org/
 safe=1.1.11
-vuln=http://www.simplemachines.org/community/index.php?P=76ef1d7a6521312ab4dcf4e8b10daae0&topic=351341.0
+vuln=CVE-2010-2485
 file=index.php
 variable=$forum_version
 subdir=0
@@ -54,6 +64,7 @@ extra_match=SMF: Simple Machines Forum
 [MyBB]
 url=http://www.mybboard.net/
 safe=1.4.12
+latest=1.6
 vuln=http://blog.mybboard.net/2010/04/13/mybb-1-4-12-released-security-maintenance-update/
 file=class_core.php
 variable=$version
@@ -78,8 +89,8 @@ subdir=0
 
 [FluxBB]
 url=http://fluxbb.org/
-safe=1.2.22
-vuln=http://fluxbb.org/forums/topic/3222/fluxbb1222-released/
+safe=1.2.23
+vuln=http://fluxbb.org/forums/viewtopic.php?id=4524
 file=install.php
 variable=$fluxbb_version
 subdir=1
