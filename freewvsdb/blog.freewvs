@@ -1,7 +1,7 @@
 [Serendipity]
 url=http://www.s9y.org/
 safe=1.5.4
-vuln=http://www.htbridge.ch/advisory/xss_vulnerability_in_serendipity.html
+vuln=CVE-2010-2957
 file=serendipity_config.inc.php
 variable=$serendipity['version']
 subdir=0
@@ -52,8 +52,8 @@ extra_match=[sblog_version_info]
 
 [Movable_Type]
 url=http://www.movabletype.com/
-safe=4.34
-vuln=CVE-2009-0752
+safe=5.02
+vuln=CVE-2010-1985
 file=mt.php
 variable=VERSION_ID
 subdir=1
