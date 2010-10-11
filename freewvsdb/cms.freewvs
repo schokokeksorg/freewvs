@@ -40,7 +40,7 @@ subdir=2
 url=http://typo3.org/
 safe=4.4.4
 old_safe=4.3.7
-vuln=http://typo3.org/teams/security/security-bulletins/typo3-sa-2010-020/
+vuln=CVE-2010-3714
 file=config_default.php
 variable=$TYPO_VERSION
 subdir=1
@@ -48,7 +48,7 @@ subdir=1
 [Joomla-deprecated]
 url=http://www.joomla.org/
 safe=1.5.21
-vuln=http://www.joomla.org/announcements/release-news/5300-joomla-1521-released.html
+vuln=CVE-2010-3712
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
@@ -58,7 +58,7 @@ subdir=1
 [Joomla]
 url=http://www.joomla.org/
 safe=1.5.21
-vuln=http://www.joomla.org/announcements/release-news/5300-joomla-1521-released.html
+vuln=CVE-2010-3712
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework

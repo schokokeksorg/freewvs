@@ -27,7 +27,7 @@ subdir=0
 [UseBB]
 url=http://www.usebb.net/
 safe=1.0.11
-vuln=http://www.usebb.net/community/topic.php?id=2501
+vuln=CVE-2010-3713
 file=common.php
 variable=USEBB_VERSION
 subdir=1
