@@ -74,7 +74,7 @@ subdir=1
 url=http://www.phorum.org/
 safe=5.2.15
 latest=5.2.15
-vuln=http://www.facebook.com/note.php?note_id=371190874581
+vuln=CVE-2010-1629
 file=common.php
 variable=define( "PHORUM"
 subdir=0
