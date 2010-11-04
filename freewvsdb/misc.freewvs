@@ -228,3 +228,12 @@ extra_match='Horde Groupware Webmail Edition'
 safe=1.2.7
 vuln=http://secunia.com/advisories/39860
 subdir=1
+
+[ResourceSpace]
+url=http://www.resourcespace.org/
+file=version.php
+variable=$productname='ResourceSpace';$productversion
+safe=3.5.1857
+latest=3.8.2144
+vuln=http://www.resourcespace.org/download.php
+subdir=1
