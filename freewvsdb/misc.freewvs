@@ -180,8 +180,8 @@ subdir=0
 
 [phplist]
 url=http://www.phplist.com/
-safe=2.10.10
-vuln=http://www.phplist.com/?lid=280
+safe=2.10.12
+vuln=http://mantis.phplist.com/changelog_page.php?version_id=60
 file=connect.php
 variable=define("VERSION"
 subdir=1
