@@ -28,9 +28,18 @@ subdir=1
 
 [TikiWiki]
 url=http://tikiwiki.org/
-safe=4.2
-old_safe=3.5
-vuln=CVE-2010-1134
+safe=5.3
+old_safe=3.8
+vuln=http://packetstormsecurity.org/files/view/94257/tikiwiki52-lfi.txt
+file=twversion.class.php
+variable=$this->version
+subdir=2
+
+[TikiWiki-old]
+url=http://tikiwiki.org/
+safe=5.3
+old_safe=3.8
+vuln=http://packetstormsecurity.org/files/view/94257/tikiwiki52-lfi.txt
 file=README
 variable=version
 extra_match=Tiki! The wiki
