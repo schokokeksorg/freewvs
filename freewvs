@@ -41,8 +41,8 @@ def versioncompare(safe_version, find_version):
 def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, style = None):
     appdir = '/'.join(os.path.abspath(vfilename).split('/')[:-1-subdir])
     if not style:
-        print "%(appname)s %(version)s (%(safeversion)s) %(vuln)s %(appdir)s" \
-              % vars()
+        print ("%(appname)s %(version)s (%(safeversion)s) %(vuln)s %(appdir)s" \
+              % vars())
     elif style=='fancy':
         print _("Directory: %(appdir)s") % vars()
         if safeversion!="ok":
@@ -175,13 +175,13 @@ for fdir in args:
                                 item['old_safe'].count(findversion)>0:
                             if opts.ALL:
                                 if opts.DEBUG:
-                                    print "File "+mfile
+                                    print ("File "+mfile)
                                 vulnprint(item['name'], findversion, \
                                           "ok", "", mfile, item['subdir'], \
                                           opts.OUTPUT)
                         else:
                             if opts.DEBUG:
-                                print "File "+mfile
+                                print ("File "+mfile)
                             safev="9999"
                             for ver in item['old_safe']:
                                 if (versioncompare(ver.split('.'), \
@@ -198,8 +198,8 @@ for fdir in args:
 
                     else:
                         if opts.DEBUG:
-                            print "regexp failed for " + \
-                                  item['name'] + " on " + mfile
+                            print ("regexp failed for " + \
+                                  item['name'] + " on " + mfile)
 
 if opts.OUTPUT == 'xml':
   print '</freewvs>'
