@@ -44,34 +44,34 @@ def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, style = No
         print ("%(appname)s %(version)s (%(safeversion)s) %(vuln)s %(appdir)s" \
               % vars())
     elif style=='fancy':
-        print _("Directory: %(appdir)s") % vars()
+        print (_("Directory: %(appdir)s") % vars())
         if safeversion!="ok":
             if safeversion!="":
-                print _("Vulnerable %(appname)s %(version)s found, please update to " \
-                        "%(safeversion)s or above.") % vars()
+                print (_("Vulnerable %(appname)s %(version)s found, please update to " \
+                        "%(safeversion)s or above.") % vars())
             else:
-                print _("Vulnerable %(appname)s %(version)s found, no fixed version available." \
-                        ) % vars()
+                print (_("Vulnerable %(appname)s %(version)s found, no fixed version available." \
+                        ) % vars())
             if vuln[:3] == "CVE":
-                print _("http://cve.mitre.org/cgi-bin/cvename.cgi?name=%(vuln)s") \
-                        % vars()
+                print (_("http://cve.mitre.org/cgi-bin/cvename.cgi?name=%(vuln)s") \
+                        % vars())
             else:
                 print (vuln)
         else:
-            print _("%(appname)s %(version)s found." ) % vars()
+            print (_("%(appname)s %(version)s found." ) % vars())
         print
     elif style=='xml':
         state = 'vulnerable'
         if safeversion == 'ok':
             state = 'ok'
-        print '  <app state="%s">' % state
-        print '    <appname>%s</appname>' % escape(appname)
-        print '    <version>%s</version>' % escape(version)
-        print '    <directory>%s</directory>' % escape(appdir)
+        print ('  <app state="%s">' % state)
+        print ('    <appname>%s</appname>' % escape(appname))
+        print ('    <version>%s</version>' % escape(version))
+        print ('    <directory>%s</directory>' % escape(appdir))
         if state == 'vulnerable':
-            print '    <safeversion>%s</safeversion>' % escape(safeversion)
-            print '    <vulninfo>%s</vulninfo>' % escape(vuln)
-        print '  </app>'
+            print ('    <safeversion>%s</safeversion>' % escape(safeversion))
+            print ('    <vulninfo>%s</vulninfo>' % escape(vuln))
+        print ('  </app>')
 
 
 pp = pprint.PrettyPrinter(indent=4)
@@ -131,8 +131,8 @@ if opts.DEBUG:
     pp.pprint(vdb)
 
 if opts.OUTPUT == 'xml':
-  print '<?xml version="1.0" ?>'
-  print '<freewvs>'
+  print ('<?xml version="1.0" ?>')
+  print ('<freewvs>')
 
 # start the search
 
@@ -202,4 +202,4 @@ for fdir in args:
                                   item['name'] + " on " + mfile)
 
 if opts.OUTPUT == 'xml':
-  print '</freewvs>'
+  print ('</freewvs>')
