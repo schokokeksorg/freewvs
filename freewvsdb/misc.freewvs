@@ -237,3 +237,11 @@ safe=3.5.1857
 latest=3.8.2144
 vuln=http://www.resourcespace.org/download.php
 subdir=1
+
+[OpenX]
+url=http://www.openx.org/
+file=constants.php
+variable=OA_VERSION
+safe=2.8.7
+vuln=http://blog.openx.org/09/security-update/
+subdir=0
