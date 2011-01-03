@@ -115,7 +115,7 @@ extra_match=Contenido Misc Configurations
 
 [SilverStripe]
 url=http://www.silverstripe.com
-safe=2.4.2
+safe=2.4.4
 vuln=http://www.silverstripe.org/security-releases/
 file=silverstripe_version
 variable=/open/modules/cms/
