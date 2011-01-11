@@ -245,3 +245,13 @@ variable=OA_VERSION
 safe=2.8.7
 vuln=http://blog.openx.org/09/security-update/
 subdir=0
+
+[apc.php]
+url=http://pecl.php.net/package/APC
+file=apc.php
+# this does not contain it's "real" version number, using the CVS id
+# instead - there's been an XSS pre 3.1.4.
+variable=$VERSION='$Id: apc.php
+safe=301867
+vuln=CVE-2010-3294
+subdir=0
