@@ -255,3 +255,12 @@ variable=$VERSION='$Id: apc.php
 safe=301867
 vuln=CVE-2010-3294
 subdir=0
+
+[webtrees]
+url=http://webtrees.net/
+file=session.php
+variable=define('WT_VERSION'
+safe=1.0.2
+latest=1.0.6
+vuln=http://wiki.webtrees.net/Release_History
+subdir=1
