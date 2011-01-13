@@ -264,3 +264,11 @@ safe=1.0.2
 latest=1.0.6
 vuln=http://wiki.webtrees.net/Release_History
 subdir=1
+
+[PhpGedView]
+url=http://phpgedview.sourceforge.net/
+file=session.php
+variable=define('PGV_VERSION'
+safe=
+vuln=http://www.exploit-db.com/exploits/15913/
+subdir=1
