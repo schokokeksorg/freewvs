@@ -34,9 +34,9 @@ subdir=1
 
 [Vanilla]
 url=http://vanillaforums.com/
-safe=2.0.10
-latest=2.0.11
-vuln=CVE-2010-4264
+safe=2.0.17
+latest=2.0.17.6
+vuln=http://yehg.net/lab/pr0js/advisories/[vanilla_forums-2.0.16]_cross_site_scripting
 file=version.php
 variable=APPLICATION_VERSION
 subdir=1
@@ -44,9 +44,9 @@ extra_match=define('APPLICATION', 'Vanilla');
 
 [Vanilla2]
 url=http://vanillaforums.com/
-safe=2.0.10
-latest=2.0.11
-vuln=CVE-2010-4264
+safe=2.0.17
+latest=2.0.17.6
+vuln=http://yehg.net/lab/pr0js/advisories/[vanilla_forums-2.0.16]_cross_site_scripting
 file=index.php
 variable=APPLICATION_VERSION
 subdir=0
