@@ -189,7 +189,7 @@ subdir=1
 [Piwik]
 url=http://piwik.org/
 safe=1.1
-vuln=http://piwik.org/blog/2011/01/piwik-1-1-security-advisory/
+vuln=CVE-2011-0004
 file=Version.php
 variable=const VERSION
 subdir=1
@@ -243,7 +243,7 @@ url=http://www.openx.org/
 file=constants.php
 variable=OA_VERSION
 safe=2.8.7
-vuln=http://blog.openx.org/09/security-update/
+vuln=CVE-2009-4140
 subdir=0
 
 [apc.php]
@@ -270,5 +270,5 @@ url=http://phpgedview.sourceforge.net/
 file=session.php
 variable=define('PGV_VERSION'
 safe=
-vuln=http://www.exploit-db.com/exploits/15913/
+vuln=2011-0405
 subdir=1
