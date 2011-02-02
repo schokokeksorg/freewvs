@@ -6,13 +6,21 @@ file=funcs.php
 variable=PHORMER_VERSION
 subdir=0
 
-[Gallery]
+[Gallery2]
 url=http://gallery.menalto.com/
 safe=2.2.6
 vuln=CVE-2008-3662
 file=module.inc
 variable=setGalleryVersion
 subdir=2
+
+[Gallery3]
+url=http://gallery.menalto.com/
+safe=3.0.1
+vuln=CVE-2010-4353
+file=gallery.php
+variable=const VERSION
+subdir=3
 
 [Coppermine]
 url=http://coppermine-gallery.net/
