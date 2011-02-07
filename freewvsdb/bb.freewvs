@@ -1,7 +1,7 @@
 [phpBB]
 url=http://www.phpbb.com
-safe=3.0.7
-vuln=CVE-2010-1627
+safe=3.0.8
+vuln=http://www.phpbb.com/support/documents.php?mode=changelog&version=3#v307-PL1
 file=CHANGELOG.html
 variable=Changes since
 add_minor=1
