@@ -52,8 +52,8 @@ extra_match=define('APPLICATION', 'Vanilla');
 
 [Simple_Machines_Forum]
 url=http://www.simplemachines.org/
-safe=1.1.11
-vuln=CVE-2010-2485
+safe=1.1.13
+vuln=http://www.simplemachines.org/community/index.php?P=2fd5266e000b83407b05d142bd006d4a&topic=421547.0
 file=index.php
 variable=$forum_version
 subdir=0
