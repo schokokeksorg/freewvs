@@ -34,9 +34,8 @@ subdir=1
 
 [Vanilla]
 url=http://vanillaforums.com/
-safe=2.0.17
-latest=2.0.17.6
-vuln=CVE-2011-0526
+safe=2.0.17.6
+vuln=CVE-2011-1009
 file=version.php
 variable=APPLICATION_VERSION
 subdir=1
