@@ -272,3 +272,11 @@ variable=define('PGV_VERSION'
 safe=
 vuln=2011-0405
 subdir=1
+
+[status.net]
+url=http://status.net
+file=common.php
+variable=define('STATUSNET_BASE_VERSION'
+safe=0.9.4
+vuln=http://status.net/2010/08/16/statusnet-0-9-4-released
+subdir=1
