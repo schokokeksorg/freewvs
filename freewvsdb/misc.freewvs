@@ -123,16 +123,16 @@ extra_match=define("TITLE", "FTP Admin");
 
 [RoundCube-deprecated]
 url=http://roundcube.net
-safe=0.2.1
-vuln=http://sourceforge.net/forum/forum.php?forum_id=927958
+safe=0.5.1
+vuln=http://trac.roundcube.net/wiki/Changelog
 file=index.php
 variable=RCMAIL_VERSION
 subdir=0
 
 [RoundCube]
 url=http://roundcube.net
-safe=0.2.1
-vuln=http://sourceforge.net/forum/forum.php?forum_id=927958
+safe=0.5.1
+vuln=http://trac.roundcube.net/wiki/Changelog
 file=iniset.php
 variable=RCMAIL_VERSION
 subdir=2
