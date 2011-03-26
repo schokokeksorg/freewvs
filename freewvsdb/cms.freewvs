@@ -45,7 +45,7 @@ file=config_default.php
 variable=$TYPO_VERSION
 subdir=1
 
-[Joomla-deprecated]
+[Joomla-1]
 url=http://www.joomla.org/
 safe=1.5.22
 vuln=CVE-2010-4166
@@ -55,7 +55,7 @@ extra_match=@package Joomla
 subdir=1
 
 # 1.5 has changed identification
-[Joomla]
+[Joomla-1_5]
 url=http://www.joomla.org/
 safe=1.5.22
 vuln=CVE-2010-4166
@@ -63,6 +63,15 @@ file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
 subdir=2
+
+# 1.6 has changed identification again
+[Joomla]
+url=http://www.joomla.org/
+safe=1.6.1
+vuln=CVE-2011-1152
+file=joomla.xml
+variable=<version>
+subdir=0
 
 [Mambo]
 url=http://www.source.mambo-foundation.org/
