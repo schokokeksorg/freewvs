@@ -68,6 +68,7 @@ subdir=2
 [Joomla]
 url=http://www.joomla.org/
 safe=1.6.1
+old_safe=1.5.22
 vuln=CVE-2011-1152
 file=joomla.xml
 variable=<version>
