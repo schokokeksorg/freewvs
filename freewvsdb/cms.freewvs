@@ -47,8 +47,8 @@ subdir=1
 
 [Joomla-1]
 url=http://www.joomla.org/
-safe=1.5.22
-vuln=CVE-2010-4166
+safe=1.5.23
+vuln=http://www.joomla.org/announcements/release-news/5367-joomla-1523-released.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
@@ -57,8 +57,8 @@ subdir=1
 # 1.5 has changed identification
 [Joomla-1_5]
 url=http://www.joomla.org/
-safe=1.5.22
-vuln=CVE-2010-4166
+safe=1.5.23
+vuln=http://www.joomla.org/announcements/release-news/5367-joomla-1523-released.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
