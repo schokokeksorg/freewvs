@@ -13,6 +13,7 @@ vuln=http://wordpress.org/news/2011/04/wordpress-3-1-1/
 file=version.php
 variable=$wp_version
 subdir=1
+extra_match=The WordPress version string
 
 [SimplePHPBlog]
 url=http://www.simplephpblog.com/
