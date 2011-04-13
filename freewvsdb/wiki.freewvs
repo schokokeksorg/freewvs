@@ -1,8 +1,8 @@
 [MediaWiki]
 url=http://www.mediawiki.org/
-safe=1.16.2
-latest=1.16.2
-vuln=CVE-2011-0047
+safe=1.16.3
+latest=1.16.3
+vuln=http://lists.wikimedia.org/pipermail/mediawiki-announce/2011-April/000096.html
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
