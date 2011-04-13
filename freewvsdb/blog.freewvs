@@ -53,8 +53,8 @@ extra_match=[sblog_version_info]
 
 [Movable_Type]
 url=http://www.movabletype.com/
-safe=5.02
-vuln=CVE-2010-1985
+safe=5.04
+vuln=CVE-2010-3921
 file=mt.php
 variable=VERSION_ID
 subdir=1
@@ -70,8 +70,8 @@ subdir=0
 
 [DotClear]
 url=http://www.dotclear.net/
-safe=2.1.5
-vuln=http://fr.dotclear.org/blog/post/2009/02/05/Dotclear-2.1.5
+safe=2.2.3
+vuln=http://fr.dotclear.org/blog/post/2011/04/01/Dotclear-2.2.3
 file=LISEZMOI.txt
 variable=DotClear
 subdir=0
