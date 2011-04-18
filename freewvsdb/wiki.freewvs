@@ -2,7 +2,7 @@
 url=http://www.mediawiki.org/
 safe=1.16.4
 latest=1.16.4
-vuln=http://lists.wikimedia.org/pipermail/mediawiki-announce/2011-April/000097.html
+vuln=CVE-2011-1587
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
