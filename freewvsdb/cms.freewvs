@@ -17,13 +17,13 @@ subdir=2
 
 [Drupal]
 url=http://www.drupal.org/
-safe=6.18
-old_safe=5.23
+safe=7.1
+old_safe=6.21
 vuln=CVE-2010-3091
 file=system.module
 variable=define('VERSION'
 subdir=2
-latest=6.19
+latest=7.2
 
 [PHPNuke]
 url=http://phpnuke.org/
