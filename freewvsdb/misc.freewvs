@@ -19,8 +19,8 @@ subdir=1
 # old mantis versions behave different
 [Mantis-deprecated]
 url=http://www.mantisbt.org/
-safe=1.2.4
-vuln=CVE-2010-4348
+safe=1.2.5
+vuln=http://www.mantisbt.org/bugs/view.php?id=12630
 file=config_defaults_inc.php
 variable=$g_mantis_version
 subdir=0
