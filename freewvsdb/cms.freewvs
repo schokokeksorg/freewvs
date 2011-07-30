@@ -17,9 +17,9 @@ subdir=2
 
 [Drupal]
 url=http://www.drupal.org/
-safe=7.1
+safe=7.7
 old_safe=6.22
-vuln=CVE-2010-3091
+vuln=http://drupal.org/node/1231510
 file=system.module
 variable=define('VERSION'
 subdir=2
