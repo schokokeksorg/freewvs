@@ -19,16 +19,16 @@ subdir=1
 # old mantis versions behave different
 [Mantis-deprecated]
 url=http://www.mantisbt.org/
-safe=1.2.5
-vuln=http://www.mantisbt.org/bugs/view.php?id=12630
+safe=1.2.7
+vuln=CVE-2011-2938
 file=config_defaults_inc.php
 variable=$g_mantis_version
 subdir=0
 
 [Mantis]
 url=http://www.mantisbt.org/
-safe=1.2.4
-vuln=CVE-2010-4348
+safe=1.2.7
+vuln=CVE-2011-2938
 file=constant_inc.php
 variable=MANTIS_VERSION
 subdir=1
@@ -124,7 +124,7 @@ extra_match=define("TITLE", "FTP Admin");
 [RoundCube-deprecated]
 url=http://roundcube.net
 safe=0.5.4
-vuln=http://sourceforge.net/news/?group_id=139281&id=302768
+vuln=CVE-2011-2937
 file=index.php
 variable=RCMAIL_VERSION
 subdir=0

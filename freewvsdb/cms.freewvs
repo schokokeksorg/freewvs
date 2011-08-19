@@ -1,7 +1,7 @@
 [WebsiteBaker]
 url=http://www.websitebaker.org/
 safe=2.8.1
-vuln=http://www.websitebaker2.org/posts/sicherheitsluecke-backup-modul-in-wb-core-12.php
+vuln=CVE-2011-2933
 file=version.php
 variable=VERSION
 extra_match=Website Baker Project
