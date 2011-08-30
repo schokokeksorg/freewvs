@@ -131,8 +131,8 @@ subdir=0
 
 [RoundCube]
 url=http://roundcube.net
-safe=0.5.1
-vuln=CVE-2011-1491
+safe=0.5.4
+vuln=CVE-2011-2937
 file=iniset.php
 variable=RCMAIL_VERSION
 subdir=2
