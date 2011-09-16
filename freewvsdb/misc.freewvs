@@ -1,8 +1,7 @@
 [phpMyAdmin]
 url=http://www.phpmyadmin.net/
-safe=3.4.4
-old_safe=3.3.10.4
-vuln=CVE-2011-3181
+safe=3.4.5
+vuln=http://www.phpmyadmin.net/home_page/security/PMASA-2011-14.php
 file=Config.class.php
 variable=PMA_VERSION
 subdir=1
@@ -20,7 +19,7 @@ subdir=1
 [Mantis-deprecated]
 url=http://www.mantisbt.org/
 safe=1.2.8
-vuln=http://www.mantisbt.org/bugs/view.php?id=13191
+vuln=CVE-2011-3356
 file=config_defaults_inc.php
 variable=$g_mantis_version
 subdir=0
@@ -28,7 +27,7 @@ subdir=0
 [Mantis]
 url=http://www.mantisbt.org/
 safe=1.2.8
-vuln=http://www.mantisbt.org/bugs/view.php?id=13191
+vuln=CVE-2011-3356
 file=constant_inc.php
 variable=MANTIS_VERSION
 subdir=1
