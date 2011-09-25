@@ -277,5 +277,5 @@ url=http://status.net
 file=common.php
 variable=define('STATUSNET_BASE_VERSION'
 safe=0.9.9
-vuln=http://status.net/2011/08/02/security-alert-for-all-versions-of-statusnet
+vuln=CVE-2011-3370
 subdir=1
