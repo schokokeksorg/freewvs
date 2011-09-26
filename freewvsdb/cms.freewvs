@@ -38,9 +38,8 @@ subdir=2
 
 [Typo3]
 url=http://typo3.org/
-safe=4.4.5
-old_safe=4.3.9
-vuln=http://typo3.org/teams/security/security-bulletins/typo3-sa-2010-022/
+safe=4.5.6
+vuln=http://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2011-002/
 file=config_default.php
 variable=$TYPO_VERSION
 subdir=1
