@@ -179,8 +179,8 @@ subdir=0
 
 [phplist]
 url=http://www.phplist.com/
-safe=2.10.13
-vuln=CVE-2011-0748
+safe=2.10.17
+vuln=http://secunia.com/advisories/45495
 file=connect.php
 variable=define("VERSION"
 subdir=1
