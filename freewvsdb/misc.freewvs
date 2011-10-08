@@ -104,8 +104,8 @@ subdir=1
 
 [phpPgAdmin]
 url=http://phppgadmin.sourceforge.net/
-safe=4.2.2
-vuln=CVE-2008-5587
+safe=5.0.3
+vuln=CVE-2011-3598
 file=lib.inc.php
 variable=$appVersion
 subdir=1
