@@ -52,8 +52,8 @@ extra_match=define('APPLICATION', 'Vanilla');
 
 [Vanilla2]
 url=http://vanillaforums.com/
-safe=2.0.17.6
-vuln=CVE-2011-1009
+safe=2.0.17.10
+vuln=http://vanillaforums.org/discussion/14397/vanilla-2.0.17-released
 file=index.php
 variable=APPLICATION_VERSION
 subdir=0
