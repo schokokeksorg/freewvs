@@ -18,8 +18,8 @@ extra_match=DeluxeBB
 
 [PunBB]
 url=http://punbb.org/
-safe=1.3.4
-vuln=CVE-2009-4894
+safe=1.3.6
+vuln=CVE-2011-3371
 file=install.php
 variable=$punbb_version
 subdir=0
