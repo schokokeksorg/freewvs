@@ -61,27 +61,27 @@ extra_match=define('APPLICATION', 'Vanilla');
 
 [Simple_Machines_Forum]
 url=http://www.simplemachines.org/
-safe=1.1.14
-vuln=http://www.simplemachines.org/community/index.php?P=bd0135c186399b95ab65e04eded4e6bd&topic=437305.0
+safe=2.0.1
+old_safe=1.1.15
+vuln=http://www.simplemachines.org/community/index.php?P=adfcf10856d3f74172b76dd384b6ade6&topic=452888.0
 file=index.php
 variable=$forum_version
 subdir=0
-extra_match=SMF: Simple Machines Forum
+extra_match=Simple Machines Forum
 
 [MyBB]
 url=http://www.mybboard.net/
-safe=1.4.12
-latest=1.6
-vuln=http://blog.mybboard.net/2010/04/13/mybb-1-4-12-released-security-maintenance-update/
+safe=1.6.4
+vuln=http://blog.mybb.com/2009/06/26/mybb-148-released-maintenance-security-release/
 file=class_core.php
 variable=$version
 subdir=1
 
 [Phorum]
 url=http://www.phorum.org/
-safe=5.2.15
-latest=5.2.15
-vuln=CVE-2010-1629
+safe=5.2.18
+latest=5.2.18
+vuln=http://www.phorum.org/phorum5/read.php?64,149588
 file=common.php
 variable=define( "PHORUM"
 subdir=0
@@ -94,10 +94,19 @@ file=config.inc.php
 variable=define('PACKAGE_VERSION',
 subdir=0
 
-[FluxBB]
+[FluxBB12]
 url=http://fluxbb.org/
-safe=1.2.23
-vuln=http://fluxbb.org/forums/viewtopic.php?id=4524
+safe=1.4.7
+vuln=http://fluxbb.org/forums/viewtopic.php?id=5751
 file=install.php
 variable=$fluxbb_version
+subdir=1
+
+[FluxBB]
+url=http://fluxbb.org/
+safe=1.4.7
+vuln=http://fluxbb.org/forums/viewtopic.php?id=5751
+file=common.php
+variable=FORUM_VERSION
+extra_match=FORUM_DB_REVISION
 subdir=1
