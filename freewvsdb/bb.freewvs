@@ -63,7 +63,7 @@ extra_match=define('APPLICATION', 'Vanilla');
 url=http://www.simplemachines.org/
 safe=2.0.1
 old_safe=1.1.15
-vuln=http://www.simplemachines.org/community/index.php?P=adfcf10856d3f74172b76dd384b6ade6&topic=452888.0
+vuln=CVE-2011-3615
 file=index.php
 variable=$forum_version
 subdir=0
