@@ -36,7 +36,7 @@ subdir=0
 url=http://www.usebb.net/
 safe=1.0.12
 latest=1.0.13
-vuln=http://www.usebb.net/community/topic-2571.html
+vuln=CVE-2011-3611
 file=common.php
 variable=USEBB_VERSION
 subdir=1
@@ -44,7 +44,7 @@ subdir=1
 [Vanilla]
 url=http://vanillaforums.com/
 safe=2.0.17.10
-vuln=http://vanillaforums.org/discussion/14397/vanilla-2.0.17-released
+vuln=CVE-2011-3614
 file=version.php
 variable=APPLICATION_VERSION
 subdir=1
@@ -53,7 +53,7 @@ extra_match=define('APPLICATION', 'Vanilla');
 [Vanilla2]
 url=http://vanillaforums.com/
 safe=2.0.17.10
-vuln=http://vanillaforums.org/discussion/14397/vanilla-2.0.17-released
+vuln=CVE-2011-3614
 file=index.php
 variable=APPLICATION_VERSION
 subdir=0
