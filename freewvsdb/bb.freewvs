@@ -81,7 +81,7 @@ subdir=1
 url=http://www.phorum.org/
 safe=5.2.18
 latest=5.2.18
-vuln=http://www.phorum.org/phorum5/read.php?64,149588
+vuln=CVE-2011-3622
 file=common.php
 variable=define( "PHORUM"
 subdir=0
@@ -97,7 +97,7 @@ subdir=0
 [FluxBB12]
 url=http://fluxbb.org/
 safe=1.4.7
-vuln=http://fluxbb.org/forums/viewtopic.php?id=5751
+vuln=CVE-2011-3621
 file=install.php
 variable=$fluxbb_version
 subdir=1
