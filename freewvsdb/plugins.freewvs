@@ -29,3 +29,11 @@ vuln=CVE-2010-4521
 file=views.info
 variable=version = "6.x
 subdir=0
+
+[Wordpress-timthumb]
+url=http://code.google.com/p/timthumb/
+safe=2.0
+vuln=http://markmaunder.com/2011/08/01/zero-day-vulnerability-in-many-wordpress-themes/
+file=timthumb.php
+variable=define ('VERSION',
+subdir=0
