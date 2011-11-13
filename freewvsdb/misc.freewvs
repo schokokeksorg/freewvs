@@ -232,8 +232,8 @@ subdir=1
 url=http://www.resourcespace.org/
 file=version.php
 variable=$productname='ResourceSpace';$productversion
-safe=3.5.1857
-latest=3.8.2144
+safe=4.2.2833
+latest=4.3.2912
 vuln=http://www.resourcespace.org/download.php
 subdir=1
 
