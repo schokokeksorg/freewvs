@@ -123,8 +123,8 @@ extra_match=/open/modules/cms/
 
 [CMSMadeSimple]
 url=http://www.cmsmadesimple.org/
-safe=1.9.4.2
-vuln=http://www.cmsmadesimple.org/2011/05/CMSMS-1-9-4-2/
+safe=1.9.4.3
+vuln=http://www.cmsmadesimple.org/2011/08/Announcing-CMSMS-1-9-4-3---Security-Release/
 file=version.php
 variable=$CMS_VERSION
 subdir=0
