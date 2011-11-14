@@ -87,8 +87,8 @@ subdir=0
 
 [Ampache]
 url=http://ampache.org/
-safe=3.3.3.5  
-vuln=CVE-2007-4437
+safe=3.5.3
+vuln=http://ampache.org/2009/12/20/3-5-3-security-release/
 file=init.php
 variable=$results['version']
 subdir=1
@@ -260,9 +260,9 @@ subdir=0
 url=http://webtrees.net/
 file=session.php
 variable=define('WT_VERSION'
-safe=1.0.2
-latest=1.0.6
-vuln=http://wiki.webtrees.net/Release_History
+safe=1.2.4
+latest=1.2.4
+vuln=http://webtrees.net/en/forums/2-open-discussion/16423-webtrees-124
 subdir=1
 
 [PhpGedView]
