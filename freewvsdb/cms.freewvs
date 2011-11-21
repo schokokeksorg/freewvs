@@ -1,7 +1,7 @@
 [WebsiteBaker]
 url=http://www.websitebaker.org/
 safe=2.8.2
-vuln=http://www.websitebaker2.org/posts/security-vulnerability-backup-module-in-wb-core-13.php
+vuln=CVE-2011-4322
 file=version.php
 variable=VERSION
 extra_match=Website Baker Project
@@ -20,7 +20,7 @@ url=http://www.drupal.org/
 safe=7.7
 latest=7.9
 old_safe=6.22
-vuln=http://drupal.org/node/1231510
+vuln=CVE-2011-4323
 file=system.module
 variable=define('VERSION'
 subdir=2
@@ -48,7 +48,7 @@ subdir=1
 [Joomla-1]
 url=http://www.joomla.org/
 safe=1.5.25
-vuln=http://developer.joomla.org/security/news/9-security/10-core-security/375-20111103-core-password-change
+vuln=CVE-2011-4321
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
