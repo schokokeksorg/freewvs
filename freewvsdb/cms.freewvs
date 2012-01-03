@@ -133,8 +133,8 @@ subdir=0
 
 [e107]
 url=http://e107.org/
-safe=0.7.20
-vuln=http://e107.org/e107_plugins/forum/forum_viewtopic.php?196978
+safe=1.0.0
+vuln=http://osvdb.org/show/osvdb/78047
 file=ver.php
 variable=$e107info['e107_version']
 subdir=0
