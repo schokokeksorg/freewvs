@@ -235,7 +235,7 @@ file=version.php
 variable=$productname='ResourceSpace';$productversion
 safe=4.2.2833
 latest=4.3.2912
-vuln=http://www.resourcespace.org/download.php
+vuln=CVE-2011-4311
 subdir=1
 
 [OpenX]
