@@ -1,12 +1,13 @@
 [MediaWiki]
 url=http://www.mediawiki.org/
-safe=1.17.1
-latest=1.18.0
-vuln=http://lists.wikimedia.org/pipermail/mediawiki-announce/2011-November/000104.html
+safe=1.18.1
+old_safe=1.17.2
+latest=1.18.1
+vuln=CVE-2012-0046
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
-download=http://download.wikimedia.org/mediawiki/1.16/mediawiki-__VERSION__.tar.gz
+download=http://download.wikimedia.org/mediawiki/1.18/mediawiki-__VERSION__.tar.gz
 upgradeinstructions=http://www.mediawiki.org/wiki/Upgrade
 
 [TWiki]
