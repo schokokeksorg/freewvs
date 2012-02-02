@@ -15,16 +15,14 @@ file=tcms_version.xml
 variable=release
 subdir=2
 
-[Drupal]
+[Drupal6]
 url=http://www.drupal.org/
-safe=7.7
-latest=7.9
-old_safe=6.23
-vuln=CVE-2011-2726
+safe=6.23
+latest=6.24
+vuln=DRUPAL-SA-CORE-2012-001
 file=system.module
 variable=define('VERSION'
 subdir=2
-latest=7.2
 
 [PHPNuke]
 url=http://phpnuke.org/
