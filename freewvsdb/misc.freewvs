@@ -188,8 +188,8 @@ subdir=1
 
 [Piwik]
 url=http://piwik.org/
-safe=1.6
-vuln=http://piwik.org/blog/2011/10/piwik-1-6/
+safe=1.7
+vuln=http://piwik.org/blog/2012/02/7775/
 file=Version.php
 variable=const VERSION
 subdir=1
