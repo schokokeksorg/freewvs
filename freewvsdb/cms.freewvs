@@ -63,6 +63,16 @@ variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
 subdir=2
 
+[Joomla-2]
+url=http://www.joomla.org/
+safe=2.5.3
+vuln=CVE-2012-9999
+file=joomla.xml
+variable=<version>
+#extra_match=@package	Joomla.Framework
+extra_match=<name>files_joomla</name>
+subdir=0
+
 [Mambo]
 url=http://www.source.mambo-foundation.org/
 safe=4.6.5
