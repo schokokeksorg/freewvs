@@ -298,3 +298,12 @@ extra_match=$dbversionnumber
 safe=1.91
 vuln=CVE-2011-3752
 subdir=0
+
+[webcalendar]
+url=http://www.k5n.us/webcalendar.php
+file=config.php
+variable=$PROGRAM_VERSION
+extra_match=@package WebCalendar
+safe=1.2.5
+vuln=CVE-2012-1496
+subdir=1
