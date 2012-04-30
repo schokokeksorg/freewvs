@@ -149,8 +149,9 @@ subdir=0
 
 [SPIP]
 url=http://www.spip.net/
-safe=2.0.9
-vuln=CVE-2009-3041
+safe=2.1.13
+old_safe=2.0.18
+vuln=http://archives.rezo.net/archives/spip-en.mbox/U5QUZ6WJRAJC7H5BR7W5SQG6WCD3PXL7/
 file=inc_version.php
 variable=$spip_version_branche
 subdir=1
