@@ -18,16 +18,16 @@ subdir=1
 # old mantis versions behave different
 [Mantis-deprecated]
 url=http://www.mantisbt.org/
-safe=1.2.8
-vuln=CVE-2011-3356
+safe=1.2.9
+vuln=CVE-2012-1118
 file=config_defaults_inc.php
 variable=$g_mantis_version
 subdir=0
 
 [Mantis]
 url=http://www.mantisbt.org/
-safe=1.2.8
-vuln=CVE-2011-3356
+safe=1.2.9
+vuln=CVE-2012-1118
 file=constant_inc.php
 variable=MANTIS_VERSION
 subdir=1
