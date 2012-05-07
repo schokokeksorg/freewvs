@@ -8,16 +8,16 @@ subdir=0
 
 [Gallery2]
 url=http://gallery.menalto.com/
-safe=2.2.6
-vuln=CVE-2008-3662
+safe=2.3.2
+vuln=CVE-2012-1113
 file=module.inc
 variable=setGalleryVersion
 subdir=2
 
 [Gallery3]
 url=http://gallery.menalto.com/
-safe=3.0.1
-vuln=CVE-2010-4353
+safe=3.0.3
+vuln=CVE-2012-1113
 file=gallery.php
 variable=const VERSION
 subdir=3
