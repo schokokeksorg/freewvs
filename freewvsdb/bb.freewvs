@@ -72,7 +72,7 @@ extra_match=Simple Machines Forum
 [MyBB]
 url=http://www.mybboard.net/
 safe=1.6.7
-vuln=http://blog.mybb.com/2012/04/01/mybb-1-6-7-update-1-8-development/
+vuln=CVE-2012-2324
 file=class_core.php
 variable=$version
 subdir=1
