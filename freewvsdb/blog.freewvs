@@ -1,7 +1,7 @@
 [Serendipity]
 url=http://www.s9y.org/
-safe=1.6
-vuln=CVE-2011-4090
+safe=1.6.1
+vuln=CVE-2012-2331
 file=serendipity_config.inc.php
 variable=$serendipity['version']
 subdir=0
