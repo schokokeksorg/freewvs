@@ -123,9 +123,9 @@ extra_match=http://www.pn-cms.de
 
 [Contenido]
 url=http://www.contenido.org/
-safe=4.8.11
-latest=4.8.13
-vuln=http://forum.contenido.org/viewtopic.php?f=25&t=23254
+safe=4.8.15
+latest=4.8.15
+vuln=http://www.contenido.org/de/front_content.php?idcat=107&idart=1789&client=6&lang=3
 file=config.misc.php
 variable=$cfg['version']
 subdir=1
