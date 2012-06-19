@@ -75,7 +75,7 @@ subdir=2
 [Joomla-2]
 url=http://www.joomla.org/
 safe=2.5.5
-vuln=http://developer.joomla.org/security/news/470-20120601-core-privilege-escalation.html?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+JoomlaSecurityNews+%28Joomla%21+Security+News%29
+vuln=CVE-2012-2747
 file=joomla.xml
 variable=<version>
 #extra_match=@package	Joomla.Framework
