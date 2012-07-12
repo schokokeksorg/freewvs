@@ -1,6 +1,6 @@
 # German translations for freewvs package.
 # Copyright (C) 2008 Hanno Boeck
-# This file is distributed under the GPL v3.
+# This file is distributed under the CC0.
 # Hanno Boeck <hanno@hboeck.de>, 2008.
 #
 msgid ""

@@ -4,23 +4,24 @@
 #
 # http://source.schokokeks.org/freewvs/
 #
-# Copyright 2007 Hanno Boeck, schokokeks.org <hanno@schokokeks.org>
+# Written 2007-2012 by schokokeks.org Hosting, http://www.schokokeks.org
 #
 # Contributions by
-# Fabian Fingerle <fabian@datensalat.eu>
+# Hanno Boeck, http://hboeck.de/
+# Fabian Fingerle, http://www.fabian-fingerle.de/
+# Bernd Wurst, http://bwurst.org/
 #
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+# To the extent possible under law, the author(s) have dedicated all copyright
+# and related and neighboring rights to this software to the public domain
+# worldwide. This software is distributed without any warranty.
 #
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.    See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.    If not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the CC0 Public Domain Dedication along
+# with this software. If not, see 
+# http://creativecommons.org/publicdomain/zero/1.0/
+# Nevertheless, in case you use a significant part of this code, we ask (but
+# not require, see the license) that you keep the authors' names in place and
+# return your changes to the public. We would be especially happy if you tell
+# us what you're going to do with this code.
 
 import ConfigParser, os, glob, pprint, re, optparse, sys, gettext
 from xml.sax.saxutils import escape
