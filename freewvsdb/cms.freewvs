@@ -55,8 +55,8 @@ subdir=1
 
 [Joomla-1]
 url=http://www.joomla.org/
-safe=1.5.25
-vuln=CVE-2011-4321
+safe=1.5.26
+vuln=http://developer.joomla.org/security/news/396-20120305-core-password-change.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
@@ -65,8 +65,8 @@ subdir=1
 # 1.5 has changed identification
 [Joomla-1_5]
 url=http://www.joomla.org/
-safe=1.5.25
-vuln=http://developer.joomla.org/security/news/9-security/10-core-security/375-20111103-core-password-change
+safe=1.5.26
+vuln=http://developer.joomla.org/security/news/396-20120305-core-password-change.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
