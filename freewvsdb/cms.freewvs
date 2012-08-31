@@ -164,3 +164,23 @@ vuln=http://archives.rezo.net/archives/spip-en.mbox/U5QUZ6WJRAJC7H5BR7W5SQG6WCD3
 file=inc_version.php
 variable=$spip_version_branche
 subdir=1
+
+[contao]
+url=http://contao.org/
+safe=2.11.4
+vuln=https://github.com/contao/core/issues/4427
+latest=2.11.5
+file=CHANGELOG.md
+variable=Version
+extra_match=Contao Open Source CMS Changelog
+subdir=0
+
+[contao-old]
+url=http://contao.org/
+safe=2.11.4
+vuln=https://github.com/contao/core/issues/4427
+latest=2.11.5
+file=CHANGELOG.txt
+variable=Version
+extra_match=Contao Open Source CMS Changelog
+subdir=0
