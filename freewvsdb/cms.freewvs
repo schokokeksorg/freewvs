@@ -48,7 +48,7 @@ subdir=2
 url=http://typo3.org/
 safe=4.7.4
 old_safe=4.6.12,4.5.19
-vuln=https://typo3.org/support/teams-security-security-bulletins/security-bulletins-single-view/article/several-vulnerabilities-in-typo3-core/
+vuln=CVE-2012-3527
 file=config_default.php
 variable=$TYPO_VERSION
 subdir=1
@@ -56,7 +56,7 @@ subdir=1
 [Joomla-1]
 url=http://www.joomla.org/
 safe=1.5.26
-vuln=http://developer.joomla.org/security/news/396-20120305-core-password-change.html
+vuln=CVE-2012-1598
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
@@ -66,7 +66,7 @@ subdir=1
 [Joomla-1_5]
 url=http://www.joomla.org/
 safe=1.5.26
-vuln=http://developer.joomla.org/security/news/396-20120305-core-password-change.html
+vuln=CVE-2012-1598
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
@@ -168,7 +168,7 @@ subdir=1
 [contao]
 url=http://contao.org/
 safe=2.11.4
-vuln=https://github.com/contao/core/issues/4427
+vuln=CVE-2012-4383
 latest=2.11.5
 file=CHANGELOG.md
 variable=Version
@@ -178,7 +178,7 @@ subdir=0
 [contao-old]
 url=http://contao.org/
 safe=2.11.4
-vuln=https://github.com/contao/core/issues/4427
+vuln=CVE-2012-4383
 latest=2.11.5
 file=CHANGELOG.txt
 variable=Version
