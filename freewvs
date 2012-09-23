@@ -143,7 +143,10 @@ for fdir in args:
             for item in vdb:
                 if filename == item['file']:
                     mfile = os.path.join(root, filename)
-                    file = open(mfile)
+                    try:
+                      file = open(mfile)
+                    except:
+                      continue
                     filestr = file.read()
                     file.close()
 
