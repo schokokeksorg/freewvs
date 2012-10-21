@@ -308,3 +308,12 @@ extra_match=@package WebCalendar
 safe=1.2.5
 vuln=CVE-2012-1496
 subdir=1
+
+[owncloud]
+url=http://owncloud.org/
+file=util.php
+variable=return '
+extra_match=OC_Util
+subdir=1
+vuln=CVE-2012-5056
+safe=4.0.8
