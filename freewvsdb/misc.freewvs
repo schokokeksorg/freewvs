@@ -206,8 +206,8 @@ extra_match=* Wishlist -
 
 [awstats]
 url=http://awstats.sourceforge.net/
-safe=7.0
-vuln=CVE-2010-4369
+safe=7.1
+vuln=CVE-2012-4547
 file=awstats.pl
 variable=$VERSION  =
 subdir=0
