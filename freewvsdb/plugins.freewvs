@@ -37,3 +37,13 @@ vuln=CVE-2011-4106
 file=timthumb.php
 variable=define ('VERSION',
 subdir=0
+
+[Joomla-JCE]
+url=http://www.joomlacontenteditor.net/
+safe=2.1
+vuln=CVE-2012-2902
+file=editor.php
+variable=$_version
+extra_match=JCE class
+subdir=3
+
