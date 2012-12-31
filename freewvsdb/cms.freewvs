@@ -31,7 +31,7 @@ latest=7.18
 vuln=CVE-2012-5651
 file=bootstrap.inc
 variable=define('VERSION'
-subdir=2
+subdir=1
 
 [PHPNuke]
 url=http://phpnuke.org/
