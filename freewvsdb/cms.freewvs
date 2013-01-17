@@ -17,18 +17,18 @@ subdir=2
 
 [Drupal6]
 url=http://www.drupal.org/
-safe=6.27
-latest=6.27
-vuln=CVE-2012-5651
+safe=6.28
+latest=6.28
+vuln=http://drupal.org/SA-CORE-2013-001
 file=system.module
 variable=define('VERSION'
 subdir=2
 
 [Drupal7]
 url=http://www.drupal.org/
-safe=7.18
-latest=7.18
-vuln=CVE-2012-5651
+safe=7.19
+latest=7.19
+vuln=http://drupal.org/SA-CORE-2013-001
 file=bootstrap.inc
 variable=define('VERSION'
 subdir=1
