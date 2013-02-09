@@ -74,8 +74,8 @@ subdir=2
 
 [Joomla-2]
 url=http://www.joomla.org/
-safe=2.5.8
-vuln=CVE-2012-5827
+safe=2.5.9
+vuln=CVE-2013-1453
 file=joomla.xml
 variable=<version>
 #extra_match=@package	Joomla.Framework
