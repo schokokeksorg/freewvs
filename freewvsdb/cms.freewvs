@@ -55,8 +55,9 @@ subdir=1
 
 [Joomla-1]
 url=http://www.joomla.org/
-safe=2.5.8
-vuln=CVE-2012-5827
+safe=3.0.3
+old_safe=2.5.9
+vuln=CVE-2013-1453
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
@@ -65,8 +66,9 @@ subdir=1
 # 1.5 has changed identification
 [Joomla-1_5]
 url=http://www.joomla.org/
-safe=2.5.8
-vuln=CVE-2012-5827
+safe=3.0.3
+old_safe=2.5.9
+vuln=CVE-2013-1453
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
@@ -74,7 +76,8 @@ subdir=2
 
 [Joomla-2]
 url=http://www.joomla.org/
-safe=2.5.9
+safe=3.0.3
+old_safe=2.5.9
 vuln=CVE-2013-1453
 file=joomla.xml
 variable=<version>
