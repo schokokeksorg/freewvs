@@ -26,9 +26,9 @@ subdir=2
 
 [Drupal7]
 url=http://www.drupal.org/
-safe=7.19
-latest=7.19
-vuln=http://drupal.org/SA-CORE-2013-001
+safe=7.20
+latest=7.20
+vuln=http://drupal.org/SA-CORE-2013-002
 file=bootstrap.inc
 variable=define('VERSION'
 subdir=1
