@@ -188,8 +188,8 @@ subdir=1
 
 [Piwik]
 url=http://piwik.org/
-safe=1.10
-vuln=CVE-2013-0193
+safe=1.11
+vuln=CVE-2013-1844
 file=Version.php
 variable=const VERSION
 subdir=1
