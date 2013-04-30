@@ -187,3 +187,12 @@ file=CHANGELOG.txt
 variable=Version
 extra_match=Contao Open Source CMS Changelog
 subdir=0
+
+[redaxo]
+url=http://www.redaxo.org/
+safe=4.5
+vuln=CVE-2012-3869
+latest=4.5
+file=en_gb.lang
+variable=setup_037
+subdir=3
