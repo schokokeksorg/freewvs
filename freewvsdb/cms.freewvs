@@ -47,7 +47,7 @@ subdir=2
 [Typo3]
 url=http://typo3.org/
 safe=6.0.3
-old_safe=4.7.10,4.7.9,4.6.18,4.6.17,4.5.25,4.5.24
+old_safe=4.7.12,4.7.11,4.7.10,4.7.9,4.6.18,4.6.17,4.5.27,4.5.26,4.5.25,4.5.24
 vuln=https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2013-001/
 file=config_default.php
 variable=$TYPO_VERSION
