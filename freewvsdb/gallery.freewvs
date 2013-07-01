@@ -16,8 +16,8 @@ subdir=2
 
 [Gallery3]
 url=http://gallery.menalto.com/
-safe=3.0.7
-vuln=CVE-2013-2087
+safe=3.0.9
+vuln=http://galleryproject.org/gallery_3_0_9
 file=gallery.php
 variable=const VERSION
 subdir=3
