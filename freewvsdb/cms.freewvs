@@ -146,7 +146,7 @@ extra_match=/open/modules/cms/
 [CMSMadeSimple]
 url=http://www.cmsmadesimple.org/
 safe=1.11.7
-vuln=http://www.cmsmadesimple.org/cmsms-1-11-7-genovesa/
+vuln=CVE-2013-4167
 file=version.php
 variable=$CMS_VERSION
 subdir=0
