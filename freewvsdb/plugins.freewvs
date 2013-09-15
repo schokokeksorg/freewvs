@@ -35,7 +35,25 @@ url=http://code.google.com/p/timthumb/
 safe=2.0
 vuln=CVE-2011-4106
 file=timthumb.php
+variable=('VERSION',
+subdir=0
+
+[Wordpress-timthumb-renamed]
+url=http://code.google.com/p/timthumb/
+safe=2.0
+vuln=CVE-2011-4106
+file=thumb.php
+variable=('VERSION',
+subdir=0
+extra_match=TimThumb
+
+[Wordpress-timthumb-renamed]
+url=http://code.google.com/p/timthumb/
+safe=2.0
+vuln=CVE-2011-4106
+file=thumb.php
 variable=define ('VERSION',
+extra_match="TimThumb"
 subdir=0
 
 [Joomla-JCE]
