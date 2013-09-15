@@ -317,3 +317,12 @@ subdir=1
 vuln=CVE-2013-2149
 safe=5.0.7
 old_safe=4.5.12
+
+[videodb]
+url=http://www.videodb.net/
+file=constants.php
+variable=('VERSION',
+extra_match=TBL_
+safe=4.0
+vuln=http://www.exploit-db.com/exploits/17660/
+subdir=1
