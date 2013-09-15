@@ -326,3 +326,12 @@ extra_match=TBL_
 safe=4.0
 vuln=http://www.exploit-db.com/exploits/17660/
 subdir=1
+
+[OpenX]
+url=http://www.openx.com/
+file=constants.php
+variable=OA_VERSION
+extra_match=OpenX
+safe=2.8.11
+vuln=CVE-2013-3514
+subdir=0
