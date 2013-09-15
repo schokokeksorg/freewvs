@@ -84,3 +84,11 @@ file=w3-total-cache.php
 variable=Version:
 extra_match=Plugin Name: W3 Total Cache
 subdir=0
+
+[phpThumb]
+url=http://phpthumb.sourceforge.net/
+safe=1.7.10
+vuln=CVE-2010-1598
+file=phpthumb.class.php
+variable=$phpthumb_version
+subdir=0
