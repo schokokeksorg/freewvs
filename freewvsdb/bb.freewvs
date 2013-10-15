@@ -111,3 +111,12 @@ file=common.php
 variable=FORUM_VERSION
 extra_match=FORUM_DB_REVISION
 subdir=1
+
+[vBulletin]
+url=https://www.vbulletin.com/
+safe=4.2.2
+vuln=http://www.net-security.org/secworld.php?id=15743
+file=class_core.php
+variable=define('FILE_VERSION'
+subdir=1
+extra_match=vBulletin
