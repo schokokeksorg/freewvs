@@ -115,7 +115,7 @@ subdir=1
 [vBulletin]
 url=https://www.vbulletin.com/
 safe=4.2.2
-vuln=http://www.net-security.org/secworld.php?id=15743
+vuln=CVE-2013-6129
 file=class_core.php
 variable=define('FILE_VERSION'
 subdir=1
