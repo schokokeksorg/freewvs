@@ -106,12 +106,29 @@ extra_match=w-agora version $v
 
 [MODx]
 url=http://www.modxcms.com/
-safe=0.9.6.3
-vuln=http://modxcms.com/about/blog/rthrash/another-year-for-modx-and-a-new-release.html
+safe=1.0.12
+vuln=http://modx.com/blog/2013/09/13/evolution-1.0.12-released/
 file=version.inc.php
 variable=$version
 subdir=2
 extra_match=$full_appname = 'MODx'
+
+[MODX-1.x]
+url=http://www.modxcms.com/
+safe=1.0.12
+vuln=http://modx.com/blog/2013/09/13/evolution-1.0.12-released/
+file=version.inc.php
+variable=$modx_version
+subdir=2
+
+[MODX-2.x]
+url=http://www.modxcms.com/
+safe=2.2.10
+vuln=http://forums.modx.com/thread/87080/revolution-2-2-10-out-now
+file=changelog.txt
+variable=MODX Revolution
+subdir=2
+extra_match=MODX
 
 [PostNuke]
 # This one is a hell to detect, not sure for how many versions this works
