@@ -308,6 +308,15 @@ safe=1.2.7
 vuln=CVE-2013-1422
 subdir=1
 
+[owncloud6]
+url=http://owncloud.org/
+file=version.php
+variable=$OC_VersionString
+vuln=
+safe=6.0
+subdir=0
+
+
 [owncloud]
 url=http://owncloud.org/
 file=util.php
