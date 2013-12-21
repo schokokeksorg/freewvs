@@ -238,14 +238,6 @@ latest=4.3.2912
 vuln=CVE-2011-4311
 subdir=1
 
-[OpenX]
-url=http://www.openx.org/
-file=constants.php
-variable=OA_VERSION
-safe=2.8.7
-vuln=CVE-2009-4140
-subdir=0
-
 [apc.php]
 url=http://pecl.php.net/package/APC
 file=apc.php
@@ -341,6 +333,15 @@ url=http://www.openx.com/
 file=constants.php
 variable=OA_VERSION
 extra_match=OpenX
-safe=2.8.11
-vuln=CVE-2013-3514
+safe=
+vuln=http://www.kreativrauschen.com/blog/2013/12/18/zero-day-vulnerability-in-openx-source-2-8-11-and-revive-adserver-3-0-1/
+subdir=0
+
+[revive]
+url=http://www.revive-adserver.com/
+file=constants.php
+variable=VERSION
+extra_match=Revive Adserver
+safe=3.0.2
+vuln=http://www.kreativrauschen.com/blog/2013/12/18/zero-day-vulnerability-in-openx-source-2-8-11-and-revive-adserver-3-0-1/
 subdir=0
