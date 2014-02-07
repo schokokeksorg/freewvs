@@ -187,19 +187,21 @@ subdir=1
 
 [contao]
 url=http://contao.org/
-safe=2.11.4
-vuln=CVE-2012-4383
-latest=2.11.5
+safe=3.2.5
+old_safe=2.11.14
+vuln=CVE-2014-1860
+latest=3.2.5
 file=CHANGELOG.md
 variable=Version
-extra_match=Contao Open Source CMS Changelog
+extra_match=Contao Open Source CMS
 subdir=0
 
 [contao-old]
 url=http://contao.org/
-safe=2.11.4
-vuln=CVE-2012-4383
-latest=2.11.5
+safe=3.2.5
+old_safe=2.11.14
+vuln=CVE-2014-1860
+latest=3.2.5
 file=CHANGELOG.txt
 variable=Version
 extra_match=Contao Open Source CMS Changelog

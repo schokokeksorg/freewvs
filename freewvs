@@ -1,4 +1,4 @@
-#!/usr/bin/python -tO
+#!/usr/bin/python2 -tO
 
 # freewvs 0.1 - the free web vulnerability scanner
 #
