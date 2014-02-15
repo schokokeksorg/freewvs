@@ -123,8 +123,8 @@ subdir=2
 
 [MODX-2.x]
 url=http://www.modxcms.com/
-safe=2.2.10
-vuln=http://forums.modx.com/thread/87080/revolution-2-2-10-out-now
+safe=2.2.11
+vuln=http://modx.com/blog/2014/01/21/revolution-2.2.11%E2%80%94security-fixes-and-prevent-change-loss/
 file=changelog.txt
 variable=MODX Revolution
 subdir=2
