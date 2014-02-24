@@ -27,6 +27,9 @@ try: # python3
 	import configparser
 except ImportError: # python2
 	import ConfigParser as configparser
+	# overwrite default open() function
+	# this one supports encoding='...'
+	from codecs import open
 
 import os, glob, pprint, re, optparse, sys, gettext
 from xml.sax.saxutils import escape
