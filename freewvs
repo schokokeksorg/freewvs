@@ -78,7 +78,7 @@ def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, style = No
 pp = pprint.PrettyPrinter(indent=4)
 
 # Command-line options
-parser = optparse.OptionParser()
+parser = optparse.OptionParser(usage="usage: %prog [options] <path> [<path2> ...]")
 parser.add_option("-a", "--all", action="store_true", dest="ALL",
                   help="Show all webapps found, not just vulnerable")
 parser.add_option("-d", "--debug", action="store_true", dest="DEBUG",
