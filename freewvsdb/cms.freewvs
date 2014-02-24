@@ -124,7 +124,7 @@ subdir=2
 [MODX-2.x]
 url=http://www.modxcms.com/
 safe=2.2.11
-vuln=http://modx.com/blog/2014/01/21/revolution-2.2.11%E2%80%94security-fixes-and-prevent-change-loss/
+vuln=http://modx.com/blog/2014/01/21/revolution-2.2.11%%E2%%80%%94security-fixes-and-prevent-change-loss/
 file=changelog.txt
 variable=MODX Revolution
 subdir=2

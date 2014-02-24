@@ -1,4 +1,4 @@
-#!/usr/bin/python2 -tO
+#!/usr/bin/python -tO
 
 # freewvs 0.1 - the free web vulnerability scanner
 #
@@ -23,7 +23,12 @@
 # return your changes to the public. We would be especially happy if you tell
 # us what you're going to do with this code.
 
-import ConfigParser, os, glob, pprint, re, optparse, sys, gettext
+try: # python3
+	import configparser
+except ImportError: # python2
+	import ConfigParser as configparser
+
+import os, glob, pprint, re, optparse, sys, gettext
 from xml.sax.saxutils import escape
 
 gettext.textdomain('freewvs')
@@ -60,7 +65,7 @@ def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, style = No
                 print (vuln)
         else:
             print (_("%(appname)s %(version)s found." ) % vars())
-        print
+        print ("")
     elif style=='xml':
         state = 'vulnerable'
         if safeversion == 'ok':
@@ -91,7 +96,7 @@ parser.add_option("-x", "--xml", action="store_const", dest="OUTPUT", const="xml
 opts, args = parser.parse_args()
 
 # Parse vulnerability database
-config = ConfigParser.ConfigParser()
+config = configparser.ConfigParser()
 config.read(glob.glob('/usr/share/freewvs/*.freewvs'))
 config.read(glob.glob('/usr/local/share/freewvs/*.freewvs'))
 config.read(glob.glob(os.path.dirname(sys.argv[0])+'/freewvsdb/*.freewvs'))
@@ -144,7 +149,7 @@ for fdir in args:
                 if filename == item['file']:
                     mfile = os.path.join(root, filename)
                     try:
-                      file = open(mfile)
+                      file = open(mfile,encoding="iso-8859-15")
                     except:
                       continue
                     filestr = file.read()
