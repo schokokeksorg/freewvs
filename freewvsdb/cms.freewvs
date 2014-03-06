@@ -67,7 +67,7 @@ subdir=1
 [Joomla-1_5]
 url=http://www.joomla.org/
 safe=3.2.0
-old_safe=2.5.17,2.5.16
+old_safe=2.5.18,2.5.17,2.5.16
 vuln=2013-5583
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
@@ -77,7 +77,7 @@ subdir=2
 [Joomla-2]
 url=http://www.joomla.org/
 safe=3.2.0
-old_safe=2.5.17,2.5.16
+old_safe=2.5.18,2.5.17,2.5.16
 vuln=2013-5583
 file=joomla.xml
 variable=<version>
