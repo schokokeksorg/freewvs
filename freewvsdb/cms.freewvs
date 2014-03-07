@@ -55,9 +55,9 @@ subdir=1
 
 [Joomla-1]
 url=http://www.joomla.org/
-safe=3.2.0
-old_safe=2.5.18,2.5.17,2.5.16
-vuln=2013-5583
+safe=3.2.3
+old_safe=2.5.19
+vuln=http://developer.joomla.org/security/578-20140301-core-sql-injection.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
@@ -66,9 +66,9 @@ subdir=1
 # 1.5 has changed identification
 [Joomla-1_5]
 url=http://www.joomla.org/
-safe=3.2.0
-old_safe=2.5.18,2.5.17,2.5.16
-vuln=2013-5583
+safe=3.2.3
+old_safe=2.5.19
+vuln=http://developer.joomla.org/security/578-20140301-core-sql-injection.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
@@ -76,9 +76,9 @@ subdir=2
 
 [Joomla-2]
 url=http://www.joomla.org/
-safe=3.2.0
-old_safe=2.5.18,2.5.17,2.5.16
-vuln=2013-5583
+safe=3.2.3
+old_safe=2.5.19
+vuln=http://developer.joomla.org/security/578-20140301-core-sql-injection.html
 file=joomla.xml
 variable=<version>
 #extra_match=@package	Joomla.Framework
