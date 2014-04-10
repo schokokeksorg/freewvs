@@ -92,3 +92,11 @@ vuln=CVE-2010-1598
 file=phpthumb.class.php
 variable=$phpthumb_version
 subdir=0
+
+[Wordpress-Jetpack]
+url=http://jetpack.me/
+safe=2.9.3
+vuln=CVE-2014-0173
+file=jetpack.php
+variable=JETPACK__VERSION
+subdir=0
