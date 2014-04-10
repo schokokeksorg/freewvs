@@ -9,7 +9,7 @@ subdir=0
 [Wordpress]
 url=http://www.wordpress.org/
 safe=3.8.2
-vuln=http://wordpress.org/news/2014/04/wordpress-3-8-2/
+vuln=CVE-2014-0166
 file=version.php
 variable=$wp_version
 subdir=1
