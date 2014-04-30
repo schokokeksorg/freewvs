@@ -304,8 +304,8 @@ subdir=1
 url=http://owncloud.org/
 file=version.php
 variable=$OC_VersionString
-vuln=
-safe=6.0
+vuln=http://owncloud.org/changelog/
+safe=6.0.3
 subdir=0
 
 
@@ -315,9 +315,8 @@ file=util.php
 variable=return '
 extra_match=OC_Util
 subdir=1
-vuln=http://seclists.org/oss-sec/2013/q3/278
-safe=5.0.8
-old_safe=4.5.13
+vuln=http://owncloud.org/changelog/
+safe=5.0.16
 
 [videodb]
 url=http://www.videodb.net/
