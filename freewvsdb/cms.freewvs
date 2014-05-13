@@ -53,6 +53,15 @@ file=config_default.php
 variable=$TYPO_VERSION
 subdir=1
 
+[typo3-6]
+url=http://typo3.org/
+safe=6.1.7
+old_safe=6.0.12,4.7.17,4.5.32
+vuln=CVE-2013-7073
+file=SystemEnvironmentBuilder.php
+variable=define('TYPO3_version
+subdir=4
+
 [Joomla-1]
 url=http://www.joomla.org/
 safe=3.2.3
