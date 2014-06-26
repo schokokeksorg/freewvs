@@ -30,10 +30,10 @@ file=versioncheck.php
 variable=Coppermine version
 subdir=0
 
-[PhpWebGallery]
+[Piwigo/PhpWebGallery]
 url=http://www.phpwebgallery.net/
-safe=1.7.2
-vuln=CVE-2008-3451
+safe=2.6.3
+vuln=CVE-2014-4648
 file=constants.php
 variable=PHPWG_VERSION
 subdir=1
