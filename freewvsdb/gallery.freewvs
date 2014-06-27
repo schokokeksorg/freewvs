@@ -55,3 +55,11 @@ file=index.php
 variable=$version
 subdir=0
 extra_match=Mig - A general purpose photo gallery management system.
+
+[zenphoto]
+url=http://www.zenphoto.org/
+safe=1.4.5.4
+vuln=CVE-2013-7242
+file=version.php
+variable=define('ZENPHOTO_VERSION'
+subdir=1
