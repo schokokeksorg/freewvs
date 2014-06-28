@@ -43,8 +43,8 @@ subdir=1
 
 [Vanilla]
 url=http://vanillaforums.com/
-safe=2.0.18.8
-vuln=CVE-2013-3527
+safe=2.0.18.11
+vuln=http://vanillaforums.org/discussion/26627/vanilla-2-0-18-11-security-release
 file=version.php
 variable=APPLICATION_VERSION
 subdir=1
@@ -52,8 +52,8 @@ extra_match=define('APPLICATION', 'Vanilla');
 
 [Vanilla2]
 url=http://vanillaforums.com/
-safe=2.0.18.8
-vuln=CVE-2013-3527
+safe=2.0.18.11
+vuln=http://vanillaforums.org/discussion/26627/vanilla-2-0-18-11-security-release
 file=index.php
 variable=APPLICATION_VERSION
 subdir=0
