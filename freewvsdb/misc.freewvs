@@ -278,18 +278,27 @@ url=http://www.limesurvey.org/
 file=common.php
 variable=$versionnumber
 extra_match=LimeSurvey
-safe=1.91
-vuln=CVE-2011-3752
+safe=2.05
+vuln=http://www.zeroscience.mk/en/vulnerabilities/ZSL-2013-5161.php
+subdir=0
+
+[limesurvey19]
+url=http://www.limesurvey.org/
+file=version.php
+variable=$versionnumber
+extra_match=$dbversionnumber
+safe=2.05
+vuln=http://www.zeroscience.mk/en/vulnerabilities/ZSL-2013-5161.php
 subdir=0
 
 [limesurvey]
 url=http://www.limesurvey.org/
 file=version.php
-variable=$versionnumber
-extra_match=$dbversionnumber
-safe=1.91
-vuln=CVE-2011-3752
-subdir=0
+variable=$config['versionnumber']
+extra_match=LimeSurvey
+safe=2.05
+vuln=http://www.zeroscience.mk/en/vulnerabilities/ZSL-2013-5161.php
+subdir=2
 
 [webcalendar]
 url=http://www.k5n.us/webcalendar.php
