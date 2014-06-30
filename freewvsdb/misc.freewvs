@@ -193,7 +193,7 @@ vuln=CVE-2013-1844
 file=Version.php
 variable=const VERSION
 subdir=1
-extra_match=final class Piwik_Version
+extra_match=@link http://piwik.org
 
 [phpWishlist]
 url=http://phpwishlist.sourceforge.net/
@@ -305,7 +305,7 @@ url=http://owncloud.org/
 file=version.php
 variable=$OC_VersionString
 vuln=http://owncloud.org/changelog/
-safe=6.0.3
+safe=6.0.4
 subdir=0
 
 
