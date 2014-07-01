@@ -7,6 +7,15 @@ variable=VERSION
 extra_match=Website Baker Project
 subdir=3
 
+[WebsiteBaker28]
+url=http://www.websitebaker.org/
+safe=2.8.2
+vuln=CVE-2011-4322
+file=info.php
+variable=$template_platform
+extra_match=wb_theme
+subdir=3
+
 [toendaCMS]
 url=http://www.toendacms.com/
 safe=
