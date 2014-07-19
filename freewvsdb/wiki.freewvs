@@ -1,13 +1,13 @@
 [MediaWiki]
 url=http://www.mediawiki.org/
-safe=1.22.6
-old_safe=1.21.9,1.19.15
-latest=1.22.6
+safe=1.23.1
+old_safe=1.21.11,1.19.17,1.22.8
+latest=1.23.1
 vuln=CVE-2014-2853
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
-download=http://download.wikimedia.org/mediawiki/1.22/mediawiki-__VERSION__.tar.gz
+download=http://download.wikimedia.org/mediawiki/1.23/mediawiki-__VERSION__.tar.gz
 upgradeinstructions=http://www.mediawiki.org/wiki/Upgrade
 
 [TWiki]
