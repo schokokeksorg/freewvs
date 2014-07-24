@@ -104,7 +104,7 @@ subdir=0
 [Wordpress-MailPoet]
 url=http://www.mailpoet.com/
 safe=2.6.8
-vuln=http://wordpress.org/plugins/wysija-newsletters/changelog/
+vuln=CVE-2014-4726
 file=base.php
 variable=static $version
 extra_match=WYSIJA_object
