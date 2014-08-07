@@ -26,18 +26,18 @@ subdir=2
 
 [Drupal6]
 url=http://www.drupal.org/
-safe=6.32
-latest=6.32
-vuln=http://drupal.org/SA-CORE-2014-003
+safe=6.33
+latest=6.33
+vuln=http://drupal.org/SA-CORE-2014-004
 file=system.module
 variable=define('VERSION'
 subdir=2
 
 [Drupal7]
 url=http://www.drupal.org/
-safe=7.29
-latest=7.29
-vuln=http://drupal.org/SA-CORE-2014-003
+safe=7.31
+latest=7.31
+vuln=http://drupal.org/SA-CORE-2014-004
 file=bootstrap.inc
 variable=define('VERSION'
 subdir=1
