@@ -109,3 +109,11 @@ file=base.php
 variable=static $version
 extra_match=WYSIJA_object
 subdir=0
+
+[Wordpress-CustomerContact]
+url=https://wordpress.org/plugins/custom-contact-forms/
+safe=5.1.0.4
+vuln=http://blog.sucuri.net/2014/08/database-takeover-in-custom-contact-forms.html
+file=custom-contact-forms.php
+variable=Version
+subdir=0
