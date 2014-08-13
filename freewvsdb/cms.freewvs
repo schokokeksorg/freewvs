@@ -74,7 +74,7 @@ subdir=4
 [Joomla-1]
 url=http://www.joomla.org/
 safe=3.2.3
-old_safe=2.5.19,2.5.20,2.5.21,2.5.22
+old_safe=2.5.19,2.5.20,2.5.21,2.5.22,2.5.23,2.5.24
 vuln=http://developer.joomla.org/security/578-20140301-core-sql-injection.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
