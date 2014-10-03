@@ -1,7 +1,7 @@
 [phpMyAdmin]
 url=http://www.phpmyadmin.net/
-safe=4.2.8.1
-vuln=CVE-2014-6300
+safe=4.2.9.1
+vuln=CVE-2014-7217
 file=Config.class.php
 variable=PMA_VERSION
 subdir=1
