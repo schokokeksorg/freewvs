@@ -164,8 +164,8 @@ subdir=0
 
 [Flyspray]
 url=http://www.flyspray.org/
-safe=0.9.9.5
-vuln=CVE-2008-1165
+safe=0.9.9.7
+vuln=CVE-2012-1058
 file=class.flyspray.php
 variable=var $version
 subdir=1
