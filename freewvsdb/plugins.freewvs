@@ -125,3 +125,11 @@ vuln=http://blog.sucuri.net/2014/09/slider-revolution-plugin-critical-vulnerabil
 file=revslider.php
 variable=$revSliderVersion
 subdir=0
+
+[Wordpress-NextGEN]
+url=https://wordpress.org/plugins/nextgen-gallery/
+safe=2.0.66.17
+vuln=https://wordpress.org/plugins/nextgen-gallery/changelog/
+file=nggallery.php
+variable=NGG_PLUGIN_VERSION
+subdir=0
