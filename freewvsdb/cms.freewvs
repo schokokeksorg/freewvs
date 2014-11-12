@@ -124,8 +124,8 @@ extra_match=w-agora version $v
 
 [MODx]
 url=http://www.modxcms.com/
-safe=1.0.12
-vuln=http://modx.com/blog/2013/09/13/evolution-1.0.12-released/
+safe=1.0.15
+vuln=http://forums.modx.com/thread/94952/multiple-vulnerabilities-xss-remote-command-injection
 file=version.inc.php
 variable=$version
 subdir=2
@@ -142,7 +142,7 @@ subdir=2
 [MODX-2.x]
 url=http://www.modxcms.com/
 safe=2.2.11
-vuln=CVE-2014-2080
+vuln=http://modx.com/blog/2014/07/15/revolution-2.2.15/
 file=changelog.txt
 variable=MODX Revolution
 subdir=2
