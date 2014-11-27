@@ -1,9 +1,9 @@
 [MediaWiki]
 url=http://www.mediawiki.org/
-safe=1.23.5
-old_safe=1.22.12,1.19.20
-latest=1.23.5
-vuln=CVE-2014-7295
+safe=1.23.7
+old_safe=1.19.22
+latest=1.24.0
+vuln=https://lists.wikimedia.org/pipermail/mediawiki-announce/2014-November/000170.html
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
