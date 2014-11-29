@@ -133,3 +133,11 @@ vuln=https://wordpress.org/plugins/nextgen-gallery/changelog/
 file=nggallery.php
 variable=NGG_PLUGIN_VERSION
 subdir=0
+
+[Wordpress-Akismet]
+url=https://wordpress.org/plugins/akismet/
+safe=2.5.4
+vuln=http://blog.akismet.com/2012/07/18/erroneous-claims-of-vulnerabilities-in-the-akismet-plugin/
+file=akismet.php
+variable=AKISMET_VERSION
+subdir=0
