@@ -71,8 +71,9 @@ extra_match=Simple Machines Forum
 
 [MyBB]
 url=http://www.mybboard.net/
-safe=1.6.10
-vuln=http://blog.mybb.com/2013/04/22/mybb-1-6-10-released-security-maintenance-release/
+safe=1.8.3
+old_safe=1.6.16
+vuln=http://blog.mybb.com/2014/11/20/mybb-1-8-3-1-6-16-released-security-releases/
 file=class_core.php
 variable=$version
 subdir=1
