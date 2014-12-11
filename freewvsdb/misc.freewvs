@@ -313,8 +313,9 @@ subdir=1
 url=http://owncloud.org/
 file=version.php
 variable=$OC_VersionString
-vuln=CVE-2014-5341
-safe=6.0.5
+vuln=CVE-2014-9047
+safe=7.0.3
+old_safe=6.0.6
 subdir=0
 
 
@@ -324,8 +325,9 @@ file=util.php
 variable=return '
 extra_match=OC_Util
 subdir=1
-vuln=CVE-2014-4929
-safe=5.0.17
+vuln=CVE-2014-9047
+safe=7.0.3
+old_safe=6.0.6
 
 [videodb]
 url=http://www.videodb.net/
