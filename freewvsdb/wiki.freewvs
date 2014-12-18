@@ -1,9 +1,8 @@
 [MediaWiki]
 url=http://www.mediawiki.org/
-safe=1.23.7
-old_safe=1.19.22
-latest=1.24.0
-vuln=https://lists.wikimedia.org/pipermail/mediawiki-announce/2014-November/000170.html
+safe=1.24.1
+latest=1.24.1
+vuln=https://lists.wikimedia.org/pipermail/mediawiki-announce/2014-December/000173.html
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
