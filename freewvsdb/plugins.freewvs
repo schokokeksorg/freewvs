@@ -149,3 +149,11 @@ vuln=http://blog.sucuri.net/2014/05/vulnerability-found-in-the-all-in-one-seo-pa
 file=all_in_one_seo_pack.php
 variable=define( 'AIOSEOP_VERSION'
 subdir=0
+
+[Wordpress-DownloadManager]
+url=https://wordpress.org/plugins/download-manager/
+safe=2.7.5
+vuln=http://blog.sucuri.net/2014/12/security-advisory-high-severity-wordpress-download-manager.html
+file=download-manager.php
+variable=define('WPDM_Version'
+subdir=0
