@@ -1,7 +1,7 @@
 [phpBB]
 url=http://www.phpbb.com
-safe=3.0.11
-vuln=http://packetstormsecurity.com/files/115089/phpBB3-SQL-Injection.html
+safe=3.0.13
+vuln=CVE-2015-1431
 file=CHANGELOG.html
 variable=Changes since
 add_minor=1
