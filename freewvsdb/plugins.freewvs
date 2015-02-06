@@ -157,3 +157,11 @@ vuln=http://blog.sucuri.net/2014/12/security-advisory-high-severity-wordpress-do
 file=download-manager.php
 variable=define('WPDM_Version'
 subdir=0
+
+[Wordpress-Fancybox]
+url=https://wordpress.org/plugins/fancybox-for-wordpress/
+safe=3.0.4
+vuln=CVE-2015-1494
+file=fancybox.php
+variable=FBFW_VERSION
+subdir=0
