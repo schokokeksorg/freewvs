@@ -55,17 +55,17 @@ subdir=2
 
 [Typo3]
 url=http://typo3.org/
-safe=6.2.6
-old_safe=6.1.12,4.7.20,4.5.37
-vuln=https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2014-002/
+safe=7.0.2
+old_safe=6.2.9,4.5.39
+vuln=https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2014-003/
 file=config_default.php
 variable=$TYPO_VERSION
 subdir=1
 
 [typo3-6]
 url=http://typo3.org/
-safe=6.2.6
-old_safe=6.1.12,4.7.20,4.5.37
+safe=7.0.2
+old_safe=6.2.9,4.5.39
 vuln=https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2014-002/
 file=SystemEnvironmentBuilder.php
 variable=define('TYPO3_version
