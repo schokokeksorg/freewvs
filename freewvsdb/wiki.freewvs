@@ -19,8 +19,8 @@ subdir=1
 
 [PmWiki]
 url=http://www.pmwiki.org/
-safe=2.2.35
-vuln=CVE-2011-4453
+safe=2.2.51
+vuln=http://www.pmwiki.org/wiki/PmWiki/ReleaseNotes
 file=version.php
 variable=$Version
 extra_match=pmwiki
