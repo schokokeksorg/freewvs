@@ -180,8 +180,8 @@ extra_match=/open/modules/cms/
 
 [CMSMadeSimple]
 url=http://www.cmsmadesimple.org/
-safe=1.11.11
-vuln=http://www.cmsmadesimple.org/2014/08/Announcing-CMSMS-1-11-11-San-Cristobal/
+safe=1.11.13
+vuln=http://www.cmsmadesimple.org/2015/02/Announcing-CMS-Made-Simple-1-11-13-Security-Release/
 file=version.php
 variable=$CMS_VERSION
 subdir=0
