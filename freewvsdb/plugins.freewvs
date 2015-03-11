@@ -173,3 +173,11 @@ vuln=http://joomlacode.org/gf/project/mambot_google1/news/?id=4119
 file=plugin_googlemap3.perm
 variable=<version>
 subdir=0
+
+[Wordpress-Fancybox]
+url=https://wordpress.org/plugins/fancybox-for-wordpress/
+safe=1.7.4
+vuln=https://wpvulndb.com/vulnerabilities/7841
+file=wp-seo-main.php
+variable=WPSEO_VERSION
+subdir=0
