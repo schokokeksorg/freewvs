@@ -174,7 +174,7 @@ file=plugin_googlemap3.perm
 variable=<version>
 subdir=0
 
-[Wordpress-Fancybox]
+[Wordpress-SEO]
 url=https://wordpress.org/plugins/fancybox-for-wordpress/
 safe=1.7.4
 vuln=https://wpvulndb.com/vulnerabilities/7841
