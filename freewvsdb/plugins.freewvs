@@ -68,9 +68,9 @@ subdir=3
 
 [WP Super Cache]
 url=http://wordpress.org/extend/plugins/wp-super-cache/
-safe=1.3.2
-latest=1.3.2
-vuln=CVE-2013-2011
+safe=1.4.3
+latest=1.4.4
+vuln=https://wordpress.org/plugins/wp-super-cache/changelog/
 file=wp-cache.php
 variable=Version:
 extra_match=Plugin Name: WP Super Cache
