@@ -78,8 +78,8 @@ subdir=0
 
 [W3 Total Cache]
 url=http://wordpress.org/extend/plugins/w3-total-cache/
-safe=0.9.2.9
-vuln=CVE-2013-2010
+safe=0.9.4.1
+vuln=CVE-2014-8724
 file=w3-total-cache.php
 variable=Version:
 extra_match=Plugin Name: W3 Total Cache
