@@ -68,9 +68,9 @@ subdir=3
 
 [WP Super Cache]
 url=http://wordpress.org/extend/plugins/wp-super-cache/
-safe=1.4.3
+safe=1.4.4
 latest=1.4.4
-vuln=https://wordpress.org/plugins/wp-super-cache/changelog/
+vuln=http://blog.sucuri.net/2015/04/security-advisory-persistent-xss-in-wp-super-cache.html
 file=wp-cache.php
 variable=Version:
 extra_match=Plugin Name: WP Super Cache
