@@ -144,8 +144,8 @@ subdir=0
 
 [Wordpress-AllInOneSEO]
 url=http://semperfiwebdesign.com/blog/all-in-one-seo-pack/all-in-one-seo-pack-release-history/
-safe=2.1.6
-vuln=http://blog.sucuri.net/2014/05/vulnerability-found-in-the-all-in-one-seo-pack-wordpress-plugin.html
+safe=2.2.6.2
+vuln=http://semperfiwebdesign.com/blog/all-in-one-seo-pack/all-in-one-seo-pack-release-history/
 file=all_in_one_seo_pack.php
 variable=define( 'AIOSEOP_VERSION'
 subdir=0
