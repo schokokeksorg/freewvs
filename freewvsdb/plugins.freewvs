@@ -95,8 +95,8 @@ subdir=0
 
 [Wordpress-Jetpack]
 url=http://jetpack.me/
-safe=2.9.3
-vuln=CVE-2014-0173
+safe=3.4.3
+vuln=https://jetpack.me/2015/04/20/jetpack-3-4-3-coordinated-security-update/
 file=jetpack.php
 variable=JETPACK__VERSION
 subdir=0
