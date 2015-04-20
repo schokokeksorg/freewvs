@@ -174,10 +174,10 @@ file=plugin_googlemap3.perm
 variable=<version>
 subdir=0
 
-[Wordpress-SEO]
-url=https://wordpress.org/plugins/fancybox-for-wordpress/
-safe=1.7.4
-vuln=https://wpvulndb.com/vulnerabilities/7841
+[Wordpress-SEObyYoast]
+url=https://wpvulndb.com/vulnerabilities/7841https://wordpress.org/plugins/fancybox-for-wordpress/
+safe=2.1
+vuln=https://yoast.com/coordinated-security-release/
 file=wp-seo-main.php
 variable=WPSEO_VERSION
 subdir=0
