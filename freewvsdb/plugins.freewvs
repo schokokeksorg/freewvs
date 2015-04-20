@@ -181,3 +181,11 @@ vuln=https://yoast.com/coordinated-security-release/
 file=wp-seo-main.php
 variable=WPSEO_VERSION
 subdir=0
+
+[Wordpress-GoogleAnalyticsbyYoast]
+url=https://wordpress.org/plugins/google-analytics-for-wordpress/changelog/
+safe=5.4
+vuln=https://blog.sucuri.net/2015/04/security-advisory-xss-vulnerability-affecting-multiple-wordpress-plugins.html
+file=googleanalytics.php
+variable=GAWP_VERSION
+subdir=0
