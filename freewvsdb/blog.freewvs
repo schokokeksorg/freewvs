@@ -9,9 +9,9 @@ subdir=0
 
 [Wordpress]
 url=http://www.wordpress.org/
-safe=4.1.2
-old_safe=4.0.3,4.0.2,3.9.5,3.9.4,3.8.7,3.8.6,3.7.7,3.7.6
-vuln=https://wordpress.org/news/2015/04/wordpress-4-1-2/
+safe=4.2.1
+old_safe=4.1.4,4.0.4,3.9.5,3.9.4,3.8.7,3.8.6,3.7.7,3.7.6
+vuln=http://klikki.fi/adv/wordpress2.html
 file=version.php
 variable=$wp_version
 subdir=1
