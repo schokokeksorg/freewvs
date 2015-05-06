@@ -1,0 +1,8 @@
+[Wordpress-Theme-Twentyfifteen]
+url=http://www.wordpress.org
+safe=1.2
+vuln=https://blog.sucuri.net/2015/05/jetpack-and-twentyfifteen-vulnerable-to-dom-based-xss.html
+file=style.css
+variable=Version:
+extra_match=Theme Name: Twenty Fifteen
+subdir=0
