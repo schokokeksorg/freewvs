@@ -176,8 +176,8 @@ subdir=0
 
 [Wordpress-SEObyYoast]
 url=https://wpvulndb.com/vulnerabilities/7841https://wordpress.org/plugins/fancybox-for-wordpress/
-safe=2.1
-vuln=https://yoast.com/coordinated-security-release/
+safe=2.2
+vuln=https://inventropy.us/blog/yoast-seo-plugin-cross-site-scripting-vulnerability/
 file=wp-seo-main.php
 variable=WPSEO_VERSION
 subdir=0
