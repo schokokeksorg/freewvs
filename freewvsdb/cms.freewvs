@@ -73,8 +73,8 @@ subdir=4
 
 [Joomla-1]
 url=http://www.joomla.org/
-safe=3.4.2
-vuln=http://developer.joomla.org/security-centre/618-20150602-core-remote-code-execution.html
+safe=3.4.5
+vuln=CVE-2015-7297
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
@@ -83,17 +83,17 @@ subdir=1
 # 1.5 has changed identification
 [Joomla-1_5]
 url=http://www.joomla.org/
-safe=3.4.2
-vuln=http://developer.joomla.org/security-centre/618-20150602-core-remote-code-execution.html
+safe=3.4.5
+vuln=CVE-2015-7297
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package	Joomla.Framework
 subdir=2
 
-[Joomla-2]
+[Joomla-3]
 url=http://www.joomla.org/
-safe=3.4.2
-vuln=http://developer.joomla.org/security-centre/618-20150602-core-remote-code-execution.html
+safe=3.4.5
+vuln=CVE-2015-7297
 file=joomla.xml
 variable=<version>
 #extra_match=@package	Joomla.Framework
