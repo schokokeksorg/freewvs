@@ -35,9 +35,9 @@ subdir=2
 
 [Drupal7]
 url=http://www.drupal.org/
-safe=7.39
-latest=7.39
-vuln=https://www.drupal.org/SA-CORE-2015-003
+safe=7.41
+latest=7.41
+vuln=CVE-2015-7943
 file=bootstrap.inc
 variable=define('VERSION'
 subdir=1
