@@ -357,3 +357,12 @@ extra_match=Revive Adserver
 safe=3.0.5
 vuln=CVE-2013-5954
 subdir=0
+
+[osTicket]
+url=http://osticket.com/
+file=bootstrap.php
+variable=define('THIS_VERSION',
+safe=1.8.12
+latest=1.9.12
+vuln=https://github.com/osTicket/osTicket-1.8/releases/tag/v1.8.12
+subdir=0
