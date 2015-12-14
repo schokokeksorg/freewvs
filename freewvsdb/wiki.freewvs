@@ -1,12 +1,12 @@
 [MediaWiki]
 url=http://www.mediawiki.org/
-safe=1.24.2
-latest=1.24.2
-vuln=CVE-2015-2931
+safe=1.25.3
+old_safe=1.24.4,1.13.11
+latest=1.26.0
+vuln=https://lists.wikimedia.org/pipermail/mediawiki-announce/2015-October/000181.html
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
-download=http://download.wikimedia.org/mediawiki/1.23/mediawiki-__VERSION__.tar.gz
 upgradeinstructions=http://www.mediawiki.org/wiki/Upgrade
 
 [TWiki]
