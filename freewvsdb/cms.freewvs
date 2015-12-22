@@ -73,8 +73,8 @@ subdir=4
 
 [Joomla-1]
 url=http://www.joomla.org/
-safe=3.4.6
-vuln=https://developer.joomla.org/security-centre/630-20151214-core-remote-code-execution-vulnerability.html
+safe=3.4.7
+vuln=https://www.joomla.org/announcements/release-news/5643-joomla-3-4-7.html
 file=version.php
 variable=var $RELEASE,var $DEV_LEVEL
 extra_match=@package Joomla
