@@ -95,8 +95,8 @@ subdir=0
 
 [Wordpress-Jetpack]
 url=http://jetpack.me/
-safe=3.5.3
-vuln=https://blog.sucuri.net/2015/05/jetpack-and-twentyfifteen-vulnerable-to-dom-based-xss-millions-of-wordpress-websites-affected-millions-of-wordpress-websites-affected.html
+safe=3.7.1
+vuln=https://blog.sucuri.net/2015/10/security-advisory-stored-xss-in-jetpack.html
 file=jetpack.php
 variable=JETPACK__VERSION
 subdir=0
