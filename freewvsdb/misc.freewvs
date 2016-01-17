@@ -311,25 +311,25 @@ safe=1.2.7
 vuln=CVE-2013-1422
 subdir=1
 
-[owncloud6]
+[owncloud]
 url=http://owncloud.org/
 file=version.php
 variable=$OC_VersionString
-vuln=CVE-2014-9047
-safe=7.0.3
-old_safe=6.0.6
+vuln=CVE-2016-1498
+safe=8.2.2
+old_safe=8.1.5,8.0.10,7.0.12
 subdir=0
 
 
-[owncloud]
+[owncloud5]
 url=http://owncloud.org/
 file=util.php
 variable=return '
 extra_match=OC_Util
 subdir=1
-vuln=CVE-2014-9047
-safe=7.0.3
-old_safe=6.0.6
+vuln=CVE-2016-1498
+safe=8.2.2
+old_safe=8.1.5,8.0.10,7.0.12
 
 [videodb]
 url=http://www.videodb.net/
