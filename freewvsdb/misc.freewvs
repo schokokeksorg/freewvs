@@ -190,8 +190,8 @@ subdir=1
 
 [Piwik]
 url=http://piwik.org/
-safe=2.6.0
-vuln=https://community.qualys.com/blogs/securitylabs/2014/09/11/xss-vulnerability-shows-how-security-issues-can-creep-into-popular-software
+safe=2.15.0
+vuln=CVE-2015-7816
 file=Version.php
 variable=const VERSION
 subdir=1
