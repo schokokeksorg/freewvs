@@ -26,21 +26,30 @@ subdir=2
 
 [Drupal6]
 url=http://www.drupal.org/
-safe=6.37
-latest=6.37
-vuln=https://www.drupal.org/SA-CORE-2015-003
+safe=6.38
+latest=6.38
+vuln=https://www.drupal.org/SA-CORE-2016-001
 file=system.module
 variable=define('VERSION'
 subdir=2
 
 [Drupal7]
 url=http://www.drupal.org/
-safe=7.41
-latest=7.41
-vuln=CVE-2015-7943
+safe=7.43
+latest=7.43
+vuln=https://www.drupal.org/SA-CORE-2016-001
 file=bootstrap.inc
 variable=define('VERSION'
 subdir=1
+
+[Drupal8]
+url=http://www.drupal.org/
+safe=8.0.4
+latest=8.0.4
+vuln=https://www.drupal.org/SA-CORE-2016-001
+file=Drupal.php
+variable=const VERSION
+subdir=2
 
 [PHPNuke]
 url=http://phpnuke.org/
