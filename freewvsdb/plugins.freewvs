@@ -95,8 +95,8 @@ subdir=0
 
 [Wordpress-Jetpack]
 url=http://jetpack.me/
-safe=3.7.1
-vuln=https://blog.sucuri.net/2015/10/security-advisory-stored-xss-in-jetpack.html
+safe=3.9.2
+vuln=https://jetpack.me/2016/02/25/jetpack-3-9-2-maintenance-and-security-release/
 file=jetpack.php
 variable=JETPACK__VERSION
 subdir=0
