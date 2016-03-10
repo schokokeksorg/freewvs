@@ -317,7 +317,7 @@ file=version.php
 variable=$OC_VersionString
 vuln=CVE-2016-1498
 safe=8.2.2
-old_safe=8.1.5,8.0.10,7.0.12
+old_safe=8.1.6,8.1.5,8.0.11,8.0.10,7.0.13,7.0.12
 subdir=0
 
 
