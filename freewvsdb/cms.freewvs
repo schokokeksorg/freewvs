@@ -26,27 +26,27 @@ subdir=2
 
 [Drupal6]
 url=http://www.drupal.org/
-safe=6.38
-latest=6.38
-vuln=https://www.drupal.org/SA-CORE-2016-001
+safe=7.44
+latest=7.44
+vuln=https://www.drupal.org/SA-CORE-2016-002
 file=system.module
 variable=define('VERSION'
 subdir=2
 
 [Drupal7]
 url=http://www.drupal.org/
-safe=7.43
-latest=7.43
-vuln=https://www.drupal.org/SA-CORE-2016-001
+safe=7.44
+latest=7.44
+vuln=https://www.drupal.org/SA-CORE-2016-002
 file=bootstrap.inc
 variable=define('VERSION'
 subdir=1
 
 [Drupal8]
 url=http://www.drupal.org/
-safe=8.0.4
-latest=8.0.4
-vuln=https://www.drupal.org/SA-CORE-2016-001
+safe=8.1.3
+latest=8.1.3
+vuln=https://www.drupal.org/SA-CORE-2016-002
 file=Drupal.php
 variable=const VERSION
 subdir=2
