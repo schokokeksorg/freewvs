@@ -9,9 +9,9 @@ subdir=0
 
 [Wordpress]
 url=http://www.wordpress.org/
-safe=4.4.2
-old_safe=4.3.3,4.3.2,4.2.8,4.2.7,4.1.11,4.1.10,4.0.11,4.0.10,3.9.12,3.9.11,3.8.14,3.8.13,3.7.14,3.7.13
-vuln=CVE-2016-2221
+safe=4.5.3
+old_safe=4.4.5,4.4.4,4.3.6,4.3.5,4.2.10,4.2.9,4.1.13,4.1.12,4.0.13,4.0.12,3.9.14,3.9.13,3.8.16,3.8.15,3.7.16,3.7.15
+vuln=https://wordpress.org/news/2016/06/wordpress-4-5-3/
 file=version.php
 variable=$wp_version
 subdir=1
