@@ -1,15 +1,15 @@
 [phpMyAdmin-old]
 url=http://www.phpmyadmin.net/
-safe=4.5.5.1
-vuln=CVE-2016-2561
+safe=4.6.3
+vuln=CVE-2016-5703
 file=Config.class.php
 variable=PMA_VERSION
 subdir=1
 
 [phpMyAdmin]
 url=http://www.phpmyadmin.net/
-safe=4.5.5.1
-vuln=CVE-2016-2561
+safe=4.6.3
+vuln=CVE-2016-5703
 file=Config.php
 variable=PMA_VERSION
 subdir=1
