@@ -204,7 +204,7 @@ vuln=CVE-2015-7816
 file=Version.php
 variable=const VERSION
 subdir=1
-#extra_match=@link http://piwik.org
+extra_match=@link http://piwik.org
 
 [phpWishlist]
 url=http://phpwishlist.sourceforge.net/
