@@ -320,6 +320,15 @@ safe=1.2.7
 vuln=CVE-2013-1422
 subdir=1
 
+[nextcloud]
+url=https://nextcloud.com
+file=version.php
+variable=$OC_VersionString
+vuln=https://nextcloud.com/security/advisory/?id=nc-sa-2016-008
+safe=10.0.1
+subdir=0
+extra_match=$vendor = 'nextcloud';
+
 [owncloud]
 url=http://owncloud.org/
 file=version.php
@@ -327,7 +336,7 @@ variable=$OC_VersionString
 vuln=https://owncloud.org/security/advisory/?id=oc-sa-2016-018
 safe=9.1.1
 subdir=0
-
+extra_match=$OC_Edition = '';
 
 [owncloud5]
 url=http://owncloud.org/
