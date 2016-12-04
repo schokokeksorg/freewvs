@@ -1,8 +1,8 @@
 [Serendipity]
 url=http://www.s9y.org/
-safe=2.0.3
+safe=2.0.5
 old_safe=1.7.9
-vuln=http://blog.s9y.org/archives/266-Serendipity-2.0.3-released.html
+vuln=CVE-2016-9681
 file=serendipity_config.inc.php
 variable=$serendipity['version']
 subdir=0
