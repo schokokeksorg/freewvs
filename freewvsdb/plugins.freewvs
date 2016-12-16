@@ -78,8 +78,8 @@ subdir=0
 
 [W3 Total Cache]
 url=http://wordpress.org/extend/plugins/w3-total-cache/
-safe=0.9.4.1
-vuln=CVE-2014-8724
+safe=0.9.5
+vuln=https://secupress.me/w3-total-cache-vulnerable-xss-high-risk/
 file=w3-total-cache.php
 variable=Version:
 extra_match=Plugin Name: W3 Total Cache
@@ -128,7 +128,7 @@ subdir=0
 
 [Wordpress-NextGEN]
 url=https://wordpress.org/plugins/nextgen-gallery/
-safe=2.0.66.17
+safe=2.1.60
 vuln=https://wordpress.org/plugins/nextgen-gallery/changelog/
 file=nggallery.php
 variable=NGG_PLUGIN_VERSION
