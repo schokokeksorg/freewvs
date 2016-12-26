@@ -382,3 +382,11 @@ safe=1.8.12
 latest=1.9.12
 vuln=https://github.com/osTicket/osTicket-1.8/releases/tag/v1.8.12
 subdir=0
+
+[phpmailer]
+url=https://github.com/PHPMailer/PHPMailer
+safe=5.2.18
+vuln=CVE-2016-10033
+file=class.phpmailer.php
+variable=public $Version
+subdir=0
