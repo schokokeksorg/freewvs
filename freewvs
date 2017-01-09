@@ -100,9 +100,12 @@ opts, args = parser.parse_args()
 
 # Parse vulnerability database
 config = configparser.ConfigParser()
-config.read(glob.glob('/usr/share/freewvs/*.freewvs'))
-config.read(glob.glob('/usr/local/share/freewvs/*.freewvs'))
-config.read(glob.glob(os.path.dirname(sys.argv[0])+'/freewvsdb/*.freewvs'))
+try:
+    config.read(glob.glob('/usr/share/freewvs/*.freewvs'))
+    config.read(glob.glob('/usr/local/share/freewvs/*.freewvs'))
+    config.read(glob.glob(os.path.dirname(sys.argv[0])+'/freewvsdb/*.freewvs'))
+except configparser.MissingSectionHeaderError as err:
+    print("Error parsing config files: %s" % err);
 
 vdb = []
 for sect in config.sections():
