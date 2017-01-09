@@ -16,86 +16,96 @@
 # worldwide. This software is distributed without any warranty.
 #
 # You should have received a copy of the CC0 Public Domain Dedication along
-# with this software. If not, see 
+# with this software. If not, see
 # http://creativecommons.org/publicdomain/zero/1.0/
 # Nevertheless, in case you use a significant part of this code, we ask (but
 # not require, see the license) that you keep the authors' names in place and
 # return your changes to the public. We would be especially happy if you tell
 # us what you're going to do with this code.
 
-try: # python3
-	import configparser
-except ImportError: # python2
-	import ConfigParser as configparser
-	# overwrite default open() function
-	# this one supports encoding='...'
-	from codecs import open
+try:					# python3
+    import configparser
+except ImportError:			# python2
+    import ConfigParser as configparser
+    # overwrite default open() function
+    # this one supports encoding='...'
+    from codecs import open
 
-import os, glob, pprint, re, optparse, sys, gettext
+import os
+import glob
+import pprint
+import re
+import optparse
+import sys
+import gettext
 from xml.sax.saxutils import escape
 
 gettext.textdomain('freewvs')
 _ = gettext.gettext
 
+
 def versioncompare(safe_version, find_version):
     if safe_version == [""]:
         return True
     for i in range(min(len(find_version), len(safe_version))):
-        if int(find_version[i])<int(safe_version[i]):
+        if int(find_version[i]) < int(safe_version[i]):
             return True
-        if int(find_version[i])>int(safe_version[i]):
+        if int(find_version[i]) > int(safe_version[i]):
             return False
-    return (len(find_version)<len(safe_version))
+    return (len(find_version) < len(safe_version))
 
-def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, style = None):
+
+def vulnprint(appname, version, safeversion, vuln, vfilename, subdir,
+              style=None):
     appdir = '/'.join(os.path.abspath(vfilename).split('/')[:-1-subdir])
     if not style:
-        print ("%(appname)s %(version)s (%(safeversion)s) %(vuln)s %(appdir)s" \
-              % vars())
-    elif style=='fancy':
-        print (_("Directory: %(appdir)s") % vars())
-        if safeversion!="ok":
-            if safeversion!="":
-                print (_("Vulnerable %(appname)s %(version)s found, please update to " \
-                        "%(safeversion)s or above.") % vars())
+        print("%(appname)s %(version)s (%(safeversion)s) %(vuln)s"
+              "%(appdir)s" % vars())
+    elif style == 'fancy':
+        print(_("Directory: %(appdir)s") % vars())
+        if safeversion != "ok":
+            if safeversion != "":
+                print(_("Vulnerable %(appname)s %(version)s found, please "
+                        "update to %(safeversion)s or above.") % vars())
             else:
-                print (_("Vulnerable %(appname)s %(version)s found, no fixed version available." \
-                        ) % vars())
+                print(_("Vulnerable %(appname)s %(version)s found, no fixed "
+                        "version available.") % vars())
             if vuln[:3] == "CVE":
-                print (_("http://cve.mitre.org/cgi-bin/cvename.cgi?name=%(vuln)s") \
-                        % vars())
+                print(_("http://cve.mitre.org/cgi-bin/cvename.cgi?name="
+                        "%(vuln)s") % vars())
             else:
-                print (vuln)
+                print(vuln)
         else:
-            print (_("%(appname)s %(version)s found." ) % vars())
-        print ("")
-    elif style=='xml':
+            print(_("%(appname)s %(version)s found.") % vars())
+        print("")
+    elif style == 'xml':
         state = 'vulnerable'
         if safeversion == 'ok':
             state = 'ok'
-        print ('  <app state="%s">' % state)
-        print ('    <appname>%s</appname>' % escape(appname))
-        print ('    <version>%s</version>' % escape(version))
-        print ('    <directory>%s</directory>' % escape(appdir))
+        print('  <app state="%s">' % state)
+        print('    <appname>%s</appname>' % escape(appname))
+        print('    <version>%s</version>' % escape(version))
+        print('    <directory>%s</directory>' % escape(appdir))
         if state == 'vulnerable':
-            print ('    <safeversion>%s</safeversion>' % escape(safeversion))
-            print ('    <vulninfo>%s</vulninfo>' % escape(vuln))
-        print ('  </app>')
+            print('    <safeversion>%s</safeversion>' % escape(safeversion))
+            print('    <vulninfo>%s</vulninfo>' % escape(vuln))
+        print('  </app>')
 
 
 pp = pprint.PrettyPrinter(indent=4)
 
 # Command-line options
-parser = optparse.OptionParser(usage="usage: %prog [options] <path> [<path2> ...]")
+parser = optparse.OptionParser(usage="usage: %prog [options] <path>"
+                               "[<path2> ...]")
 parser.add_option("-a", "--all", action="store_true", dest="ALL",
                   help="Show all webapps found, not just vulnerable")
 parser.add_option("-d", "--debug", action="store_true", dest="DEBUG",
-                  help="Show lots of debugging output, mainly useful"+ \
+                  help="Show lots of debugging output, mainly useful"
                   "for development")
-parser.add_option("-f", "--fancy", action="store_const", dest="OUTPUT", const="fancy",
-                  help="Show more fancy output")
-parser.add_option("-x", "--xml", action="store_const", dest="OUTPUT", const="xml",
-                  help="Output results as XML")
+parser.add_option("-f", "--fancy", action="store_const", dest="OUTPUT",
+                  const="fancy", help="Show more fancy output")
+parser.add_option("-x", "--xml", action="store_const", dest="OUTPUT",
+                  const="xml", help="Output results as XML")
 opts, args = parser.parse_args()
 
 # Parse vulnerability database
@@ -105,7 +115,7 @@ try:
     config.read(glob.glob('/usr/local/share/freewvs/*.freewvs'))
     config.read(glob.glob(os.path.dirname(sys.argv[0])+'/freewvsdb/*.freewvs'))
 except configparser.MissingSectionHeaderError as err:
-    print("Error parsing config files: %s" % err);
+    print("Error parsing config files: %s" % err)
 
 vdb = []
 for sect in config.sections():
@@ -120,21 +130,21 @@ for sect in config.sections():
 
     # match magic
     item['variable'] = []
-    for var in config.get(sect,'variable').split(","):
-        item['variable'].append(re.compile(re.escape(var)+
+    for var in config.get(sect, 'variable').split(","):
+        item['variable'].append(re.compile(re.escape(var) +
                                 r"[^0-9.\n\r]*[.]*([0-9.]*[0-9])[^0-9.]"))
 
     # optional options
-    if config.has_option(sect,'extra_match'):
-        item['extra_match'] = config.get(sect,'extra_match')
+    if config.has_option(sect, 'extra_match'):
+        item['extra_match'] = config.get(sect, 'extra_match')
     else:
         item['extra_match'] = False
-    if config.has_option(sect,'add_minor'):
-        item['add_minor'] = config.get(sect,'add_minor')
+    if config.has_option(sect, 'add_minor'):
+        item['add_minor'] = config.get(sect, 'add_minor')
     else:
         item['add_minor'] = False
-    if config.has_option(sect,'old_safe'):
-        item['old_safe'] = config.get(sect,'old_safe').split(",")
+    if config.has_option(sect, 'old_safe'):
+        item['old_safe'] = config.get(sect, 'old_safe').split(",")
     else:
         item['old_safe'] = []
 
@@ -143,8 +153,8 @@ if opts.DEBUG:
     pp.pprint(vdb)
 
 if opts.OUTPUT == 'xml':
-  print ('<?xml version="1.0" ?>')
-  print ('<freewvs>')
+    print('<?xml version="1.0" ?>')
+    print('<freewvs>')
 
 # start the search
 
@@ -155,9 +165,9 @@ for fdir in args:
                 if filename == item['file']:
                     mfile = os.path.join(root, filename)
                     try:
-                      file = open(mfile)
+                        file = open(mfile)
                     except:
-                      continue
+                        continue
                     filestr = file.read()
                     file.close()
 
@@ -181,40 +191,40 @@ for fdir in args:
                         # Very ugly phpbb workaround
                         if item['add_minor']:
                             findversion = findversion.split('.')
-                            findversion[-1] = str(int(findversion[-1])+
-                                            int(item['add_minor']))
+                            findversion[-1] = str(int(findversion[-1]) +
+                                                  int(item['add_minor']))
                             findversion = '.'.join(findversion)
 
-                        if not (versioncompare(item['safe'].split('.'), \
+                        if not (versioncompare(item['safe'].split('.'),
                                 findversion.split('.'))) or \
-                                item['old_safe'].count(findversion)>0:
+                                item['old_safe'].count(findversion) > 0:
                             if opts.ALL:
                                 if opts.DEBUG:
-                                    print ("File "+mfile)
-                                vulnprint(item['name'], findversion, \
-                                          "ok", "", mfile, item['subdir'], \
+                                    print("File "+mfile)
+                                vulnprint(item['name'], findversion,
+                                          "ok", "", mfile, item['subdir'],
                                           opts.OUTPUT)
                         else:
                             if opts.DEBUG:
-                                print ("File "+mfile)
-                            safev="9999"
+                                print("File " + mfile)
+                            safev = "9999"
                             for ver in item['old_safe']:
-                                if (versioncompare(ver.split('.'), \
-                                    findversion.split('.') ) and \
-                                    not versioncompare(ver.split('.'), \
-                                    safev.split('.')) ):
-                                    safev=ver
-                            if safev=="9999":
-                                safev=item['safe']
+                                if(versioncompare(ver.split('.'),
+                                   findversion.split('.')) and
+                                   not versioncompare(ver.split('.'),
+                                   safev.split('.'))):
+                                    safev = ver
+                            if safev == "9999":
+                                safev = item['safe']
 
-                            vulnprint (item['name'], findversion, \
-                                       safev, item['vuln'], \
-                                       mfile, item['subdir'], opts.OUTPUT)
+                            vulnprint(item['name'], findversion,
+                                      safev, item['vuln'],
+                                      mfile, item['subdir'], opts.OUTPUT)
 
                     else:
                         if opts.DEBUG:
-                            print ("regexp failed for " + \
+                            print("regexp failed for " +
                                   item['name'] + " on " + mfile)
 
 if opts.OUTPUT == 'xml':
-  print ('</freewvs>')
+    print('</freewvs>')
