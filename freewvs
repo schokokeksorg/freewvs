@@ -152,7 +152,7 @@ for fdir in args:
                 if filename == item['file']:
                     mfile = os.path.join(root, filename)
                     try:
-                      file = open(mfile,encoding="iso-8859-15")
+                      file = open(mfile)
                     except:
                       continue
                     filestr = file.read()
