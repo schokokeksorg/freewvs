@@ -9,7 +9,7 @@ subdir=1
 [Magento-old]
 url=http://www.magentocommerce.com/
 safe=1.9.2.2
-vuln=https://de.magento.com/security/patches/supee-6788-%E2%80%93-addresses-vulnerability-zend-framework
+vuln=CVE-2015-5161
 file=Mage.php
 variable=return '
 subdir=1
@@ -17,7 +17,7 @@ subdir=1
 [Magento]
 url=http://www.magentocommerce.com/
 safe=1.9.2.2
-vuln=https://de.magento.com/security/patches/supee-6788-%E2%80%93-addresses-vulnerability-zend-framework
+vuln=CVE-2015-5161
 # This does not reliably give correct version numbers,
 # but it works for the latest versions
 file=RELEASE_NOTES.txt
