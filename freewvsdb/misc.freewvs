@@ -188,11 +188,19 @@ file=MyID.php
 variable=@version
 subdir=0
 
+[phplist-old]
+url=http://www.phplist.com/
+safe=3.2.7
+vuln=CVE-2016-10045
+file=connect.php
+variable=define("VERSION"
+subdir=1
+
 [phplist]
 url=http://www.phplist.com/
-safe=3.0.6
-vuln=CVE-2014-2916
-file=connect.php
+safe=3.2.7
+vuln=CVE-2016-10045
+file=init.php
 variable=define("VERSION"
 subdir=1
 
