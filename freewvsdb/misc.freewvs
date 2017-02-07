@@ -343,13 +343,12 @@ variable=$OC_VersionString
 vuln=https://owncloud.org/security/advisory/?id=oc-sa-2017-003
 safe=9.1.3
 subdir=0
-extra_match=$OC_Edition = '';
+extra_nomatch=nextcloud
 
 [owncloud5]
 url=http://owncloud.org/
 file=util.php
 variable=return '
-extra_match=OC_Util
 subdir=1
 vuln=https://owncloud.org/security/advisory/?id=oc-sa-2017-003
 safe=9.1.3

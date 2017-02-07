@@ -139,6 +139,10 @@ for sect in config.sections():
         item['extra_match'] = config.get(sect, 'extra_match')
     else:
         item['extra_match'] = False
+    if config.has_option(sect, 'extra_nomatch'):
+        item['extra_nomatch'] = config.get(sect, 'extra_nomatch')
+    else:
+        item['extra_nomatch'] = False
     if config.has_option(sect, 'add_minor'):
         item['add_minor'] = config.get(sect, 'add_minor')
     else:
@@ -173,6 +177,8 @@ for fdir in args:
 
                     if item['extra_match']:
                         ematch = (filestr.find(item['extra_match']) != -1)
+                    elif item['extra_nomatch']:
+                        ematch = not (filestr.find(item['extra_nomatch']) != -1)
                     else:
                         ematch = True
 
