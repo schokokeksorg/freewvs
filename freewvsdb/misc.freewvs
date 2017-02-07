@@ -340,7 +340,7 @@ extra_match=$vendor = 'nextcloud';
 url=http://owncloud.org/
 file=version.php
 variable=$OC_VersionString
-vuln=https://owncloud.org/security/advisory/?id=oc-sa-2017-001
+vuln=https://owncloud.org/security/advisory/?id=oc-sa-2017-003
 safe=9.1.3
 subdir=0
 extra_match=$OC_Edition = '';
@@ -351,8 +351,8 @@ file=util.php
 variable=return '
 extra_match=OC_Util
 subdir=1
-vuln=https://owncloud.org/security/advisory/?id=oc-sa-2016-018
-safe=9.1.1
+vuln=https://owncloud.org/security/advisory/?id=oc-sa-2017-003
+safe=9.1.3
 
 [videodb]
 url=http://www.videodb.net/
