@@ -59,7 +59,7 @@ def vulnprint(appname, version, safeversion, vuln, vfilename, subdir,
               style=None):
     appdir = '/'.join(os.path.abspath(vfilename).split('/')[:-1-subdir])
     if not style:
-        print("%(appname)s %(version)s (%(safeversion)s) %(vuln)s"
+        print("%(appname)s %(version)s (%(safeversion)s) %(vuln)s "
               "%(appdir)s" % vars())
     elif style == 'fancy':
         print(_("Directory: %(appdir)s") % vars())
