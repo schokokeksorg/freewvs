@@ -1,15 +1,15 @@
 [phpMyAdmin-old]
 url=http://www.phpmyadmin.net/
-safe=4.6.5
-vuln=https://www.phpmyadmin.net/security/PMASA-2016-71/
+safe=4.6.6
+vuln=https://www.phpmyadmin.net/security/PMASA-2017-7/
 file=Config.class.php
 variable=PMA_VERSION
 subdir=1
 
 [phpMyAdmin]
 url=http://www.phpmyadmin.net/
-safe=4.6.5
-vuln=https://www.phpmyadmin.net/security/PMASA-2016-71/
+safe=4.6.6
+vuln=https://www.phpmyadmin.net/security/PMASA-2017-7/
 file=Config.php
 variable=PMA_VERSION
 subdir=1
