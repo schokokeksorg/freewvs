@@ -128,8 +128,8 @@ subdir=0
 
 [Wordpress-NextGEN]
 url=https://wordpress.org/plugins/nextgen-gallery/
-safe=2.1.60
-vuln=https://wordpress.org/plugins/nextgen-gallery/changelog/
+safe=2.1.79
+vuln=https://blog.sucuri.net/2017/02/sql-injection-vulnerability-nextgen-gallery-wordpress.html
 file=nggallery.php
 variable=NGG_PLUGIN_VERSION
 subdir=0
