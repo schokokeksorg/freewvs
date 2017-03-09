@@ -333,7 +333,7 @@ file=version.php
 variable=$OC_VersionString
 vuln=https://nextcloud.com/security/advisory/?id=nc-sa-2017-001
 safe=10.0.2
-old_safe=9.0.55
+old_safe=9.0.57,9.0.56
 subdir=0
 extra_match=$vendor = 'nextcloud';
 
