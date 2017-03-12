@@ -130,9 +130,9 @@ extra_match=define("TITLE", "FTP Admin");
 
 [RoundCube-deprecated]
 url=http://roundcube.net
-safe=1.2.3
-old_safe=1.1.7
-vuln=https://blog.ripstech.com/2016/roundcube-command-execution-via-email/
+safe=1.2.4
+old_safe=1.1.8
+vuln=CVE-2017-6820
 file=index.php
 variable=RCMAIL_VERSION
 subdir=0
