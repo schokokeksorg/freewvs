@@ -352,6 +352,7 @@ url=http://owncloud.org/
 file=util.php
 variable=return '
 subdir=1
+extra_match=class OC_Util
 vuln=https://owncloud.org/security/advisory/?id=oc-sa-2017-003
 safe=9.1.3
 old_safe=9.0.8,8.2.10,8.1.12
