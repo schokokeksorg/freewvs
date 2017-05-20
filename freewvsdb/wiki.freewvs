@@ -1,9 +1,9 @@
 [MediaWiki]
 url=http://www.mediawiki.org/
-safe=1.28.1
-old_safe=1.27.2,1.23.16
-latest=1.28.1
-vuln=CVE-2017-0363
+safe=1.28.2
+old_safe=1.27.3
+latest=1.28.2
+vuln=https://lists.wikimedia.org/pipermail/mediawiki-announce/2017-April/000209.html
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
