@@ -2,14 +2,14 @@
 
 # freewvs 0.1 - the free web vulnerability scanner
 #
-# http://source.schokokeks.org/freewvs/
+# https://source.schokokeks.org/freewvs/
 #
-# Written 2007-2012 by schokokeks.org Hosting, http://www.schokokeks.org
+# Written 2007-2012 by schokokeks.org Hosting, https://schokokeks.org
 #
 # Contributions by
-# Hanno Boeck, http://hboeck.de/
-# Fabian Fingerle, http://www.fabian-fingerle.de/
-# Bernd Wurst, http://bwurst.org/
+# Hanno Boeck, https://hboeck.de/
+# Fabian Fingerle, https://fabian-fingerle.de/
+# Bernd Wurst, https://bwurst.org/
 #
 # To the extent possible under law, the author(s) have dedicated all copyright
 # and related and neighboring rights to this software to the public domain
@@ -17,7 +17,7 @@
 #
 # You should have received a copy of the CC0 Public Domain Dedication along
 # with this software. If not, see
-# http://creativecommons.org/publicdomain/zero/1.0/
+# https://creativecommons.org/publicdomain/zero/1.0/
 # Nevertheless, in case you use a significant part of this code, we ask (but
 # not require, see the license) that you keep the authors' names in place and
 # return your changes to the public. We would be especially happy if you tell
@@ -71,7 +71,7 @@ def vulnprint(appname, version, safeversion, vuln, vfilename, subdir,
                 print(_("Vulnerable %(appname)s %(version)s found, no fixed "
                         "version available.") % vars())
             if vuln[:3] == "CVE":
-                print(_("http://cve.mitre.org/cgi-bin/cvename.cgi?name="
+                print(_("https://cve.mitre.org/cgi-bin/cvename.cgi?name="
                         "%(vuln)s") % vars())
             else:
                 print(vuln)
