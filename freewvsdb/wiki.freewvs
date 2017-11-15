@@ -1,13 +1,13 @@
 [MediaWiki]
-url=http://www.mediawiki.org/
-safe=1.28.2
-old_safe=1.27.3
-latest=1.28.2
-vuln=https://lists.wikimedia.org/pipermail/mediawiki-announce/2017-April/000209.html
+url=https://www.mediawiki.org/
+safe=1.29.2
+old_safe=1.28.3,1.27.4
+latest=1.29.2
+vuln=CVE-2017-8809
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
-upgradeinstructions=http://www.mediawiki.org/wiki/Upgrade
+upgradeinstructions=https://www.mediawiki.org/wiki/Manual:Upgrading
 
 [TWiki]
 url=http://twiki.org/
