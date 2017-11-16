@@ -392,3 +392,12 @@ safe=1.8.12
 latest=1.9.12
 vuln=https://github.com/osTicket/osTicket-1.8/releases/tag/v1.8.12
 subdir=0
+
+[Gitlist]
+url=http://gitlist.org/
+file=footer.twig
+variable="Powered by"
+safe=0.5.0
+latest=0.6.0
+vuln=CVE-2014-4511
+subdir=3
