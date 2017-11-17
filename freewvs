@@ -132,7 +132,7 @@ for sect in config.sections():
     item['variable'] = []
     for var in config.get(sect, 'variable').split(","):
         item['variable'].append(re.compile(re.escape(var) +
-                                r"[^0-9.\n\r]*[.]*([0-9.]*[0-9])[^0-9.]"))
+                                r"[^0-9\n\r]*[.]*([0-9.]*[0-9])[^0-9.]"))
 
     # optional options
     if config.has_option(sect, 'extra_match'):

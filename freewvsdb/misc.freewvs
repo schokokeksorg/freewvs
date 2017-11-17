@@ -396,7 +396,7 @@ subdir=0
 [Gitlist]
 url=http://gitlist.org/
 file=footer.twig
-variable="Powered by"
+variable=Powered by
 safe=0.5.0
 latest=0.6.0
 vuln=CVE-2014-4511
