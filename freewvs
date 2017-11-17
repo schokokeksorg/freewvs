@@ -57,7 +57,7 @@ def versioncompare(safe_version, find_version):
 
 def vulnprint(appname, version, safeversion, vuln, vfilename, subdir,
               style=None):
-    appdir = '/'.join(os.path.abspath(vfilename).split('/')[:-1-subdir])
+    appdir = '/'.join(os.path.abspath(vfilename).split('/')[:-1 - subdir])
     if not style:
         print("%(appname)s %(version)s (%(safeversion)s) %(vuln)s "
               "%(appdir)s" % vars())
@@ -113,7 +113,7 @@ config = configparser.ConfigParser()
 try:
     config.read(glob.glob('/usr/share/freewvs/*.freewvs'))
     config.read(glob.glob('/usr/local/share/freewvs/*.freewvs'))
-    config.read(glob.glob(os.path.dirname(sys.argv[0])+'/freewvsdb/*.freewvs'))
+    config.read(glob.glob(os.path.dirname(sys.argv[0]) + '/freewvsdb/*.freewvs'))
 except configparser.MissingSectionHeaderError as err:
     print("Error parsing config files: %s" % err)
 
@@ -170,7 +170,7 @@ for fdir in args:
                     mfile = os.path.join(root, filename)
                     try:
                         file = open(mfile)
-                    except:
+                    except Exception:
                         continue
                     filestr = file.read()
                     file.close()
@@ -206,7 +206,7 @@ for fdir in args:
                                 item['old_safe'].count(findversion) > 0:
                             if opts.ALL:
                                 if opts.DEBUG:
-                                    print("File "+mfile)
+                                    print("File " + mfile)
                                 vulnprint(item['name'], findversion,
                                           "ok", "", mfile, item['subdir'],
                                           opts.OUTPUT)
