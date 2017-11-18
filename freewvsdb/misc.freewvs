@@ -132,16 +132,16 @@ extra_match=define("TITLE", "FTP Admin");
 
 [RoundCube-deprecated]
 url=http://roundcube.net
-safe=1.2.6
-vuln=https://github.com/roundcube/roundcubemail/releases/tag/1.2.6
+safe=1.3.3
+vuln=CVE-2017-16651
 file=index.php
 variable=RCMAIL_VERSION
 subdir=0
 
 [RoundCube]
 url=http://roundcube.net
-safe=1.2.6
-vuln=https://github.com/roundcube/roundcubemail/releases/tag/1.2.6
+safe=1.3.3
+vuln=CVE-2017-16651
 file=iniset.php
 variable=RCMAIL_VERSION
 subdir=2
