@@ -331,9 +331,9 @@ subdir=1
 url=https://nextcloud.com
 file=version.php
 variable=$OC_VersionString
-vuln=https://nextcloud.com/security/advisory/?id=nc-sa-2017-001
-safe=10.0.2
-old_safe=9.0.57,9.0.56
+vuln=CVE-2017-0891
+safe=11.0.3
+old_safe=10.0.5,9.0.58
 subdir=0
 extra_match=$vendor = 'nextcloud';
 
