@@ -189,3 +189,11 @@ vuln=https://wordpress.org/plugins/google-analytics-for-wordpress/changelog/
 file=googleanalytics.php
 variable=GAWP_VERSION
 subdir=0
+
+[Wordpress-Captcha]
+url=https://de.wordpress.org/plugins/captcha/
+safe=4.4.5
+vuln=https://www.wordfence.com/blog/2017/12/backdoor-captcha-plugin/
+file=captcha.php
+variable=Version:
+subdir=0
