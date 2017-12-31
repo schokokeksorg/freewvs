@@ -19,8 +19,8 @@ subdir=1
 
 [PmWiki]
 url=http://www.pmwiki.org/
-safe=2.2.51
-vuln=http://www.pmwiki.org/wiki/PmWiki/ReleaseNotes
+safe=2.2.96
+vuln=http://www.pmwiki.org/wiki/PmWiki/ChangeLog
 file=version.php
 variable=$Version
 extra_match=pmwiki
