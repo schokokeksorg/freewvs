@@ -44,9 +44,9 @@ subdir=1
 
 [Drupal8]
 url=http://www.drupal.org/
-safe=8.3.4
-latest=8.3.4
-vuln=CVE-2017-6921
+safe=8.3.7
+latest=8.3.7
+vuln=CVE-2017-6923
 file=Drupal.php
 variable=const VERSION
 subdir=2
