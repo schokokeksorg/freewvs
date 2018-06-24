@@ -1,4 +1,4 @@
-[phpMyAdmin-old]
+[phpMyAdmin-veryold]
 url=http://www.phpmyadmin.net/
 safe=4.7.8
 vuln=CVE-2018-7260
@@ -13,6 +13,16 @@ vuln=CVE-2018-7260
 file=Config.php
 variable=PMA_VERSION
 subdir=1
+extra_match=namespace PMA\libraries;
+
+[phpMyAdmin-old]
+url=http://www.phpmyadmin.net/
+safe=4.7.8
+vuln=CVE-2018-7260
+file=Config.php
+variable=PMA_VERSION
+subdir=2
+extra_match=namespace PhpMyAdmin;
 
 [SquirrelMail]
 url=http://www.squirrelmail.org/
