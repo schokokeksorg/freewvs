@@ -8,8 +8,8 @@ subdir=0
 
 [Serendipity-freetag]
 url=http://www.s9y.org
-safe=3.30
-vuln=CVE-2011-3610
+safe=3.69
+vuln=https://github.com/s9y/additional_plugins/commit/3edecdb7eccc24e0d5c63a3d5702dba54599bda3
 file=serendipity_event_freetag.php
 variable=$propbag->add('version'
 subdir=0
