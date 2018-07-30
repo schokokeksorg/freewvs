@@ -31,18 +31,18 @@ variable=version = "6.x
 subdir=0
 
 [Wordpress-timthumb]
-url=http://code.google.com/p/timthumb/
-safe=2.0
-vuln=CVE-2011-4106
+url=https://github.com/GabrielGil/TimThumb
+safe=2.8.14
+vuln=CVE-2014-4663
 file=timthumb.php
 variable=('VERSION',
 extra_match=TimThumb
 subdir=0
 
 [Wordpress-timthumb-renamed]
-url=http://code.google.com/p/timthumb/
-safe=2.0
-vuln=CVE-2011-4106
+url=https://github.com/GabrielGil/TimThumb
+safe=2.8.14
+vuln=CVE-2014-4663
 file=thumb.php
 variable=('VERSION',
 extra_match=TimThumb
