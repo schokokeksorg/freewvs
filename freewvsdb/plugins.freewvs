@@ -39,22 +39,13 @@ variable=('VERSION',
 extra_match=TimThumb
 subdir=0
 
-[Wordpress-timthumb_renamed]
+[Wordpress-timthumb-renamed]
 url=http://code.google.com/p/timthumb/
 safe=2.0
 vuln=CVE-2011-4106
 file=thumb.php
 variable=('VERSION',
 extra_match=TimThumb
-subdir=0
-
-[Wordpress-timthumb-renamed]
-url=http://code.google.com/p/timthumb/
-safe=2.0
-vuln=CVE-2011-4106
-file=thumb.php
-variable=define ('VERSION',
-extra_match="TimThumb"
 subdir=0
 
 [Joomla-JCE]
