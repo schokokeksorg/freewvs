@@ -248,3 +248,13 @@ latest=4.6.2
 file=index.php
 subdir=1
 variable=$thisversion
+
+[bolt]
+url=https://bolt.cm/
+safe=3.5.3
+latest=3.5.3
+file=Version.php
+variable=const VERSION
+vuln=https://github.com/bolt/bolt/blob/v3.5.4/changelog.md#bolt-353
+extra_match=Bolt's
+subdir=4
