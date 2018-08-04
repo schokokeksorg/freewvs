@@ -52,7 +52,7 @@ def versioncompare(safe_version, find_version):
             return True
         if int(find_version[i]) > int(safe_version[i]):
             return False
-    return (len(find_version) < len(safe_version))
+    return len(find_version) < len(safe_version)
 
 
 def vulnprint(appname, version, safeversion, vuln, vfilename, subdir,
@@ -176,9 +176,9 @@ for fdir in args:
                     file.close()
 
                     if item['extra_match']:
-                        ematch = (filestr.find(item['extra_match']) != -1)
+                        ematch = filestr.find(item['extra_match']) != -1
                     elif item['extra_nomatch']:
-                        ematch = not (filestr.find(item['extra_nomatch']) != -1)
+                        ematch = not filestr.find(item['extra_nomatch']) != -1
                     else:
                         ematch = True
 
