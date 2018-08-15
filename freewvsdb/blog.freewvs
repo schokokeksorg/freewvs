@@ -9,9 +9,9 @@ subdir=0
 
 [Wordpress]
 url=http://www.wordpress.org/
-safe=4.9.4
-old_safe=4.8.6,4.8.5,4.7.10,4.7.9,4.6.11,4.6.10,4.5.14,4.5.13,4.4.15,4.4.14,4.3.16,4.3.15,4.2.20,4.2.19,4.1.23,4.1.22,4.0.23,4.0.22,3.9.24,3.9.23,3.8.26,3.8.25,3.7.26,3.7.25
-vuln=https://wordpress.org/news/2018/02/wordpress-4-9-4-maintenance-release/
+safe=4.9.7
+old_safe=4.8.8,4.8.7,4.7.12,4.7.11,4.6.13,4.6.12,4.5.16,4.5.15,4.4.17,4.4.16,4.3.18,4.3.17,4.2.22,4.2.21,4.1.25,4.1.24,4.0.25,4.0.24,3.9.26,3.9.25,3.8.28,3.8.27,3.7.28,3.7.27
+vuln=https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-release/
 file=version.php
 variable=$wp_version
 subdir=1
