@@ -1,15 +1,15 @@
 [phpMyAdmin-veryold]
 url=http://www.phpmyadmin.net/
-safe=4.8.3
-vuln=CVE-2018-15605
+safe=4.8.4
+vuln=CVE-2018-19968
 file=Config.class.php
 variable=PMA_VERSION
 subdir=1
 
 [phpMyAdmin-old]
 url=http://www.phpmyadmin.net/
-safe=4.8.3
-vuln=CVE-2018-15605
+safe=4.8.4
+vuln=CVE-2018-19968
 file=Config.php
 variable=PMA_VERSION
 subdir=1
@@ -17,8 +17,8 @@ extra_match=namespace PMA\libraries;
 
 [phpMyAdmin]
 url=http://www.phpmyadmin.net/
-safe=4.8.3
-vuln=CVE-2018-15605
+safe=4.8.4
+vuln=CVE-2018-19968
 file=Config.php
 variable=PMA_VERSION
 subdir=2
