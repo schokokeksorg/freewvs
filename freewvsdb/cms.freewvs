@@ -44,9 +44,9 @@ subdir=1
 
 [Drupal8]
 url=http://www.drupal.org/
-safe=8.6.6
-old_safe=8.5.9
-latest=8.6.6
+safe=8.6.10
+old_safe=8.5.11
+latest=8.6.10
 vuln=https://www.drupal.org/sa-core-2019-002
 file=Drupal.php
 variable=const VERSION
