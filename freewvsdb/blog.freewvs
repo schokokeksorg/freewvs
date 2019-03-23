@@ -1,5 +1,5 @@
 [Serendipity]
-url=http://www.s9y.org/
+url=https://docs.s9y.org/
 safe=2.1.4
 vuln=http://blog.s9y.org/archives/280-Serendipity-2.1.4-and-2.2.1-alpha1-released.html
 file=serendipity_config.inc.php
@@ -7,7 +7,7 @@ variable=$serendipity['version']
 subdir=0
 
 [Wordpress]
-url=http://www.wordpress.org/
+url=https://wordpress.org/
 safe=5.1.1
 old_safe=5.0.5,5.0.4,4.9.11,4.9.10,4.8.10,4.8.9,4.7.14,4.7.13,4.6.15,4.6.14,4.5.18,4.5.17,4.4.19,4.4.18,4.3.20,4.3.19,4.2.24,4.2.23,4.1.27,4.1.26,4.0.27,4.0.26,3.9.27,3.9.26,3.8.29,3.8.28,3.7.29,3.7.28
 vuln=https://wordpress.org/news/2019/03/wordpress-5-1-1-security-and-maintenance-release/
@@ -25,7 +25,7 @@ variable=$sb_info[ 'version' ]
 subdir=1
 
 [b2evolution]
-url=http://b2evolution.net/
+url=https://b2evolution.net/
 safe=1.9.2
 old_safe=1.8.7
 vuln=CVE-2007-0175
@@ -53,7 +53,7 @@ subdir=1
 extra_match=[sblog_version_info]
 
 [Movable_Type]
-url=http://www.movabletype.com/
+url=https://www.movabletype.com/
 # movable type has a crazy versioning scheme, that makes it basically
 # impossible to really use freewvs properly, latest is 5.2.3
 safe=5.13
