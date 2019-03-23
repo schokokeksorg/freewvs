@@ -25,29 +25,29 @@ variable=release
 subdir=2
 
 [Drupal6]
-url=http://www.drupal.org/
-safe=7.62
-latest=7.62
-vuln=https://www.drupal.org/sa-core-2019-002
+url=https://www.drupal.org/
+safe=7.65
+latest=7.65
+vuln=https://www.drupal.org/SA-CORE-2019-004
 file=system.module
 variable=define('VERSION'
 subdir=2
 
 [Drupal7]
-url=http://www.drupal.org/
-safe=7.62
-latest=7.62
-vuln=https://www.drupal.org/sa-core-2019-002
+url=https://www.drupal.org/
+safe=7.65
+latest=7.65
+vuln=https://www.drupal.org/SA-CORE-2019-004
 file=bootstrap.inc
 variable=define('VERSION'
 subdir=1
 
 [Drupal8]
-url=http://www.drupal.org/
-safe=8.6.10
-old_safe=8.5.11
-latest=8.6.10
-vuln=CVE-2019-6340
+url=https://www.drupal.org/
+safe=8.6.13
+old_safe=8.5.14
+latest=8.6.13
+vuln=https://www.drupal.org/SA-CORE-2019-004
 file=Drupal.php
 variable=const VERSION
 subdir=2
