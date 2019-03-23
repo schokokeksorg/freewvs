@@ -1,5 +1,5 @@
 [WebsiteBaker]
-url=http://www.websitebaker.org/
+url=https://websitebaker.org/
 safe=2.8.4
 vuln=CVE-2015-0553
 file=version.php
@@ -8,7 +8,7 @@ extra_match=Website Baker Project
 subdir=3
 
 [WebsiteBaker28]
-url=http://www.websitebaker.org/
+url=https://websitebaker.org/
 safe=2.8.4
 vuln=CVE-2015-0553
 file=info.php
@@ -53,7 +53,7 @@ variable=const VERSION
 subdir=2
 
 [PHPNuke]
-url=http://phpnuke.org/
+url=https://www.phpnuke.org/
 # I'm not really sure about that, but 8.0 is at least vulnerable
 # Versions pre 8.0 aren't easily detectable
 safe=8.1
@@ -64,7 +64,7 @@ extra_match=PHP-Nuke $version_number
 subdir=2
 
 [Typo3]
-url=http://typo3.org/
+url=https://typo3.org/
 safe=8.1.1
 old_safe=7.6.10,7.6.9,7.6.8,6.2.26,6.2.25,6.2.24
 vuln=https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2016-013/
@@ -73,7 +73,7 @@ variable=$TYPO_VERSION
 subdir=1
 
 [typo3-6]
-url=http://typo3.org/
+url=https://typo3.org/
 safe=7.0.2
 old_safe=6.2.9,4.5.39
 vuln=https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2014-002/
@@ -82,7 +82,7 @@ variable=define('TYPO3_version
 subdir=4
 
 [Joomla-1]
-url=http://www.joomla.org/
+url=https://www.joomla.org/
 safe=3.9.3
 vuln=CVE-2019-7744
 file=version.php
@@ -92,7 +92,7 @@ subdir=1
 
 # 1.5 has changed identification
 [Joomla-1_5]
-url=http://www.joomla.org/
+url=https://www.joomla.org/
 safe=3.9.3
 vuln=CVE-2019-7744
 file=version.php
@@ -101,7 +101,7 @@ extra_match=@package	Joomla.Framework
 subdir=2
 
 [Joomla-3]
-url=http://www.joomla.org/
+url=https://www.joomla.org/
 safe=3.9.3
 vuln=CVE-2019-7744
 file=joomla.xml
@@ -130,7 +130,7 @@ subdir=1
 extra_match=w-agora version $v
 
 [MODx]
-url=http://www.modxcms.com/
+url=https://modx.com/
 safe=1.0.15
 vuln=http://forums.modx.com/thread/94952/multiple-vulnerabilities-xss-remote-command-injection
 file=version.inc.php
@@ -139,7 +139,7 @@ subdir=2
 extra_match=$full_appname = 'MODx'
 
 [MODX-1.x]
-url=http://www.modxcms.com/
+url=https://modx.com/
 safe=1.0.15
 vuln=http://forums.modx.com/thread/94952/multiple-vulnerabilities-xss-remote-command-injection
 file=version.inc.php
@@ -147,7 +147,7 @@ variable=$modx_version
 subdir=2
 
 [MODX-2.x]
-url=http://www.modxcms.com/
+url=https://modx.com/
 safe=2.2.11
 vuln=http://modx.com/blog/2014/07/15/revolution-2.2.15/
 file=changelog.txt
@@ -167,7 +167,7 @@ subdir=2
 extra_match=http://www.pn-cms.de
 
 [Contenido]
-url=http://www.contenido.org/
+url=https://www.contenido.org/
 safe=4.8.15
 latest=4.8.15
 vuln=http://www.contenido.org/de/front_content.php?idcat=107&idart=1789&client=6&lang=3
@@ -177,7 +177,7 @@ subdir=1
 extra_match=Contenido Misc Configurations
 
 [SilverStripe]
-url=http://www.silverstripe.com
+url=https://www.silverstripe.com
 safe=2.4.7
 vuln=CVE-2012-0976
 file=silverstripe_version
@@ -186,7 +186,7 @@ subdir=1
 extra_match=/open/modules/cms/
 
 [CMSMadeSimple]
-url=http://www.cmsmadesimple.org/
+url=https://www.cmsmadesimple.org/
 safe=1.11.13
 vuln=http://www.cmsmadesimple.org/2015/02/Announcing-CMS-Made-Simple-1-11-13-Security-Release/
 file=version.php
@@ -194,7 +194,7 @@ variable=$CMS_VERSION
 subdir=0
 
 [e107]
-url=http://e107.org/
+url=https://e107.org/
 safe=1.0.0
 vuln=CVE-2011-4920
 file=ver.php
@@ -202,7 +202,7 @@ variable=$e107info['e107_version']
 subdir=0
 
 [SPIP]
-url=http://www.spip.net/
+url=https://www.spip.net/
 safe=2.1.13
 old_safe=2.0.18
 vuln=http://archives.rezo.net/archives/spip-en.mbox/U5QUZ6WJRAJC7H5BR7W5SQG6WCD3PXL7/
@@ -211,7 +211,7 @@ variable=$spip_version_branche
 subdir=1
 
 [contao]
-url=http://contao.org/
+url=https://contao.org/
 safe=3.2.5
 old_safe=2.11.14
 vuln=CVE-2014-1860
@@ -222,7 +222,7 @@ extra_match=Contao Open Source CMS
 subdir=0
 
 [contao-old]
-url=http://contao.org/
+url=https://contao.org/
 safe=3.2.5
 old_safe=2.11.14
 vuln=CVE-2014-1860
@@ -233,7 +233,7 @@ extra_match=Contao Open Source CMS Changelog
 subdir=0
 
 [redaxo]
-url=http://www.redaxo.org/
+url=https://redaxo.org/
 safe=4.5
 vuln=CVE-2012-3869
 latest=4.5
