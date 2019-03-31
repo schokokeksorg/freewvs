@@ -1,8 +1,7 @@
 [phpBB]
-url=http://www.phpbb.com
-safe=3.1.4
-old_safe=3.0.14
-vuln=https://www.phpbb.com/community/viewtopic.php?f=14&t=2313941
+url=https://www.phpbb.com
+safe=3.2.4
+vuln=CVE-2018-19274
 file=CHANGELOG.html
 variable=Changes since
 add_minor=1
