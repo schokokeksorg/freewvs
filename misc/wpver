@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# helper script for development only, creates version list
+# of all supported wordpress versions + one future version
+# for each major/minor combination
+
+vers=$(curl -s https://api.wordpress.org/core/version-check/1.7/ | jq . | grep current | sed -e 's!^.*: "!!g' -e 's!",$!!g' | sort -ru)
+
+safe=$(echo "$vers"|head -n 1)
+
+echo safe=$safe
+
+echo -n old_safe=
+for ver in $(echo "$vers"|tail -n +2); do
+
+	pre=$(echo $ver | sed -e 's:[0-9]*$::g')
+	post=$(echo $ver | sed -e 's:.*\.::g')
+
+	let postadd=post+1
+
+	echo -n $pre$postadd,
+	echo -n $pre$post,
+
+done | sed -e 's:,$::g'
+
+echo
