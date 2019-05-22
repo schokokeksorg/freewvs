@@ -1,7 +1,7 @@
 [phpBB]
 url=https://www.phpbb.com
-safe=3.2.4
-vuln=CVE-2018-19274
+safe=3.2.6
+vuln=CVE-2019-9826
 file=CHANGELOG.html
 variable=Changes since
 add_minor=1
