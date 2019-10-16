@@ -1,7 +1,7 @@
 [Serendipity]
 url=https://docs.s9y.org/
-safe=2.1.5
-vuln=https://blog.s9y.org/archives/282-Serendipity-2.1.5-released.html
+safe=2.3.2
+vuln=https://blog.s9y.org/archives/287-Serendipity-2.3.2-released-security-update.html
 file=serendipity_config.inc.php
 variable=$serendipity['version']
 subdir=0
