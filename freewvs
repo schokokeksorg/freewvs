@@ -174,7 +174,7 @@ for fdir in args:
                 if filename == item['file']:
                     mfile = os.path.join(root, filename)
                     try:
-                        file = open(mfile)
+                        file = open(mfile, errors='replace')
                     except Exception:
                         continue
                     filestr = file.read()
