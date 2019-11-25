@@ -1,4 +1,4 @@
-#!/usr/bin/python -tO
+#!/usr/bin/python3 -O
 
 # freewvs 0.1 - the free web vulnerability scanner
 #
@@ -23,13 +23,7 @@
 # return your changes to the public. We would be especially happy if you tell
 # us what you're going to do with this code.
 
-try:					# python3
-    import configparser
-except ImportError:			# python2
-    import ConfigParser as configparser
-    # overwrite default open() function
-    # this one supports encoding='...'
-    from codecs import open
+import configparser
 
 import os
 import glob
