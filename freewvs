@@ -106,6 +106,8 @@ parser.add_option("-f", "--fancy", action="store_const", dest="OUTPUT",
                   const="fancy", help="Show more fancy output")
 parser.add_option("-x", "--xml", action="store_const", dest="OUTPUT",
                   const="xml", help="Output results as XML")
+parser.add_option("-3", "--thirdparty", action="store_true", dest="THIRDPARTY",
+                  help="Scan for third-party components like jquery")
 opts, args = parser.parse_args()
 
 # Parse vulnerability database
@@ -120,6 +122,9 @@ except configparser.MissingSectionHeaderError as err:
 vdb = []
 for sect in config.sections():
     item = {}
+
+    if config.getboolean(sect, 'thirdparty', fallback=False) and not opts.THIRDPARTY:
+        continue
 
     # base options
     item['name'] = sect
