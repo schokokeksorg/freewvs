@@ -18,9 +18,10 @@ variable=$RELEASE
 subdir=1
 
 [PmWiki]
-url=http://www.pmwiki.org/
+url=https://pmwiki.org/
 safe=2.2.96
-vuln=http://www.pmwiki.org/wiki/PmWiki/ChangeLog
+latest=2.2.122
+vuln=https://pmwiki.org/wiki/PmWiki/ChangeLog#v2296
 file=version.php
 variable=$Version
 extra_match=pmwiki
