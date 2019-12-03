@@ -109,7 +109,8 @@ config = configparser.ConfigParser()
 try:
     config.read(glob.glob('/usr/share/freewvs/*.freewvs'))
     config.read(glob.glob('/usr/local/share/freewvs/*.freewvs'))
-    config.read(glob.glob(os.path.dirname(sys.argv[0]) + '/freewvsdb/*.freewvs'))
+    config.read(glob.glob(os.path.dirname(sys.argv[0])
+                          + '/freewvsdb/*.freewvs'))
 except configparser.MissingSectionHeaderError as err:
     print("Error parsing config files: %s" % err)
 
@@ -117,7 +118,8 @@ vdb = []
 for sect in config.sections():
     item = {}
 
-    if config.getboolean(sect, 'thirdparty', fallback=False) and not opts.THIRDPARTY:
+    if (config.getboolean(sect, 'thirdparty', fallback=False)
+       and not opts.THIRDPARTY):
         continue
 
     # base options
@@ -130,8 +132,8 @@ for sect in config.sections():
     # match magic
     item['variable'] = []
     for var in config.get(sect, 'variable').split(","):
-        item['variable'].append(re.compile(re.escape(var) +
-                                r"[^0-9\n\r]*[.]*([0-9.]*[0-9])[^0-9.]"))
+        item['variable'].append(re.compile(re.escape(var)
+                                + r"[^0-9\n\r]*[.]*([0-9.]*[0-9])[^0-9.]"))
 
     # optional options
     if config.has_option(sect, 'extra_match'):
@@ -196,8 +198,8 @@ for fdir in args:
                         # Very ugly phpbb workaround
                         if item['add_minor']:
                             findversion = findversion.split('.')
-                            findversion[-1] = str(int(findversion[-1]) +
-                                                  int(item['add_minor']))
+                            findversion[-1] = str(int(findversion[-1])
+                                                  + int(item['add_minor']))
                             findversion = '.'.join(findversion)
 
                         if not (versioncompare(item['safe'].split('.'),
@@ -215,8 +217,8 @@ for fdir in args:
                             safev = "9999"
                             for ver in item['old_safe']:
                                 if(versioncompare(ver.split('.'),
-                                   findversion.split('.')) and
-                                   not versioncompare(ver.split('.'),
+                                   findversion.split('.'))
+                                   and not versioncompare(ver.split('.'),
                                    safev.split('.'))):
                                     safev = ver
                             if safev == "9999":
@@ -228,8 +230,8 @@ for fdir in args:
 
                     else:
                         if opts.DEBUG:
-                            print("regexp failed for " +
-                                  item['name'] + " on " + mfile)
+                            print("regexp failed for "
+                                  + item['name'] + " on " + mfile)
 
 if opts.OUTPUT == 'xml':
     print('</freewvs>')
