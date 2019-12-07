@@ -130,10 +130,8 @@ for sect in config.sections():
     item['subdir'] = int(config.get(sect, 'subdir'))
 
     # match magic
-    item['variable'] = []
-    for var in config.get(sect, 'variable').split(","):
-        item['variable'].append(re.compile(re.escape(var)
-                                + r"[^0-9\n\r]*[.]*([0-9.]*[0-9])[^0-9.]"))
+    item['variable'] = re.compile(re.escape(config.get(sect, 'variable'))
+                                + r"[^0-9\n\r]*[.]*([0-9.]*[0-9])[^0-9.]")
 
     # optional options
     if config.has_option(sect, 'extra_match'):
@@ -180,66 +178,51 @@ for fdir in args:
                     filestr = file.read()
                     file.close()
 
-                    if item['extra_match']:
-                        ematch = filestr.find(item['extra_match']) != -1
-                    elif item['extra_nomatch']:
-                        ematch = not filestr.find(item['extra_nomatch']) != -1
-                    else:
-                        ematch = True
-
-                    if (item['path_match']
-                       and not root.endswith(item['path_match'])):
+                    if ((item['extra_match']
+                       and item['extra_match'] not in filestr)
+                       or (item['extra_nomatch']
+                       and item['extra_nomatch'] not in filestr)
+                       or (item['path_match']
+                       and not root.endswith(item['path_match']))):
                         continue
 
-                    findversion = []
-                    for var in item['variable']:
-                        var = var.search(filestr)
-                        if not var:
-                            findversion = False
-                            break
-                        else:
-                            findversion.append(var.group(1))
+                    findversion = item['variable'].search(filestr)
+                    if not findversion:
+                        continue
+                    findversion=findversion.group(1)
 
-                    if findversion and ematch:
+                    # Very ugly phpbb workaround
+                    if item['add_minor']:
+                        findversion = findversion.split('.')
+                        findversion[-1] = str(int(findversion[-1])
+                                              + int(item['add_minor']))
                         findversion = '.'.join(findversion)
 
-                        # Very ugly phpbb workaround
-                        if item['add_minor']:
-                            findversion = findversion.split('.')
-                            findversion[-1] = str(int(findversion[-1])
-                                                  + int(item['add_minor']))
-                            findversion = '.'.join(findversion)
-
-                        if not (versioncompare(item['safe'].split('.'),
-                                findversion.split('.'))) or \
-                                item['old_safe'].count(findversion) > 0:
-                            if opts.ALL:
-                                if opts.DEBUG:
-                                    print("File " + mfile)
-                                vulnprint(item['name'], findversion,
-                                          "ok", "", mfile, item['subdir'],
-                                          opts.OUTPUT)
-                        else:
+                    if not (versioncompare(item['safe'].split('.'),
+                            findversion.split('.'))) or \
+                            item['old_safe'].count(findversion) > 0:
+                        if opts.ALL:
                             if opts.DEBUG:
                                 print("File " + mfile)
-                            safev = "9999"
-                            for ver in item['old_safe']:
-                                if(versioncompare(ver.split('.'),
-                                   findversion.split('.'))
-                                   and not versioncompare(ver.split('.'),
-                                   safev.split('.'))):
-                                    safev = ver
-                            if safev == "9999":
-                                safev = item['safe']
-
                             vulnprint(item['name'], findversion,
-                                      safev, item['vuln'],
-                                      mfile, item['subdir'], opts.OUTPUT)
-
+                                      "ok", "", mfile, item['subdir'],
+                                      opts.OUTPUT)
                     else:
                         if opts.DEBUG:
-                            print("regexp failed for "
-                                  + item['name'] + " on " + mfile)
+                            print("File " + mfile)
+                        safev = "9999"
+                        for ver in item['old_safe']:
+                            if(versioncompare(ver.split('.'),
+                               findversion.split('.'))
+                               and not versioncompare(ver.split('.'),
+                               safev.split('.'))):
+                                safev = ver
+                        if safev == "9999":
+                            safev = item['safe']
+
+                        vulnprint(item['name'], findversion,
+                                  safev, item['vuln'],
+                                  mfile, item['subdir'], opts.OUTPUT)
 
 if opts.OUTPUT == 'xml':
     print('</freewvs>')
