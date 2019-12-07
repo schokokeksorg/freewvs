@@ -144,6 +144,10 @@ for sect in config.sections():
         item['extra_nomatch'] = config.get(sect, 'extra_nomatch')
     else:
         item['extra_nomatch'] = False
+    if config.has_option(sect, 'path_match'):
+        item['path_match'] = config.get(sect, 'path_match')
+    else:
+        item['path_match'] = False
     if config.has_option(sect, 'add_minor'):
         item['add_minor'] = config.get(sect, 'add_minor')
     else:
@@ -182,6 +186,10 @@ for fdir in args:
                         ematch = not filestr.find(item['extra_nomatch']) != -1
                     else:
                         ematch = True
+
+                    if (item['path_match']
+                       and not root.endswith(item['path_match'])):
+                        continue
 
                     findversion = []
                     for var in item['variable']:
