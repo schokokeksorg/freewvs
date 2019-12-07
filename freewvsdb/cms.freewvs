@@ -85,20 +85,10 @@ subdir=4
 url=https://www.joomla.org/
 safe=3.9.13
 vuln=CVE-2019-18674
-file=version.php
-variable=var $RELEASE,var $DEV_LEVEL
-extra_match=@package Joomla
-subdir=1
-
-# 1.5 has changed identification
-[Joomla-1_5]
-url=https://www.joomla.org/
-safe=3.9.13
-vuln=CVE-2019-18674
-file=version.php
-variable=var $RELEASE,var $DEV_LEVEL
-extra_match=@package	Joomla.Framework
-subdir=2
+file=CHANGELOG.php
+variable=---------------
+extra_match=Joomla! is free software.
+subdir=0
 
 [Joomla-3]
 url=https://www.joomla.org/
@@ -106,8 +96,8 @@ safe=3.9.13
 vuln=CVE-2019-18674
 file=joomla.xml
 variable=<version>
-#extra_match=@package	Joomla.Framework
-extra_match=<name>files_joomla</name>
+extra_match=FILES_JOOMLA_XML_DESCRIPTION
+path_match=administrator/manifests/files
 subdir=0
 
 [Mambo]
