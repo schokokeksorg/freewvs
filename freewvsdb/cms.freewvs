@@ -90,7 +90,7 @@ variable=---------------
 extra_match=Joomla! is free software.
 subdir=0
 
-[Joomla-3]
+[Joomla]
 url=https://www.joomla.org/
 safe=3.9.13
 vuln=CVE-2019-18674
@@ -98,7 +98,7 @@ file=joomla.xml
 variable=<version>
 extra_match=FILES_JOOMLA_XML_DESCRIPTION
 path_match=administrator/manifests/files
-subdir=0
+subdir=3
 
 [Mambo]
 url=http://www.source.mambo-foundation.org/
