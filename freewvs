@@ -28,7 +28,7 @@ import configparser
 import os
 import glob
 import re
-import optparse
+import argparse
 import sys
 from xml.sax.saxutils import escape
 
@@ -45,12 +45,12 @@ def versioncompare(safe_version, find_version):
 
 
 def vulnprint(appname, version, safeversion, vuln, vfilename, subdir,
-              style=None):
+              xml):
     appdir = '/'.join(os.path.abspath(vfilename).split('/')[:-1 - subdir])
-    if not style:
+    if not xml:
         print("%(appname)s %(version)s (%(safeversion)s) %(vuln)s "
               "%(appdir)s" % vars())
-    elif style == 'xml':
+    else:
         state = 'vulnerable'
         if safeversion == 'ok':
             state = 'ok'
@@ -65,15 +65,16 @@ def vulnprint(appname, version, safeversion, vuln, vfilename, subdir,
 
 
 # Command-line options
-parser = optparse.OptionParser(usage="usage: %prog [options] <path>"
-                               "[<path2> ...]")
-parser.add_option("-a", "--all", action="store_true", dest="ALL",
-                  help="Show all webapps found, not just vulnerable")
-parser.add_option("-x", "--xml", action="store_const", dest="OUTPUT",
-                  const="xml", help="Output results as XML")
-parser.add_option("-3", "--thirdparty", action="store_true", dest="THIRDPARTY",
-                  help="Scan for third-party components like jquery")
-opts, args = parser.parse_args()
+parser = argparse.ArgumentParser()
+parser.add_argument("dirs", nargs="*",
+                    help="Directories to scan")
+parser.add_argument("-a", "--all", action="store_true",
+                    help="Show all webapps found, not just vulnerable")
+parser.add_argument("-x", "--xml", action="store_true",
+                    help="Output results as XML")
+parser.add_argument("-3", "--thirdparty", action="store_true",
+                    help="Scan for third-party components like jquery")
+opts = parser.parse_args()
 
 # Parse vulnerability database
 config = configparser.ConfigParser()
@@ -90,7 +91,7 @@ for sect in config.sections():
     item = {}
 
     if (config.getboolean(sect, 'thirdparty', fallback=False)
-       and not opts.THIRDPARTY):
+       and not opts.thirdparty):
         continue
 
     # base options
@@ -128,13 +129,13 @@ for sect in config.sections():
 
     vdb.append(item)
 
-if opts.OUTPUT == 'xml':
+if opts.xml:
     print('<?xml version="1.0" ?>')
     print('<freewvs>')
 
 # start the search
 
-for fdir in args:
+for fdir in opts.dirs:
     for root, NULL, files in os.walk(fdir):
         for filename in files:
             for item in vdb:
@@ -170,10 +171,10 @@ for fdir in args:
                     if not (versioncompare(item['safe'].split('.'),
                             findversion.split('.'))) or \
                             item['old_safe'].count(findversion) > 0:
-                        if opts.ALL:
+                        if opts.all:
                             vulnprint(item['name'], findversion,
                                       "ok", "", mfile, item['subdir'],
-                                      opts.OUTPUT)
+                                      opts.xml)
                     else:
                         safev = "9999"
                         for ver in item['old_safe']:
@@ -187,7 +188,7 @@ for fdir in args:
 
                         vulnprint(item['name'], findversion,
                                   safev, item['vuln'],
-                                  mfile, item['subdir'], opts.OUTPUT)
+                                  mfile, item['subdir'], opts.xml)
 
-if opts.OUTPUT == 'xml':
+if opts.xml:
     print('</freewvs>')
