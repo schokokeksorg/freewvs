@@ -131,7 +131,7 @@ for sect in config.sections():
 
     # match magic
     item['variable'] = re.compile(re.escape(config.get(sect, 'variable'))
-                                + r"[^0-9\n\r]*[.]*([0-9.]*[0-9])[^0-9.]")
+                                  + r"[^0-9\n\r]*[.]*([0-9.]*[0-9])[^0-9.]")
 
     # optional options
     if config.has_option(sect, 'extra_match'):
@@ -189,7 +189,7 @@ for fdir in args:
                     findversion = item['variable'].search(filestr)
                     if not findversion:
                         continue
-                    findversion=findversion.group(1)
+                    findversion = findversion.group(1)
 
                     # Very ugly phpbb workaround
                     if item['add_minor']:
