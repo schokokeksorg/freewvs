@@ -82,6 +82,7 @@ except configparser.MissingSectionHeaderError as err:
     print("Error parsing config files: %s" % err)
 
 vdb = []
+scanfiles = set()
 for sect in config.sections():
     item = {}
 
@@ -95,6 +96,7 @@ for sect in config.sections():
     item['file'] = config.get(sect, 'file')
     item['vuln'] = config.get(sect, 'vuln')
     item['subdir'] = int(config.get(sect, 'subdir'))
+    scanfiles.add(item['file'])
 
     # match magic
     item['variable'] = re.compile(re.escape(config.get(sect, 'variable'))
@@ -132,7 +134,7 @@ if opts.xml:
 
 for fdir in opts.dirs:
     for root, NULL, files in os.walk(fdir):
-        for filename in files:
+        for filename in scanfiles.intersection(files):
             for item in vdb:
                 if filename == item['file']:
                     mfile = os.path.join(root, filename)
