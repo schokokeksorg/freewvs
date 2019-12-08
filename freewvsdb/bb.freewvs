@@ -20,8 +20,9 @@ extra_match=DeluxeBB
 url=http://punbb.org/
 safe=1.4.1
 vuln=https://secunia.com/advisories/46864
-file=install.php
-variable=FORUM_VERSION
+file=db_update.php
+variable=UPDATE_TO
+extra_matcH=@package PunBB
 subdir=0
 
 [PunBB12]
