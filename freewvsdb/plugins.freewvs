@@ -167,8 +167,8 @@ subdir=0
 
 [Wordpress-SEObyYoast]
 url=https://wordpress.org/plugins/wordpress-seo/
-safe=2.2
-vuln=https://inventropy.us/blog/yoast-seo-plugin-cross-site-scripting-vulnerability/
+safe=11.6.0
+vuln=2019-13478
 file=wp-seo-main.php
 variable=WPSEO_VERSION
 subdir=0
