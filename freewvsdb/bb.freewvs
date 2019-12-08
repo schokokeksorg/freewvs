@@ -105,18 +105,17 @@ extra_match=<packagename>WoltLab Burning Board Lite</packagename>
 subdir=0
 
 [FluxBB12]
-url=http://fluxbb.org/
-safe=1.4.7
-vuln=CVE-2011-3621
+url=https://fluxbb.org/
+safe=1.5.11
+vuln=https://fluxbb.org/forums/viewtopic.php?id=9472
 file=install.php
 variable=$fluxbb_version
 subdir=1
 
 [FluxBB]
-url=http://fluxbb.org/
-safe=1.5.4
-old_safe=1.4.11
-vuln=http://fluxbb.org/forums/viewtopic.php?id=7217
+url=https://fluxbb.org/
+safe=1.5.11
+vuln=https://fluxbb.org/forums/viewtopic.php?id=9472
 file=common.php
 variable=FORUM_VERSION
 extra_match=FORUM_DB_REVISION
