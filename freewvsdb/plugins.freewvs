@@ -85,9 +85,9 @@ variable=$phpthumb_version
 subdir=0
 
 [Wordpress-Jetpack]
-url=http://jetpack.me/
-safe=4.0.4
-vuln=https://jetpack.com/2016/06/20/jetpack-4-0-4-bug-fixes/
+url=https://jetpack.com/
+safe=7.9.1
+vuln=https://jetpack.com/2019/11/19/jetpack-7-9-1-maintenance-security/
 file=jetpack.php
 variable=JETPACK__VERSION
 subdir=0
