@@ -27,15 +27,10 @@ import configparser
 
 import os
 import glob
-import pprint
 import re
 import optparse
 import sys
-import gettext
 from xml.sax.saxutils import escape
-
-gettext.textdomain('freewvs')
-_ = gettext.gettext
 
 
 def versioncompare(safe_version, find_version):
@@ -55,23 +50,6 @@ def vulnprint(appname, version, safeversion, vuln, vfilename, subdir,
     if not style:
         print("%(appname)s %(version)s (%(safeversion)s) %(vuln)s "
               "%(appdir)s" % vars())
-    elif style == 'fancy':
-        print(_("Directory: %(appdir)s") % vars())
-        if safeversion != "ok":
-            if safeversion != "":
-                print(_("Vulnerable %(appname)s %(version)s found, please "
-                        "update to %(safeversion)s or above.") % vars())
-            else:
-                print(_("Vulnerable %(appname)s %(version)s found, no fixed "
-                        "version available.") % vars())
-            if vuln[:3] == "CVE":
-                print(_("https://cve.mitre.org/cgi-bin/cvename.cgi?name="
-                        "%(vuln)s") % vars())
-            else:
-                print(vuln)
-        else:
-            print(_("%(appname)s %(version)s found.") % vars())
-        print("")
     elif style == 'xml':
         state = 'vulnerable'
         if safeversion == 'ok':
@@ -86,18 +64,11 @@ def vulnprint(appname, version, safeversion, vuln, vfilename, subdir,
         print('  </app>')
 
 
-pp = pprint.PrettyPrinter(indent=4)
-
 # Command-line options
 parser = optparse.OptionParser(usage="usage: %prog [options] <path>"
                                "[<path2> ...]")
 parser.add_option("-a", "--all", action="store_true", dest="ALL",
                   help="Show all webapps found, not just vulnerable")
-parser.add_option("-d", "--debug", action="store_true", dest="DEBUG",
-                  help="Show lots of debugging output, mainly useful"
-                  "for development")
-parser.add_option("-f", "--fancy", action="store_const", dest="OUTPUT",
-                  const="fancy", help="Show more fancy output")
 parser.add_option("-x", "--xml", action="store_const", dest="OUTPUT",
                   const="xml", help="Output results as XML")
 parser.add_option("-3", "--thirdparty", action="store_true", dest="THIRDPARTY",
@@ -156,8 +127,6 @@ for sect in config.sections():
         item['old_safe'] = []
 
     vdb.append(item)
-if opts.DEBUG:
-    pp.pprint(vdb)
 
 if opts.OUTPUT == 'xml':
     print('<?xml version="1.0" ?>')
@@ -202,14 +171,10 @@ for fdir in args:
                             findversion.split('.'))) or \
                             item['old_safe'].count(findversion) > 0:
                         if opts.ALL:
-                            if opts.DEBUG:
-                                print("File " + mfile)
                             vulnprint(item['name'], findversion,
                                       "ok", "", mfile, item['subdir'],
                                       opts.OUTPUT)
                     else:
-                        if opts.DEBUG:
-                            print("File " + mfile)
                         safev = "9999"
                         for ver in item['old_safe']:
                             if(versioncompare(ver.split('.'),
