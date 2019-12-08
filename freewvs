@@ -181,7 +181,7 @@ for fdir in args:
                     if ((item['extra_match']
                        and item['extra_match'] not in filestr)
                        or (item['extra_nomatch']
-                       and item['extra_nomatch'] not in filestr)
+                       and item['extra_nomatch'] in filestr)
                        or (item['path_match']
                        and not root.endswith(item['path_match']))):
                         continue
