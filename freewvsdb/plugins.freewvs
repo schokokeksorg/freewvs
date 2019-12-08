@@ -1,5 +1,5 @@
 [Serendipity-mycalendar]
-url=http://www.s9y.org
+url=https://s9y.org
 safe=0.13
 vuln=CVE-2007-6390
 file=serendipity_event_mycalendar.php
@@ -7,7 +7,7 @@ variable=$propbag->add('version'
 subdir=0
 
 [Serendipity-freetag]
-url=http://www.s9y.org
+url=https://s9y.org
 safe=3.69
 vuln=https://github.com/s9y/additional_plugins/commit/3edecdb7eccc24e0d5c63a3d5702dba54599bda3
 file=serendipity_event_freetag.php
@@ -15,7 +15,7 @@ variable=$propbag->add('version'
 subdir=0
 
 [SquirrelMail-gpg]
-url=http://www.squirrelmail.org/plugin_view.php?id=153
+url=https://squirrelmail.org/plugin_view.php?id=153
 safe=2.1
 vuln=CVE-2007-3779
 file=gpg_pref_functions.php
@@ -23,7 +23,7 @@ variable=$GPG_VERSION
 subdir=0
 
 [Drupal-Views]
-url=http://drupal.org/project/views
+url=https://www.drupal.org/project/views
 safe=2.13
 vuln=CVE-2011-4113
 file=views.info
@@ -49,7 +49,7 @@ extra_match=TimThumb
 subdir=0
 
 [Joomla-JCE]
-url=http://www.joomlacontenteditor.net/
+url=https://www.joomlacontenteditor.net/
 safe=2.1
 vuln=CVE-2012-2902
 file=editor.php
@@ -58,7 +58,7 @@ extra_match=JCE class
 subdir=3
 
 [WP Super Cache]
-url=http://wordpress.org/extend/plugins/wp-super-cache/
+url=https://wordpress.org/plugins/wp-super-cache/
 safe=1.4.9
 latest=1.4.9
 vuln=https://wptavern.com/wp-super-cache-1-4-9-patches-multiple-xss-vulnerabilities
@@ -68,7 +68,7 @@ extra_match=Plugin Name: WP Super Cache
 subdir=0
 
 [W3 Total Cache]
-url=http://wordpress.org/extend/plugins/w3-total-cache/
+url=https://wordpress.org/plugins/w3-total-cache/
 safe=0.9.5
 vuln=https://secupress.me/w3-total-cache-vulnerable-xss-high-risk/
 file=w3-total-cache.php
@@ -93,7 +93,7 @@ variable=JETPACK__VERSION
 subdir=0
 
 [Wordpress-MailPoet]
-url=http://www.mailpoet.com/
+url=https://www.mailpoet.com/
 safe=2.6.8
 vuln=CVE-2014-4726
 file=base.php
@@ -110,7 +110,7 @@ variable=Version
 subdir=0
 
 [Wordpress-SliderRevolution]
-url=http://themepunch.com/revolution/
+url=https://revolution.themepunch.com/
 safe=4.2.0
 vuln=http://blog.sucuri.net/2014/09/slider-revolution-plugin-critical-vulnerability-being-exploited.html
 file=revslider.php
@@ -134,7 +134,7 @@ variable=AKISMET_VERSION
 subdir=0
 
 [Wordpress-AllInOneSEO]
-url=http://semperfiwebdesign.com/blog/all-in-one-seo-pack/all-in-one-seo-pack-release-history/
+url=https://semperplugins.com/all-in-one-seo-pack-changelog/
 safe=2.3.8
 vuln=https://www.wordfence.com/blog/2016/07/new-xss-vulnerability-all-in-one-seo-pack/
 file=all_in_one_seo_pack.php
@@ -166,7 +166,7 @@ variable=<version>
 subdir=0
 
 [Wordpress-SEObyYoast]
-url=https://wpvulndb.com/vulnerabilities/7841https://wordpress.org/plugins/fancybox-for-wordpress/
+url=https://wordpress.org/plugins/wordpress-seo/
 safe=2.2
 vuln=https://inventropy.us/blog/yoast-seo-plugin-cross-site-scripting-vulnerability/
 file=wp-seo-main.php
@@ -182,7 +182,7 @@ variable=GAWP_VERSION
 subdir=0
 
 [Wordpress-Captcha]
-url=https://de.wordpress.org/plugins/captcha/
+url=https://wordpress.org/plugins/captcha/
 safe=4.4.5
 vuln=https://www.wordfence.com/blog/2017/12/backdoor-captcha-plugin/
 file=captcha.php
