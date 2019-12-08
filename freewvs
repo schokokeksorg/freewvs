@@ -34,14 +34,9 @@ from xml.sax.saxutils import escape
 
 
 def versioncompare(safe_version, find_version):
-    if safe_version == [""]:
-        return True
-    for i in range(min(len(find_version), len(safe_version))):
-        if int(find_version[i]) < int(safe_version[i]):
-            return True
-        if int(find_version[i]) > int(safe_version[i]):
-            return False
-    return len(find_version) < len(safe_version)
+    safe_version_tup = [int(x) for x in safe_version.split(".")]
+    find_version_tup = [int(x) for x in find_version.split(".")]
+    return find_version_tup < safe_version_tup
 
 
 def vulnprint(appname, version, safeversion, vuln, vfilename, subdir,
@@ -168,27 +163,20 @@ for fdir in opts.dirs:
                                               + int(item['add_minor']))
                         findversion = '.'.join(findversion)
 
-                    if not (versioncompare(item['safe'].split('.'),
-                            findversion.split('.'))) or \
-                            item['old_safe'].count(findversion) > 0:
+                    if (not versioncompare(item['safe'], findversion)
+                       or findversion in item['old_safe']):
                         if opts.all:
-                            vulnprint(item['name'], findversion,
-                                      "ok", "", mfile, item['subdir'],
-                                      opts.xml)
-                    else:
-                        safev = "9999"
-                        for ver in item['old_safe']:
-                            if(versioncompare(ver.split('.'),
-                               findversion.split('.'))
-                               and not versioncompare(ver.split('.'),
-                               safev.split('.'))):
-                                safev = ver
-                        if safev == "9999":
-                            safev = item['safe']
+                            vulnprint(item['name'], findversion, "ok", "",
+                                      mfile, item['subdir'], opts.xml)
+                        continue
 
-                        vulnprint(item['name'], findversion,
-                                  safev, item['vuln'],
-                                  mfile, item['subdir'], opts.xml)
+                    safev = item['safe']
+                    for ver in item['old_safe']:
+                        if versioncompare(ver, findversion):
+                            safev = ver
+
+                    vulnprint(item['name'], findversion, safev, item['vuln'],
+                              mfile, item['subdir'], opts.xml)
 
 if opts.xml:
     print('</freewvs>')
