@@ -233,9 +233,9 @@ subdir=3
 
 [textpattern]
 url=https://textpattern.com/
-safe=4.5.7
-vuln=CVE-2014-4737
-latest=4.6.2
+safe=4.7.0
+vuln=CVE-2018-7474
+latest=4.7.3
 file=index.php
 subdir=1
 variable=$thisversion
