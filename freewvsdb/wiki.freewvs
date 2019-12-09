@@ -62,11 +62,10 @@ variable=PHPWIKI_VERSION
 subdir=1
 
 [etherpad-lite]
-url=http://etherpad.org/
-# not really, 1.1.3 is safe, but 1.1.3/1.1.4 contain wrong version string
-safe=1.1.2
-vuln=http://etherpad.org/
+url=https://etherpad.org/
+safe=1.6.4
+vuln=CVE-2018-9326
 file=package.json
 variable=version
-extra_match=https://github.com/Pita/etherpad-lite
+extra_match=ep_etherpad-lite
 subdir=0
