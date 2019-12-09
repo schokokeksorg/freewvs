@@ -7,7 +7,6 @@ vuln=CVE-2019-16738
 file=DefaultSettings.php
 variable=$wgVersion
 subdir=1
-upgradeinstructions=https://www.mediawiki.org/wiki/Manual:Upgrading
 
 [TWiki]
 url=http://twiki.org/
