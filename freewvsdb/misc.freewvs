@@ -402,10 +402,10 @@ vuln=https://github.com/osTicket/osTicket-1.8/releases/tag/v1.8.12
 subdir=0
 
 [Gitlist]
-url=http://gitlist.org/
+url=https://gitlist.org/
 file=footer.twig
 variable=Powered by
 safe=0.7.0
 latest=1.0.2
-vuln=https://security.szurek.pl/exploit-bypass-php-escapeshellarg-escapeshellcmd.html
+vuln=CVE-2018-1000533
 subdir=3
