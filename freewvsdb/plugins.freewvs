@@ -59,9 +59,9 @@ subdir=3
 
 [WP Super Cache]
 url=https://wordpress.org/plugins/wp-super-cache/
-safe=1.4.9
-latest=1.4.9
-vuln=https://wptavern.com/wp-super-cache-1-4-9-patches-multiple-xss-vulnerabilities
+safe=1.6.9
+latest=1.7.0
+vuln=https://odd.blog/2019/07/25/wp-super-cache-1-6-9-security-update/
 file=wp-cache.php
 variable=Version:
 extra_match=Plugin Name: WP Super Cache
@@ -69,8 +69,8 @@ subdir=0
 
 [W3 Total Cache]
 url=https://wordpress.org/plugins/w3-total-cache/
-safe=0.9.5
-vuln=https://secupress.me/w3-total-cache-vulnerable-xss-high-risk/
+safe=0.9.7.4
+vuln=https://www.cybersecurity-help.cz/vdb/SB2019050701
 file=w3-total-cache.php
 variable=Version:
 extra_match=Plugin Name: W3 Total Cache
@@ -111,16 +111,17 @@ subdir=0
 
 [Wordpress-SliderRevolution]
 url=https://revolution.themepunch.com/
-safe=4.2.0
-vuln=http://blog.sucuri.net/2014/09/slider-revolution-plugin-critical-vulnerability-being-exploited.html
+# unclear about exact version
+safe=4.2.3
+vuln=CVE-2015-5151
 file=revslider.php
 variable=$revSliderVersion
 subdir=0
 
 [Wordpress-NextGEN]
 url=https://wordpress.org/plugins/nextgen-gallery/
-safe=2.1.79
-vuln=https://blog.sucuri.net/2017/02/sql-injection-vulnerability-nextgen-gallery-wordpress.html
+safe=3.2.11
+vuln=2019-14314
 file=nggallery.php
 variable=NGG_PLUGIN_VERSION
 subdir=0
@@ -128,15 +129,15 @@ subdir=0
 [Wordpress-Akismet]
 url=https://wordpress.org/plugins/akismet/
 safe=3.1.5
-vuln=https://blog.sucuri.net/2015/10/security-advisory-stored-xss-in-akismet-wordpress-plugin.html
+vuln=CVE-2015-9357
 file=akismet.php
 variable=AKISMET_VERSION
 subdir=0
 
 [Wordpress-AllInOneSEO]
 url=https://semperplugins.com/all-in-one-seo-pack-changelog/
-safe=2.3.8
-vuln=https://www.wordfence.com/blog/2016/07/new-xss-vulnerability-all-in-one-seo-pack/
+safe=3.2.7
+vuln=CVE-2019-16520
 file=all_in_one_seo_pack.php
 variable=define( 'AIOSEOP_VERSION'
 subdir=0
