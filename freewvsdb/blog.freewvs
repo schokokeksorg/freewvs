@@ -43,9 +43,9 @@ variable=$nucleus['version']
 subdir=2
 
 [sBlog]
-url=http://sblog.se
-# Last release 0.7.3 since 2006-03-09
+url=https://web.archive.org/web/20080908094255/http://sblog.se/wiki/Main_Page
 safe=
+latest=0.7.3
 vuln=CVE-2007-1801
 file=version.ini
 variable=conf_current_version
