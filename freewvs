@@ -23,13 +23,12 @@
 # return your changes to the public. We would be especially happy if you tell
 # us what you're going to do with this code.
 
-import configparser
-
 import os
 import glob
 import re
 import argparse
 import sys
+import json
 from xml.sax.saxutils import escape
 
 
@@ -73,60 +72,25 @@ parser.add_argument("-3", "--thirdparty", action="store_true",
                     help="Scan for third-party components like jquery")
 opts = parser.parse_args()
 
-# Parse vulnerability database
-config = configparser.ConfigParser()
-try:
-    config.read(glob.glob('/usr/share/freewvs/*.freewvs'))
-    config.read(glob.glob('/usr/local/share/freewvs/*.freewvs'))
-    config.read(glob.glob(os.path.dirname(sys.argv[0])
-                          + '/freewvsdb/*.freewvs'))
-except configparser.MissingSectionHeaderError as err:
-    print("Error parsing config files: %s" % err)
+jdir = False
+for p in [os.path.dirname(sys.argv[0]) + '/freewvsdb', '/var/lib/freewvs']:
+    if os.path.isdir(p):
+        jdir = p
+if not jdir:
+    print("Can't find freewvs json db")
+    sys.exit(1)
 
-vdb = []
+jconfig = []
+for cfile in glob.glob(jdir + '/*.json'):
+    with open(cfile) as json_file:
+        data = json.load(json_file)
+        jconfig += data
+
 scanfiles = set()
-for sect in config.sections():
-    item = {}
+for app in jconfig:
+    for det in app['detection']:
+        scanfiles.add(det['file'])
 
-    if (config.getboolean(sect, 'thirdparty', fallback=False)
-       and not opts.thirdparty):
-        continue
-
-    # base options
-    item['name'] = sect
-    item['safe'] = config.get(sect, 'safe')
-    item['file'] = config.get(sect, 'file')
-    item['vuln'] = config.get(sect, 'vuln')
-    item['subdir'] = int(config.get(sect, 'subdir'))
-    scanfiles.add(item['file'])
-
-    # match magic
-    item['variable'] = re.compile(re.escape(config.get(sect, 'variable'))
-                                  + r"[^0-9\n\r]*[.]*([0-9.]*[0-9])[^0-9.]")
-
-    # optional options
-    if config.has_option(sect, 'extra_match'):
-        item['extra_match'] = config.get(sect, 'extra_match')
-    else:
-        item['extra_match'] = False
-    if config.has_option(sect, 'extra_nomatch'):
-        item['extra_nomatch'] = config.get(sect, 'extra_nomatch')
-    else:
-        item['extra_nomatch'] = False
-    if config.has_option(sect, 'path_match'):
-        item['path_match'] = config.get(sect, 'path_match')
-    else:
-        item['path_match'] = False
-    if config.has_option(sect, 'add_minor'):
-        item['add_minor'] = config.get(sect, 'add_minor')
-    else:
-        item['add_minor'] = False
-    if config.has_option(sect, 'old_safe'):
-        item['old_safe'] = config.get(sect, 'old_safe').split(",")
-    else:
-        item['old_safe'] = []
-
-    vdb.append(item)
 
 if opts.xml:
     print('<?xml version="1.0" ?>')
@@ -137,50 +101,58 @@ if opts.xml:
 for fdir in opts.dirs:
     for root, NULL, files in os.walk(fdir):
         for filename in scanfiles.intersection(files):
-            for item in vdb:
-                if filename == item['file']:
-                    mfile = os.path.join(root, filename)
-                    try:
-                        file = open(mfile, errors='replace')
-                    except Exception:
-                        continue
-                    filestr = file.read()
-                    file.close()
+            for item in jconfig:
+                if not opts.thirdparty and 'thirdparty' in item:
+                    continue
+                for det in item['detection']:
+                    if filename == det['file']:
+                        mfile = os.path.join(root, filename)
+                        try:
+                            file = open(mfile, errors='replace')
+                        except Exception:
+                            continue
+                        filestr = file.read()
+                        file.close()
 
-                    if ((item['extra_match']
-                       and item['extra_match'] not in filestr)
-                       or (item['extra_nomatch']
-                       and item['extra_nomatch'] in filestr)
-                       or (item['path_match']
-                       and not root.endswith(item['path_match']))):
-                        continue
+                        if (('extra_match' in det
+                           and det['extra_match'] not in filestr)
+                           or ('extra_nomatch' in det
+                           and det['extra_nomatch'] in filestr)
+                           or ('path_match' in det
+                           and not root.endswith(det['path_match']))):
+                            continue
 
-                    findversion = item['variable'].search(filestr)
-                    if not findversion:
-                        continue
-                    findversion = findversion.group(1)
+                        findversion = re.search(re.escape(det['variable'])
+                                                + r"[^0-9\n\r]*[.]*"
+                                                "([0-9.]*[0-9])[^0-9.]",
+                                                filestr)
+                        if not findversion:
+                            continue
+                        findversion = findversion.group(1)
 
-                    # Very ugly phpbb workaround
-                    if item['add_minor']:
-                        findversion = findversion.split('.')
-                        findversion[-1] = str(int(findversion[-1])
-                                              + int(item['add_minor']))
-                        findversion = '.'.join(findversion)
+                        # Very ugly phpbb workaround
+                        if 'add_minor' in det:
+                            findversion = findversion.split('.')
+                            findversion[-1] = str(int(findversion[-1])
+                                                  + int(item['add_minor']))
+                            findversion = '.'.join(findversion)
 
-                    if (not versioncompare(item['safe'], findversion)
-                       or findversion in item['old_safe']):
-                        if opts.all:
-                            vulnprint(item['name'], findversion, "ok", "",
-                                      mfile, item['subdir'], opts.xml)
-                        continue
+                        if (not versioncompare(item['safe'], findversion)
+                           or ('old_safe' in item
+                           and findversion in item['old_safe'].split(','))):
+                            if opts.all:
+                                vulnprint(item['name'], findversion, "ok", "",
+                                          mfile, det['subdir'], opts.xml)
+                            continue
 
-                    safev = item['safe']
-                    for ver in item['old_safe']:
-                        if versioncompare(ver, findversion):
-                            safev = ver
+                        safev = item['safe']
+                        if 'old_safe' in item:
+                            for ver in item['old_safe'].split(','):
+                                if versioncompare(ver, findversion):
+                                    safev = ver
 
-                    vulnprint(item['name'], findversion, safev, item['vuln'],
-                              mfile, item['subdir'], opts.xml)
+                        vulnprint(item['name'], findversion, safev,
+                                  item['vuln'], mfile, det['subdir'], opts.xml)
 
 if opts.xml:
     print('</freewvs>')
