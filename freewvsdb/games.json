@@ -1,0 +1,17 @@
+[
+  {
+    "name": "NetRisk",
+    "url": "http://phprisk.org/",
+    "safe": "",
+    "vuln": "CVE-2008-0144",
+    "latest": "1.9.7",
+    "detection": [
+      {
+        "file": "install.php",
+        "variable": "$version",
+        "subdir": 0,
+        "extra_match": "NetRisk - Setup"
+      }
+    ]
+  }
+]

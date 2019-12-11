@@ -1,0 +1,210 @@
+[
+  {
+    "name": "phpBB",
+    "url": "https://www.phpbb.com",
+    "safe": "3.2.8",
+    "vuln": "CVE-2019-16108",
+    "detection": [
+      {
+        "file": "CHANGELOG.html",
+        "variable": "Changes since",
+        "subdir": 1,
+        "add_minor": "1"
+      }
+    ]
+  },
+  {
+    "name": "DeluxeBB",
+    "url": "http://www.deluxebb.com/",
+    "safe": "",
+    "vuln": "CVE-2010-4151",
+    "detection": [
+      {
+        "file": "header.php",
+        "variable": "$versionname",
+        "subdir": 0,
+        "extra_match": "DeluxeBB"
+      }
+    ]
+  },
+  {
+    "name": "PunBB",
+    "url": "http://punbb.org/",
+    "safe": "1.4.1",
+    "vuln": "https://secunia.com/advisories/46864",
+    "detection": [
+      {
+        "file": "db_update.php",
+        "variable": "UPDATE_TO",
+        "subdir": 0,
+        "extra_match": "@package PunBB"
+      }
+    ]
+  },
+  {
+    "name": "PunBB12",
+    "url": "http://punbb.org/",
+    "safe": "1.4.1",
+    "vuln": "https://secunia.com/advisories/46864",
+    "detection": [
+      {
+        "file": "install.php",
+        "variable": "$punbb_version",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "UseBB",
+    "url": "http://www.usebb.net/",
+    "safe": "1.0.12",
+    "vuln": "CVE-2011-3611",
+    "latest": "1.0.16",
+    "detection": [
+      {
+        "file": "common.php",
+        "variable": "USEBB_VERSION",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "Vanilla",
+    "url": "http://vanillaforums.com/",
+    "safe": "2.1.3",
+    "vuln": "http://vanillaforums.org/discussion/27822/vanilla-2-1-3-security-release",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "APPLICATION_VERSION",
+        "subdir": 1,
+        "extra_match": "define('APPLICATION', 'Vanilla');"
+      }
+    ]
+  },
+  {
+    "name": "Vanilla2",
+    "url": "http://vanillaforums.com/",
+    "safe": "2.1.3",
+    "vuln": "http://vanillaforums.org/discussion/27822/vanilla-2-1-3-security-release",
+    "detection": [
+      {
+        "file": "index.php",
+        "variable": "APPLICATION_VERSION",
+        "subdir": 0,
+        "extra_match": "define('APPLICATION', 'Vanilla');"
+      }
+    ]
+  },
+  {
+    "name": "Simple_Machines_Forum",
+    "url": "http://www.simplemachines.org/",
+    "safe": "2.0.5",
+    "old_safe": "1.1.16",
+    "vuln": "http://www.simplemachines.org/community/index.php?topic=509417.0",
+    "detection": [
+      {
+        "file": "index.php",
+        "variable": "$forum_version",
+        "subdir": 0,
+        "extra_match": "Simple Machines Forum"
+      }
+    ]
+  },
+  {
+    "name": "MyBB",
+    "url": "http://www.mybboard.net/",
+    "safe": "1.8.3",
+    "old_safe": "1.6.16",
+    "vuln": "http://blog.mybb.com/2014/11/20/mybb-1-8-3-1-6-16-released-security-releases/",
+    "detection": [
+      {
+        "file": "class_core.php",
+        "variable": "$version",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "Phorum",
+    "url": "http://www.phorum.org/",
+    "safe": "5.2.19",
+    "vuln": "http://www.phorum.org/phorum5/read.php?64,151943",
+    "latest": "5.2.19",
+    "detection": [
+      {
+        "file": "common.php",
+        "variable": "define( \"PHORUM\"",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "wBB",
+    "url": "http://www.woltlab.com/",
+    "safe": "3.0.9",
+    "vuln": "http://www.securityfocus.com/archive/1/503867/30/60/threaded",
+    "detection": [
+      {
+        "file": "config.inc.php",
+        "variable": "define('PACKAGE_VERSION',",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "WBBLite",
+    "url": "http://wbblite.com/",
+    "safe": "2.1",
+    "vuln": "http://www.securityfocus.com/archive/1/503867/30/60/threaded",
+    "detection": [
+      {
+        "file": "package.xml",
+        "variable": "<version>",
+        "subdir": 0,
+        "extra_match": "<packagename>WoltLab Burning Board Lite</packagename>"
+      }
+    ]
+  },
+  {
+    "name": "FluxBB12",
+    "url": "https://fluxbb.org/",
+    "safe": "1.5.11",
+    "vuln": "https://fluxbb.org/forums/viewtopic.php?id=9472",
+    "detection": [
+      {
+        "file": "install.php",
+        "variable": "$fluxbb_version",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "FluxBB",
+    "url": "https://fluxbb.org/",
+    "safe": "1.5.11",
+    "vuln": "https://fluxbb.org/forums/viewtopic.php?id=9472",
+    "detection": [
+      {
+        "file": "common.php",
+        "variable": "FORUM_VERSION",
+        "subdir": 1,
+        "extra_match": "FORUM_DB_REVISION"
+      }
+    ]
+  },
+  {
+    "name": "vBulletin",
+    "url": "https://www.vbulletin.com/",
+    "safe": "4.2.2",
+    "vuln": "CVE-2013-6129",
+    "detection": [
+      {
+        "file": "class_core.php",
+        "variable": "define('FILE_VERSION'",
+        "subdir": 1,
+        "extra_match": "vBulletin"
+      }
+    ]
+  }
+]

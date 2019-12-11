@@ -1,0 +1,48 @@
+[
+  {
+    "name": "jquery-min",
+    "url": "https://jquery.com/",
+    "safe": "3.4.0",
+    "vuln": "CVE-2019-11358",
+    "latest": "3.4.1",
+    "thirdparty": "yes",
+    "detection": [
+      {
+        "file": "jquery.min.js",
+        "variable": "/*! jQuery",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "jquery",
+    "url": "https://jquery.com/",
+    "safe": "3.4.0",
+    "vuln": "CVE-2019-11358",
+    "latest": "3.4.1",
+    "thirdparty": "yes",
+    "detection": [
+      {
+        "file": "jquery.js",
+        "variable": "/*! jQuery",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "bootstrap",
+    "url": "https://getbootstrap.com/",
+    "safe": "4.3.1",
+    "old_safe": "3.4.1",
+    "vuln": "CVE-2019-8331",
+    "latest": "3.4.1",
+    "thirdparty": "yes",
+    "detection": [
+      {
+        "file": "bootstrap.min.css",
+        "variable": "* Bootstrap v",
+        "subdir": 0
+      }
+    ]
+  }
+]

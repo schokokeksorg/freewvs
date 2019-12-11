@@ -1,0 +1,17 @@
+[
+  {
+    "name": "smarty",
+    "url": "https://www.smarty.net/",
+    "safe": "3.1.33",
+    "vuln": "CVE-2018-16831",
+    "latest": "3.1.33",
+    "thirdparty": "yes",
+    "detection": [
+      {
+        "file": "Smarty.class.php",
+        "variable": "@version",
+        "subdir": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Wordpress-Theme-Twentyfifteen",
+    "url": "http://www.wordpress.org",
+    "safe": "1.2",
+    "vuln": "https://blog.sucuri.net/2015/05/jetpack-and-twentyfifteen-vulnerable-to-dom-based-xss.html",
+    "detection": [
+      {
+        "file": "style.css",
+        "variable": "Version:",
+        "subdir": 0,
+        "extra_match": "Theme Name: Twenty Fifteen"
+      }
+    ]
+  }
+]

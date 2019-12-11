@@ -1,0 +1,309 @@
+[
+  {
+    "name": "Serendipity-mycalendar",
+    "url": "https://s9y.org",
+    "safe": "0.13",
+    "vuln": "CVE-2007-6390",
+    "detection": [
+      {
+        "file": "serendipity_event_mycalendar.php",
+        "variable": "$propbag->add('version'",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Serendipity-freetag",
+    "url": "https://s9y.org",
+    "safe": "3.69",
+    "vuln": "https://github.com/s9y/additional_plugins/commit/3edecdb7eccc24e0d5c63a3d5702dba54599bda3",
+    "detection": [
+      {
+        "file": "serendipity_event_freetag.php",
+        "variable": "$propbag->add('version'",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "SquirrelMail-gpg",
+    "url": "https://squirrelmail.org/plugin_view.php?id=153",
+    "safe": "2.1",
+    "vuln": "CVE-2007-3779",
+    "detection": [
+      {
+        "file": "gpg_pref_functions.php",
+        "variable": "$GPG_VERSION",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Drupal-Views",
+    "url": "https://www.drupal.org/project/views",
+    "safe": "2.13",
+    "vuln": "CVE-2011-4113",
+    "detection": [
+      {
+        "file": "views.info",
+        "variable": "version = \"6.x",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-timthumb",
+    "url": "https://github.com/GabrielGil/TimThumb",
+    "safe": "2.8.14",
+    "vuln": "CVE-2014-4663",
+    "detection": [
+      {
+        "file": "timthumb.php",
+        "variable": "('VERSION',",
+        "subdir": 0,
+        "extra_match": "TimThumb"
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-timthumb-renamed",
+    "url": "https://github.com/GabrielGil/TimThumb",
+    "safe": "2.8.14",
+    "vuln": "CVE-2014-4663",
+    "detection": [
+      {
+        "file": "thumb.php",
+        "variable": "('VERSION',",
+        "subdir": 0,
+        "extra_match": "TimThumb"
+      }
+    ]
+  },
+  {
+    "name": "Joomla-JCE",
+    "url": "https://www.joomlacontenteditor.net/",
+    "safe": "2.1",
+    "vuln": "CVE-2012-2902",
+    "detection": [
+      {
+        "file": "editor.php",
+        "variable": "$_version",
+        "subdir": 3,
+        "extra_match": "JCE class"
+      }
+    ]
+  },
+  {
+    "name": "WP Super Cache",
+    "url": "https://wordpress.org/plugins/wp-super-cache/",
+    "safe": "1.6.9",
+    "vuln": "https://odd.blog/2019/07/25/wp-super-cache-1-6-9-security-update/",
+    "latest": "1.7.0",
+    "detection": [
+      {
+        "file": "wp-cache.php",
+        "variable": "Version:",
+        "subdir": 0,
+        "extra_match": "Plugin Name: WP Super Cache"
+      }
+    ]
+  },
+  {
+    "name": "W3 Total Cache",
+    "url": "https://wordpress.org/plugins/w3-total-cache/",
+    "safe": "0.9.7.4",
+    "vuln": "https://www.cybersecurity-help.cz/vdb/SB2019050701",
+    "detection": [
+      {
+        "file": "w3-total-cache.php",
+        "variable": "Version:",
+        "subdir": 0,
+        "extra_match": "Plugin Name: W3 Total Cache"
+      }
+    ]
+  },
+  {
+    "name": "phpThumb",
+    "url": "http://phpthumb.sourceforge.net/",
+    "safe": "1.7.10",
+    "vuln": "CVE-2010-1598",
+    "detection": [
+      {
+        "file": "phpthumb.class.php",
+        "variable": "$phpthumb_version",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-Jetpack",
+    "url": "https://jetpack.com/",
+    "safe": "7.9.1",
+    "vuln": "https://jetpack.com/2019/11/19/jetpack-7-9-1-maintenance-security/",
+    "detection": [
+      {
+        "file": "jetpack.php",
+        "variable": "JETPACK__VERSION",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-MailPoet",
+    "url": "https://www.mailpoet.com/",
+    "safe": "2.6.8",
+    "vuln": "CVE-2014-4726",
+    "detection": [
+      {
+        "file": "base.php",
+        "variable": "static $version",
+        "subdir": 0,
+        "extra_match": "WYSIJA_object"
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-CustomContact",
+    "url": "https://wordpress.org/plugins/custom-contact-forms/",
+    "safe": "5.1.0.4",
+    "vuln": "http://blog.sucuri.net/2014/08/database-takeover-in-custom-contact-forms.html",
+    "detection": [
+      {
+        "file": "custom-contact-forms.php",
+        "variable": "Version",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-SliderRevolution",
+    "url": "https://revolution.themepunch.com/",
+    "safe": "4.2.3",
+    "vuln": "CVE-2015-5151",
+    "note": "unclear about exact version",
+    "detection": [
+      {
+        "file": "revslider.php",
+        "variable": "$revSliderVersion",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-NextGEN",
+    "url": "https://wordpress.org/plugins/nextgen-gallery/",
+    "safe": "3.2.11",
+    "vuln": "CVE-2019-14314",
+    "detection": [
+      {
+        "file": "nggallery.php",
+        "variable": "NGG_PLUGIN_VERSION",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-Akismet",
+    "url": "https://wordpress.org/plugins/akismet/",
+    "safe": "3.1.5",
+    "vuln": "CVE-2015-9357",
+    "detection": [
+      {
+        "file": "akismet.php",
+        "variable": "AKISMET_VERSION",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-AllInOneSEO",
+    "url": "https://semperplugins.com/all-in-one-seo-pack-changelog/",
+    "safe": "3.2.7",
+    "vuln": "CVE-2019-16520",
+    "detection": [
+      {
+        "file": "all_in_one_seo_pack.php",
+        "variable": "define( 'AIOSEOP_VERSION'",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-DownloadManager",
+    "url": "https://wordpress.org/plugins/download-manager/",
+    "safe": "2.7.5",
+    "vuln": "http://blog.sucuri.net/2014/12/security-advisory-high-severity-wordpress-download-manager.html",
+    "detection": [
+      {
+        "file": "download-manager.php",
+        "variable": "define('WPDM_Version'",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-Fancybox",
+    "url": "https://wordpress.org/plugins/fancybox-for-wordpress/",
+    "safe": "3.0.4",
+    "vuln": "CVE-2015-1494",
+    "detection": [
+      {
+        "file": "fancybox.php",
+        "variable": "FBFW_VERSION",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Joomla-Googlemaps",
+    "url": "http://joomlacode.org/gf/project/mambot_google1/",
+    "safe": "3.1",
+    "vuln": "http://joomlacode.org/gf/project/mambot_google1/news/?id=4119",
+    "detection": [
+      {
+        "file": "plugin_googlemap3.perm",
+        "variable": "<version>",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-SEObyYoast",
+    "url": "https://wordpress.org/plugins/wordpress-seo/",
+    "safe": "11.6.0",
+    "vuln": "CVE-2019-13478",
+    "detection": [
+      {
+        "file": "wp-seo-main.php",
+        "variable": "WPSEO_VERSION",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-GoogleAnalyticsbyMonsterInsights",
+    "url": "https://wordpress.org/plugins/google-analytics-for-wordpress/changelog/",
+    "safe": "5.4.5",
+    "vuln": "https://wordpress.org/plugins/google-analytics-for-wordpress/changelog/",
+    "detection": [
+      {
+        "file": "googleanalytics.php",
+        "variable": "GAWP_VERSION",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-Captcha",
+    "url": "https://wordpress.org/plugins/captcha/",
+    "safe": "4.4.5",
+    "vuln": "https://www.wordfence.com/blog/2017/12/backdoor-captcha-plugin/",
+    "detection": [
+      {
+        "file": "captcha.php",
+        "variable": "Version:",
+        "subdir": 0
+      }
+    ]
+  }
+]

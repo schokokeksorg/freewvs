@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Horde-groupware",
+    "url": "http://www.horde.org/",
+    "safe": "1.2.5",
+    "vuln": "CVE-2009-3701",
+    "detection": [
+      {
+        "file": "bundle.php",
+        "variable": "BUNDLE_VERSION",
+        "subdir": 1,
+        "extra_match": "'Horde Groupware'"
+      }
+    ]
+  },
+  {
+    "name": "eGroupWare",
+    "url": "http://www.egroupware.org/",
+    "safe": "1.8.006",
+    "vuln": "CVE-2014-2027",
+    "detection": [
+      {
+        "file": "setup.inc.php",
+        "variable": "$setup_info['phpgwapi']['version']",
+        "subdir": 2
+      }
+    ]
+  },
+  {
+    "name": "more.groupware",
+    "url": "http://www.moregroupware.com/",
+    "safe": "",
+    "vuln": "CVE-2006-4906",
+    "detection": [
+      {
+        "file": "version.inc.php",
+        "variable": "$gwversion_number",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "SimpleGroupware",
+    "url": "http://www.simple-groupware.de/",
+    "safe": "0.607",
+    "vuln": "http://www.simple-groupware.de/cms/Release-0-607",
+    "latest": "0.724",
+    "detection": [
+      {
+        "file": "setup.php",
+        "variable": "define(\"CORE_VERSION_STRING\"",
+        "subdir": 2
+      }
+    ]
+  }
+]

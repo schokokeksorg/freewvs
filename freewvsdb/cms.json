@@ -1,0 +1,387 @@
+[
+  {
+    "name": "WebsiteBaker",
+    "url": "https://websitebaker.org/",
+    "safe": "2.8.4",
+    "vuln": "CVE-2015-0553",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "VERSION",
+        "subdir": 3,
+        "extra_match": "Website Baker Project"
+      }
+    ]
+  },
+  {
+    "name": "WebsiteBaker28",
+    "url": "https://websitebaker.org/",
+    "safe": "2.8.4",
+    "vuln": "CVE-2015-0553",
+    "detection": [
+      {
+        "file": "info.php",
+        "variable": "$template_platform",
+        "subdir": 3,
+        "extra_match": "wb_theme"
+      }
+    ]
+  },
+  {
+    "name": "toendaCMS",
+    "url": "http://www.toendacms.com/",
+    "safe": "",
+    "vuln": "CVE-2007-1872",
+    "detection": [
+      {
+        "file": "tcms_version.xml",
+        "variable": "release",
+        "subdir": 2
+      }
+    ]
+  },
+  {
+    "name": "Drupal6",
+    "url": "https://www.drupal.org/",
+    "safe": "7.67",
+    "vuln": "https://www.drupal.org/sa-core-2019-007",
+    "latest": "7.67",
+    "detection": [
+      {
+        "file": "system.module",
+        "variable": "define('VERSION'",
+        "subdir": 2
+      }
+    ]
+  },
+  {
+    "name": "Drupal7",
+    "url": "https://www.drupal.org/",
+    "safe": "7.67",
+    "vuln": "https://www.drupal.org/sa-core-2019-007",
+    "latest": "7.67",
+    "detection": [
+      {
+        "file": "bootstrap.inc",
+        "variable": "define('VERSION'",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "Drupal8",
+    "url": "https://www.drupal.org/",
+    "safe": "8.7.1",
+    "old_safe": "8.6.16",
+    "vuln": "https://www.drupal.org/sa-core-2019-007",
+    "latest": "8.7.1",
+    "detection": [
+      {
+        "file": "Drupal.php",
+        "variable": "const VERSION",
+        "subdir": 2
+      }
+    ]
+  },
+  {
+    "name": "PHPNuke",
+    "url": "https://www.phpnuke.org/",
+    "safe": "8.1",
+    "vuln": "CVE-2007-1519",
+    "note": "I'm not really sure about that, but 8.0 is at least vulnerable, pre 8.0 aren't easily detectable",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "$version_number",
+        "subdir": 2,
+        "extra_match": "PHP-Nuke $version_number"
+      }
+    ]
+  },
+  {
+    "name": "Typo3",
+    "url": "https://typo3.org/",
+    "safe": "9.5.6",
+    "old_safe": "8.7.25",
+    "vuln": "https://typo3.org/article/typo3-956-and-8725-security-releases-published/",
+    "detection": [
+      {
+        "file": "config_default.php",
+        "variable": "$TYPO_VERSION",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "typo3-6",
+    "url": "https://typo3.org/",
+    "safe": "9.5.6",
+    "old_safe": "8.7.25",
+    "vuln": "https://typo3.org/article/typo3-956-and-8725-security-releases-published/",
+    "detection": [
+      {
+        "file": "SystemEnvironmentBuilder.php",
+        "variable": "define('TYPO3_version",
+        "subdir": 4
+      }
+    ]
+  },
+  {
+    "name": "Joomla-1",
+    "url": "https://www.joomla.org/",
+    "safe": "3.9.13",
+    "vuln": "CVE-2019-18674",
+    "detection": [
+      {
+        "file": "CHANGELOG.php",
+        "variable": "---------------",
+        "subdir": 0,
+        "extra_match": "Joomla! is free software."
+      }
+    ]
+  },
+  {
+    "name": "Joomla",
+    "url": "https://www.joomla.org/",
+    "safe": "3.9.13",
+    "vuln": "CVE-2019-18674",
+    "detection": [
+      {
+        "file": "joomla.xml",
+        "variable": "<version>",
+        "subdir": 3,
+        "extra_match": "FILES_JOOMLA_XML_DESCRIPTION",
+        "path_match": "administrator/manifests/files"
+      }
+    ]
+  },
+  {
+    "name": "Mambo",
+    "url": "http://www.source.mambo-foundation.org/",
+    "safe": "",
+    "vuln": "CVE-2008-2905",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "var $RELEASE,var $DEV_LEVEL",
+        "subdir": 1,
+        "extra_match": "@package Mambo"
+      }
+    ]
+  },
+  {
+    "name": "w-Agora",
+    "url": "http://www.w-agora.net/",
+    "safe": "",
+    "vuln": "CVE-2007-0607",
+    "latest": "4.2.1",
+    "detection": [
+      {
+        "file": "misc_func.php",
+        "variable": "$v =",
+        "subdir": 1,
+        "extra_match": "w-agora version $v"
+      }
+    ]
+  },
+  {
+    "name": "MODx",
+    "url": "https://modx.com/",
+    "safe": "1.0.15",
+    "vuln": "http://forums.modx.com/thread/94952/multiple-vulnerabilities-xss-remote-command-injection",
+    "detection": [
+      {
+        "file": "version.inc.php",
+        "variable": "$version",
+        "subdir": 2,
+        "extra_match": "$full_appname = 'MODx'"
+      }
+    ]
+  },
+  {
+    "name": "MODX-1.x",
+    "url": "https://modx.com/",
+    "safe": "1.0.15",
+    "vuln": "http://forums.modx.com/thread/94952/multiple-vulnerabilities-xss-remote-command-injection",
+    "detection": [
+      {
+        "file": "version.inc.php",
+        "variable": "$modx_version",
+        "subdir": 2
+      }
+    ]
+  },
+  {
+    "name": "MODX-2.x",
+    "url": "https://modx.com/",
+    "safe": "2.2.11",
+    "vuln": "http://modx.com/blog/2014/07/15/revolution-2.2.15/",
+    "detection": [
+      {
+        "file": "changelog.txt",
+        "variable": "MODX Revolution",
+        "subdir": 2,
+        "extra_match": "MODX"
+      }
+    ]
+  },
+  {
+    "name": "PostNuke",
+    "url": "http://www.postnuke.com",
+    "safe": "",
+    "vuln": "CVE-2007-0385",
+    "latest": "0.764",
+    "detection": [
+      {
+        "file": "global.php",
+        "variable": "_MESSAGE_00_a",
+        "subdir": 2,
+        "extra_match": "http://www.pn-cms.de"
+      }
+    ]
+  },
+  {
+    "name": "Contenido",
+    "url": "https://www.contenido.org/",
+    "safe": "4.8.15",
+    "vuln": "http://www.contenido.org/de/front_content.php?idcat=107&idart=1789&client=6&lang=3",
+    "latest": "4.8.15",
+    "detection": [
+      {
+        "file": "config.misc.php",
+        "variable": "$cfg['version']",
+        "subdir": 1,
+        "extra_match": "Contenido Misc Configurations"
+      }
+    ]
+  },
+  {
+    "name": "SilverStripe",
+    "url": "https://www.silverstripe.com",
+    "safe": "2.4.7",
+    "vuln": "CVE-2012-0976",
+    "detection": [
+      {
+        "file": "silverstripe_version",
+        "variable": "/open/modules/cms/",
+        "subdir": 1,
+        "extra_match": "/open/modules/cms/"
+      }
+    ]
+  },
+  {
+    "name": "CMSMadeSimple",
+    "url": "https://www.cmsmadesimple.org/",
+    "safe": "1.11.13",
+    "vuln": "http://www.cmsmadesimple.org/2015/02/Announcing-CMS-Made-Simple-1-11-13-Security-Release/",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "$CMS_VERSION",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "e107",
+    "url": "https://e107.org/",
+    "safe": "1.0.0",
+    "vuln": "CVE-2011-4920",
+    "detection": [
+      {
+        "file": "ver.php",
+        "variable": "$e107info['e107_version']",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "SPIP",
+    "url": "https://www.spip.net/",
+    "safe": "2.1.13",
+    "old_safe": "2.0.18",
+    "vuln": "http://archives.rezo.net/archives/spip-en.mbox/U5QUZ6WJRAJC7H5BR7W5SQG6WCD3PXL7/",
+    "detection": [
+      {
+        "file": "inc_version.php",
+        "variable": "$spip_version_branche",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "contao",
+    "url": "https://contao.org/",
+    "safe": "3.2.5",
+    "old_safe": "2.11.14",
+    "vuln": "CVE-2014-1860",
+    "latest": "3.2.5",
+    "detection": [
+      {
+        "file": "CHANGELOG.md",
+        "variable": "Version",
+        "subdir": 0,
+        "extra_match": "Contao Open Source CMS"
+      }
+    ]
+  },
+  {
+    "name": "contao-old",
+    "url": "https://contao.org/",
+    "safe": "3.2.5",
+    "old_safe": "2.11.14",
+    "vuln": "CVE-2014-1860",
+    "latest": "3.2.5",
+    "detection": [
+      {
+        "file": "CHANGELOG.txt",
+        "variable": "Version",
+        "subdir": 0,
+        "extra_match": "Contao Open Source CMS Changelog"
+      }
+    ]
+  },
+  {
+    "name": "redaxo",
+    "url": "https://redaxo.org/",
+    "safe": "4.5",
+    "vuln": "CVE-2012-3869",
+    "latest": "4.5",
+    "detection": [
+      {
+        "file": "en_gb.lang",
+        "variable": "setup_037",
+        "subdir": 3
+      }
+    ]
+  },
+  {
+    "name": "textpattern",
+    "url": "https://textpattern.com/",
+    "safe": "4.7.0",
+    "vuln": "CVE-2018-7474",
+    "latest": "4.7.3",
+    "detection": [
+      {
+        "file": "index.php",
+        "variable": "$thisversion",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "bolt",
+    "url": "https://bolt.cm/",
+    "safe": "3.5.3",
+    "vuln": "https://github.com/bolt/bolt/blob/v3.5.4/changelog.md#bolt-353",
+    "latest": "3.5.3",
+    "detection": [
+      {
+        "file": "Version.php",
+        "variable": "const VERSION",
+        "subdir": 4,
+        "extra_match": "Bolt's"
+      }
+    ]
+  }
+]

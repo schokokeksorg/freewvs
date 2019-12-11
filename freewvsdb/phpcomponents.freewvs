@@ -1,9 +1,0 @@
-[smarty]
-url=https://www.smarty.net/
-safe=3.1.33
-vuln=CVE-2018-16831
-latest=3.1.33
-file=Smarty.class.php
-subdir=1
-variable=@version
-thirdparty=yes

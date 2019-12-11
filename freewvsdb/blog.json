@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Serendipity",
+    "url": "https://docs.s9y.org/",
+    "safe": "2.3.2",
+    "vuln": "https://blog.s9y.org/archives/287-Serendipity-2.3.2-released-security-update.html",
+    "detection": [
+      {
+        "file": "serendipity_config.inc.php",
+        "variable": "$serendipity['version']",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress",
+    "url": "https://wordpress.org/",
+    "safe": "5.2.4",
+    "old_safe": "5.1.4,5.1.3,5.0.8,5.0.7,4.9.13,4.9.12,4.8.12,4.8.11,4.7.16,4.7.15,4.6.17,4.6.16,4.5.20,4.5.19,4.4.21,4.4.20,4.3.22,4.3.21,4.2.26,4.2.25,4.1.29,4.1.28,4.0.29,4.0.28,3.9.30,3.9.29,3.8.32,3.8.31,3.7.32,3.7.31",
+    "vuln": "CVE-2019-17672",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "$wp_version",
+        "subdir": 1,
+        "extra_match": "The WordPress version string"
+      }
+    ]
+  },
+  {
+    "name": "SimplePHPBlog",
+    "url": "http://www.simplephpblog.com/",
+    "safe": "0.5.1",
+    "vuln": "CVE-2007-5071",
+    "detection": [
+      {
+        "file": "sb_functions.php",
+        "variable": "$sb_info[ 'version' ]",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "b2evolution",
+    "url": "https://b2evolution.net/",
+    "safe": "1.9.2",
+    "old_safe": "1.8.7",
+    "vuln": "CVE-2007-0175",
+    "detection": [
+      {
+        "file": "_application.php",
+        "variable": "$app_version",
+        "subdir": 2,
+        "extra_match": "This is b2evolution"
+      }
+    ]
+  },
+  {
+    "name": "nucleuscms",
+    "url": "http://www.nucleuscms.org/",
+    "safe": "3.40",
+    "vuln": "CVE-2009-0929",
+    "detection": [
+      {
+        "file": "globalfunctions.php",
+        "variable": "$nucleus['version']",
+        "subdir": 2
+      }
+    ]
+  },
+  {
+    "name": "sBlog",
+    "url": "https://web.archive.org/web/20080908094255/http://sblog.se/wiki/Main_Page",
+    "safe": "",
+    "vuln": "CVE-2007-1801",
+    "latest": "0.7.3",
+    "detection": [
+      {
+        "file": "version.ini",
+        "variable": "conf_current_version",
+        "subdir": 1,
+        "extra_match": "[sblog_version_info]"
+      }
+    ]
+  },
+  {
+    "name": "Movable_Type",
+    "url": "https://movabletype.com/",
+    "safe": "7.1.4",
+    "old_safe": "6.5.2,6.3.10",
+    "vuln": "https://movabletype.org/news/2019/11/movable_type_r4603_v714_v652_and_v6310_released.html",
+    "note": "only 5.x public",
+    "detection": [
+      {
+        "file": "mt.php",
+        "variable": "VERSION_ID",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "artmedic_weblog",
+    "url": "http://www.artmedic-phpscripts.de/",
+    "safe": "",
+    "vuln": "CVE-2008-0798",
+    "latest": "1.0",
+    "detection": [
+      {
+        "file": "artmedic_index.php",
+        "variable": "# artmedic weblog",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "DotClear",
+    "url": "http://www.dotclear.net/",
+    "safe": "2.2.3",
+    "vuln": "CVE-2011-1584",
+    "detection": [
+      {
+        "file": "LISEZMOI.txt",
+        "variable": "DotClear",
+        "subdir": 0
+      }
+    ]
+  }
+]

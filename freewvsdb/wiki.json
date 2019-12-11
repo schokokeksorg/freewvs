@@ -1,0 +1,114 @@
+[
+  {
+    "name": "MediaWiki",
+    "url": "https://www.mediawiki.org/",
+    "safe": "1.33.1",
+    "old_safe": "1.32.4,1.31.4",
+    "vuln": "CVE-2019-16738",
+    "latest": "1.33.1",
+    "detection": [
+      {
+        "file": "DefaultSettings.php",
+        "variable": "$wgVersion",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "TWiki",
+    "url": "http://twiki.org/",
+    "safe": "5.0.1",
+    "vuln": "CVE-2010-3841",
+    "detection": [
+      {
+        "file": "TWiki.pm",
+        "variable": "$RELEASE",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "PmWiki",
+    "url": "https://pmwiki.org/",
+    "safe": "2.2.96",
+    "vuln": "https://pmwiki.org/wiki/PmWiki/ChangeLog#v2296",
+    "latest": "2.2.122",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "$Version",
+        "subdir": 1,
+        "extra_match": "pmwiki"
+      }
+    ]
+  },
+  {
+    "name": "TikiWiki",
+    "url": "http://tikiwiki.org/",
+    "safe": "5.3",
+    "old_safe": "3.8",
+    "vuln": "CVE-2010-4239",
+    "detection": [
+      {
+        "file": "twversion.class.php",
+        "variable": "$this->version",
+        "subdir": 2
+      }
+    ]
+  },
+  {
+    "name": "TikiWiki-old",
+    "url": "http://tikiwiki.org/",
+    "safe": "5.3",
+    "old_safe": "3.8",
+    "vuln": "CVE-2010-4239",
+    "detection": [
+      {
+        "file": "README",
+        "variable": "version",
+        "subdir": 0,
+        "extra_match": "Tiki! The wiki"
+      }
+    ]
+  },
+  {
+    "name": "phpwiki",
+    "url": "http://phpwiki.sourceforge.net/",
+    "safe": "1.3.14",
+    "vuln": "CVE-2007-3193",
+    "detection": [
+      {
+        "file": "prepend.php",
+        "variable": "PHPWIKI_VERSION",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "phpwiki-legacy",
+    "url": "http://phpwiki.sourceforge.net/",
+    "safe": "1.3.14",
+    "vuln": "CVE-2007-3193",
+    "detection": [
+      {
+        "file": "config.php",
+        "variable": "PHPWIKI_VERSION",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "etherpad-lite",
+    "url": "https://etherpad.org/",
+    "safe": "1.6.4",
+    "vuln": "CVE-2018-9326",
+    "detection": [
+      {
+        "file": "package.json",
+        "variable": "version",
+        "subdir": 0,
+        "extra_match": "ep_etherpad-lite"
+      }
+    ]
+  }
+]

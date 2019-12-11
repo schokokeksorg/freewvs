@@ -1,0 +1,660 @@
+[
+  {
+    "name": "phpMyAdmin-veryold",
+    "url": "https://www.phpmyadmin.net/",
+    "safe": "4.9.2",
+    "vuln": "CVE-2019-18622",
+    "detection": [
+      {
+        "file": "Config.class.php",
+        "variable": "PMA_VERSION",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "phpMyAdmin-old",
+    "url": "https://www.phpmyadmin.net/",
+    "safe": "4.9.2",
+    "vuln": "CVE-2019-18622",
+    "detection": [
+      {
+        "file": "Config.php",
+        "variable": "PMA_VERSION",
+        "subdir": 1,
+        "extra_match": "namespace PMA\\libraries;"
+      }
+    ]
+  },
+  {
+    "name": "phpMyAdmin",
+    "url": "https://www.phpmyadmin.net/",
+    "safe": "4.9.2",
+    "vuln": "CVE-2019-18622",
+    "detection": [
+      {
+        "file": "Config.php",
+        "variable": "PMA_VERSION",
+        "subdir": 2,
+        "extra_match": "namespace PhpMyAdmin;"
+      }
+    ]
+  },
+  {
+    "name": "SquirrelMail",
+    "url": "https://squirrelmail.org/",
+    "safe": "1.4.22",
+    "vuln": "CVE-2010-4554",
+    "detection": [
+      {
+        "file": "strings.php",
+        "variable": "$version",
+        "subdir": 1,
+        "extra_match": "SquirrelMail version number"
+      }
+    ]
+  },
+  {
+    "name": "Mantis-deprecated",
+    "url": "https://mantisbt.org/",
+    "safe": "2.22.1",
+    "vuln": "CVE-2019-15715",
+    "detection": [
+      {
+        "file": "config_defaults_inc.php",
+        "variable": "$g_mantis_version",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Mantis",
+    "url": "https://mantisbt.org/",
+    "safe": "2.22.1",
+    "vuln": "CVE-2019-15715",
+    "detection": [
+      {
+        "file": "constant_inc.php",
+        "variable": "MANTIS_VERSION",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "Bugzilla3",
+    "url": "https://www.bugzilla.org/",
+    "safe": "4.4.7",
+    "old_safe": "4.2.12,4.0.16",
+    "vuln": "CVE-2011-2379",
+    "detection": [
+      {
+        "file": "Constants.pm",
+        "variable": "BUGZILLA_VERSION",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "Bugzilla2",
+    "url": "https://www.bugzilla.org/",
+    "safe": "4.4.7",
+    "old_safe": "4.2.12,4.0.16",
+    "vuln": "CVE-2011-2379",
+    "detection": [
+      {
+        "file": "Config.pm",
+        "variable": "$Bugzilla::Config::VERSION",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "SimpNews",
+    "url": "http://www.boesch-it.de",
+    "safe": "2.48",
+    "vuln": "CVE-2010-2858",
+    "detection": [
+      {
+        "file": "global.inc.php",
+        "variable": "$version",
+        "subdir": 1,
+        "extra_match": "$path_simpnews"
+      }
+    ]
+  },
+  {
+    "name": "calendarix",
+    "url": "http://www.calendarix.com/",
+    "safe": "",
+    "vuln": "CVE-2007-3183",
+    "detection": [
+      {
+        "file": "cal_config.inc.php",
+        "variable": "$version",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "myEvent",
+    "url": "http://mywebland.com/",
+    "safe": "",
+    "vuln": "CVE-2007-0690",
+    "detection": [
+      {
+        "file": "config.php",
+        "variable": "$version",
+        "subdir": 0,
+        "extra_match": "$eventbgcolor"
+      }
+    ]
+  },
+  {
+    "name": "php-stats",
+    "url": "http://php-stats.com/",
+    "safe": "",
+    "vuln": "CVE-2007-5453",
+    "detection": [
+      {
+        "file": "update.php",
+        "variable": "$version",
+        "subdir": 0,
+        "extra_match": "http://php-stats.com/"
+      }
+    ]
+  },
+  {
+    "name": "Ampache",
+    "url": "http://ampache.org/",
+    "safe": "3.5.3",
+    "vuln": "http://ampache.org/2009/12/20/3-5-3-security-release/",
+    "detection": [
+      {
+        "file": "init.php",
+        "variable": "$results['version']",
+        "subdir": 1,
+        "extra_match": "$ampache_path"
+      }
+    ]
+  },
+  {
+    "name": "SiteBar",
+    "url": "http://sitebar.org/",
+    "safe": "3.3.9",
+    "vuln": "CVE-2007-5492",
+    "detection": [
+      {
+        "file": "database.inc.php",
+        "variable": "SB_CURRENT_RELEASE",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "phpPgAdmin",
+    "url": "http://phppgadmin.sourceforge.net/",
+    "safe": "5.0.4",
+    "vuln": "CVE-2012-1600",
+    "detection": [
+      {
+        "file": "lib.inc.php",
+        "variable": "$appVersion",
+        "subdir": 1,
+        "extra_match": "phpPgAdmin"
+      }
+    ]
+  },
+  {
+    "name": "FTP Admin",
+    "url": "http://ftpadmin.sourceforge.net/",
+    "safe": "",
+    "vuln": "CVE-2007-6234",
+    "detection": [
+      {
+        "file": "session_start.php",
+        "variable": "VERSION",
+        "subdir": 0,
+        "extra_match": "define(\"TITLE\", \"FTP Admin\");"
+      }
+    ]
+  },
+  {
+    "name": "RoundCube-deprecated",
+    "url": "https://roundcube.net",
+    "safe": "1.3.10",
+    "vuln": "CVE-2019-10740",
+    "detection": [
+      {
+        "file": "index.php",
+        "variable": "RCMAIL_VERSION",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "RoundCube",
+    "url": "https://roundcube.net",
+    "safe": "1.3.10",
+    "vuln": "CVE-2019-10740",
+    "detection": [
+      {
+        "file": "iniset.php",
+        "variable": "RCMAIL_VERSION",
+        "subdir": 2
+      }
+    ]
+  },
+  {
+    "name": "Moodle",
+    "url": "https://moodle.org/",
+    "safe": "3.2.2",
+    "old_safe": "3.1.5,3.0.9,2.7.19",
+    "vuln": "CVE-2017-2641",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "$release",
+        "subdir": 0,
+        "extra_match": "MOODLE VERSION INFORMATION"
+      }
+    ]
+  },
+  {
+    "name": "cacti",
+    "url": "http://www.cacti.net/",
+    "safe": "0.8.7",
+    "vuln": "CVE-2007-6035",
+    "detection": [
+      {
+        "file": "global.php",
+        "variable": "$config[\"cacti_version\"]",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "gnopaste",
+    "url": "http://gnopaste.sf.net/",
+    "safe": "0.5.4",
+    "vuln": "CVE-2006-2834",
+    "detection": [
+      {
+        "file": "install.php",
+        "variable": "$_SESSION['page_title'] = 'gnopaste",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Flyspray",
+    "url": "http://www.flyspray.org/",
+    "safe": "0.9.9.7",
+    "vuln": "CVE-2012-1058",
+    "detection": [
+      {
+        "file": "class.flyspray.php",
+        "variable": "var $version",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "phpMyID",
+    "url": "http://siege.org/projects/phpMyID",
+    "safe": "",
+    "vuln": "CVE-2008-4730",
+    "detection": [
+      {
+        "file": "MyID.php",
+        "variable": "@version",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "phplist-old",
+    "url": "http://www.phplist.com/",
+    "safe": "3.2.7",
+    "vuln": "CVE-2016-10045",
+    "detection": [
+      {
+        "file": "connect.php",
+        "variable": "define(\"VERSION\"",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "phplist",
+    "url": "http://www.phplist.com/",
+    "safe": "3.2.7",
+    "vuln": "CVE-2016-10045",
+    "detection": [
+      {
+        "file": "init.php",
+        "variable": "define(\"VERSION\"",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "Piwik",
+    "url": "https://matomo.org/",
+    "safe": "3.12.0",
+    "vuln": "https://matomo.org/changelog/matomo-3-12-0/",
+    "detection": [
+      {
+        "file": "Version.php",
+        "variable": "const VERSION",
+        "subdir": 1,
+        "extra_match": "@link http://piwik.org"
+      }
+    ]
+  },
+  {
+    "name": "Matomo",
+    "url": "https://matomo.org/",
+    "safe": "3.12.0",
+    "vuln": "https://matomo.org/changelog/matomo-3-12-0/",
+    "latest": "3.13.0",
+    "detection": [
+      {
+        "file": "Version.php",
+        "variable": "const VERSION",
+        "subdir": 1,
+        "extra_match": "@link https://matomo.org"
+      }
+    ]
+  },
+  {
+    "name": "phpWishlist",
+    "url": "http://phpwishlist.sourceforge.net/",
+    "safe": "0.1.15",
+    "vuln": "CVE-2005-2203",
+    "detection": [
+      {
+        "file": "header.inc.php",
+        "variable": "$version",
+        "subdir": 1,
+        "extra_match": "* Wishlist -"
+      }
+    ]
+  },
+  {
+    "name": "awstats",
+    "url": "http://awstats.sourceforge.net/",
+    "safe": "7.1",
+    "vuln": "CVE-2012-4547",
+    "detection": [
+      {
+        "file": "awstats.pl",
+        "variable": "$VERSION  =",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "phpMyFAQ",
+    "url": "http://www.phpmyfaq.de/",
+    "safe": "2.5.5",
+    "vuln": "http://www.phpmyfaq.de/advisory_2009-12-01.php",
+    "detection": [
+      {
+        "file": "phpmyfaq.spec",
+        "variable": "version",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "Horde-webmail",
+    "url": "http://www.horde.org/",
+    "safe": "1.2.7",
+    "vuln": "http://secunia.com/advisories/39860",
+    "detection": [
+      {
+        "file": "bundle.php",
+        "variable": "BUNDLE_VERSION",
+        "subdir": 1,
+        "extra_match": "'Horde Groupware Webmail Edition'"
+      }
+    ]
+  },
+  {
+    "name": "ResourceSpace",
+    "url": "http://www.resourcespace.org/",
+    "safe": "4.2.2833",
+    "vuln": "CVE-2011-4311",
+    "latest": "4.3.2912",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "$productname='ResourceSpace';$productversion",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "apc.php",
+    "url": "http://pecl.php.net/package/APC",
+    "safe": "301867",
+    "vuln": "CVE-2010-3294",
+    "note": "this does not contain it's \"real\" version number, using the CVS id instead - there's been an XSS pre 3.1.4.",
+    "detection": [
+      {
+        "file": "apc.php",
+        "variable": "$VERSION='$Id: apc.php",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "webtrees",
+    "url": "http://webtrees.net/",
+    "safe": "1.2.4",
+    "vuln": "http://webtrees.net/en/forums/2-open-discussion/16423-webtrees-124",
+    "latest": "1.2.4",
+    "detection": [
+      {
+        "file": "session.php",
+        "variable": "define('WT_VERSION'",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "PhpGedView",
+    "url": "http://phpgedview.sourceforge.net/",
+    "safe": "",
+    "vuln": "CVE-2011-0405",
+    "detection": [
+      {
+        "file": "session.php",
+        "variable": "define('PGV_VERSION'",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "status.net",
+    "url": "http://status.net",
+    "safe": "0.9.9",
+    "vuln": "CVE-2011-3370",
+    "detection": [
+      {
+        "file": "common.php",
+        "variable": "define('STATUSNET_BASE_VERSION'",
+        "subdir": 1
+      }
+    ]
+  },
+  {
+    "name": "limesurvey18",
+    "url": "http://www.limesurvey.org/",
+    "safe": "2.07",
+    "vuln": "CVE-2015-5078",
+    "detection": [
+      {
+        "file": "common.php",
+        "variable": "$versionnumber",
+        "subdir": 0,
+        "extra_match": "LimeSurvey"
+      }
+    ]
+  },
+  {
+    "name": "limesurvey19",
+    "url": "http://www.limesurvey.org/",
+    "safe": "2.07",
+    "vuln": "CVE-2015-5078",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "$versionnumber",
+        "subdir": 0,
+        "extra_match": "$dbversionnumber"
+      }
+    ]
+  },
+  {
+    "name": "limesurvey",
+    "url": "http://www.limesurvey.org/",
+    "safe": "2.07",
+    "vuln": "CVE-2015-5078",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "$config['versionnumber']",
+        "subdir": 2,
+        "extra_match": "LimeSurvey"
+      }
+    ]
+  },
+  {
+    "name": "webcalendar",
+    "url": "http://www.k5n.us/webcalendar.php",
+    "safe": "1.2.7",
+    "vuln": "CVE-2013-1422",
+    "detection": [
+      {
+        "file": "config.php",
+        "variable": "$PROGRAM_VERSION",
+        "subdir": 1,
+        "extra_match": "@package WebCalendar"
+      }
+    ]
+  },
+  {
+    "name": "nextcloud",
+    "url": "https://nextcloud.com",
+    "safe": "15.0.1",
+    "old_safe": "14.0.5,13.0.9",
+    "vuln": "CVE-2019-5449",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "$OC_VersionString",
+        "subdir": 0,
+        "extra_match": "$vendor = 'nextcloud';"
+      }
+    ]
+  },
+  {
+    "name": "owncloud",
+    "url": "https://owncloud.org/",
+    "safe": "10.2.1",
+    "vuln": "https://owncloud.org/security/advisories/possibility-to-extend-internal-share-permissions-using-the-api/",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "$OC_VersionString",
+        "subdir": 0,
+        "extra_nomatch": "nextcloud"
+      }
+    ]
+  },
+  {
+    "name": "owncloud5",
+    "url": "https://owncloud.org/",
+    "safe": "10.2.1",
+    "vuln": "https://owncloud.org/security/advisories/possibility-to-extend-internal-share-permissions-using-the-api/",
+    "detection": [
+      {
+        "file": "util.php",
+        "variable": "return '",
+        "subdir": 1,
+        "extra_match": "class OC_Util"
+      }
+    ]
+  },
+  {
+    "name": "videodb",
+    "url": "http://www.videodb.net/",
+    "safe": "4.0",
+    "vuln": "http://www.exploit-db.com/exploits/17660/",
+    "detection": [
+      {
+        "file": "constants.php",
+        "variable": "('VERSION',",
+        "subdir": 1,
+        "extra_match": "TBL_"
+      }
+    ]
+  },
+  {
+    "name": "OpenX",
+    "url": "http://www.openx.com/",
+    "safe": "",
+    "vuln": "http://www.kreativrauschen.com/blog/2013/12/18/zero-day-vulnerability-in-openx-source-2-8-11-and-revive-adserver-3-0-1/",
+    "detection": [
+      {
+        "file": "constants.php",
+        "variable": "OA_VERSION",
+        "subdir": 0,
+        "extra_match": "OpenX"
+      }
+    ]
+  },
+  {
+    "name": "revive",
+    "url": "http://www.revive-adserver.com/",
+    "safe": "3.0.5",
+    "vuln": "CVE-2013-5954",
+    "detection": [
+      {
+        "file": "constants.php",
+        "variable": "VERSION",
+        "subdir": 0,
+        "extra_match": "Revive Adserver"
+      }
+    ]
+  },
+  {
+    "name": "osTicket",
+    "url": "http://osticket.com/",
+    "safe": "1.8.12",
+    "vuln": "https://github.com/osTicket/osTicket-1.8/releases/tag/v1.8.12",
+    "latest": "1.9.12",
+    "detection": [
+      {
+        "file": "bootstrap.php",
+        "variable": "define('THIS_VERSION',",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Gitlist",
+    "url": "https://gitlist.org/",
+    "safe": "0.7.0",
+    "vuln": "CVE-2018-1000533",
+    "latest": "1.0.2",
+    "detection": [
+      {
+        "file": "footer.twig",
+        "variable": "Powered by",
+        "subdir": 3
+      }
+    ]
+  }
+]
