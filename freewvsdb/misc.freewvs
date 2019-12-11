@@ -348,31 +348,29 @@ subdir=1
 url=https://nextcloud.com
 file=version.php
 variable=$OC_VersionString
-vuln=https://nextcloud.com/security/advisory/?id=NC-SA-2019-003
-safe=15.0.0
+vuln=CVE-2019-5449
+safe=15.0.1
 old_safe=14.0.5,13.0.9
 subdir=0
 extra_match=$vendor = 'nextcloud';
 
 [owncloud]
-url=http://owncloud.org/
+url=https://owncloud.org/
 file=version.php
 variable=$OC_VersionString
-vuln=CVE-2017-8896
-safe=10.0.2
-old_safe=9.1.6,9.0.10,8.2.12
 subdir=0
 extra_nomatch=nextcloud
+vuln=https://owncloud.org/security/advisories/possibility-to-extend-internal-share-permissions-using-the-api/
+safe=10.2.1
 
 [owncloud5]
-url=http://owncloud.org/
+url=https://owncloud.org/
 file=util.php
 variable=return '
 subdir=1
 extra_match=class OC_Util
-vuln=CVE-2017-8896
-safe=10.0.2
-old_safe=9.1.6,9.0.10,8.2.12
+vuln=https://owncloud.org/security/advisories/possibility-to-extend-internal-share-permissions-using-the-api/
+safe=10.2.1
 
 [videodb]
 url=http://www.videodb.net/
