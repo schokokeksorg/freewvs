@@ -1,6 +1,6 @@
 [cpDynaLinks]
-url=http://www.cplinks.com/cpdynalinks/
-# last release 1.02 on 2004-10-25
+url=https://web.archive.org/web/20160423004721/http://www.cplinks.com/cpdynalinks/
+latest=1.02
 safe=
 vuln=CVE-2007-5408
 file=version.php

@@ -33,7 +33,6 @@ variable=$version
 extra_match=SquirrelMail version number
 subdir=1
 
-# old mantis versions behave different
 [Mantis-deprecated]
 url=https://mantisbt.org/
 safe=2.22.1
@@ -288,7 +287,7 @@ url=http://phpgedview.sourceforge.net/
 file=session.php
 variable=define('PGV_VERSION'
 safe=
-vuln=2011-0405
+vuln=CVE-2011-0405
 subdir=1
 
 [status.net]

@@ -121,7 +121,7 @@ subdir=0
 [Wordpress-NextGEN]
 url=https://wordpress.org/plugins/nextgen-gallery/
 safe=3.2.11
-vuln=2019-14314
+vuln=CVE-2019-14314
 file=nggallery.php
 variable=NGG_PLUGIN_VERSION
 subdir=0
@@ -169,7 +169,7 @@ subdir=0
 [Wordpress-SEObyYoast]
 url=https://wordpress.org/plugins/wordpress-seo/
 safe=11.6.0
-vuln=2019-13478
+vuln=CVE-2019-13478
 file=wp-seo-main.php
 variable=WPSEO_VERSION
 subdir=0

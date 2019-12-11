@@ -1,7 +1,7 @@
 [NetRisk]
 url=http://phprisk.org/
 safe=
-# 1.9.7 as of 20080205
+latest=1.9.7
 vuln=CVE-2008-0144
 file=install.php
 variable=$version
