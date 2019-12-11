@@ -212,13 +212,23 @@ variable=define("VERSION"
 subdir=1
 
 [Piwik]
-url=http://piwik.org/
-safe=3.0.3
-vuln=https://piwik.org/changelog/piwik-3-0-3/
+url=https://matomo.org/
+safe=3.12.0
+vuln=https://matomo.org/changelog/matomo-3-12-0/
 file=Version.php
 variable=const VERSION
 subdir=1
 extra_match=@link http://piwik.org
+
+[Matomo]
+url=https://matomo.org/
+safe=3.12.0
+latest=3.13.0
+vuln=https://matomo.org/changelog/matomo-3-12-0/
+file=Version.php
+variable=const VERSION
+subdir=1
+extra_match=@link https://matomo.org
 
 [phpWishlist]
 url=http://phpwishlist.sourceforge.net/
