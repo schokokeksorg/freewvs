@@ -2,28 +2,20 @@
   {
     "name": "WebsiteBaker",
     "url": "https://websitebaker.org/",
-    "safe": "2.8.4",
-    "vuln": "CVE-2015-0553",
+    "safe": "2.11.0",
+    "vuln": "CVE-2017-16514",
     "detection": [
       {
         "file": "version.php",
         "variable": "VERSION",
         "subdir": 3,
         "extra_match": "Website Baker Project"
-      }
-    ]
-  },
-  {
-    "name": "WebsiteBaker28",
-    "url": "https://websitebaker.org/",
-    "safe": "2.8.4",
-    "vuln": "CVE-2015-0553",
-    "detection": [
+      },
       {
-        "file": "info.php",
-        "variable": "$template_platform",
-        "subdir": 3,
-        "extra_match": "wb_theme"
+        "file": "version.php",
+        "variable": "VERSION",
+        "subdir": 2,
+        "extra_match": "isteam"
       }
     ]
   },

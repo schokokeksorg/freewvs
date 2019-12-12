@@ -196,24 +196,16 @@
     ]
   },
   {
-    "name": "RoundCube-deprecated",
+    "name": "RoundCube",
     "url": "https://roundcube.net",
     "safe": "1.3.10",
-    "vuln": "CVE-2019-10740",
+    "vuln": "CVE-2019-15237",
     "detection": [
       {
         "file": "index.php",
         "variable": "RCMAIL_VERSION",
         "subdir": 0
-      }
-    ]
-  },
-  {
-    "name": "RoundCube",
-    "url": "https://roundcube.net",
-    "safe": "1.3.10",
-    "vuln": "CVE-2019-10740",
-    "detection": [
+      },
       {
         "file": "iniset.php",
         "variable": "RCMAIL_VERSION",
@@ -466,44 +458,31 @@
     ]
   },
   {
-    "name": "limesurvey18",
-    "url": "http://www.limesurvey.org/",
-    "safe": "2.07",
-    "vuln": "CVE-2015-5078",
+    "name": "limesurvey",
+    "url": "https://www.limesurvey.org/",
+    "safe": "3.17.14",
+    "vuln": "CVE-2019-16174",
     "detection": [
       {
         "file": "common.php",
         "variable": "$versionnumber",
         "subdir": 0,
-        "extra_match": "LimeSurvey"
-      }
-    ]
-  },
-  {
-    "name": "limesurvey19",
-    "url": "http://www.limesurvey.org/",
-    "safe": "2.07",
-    "vuln": "CVE-2015-5078",
-    "detection": [
+        "extra_match": "LimeSurvey",
+        "note": "1.8.x and earlier"
+      },
       {
         "file": "version.php",
         "variable": "$versionnumber",
         "subdir": 0,
-        "extra_match": "$dbversionnumber"
-      }
-    ]
-  },
-  {
-    "name": "limesurvey",
-    "url": "http://www.limesurvey.org/",
-    "safe": "2.07",
-    "vuln": "CVE-2015-5078",
-    "detection": [
+        "extra_match": "$dbversionnumber",
+        "note": "1.9.x"
+      },
       {
         "file": "version.php",
         "variable": "$config['versionnumber']",
         "subdir": 2,
-        "extra_match": "LimeSurvey"
+        "extra_match": "LimeSurvey",
+        "note": "2.x and above"
       }
     ]
   },
