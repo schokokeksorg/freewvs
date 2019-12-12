@@ -1,6 +1,6 @@
 [
   {
-    "name": "phpMyAdmin-veryold",
+    "name": "phpMyAdmin",
     "url": "https://www.phpmyadmin.net/",
     "safe": "4.9.2",
     "vuln": "CVE-2019-18622",
@@ -8,30 +8,16 @@
       {
         "file": "Config.class.php",
         "variable": "PMA_VERSION",
-        "subdir": 1
-      }
-    ]
-  },
-  {
-    "name": "phpMyAdmin-old",
-    "url": "https://www.phpmyadmin.net/",
-    "safe": "4.9.2",
-    "vuln": "CVE-2019-18622",
-    "detection": [
+        "subdir": 1,
+        "note": "4.5.x and older"
+      },
       {
         "file": "Config.php",
         "variable": "PMA_VERSION",
         "subdir": 1,
-        "extra_match": "namespace PMA\\libraries;"
-      }
-    ]
-  },
-  {
-    "name": "phpMyAdmin",
-    "url": "https://www.phpmyadmin.net/",
-    "safe": "4.9.2",
-    "vuln": "CVE-2019-18622",
-    "detection": [
+        "extra_match": "namespace PMA\\libraries;",
+        "note": "4.6.x/4.7.x"
+      },
       {
         "file": "Config.php",
         "variable": "PMA_VERSION",
@@ -55,24 +41,16 @@
     ]
   },
   {
-    "name": "Mantis-deprecated",
+    "name": "Mantis",
     "url": "https://mantisbt.org/",
-    "safe": "2.22.1",
-    "vuln": "CVE-2019-15715",
+    "safe": "2.23.0",
+    "vuln": "CVE-2017-18214",
     "detection": [
       {
         "file": "config_defaults_inc.php",
         "variable": "$g_mantis_version",
         "subdir": 0
-      }
-    ]
-  },
-  {
-    "name": "Mantis",
-    "url": "https://mantisbt.org/",
-    "safe": "2.22.1",
-    "vuln": "CVE-2019-15715",
-    "detection": [
+      },
       {
         "file": "constant_inc.php",
         "variable": "MANTIS_VERSION",
@@ -81,30 +59,29 @@
     ]
   },
   {
-    "name": "Bugzilla3",
+    "name": "Bugzilla",
     "url": "https://www.bugzilla.org/",
-    "safe": "4.4.7",
-    "old_safe": "4.2.12,4.0.16",
-    "vuln": "CVE-2011-2379",
+    "safe": "5.0.4",
+    "old_safe": "4.4.13",
+    "vuln": "CVE-2018-5123",
     "detection": [
       {
-        "file": "Constants.pm",
-        "variable": "BUGZILLA_VERSION",
-        "subdir": 1
-      }
-    ]
-  },
-  {
-    "name": "Bugzilla2",
-    "url": "https://www.bugzilla.org/",
-    "safe": "4.4.7",
-    "old_safe": "4.2.12,4.0.16",
-    "vuln": "CVE-2011-2379",
-    "detection": [
+        "file": "globals.pl",
+        "variable": "$::param{'version'}",
+        "subdir": 0,
+        "note": "2.14.x and older"
+      },
       {
         "file": "Config.pm",
         "variable": "$Bugzilla::Config::VERSION",
-        "subdir": 1
+        "subdir": 1,
+        "note": "2.16.x - 2.23.x"
+      },
+      {
+        "file": "Constants.pm",
+        "variable": "BUGZILLA_VERSION",
+        "subdir": 1,
+        "note": "3.x and newer"
       }
     ]
   },
