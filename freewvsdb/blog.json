@@ -23,7 +23,22 @@
         "file": "version.php",
         "variable": "$wp_version",
         "subdir": 1,
-        "extra_match": "The WordPress version string"
+        "extra_match": "The WordPress version string",
+        "extra_nomatch": "$cp_version"
+      }
+    ]
+  },
+  {
+    "name": "ClassicPress",
+    "url": "https://www.classicpress.net/",
+    "safe": "1.1.1",
+    "vuln": "CVE-2019-17672",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "$cp_version",
+        "subdir": 1,
+        "extra_match": "The ClassicPress version string"
       }
     ]
   },
