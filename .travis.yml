@@ -5,5 +5,7 @@ python:
   - "3.7"
   - "3.8"
   - "nightly"  # nightly build
+install:
+  - pip install pycodestyle pyflakes
 script:
   - python3 -m unittest
