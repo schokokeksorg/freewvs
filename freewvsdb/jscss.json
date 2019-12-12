@@ -1,20 +1,5 @@
 [
   {
-    "name": "jquery-min",
-    "url": "https://jquery.com/",
-    "safe": "3.4.0",
-    "vuln": "CVE-2019-11358",
-    "latest": "3.4.1",
-    "thirdparty": "yes",
-    "detection": [
-      {
-        "file": "jquery.min.js",
-        "variable": "/*! jQuery",
-        "subdir": 0
-      }
-    ]
-  },
-  {
     "name": "jquery",
     "url": "https://jquery.com/",
     "safe": "3.4.0",
@@ -24,6 +9,11 @@
     "detection": [
       {
         "file": "jquery.js",
+        "variable": "/*! jQuery",
+        "subdir": 0
+      },
+      {
+        "file": "jquery.min.js",
         "variable": "/*! jQuery",
         "subdir": 0
       }
