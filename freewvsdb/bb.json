@@ -15,8 +15,9 @@
   },
   {
     "name": "DeluxeBB",
-    "url": "http://www.deluxebb.com/",
+    "url": "https://web.archive.org/web/20110202175019/http://www.deluxebb.com/",
     "safe": "",
+    "latest": "1.3",
     "vuln": "CVE-2010-4151",
     "detection": [
       {
