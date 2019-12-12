@@ -44,5 +44,25 @@
         "subdir": 0
       }
     ]
+  },
+  {
+    "name": "Moment.js",
+    "url": "https://momentjs.com/",
+    "safe": "2.19.3",
+    "vuln": "CVE-2017-18214",
+    "latest": "2.24.0",
+    "thirdparty": "yes",
+    "detection": [
+      {
+        "file": "moment.js",
+        "variable": ".version",
+        "subdir": 0
+      },
+      {
+        "file": "moment.min.js",
+        "variable": ".version",
+        "subdir": 0
+      }
+    ]
   }
 ]
