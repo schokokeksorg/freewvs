@@ -281,24 +281,16 @@
     ]
   },
   {
-    "name": "phplist-old",
-    "url": "http://www.phplist.com/",
-    "safe": "3.2.7",
-    "vuln": "CVE-2016-10045",
+    "name": "phplist",
+    "url": "https://www.phplist.org/",
+    "safe": "3.4.3",
+    "vuln": "https://www.phplist.org/newslist/phplist-3-4-3-release-notes/",
     "detection": [
       {
         "file": "connect.php",
         "variable": "define(\"VERSION\"",
         "subdir": 1
-      }
-    ]
-  },
-  {
-    "name": "phplist",
-    "url": "http://www.phplist.com/",
-    "safe": "3.2.7",
-    "vuln": "CVE-2016-10045",
-    "detection": [
+      },
       {
         "file": "init.php",
         "variable": "define(\"VERSION\"",
