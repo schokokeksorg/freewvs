@@ -30,28 +30,21 @@
   },
   {
     "name": "PunBB",
-    "url": "http://punbb.org/",
-    "safe": "1.4.1",
-    "vuln": "https://secunia.com/advisories/46864",
-    "detection": [
-      {
-        "file": "db_update.php",
-        "variable": "UPDATE_TO",
-        "subdir": 0,
-        "extra_match": "@package PunBB"
-      }
-    ]
-  },
-  {
-    "name": "PunBB12",
-    "url": "http://punbb.org/",
+    "url": "http://punbb.informer.com/",
     "safe": "1.4.1",
     "vuln": "https://secunia.com/advisories/46864",
     "detection": [
       {
         "file": "install.php",
         "variable": "$punbb_version",
-        "subdir": 0
+        "subdir": 0,
+        "note": "1.2.x and earlier"
+      },
+      {
+        "file": "db_update.php",
+        "variable": "UPDATE_TO",
+        "subdir": 0,
+        "extra_match": "@package PunBB"
       }
     ]
   },
@@ -71,26 +64,26 @@
   },
   {
     "name": "Vanilla",
-    "url": "http://vanillaforums.com/",
-    "safe": "2.1.3",
-    "vuln": "http://vanillaforums.org/discussion/27822/vanilla-2-1-3-security-release",
+    "url": "https://vanillaforums.com/",
+    "safe": "3.2",
+    "vuln": "https://open.vanillaforums.com/discussion/37556/vanilla-3-2-is-now-available",
     "detection": [
       {
         "file": "version.php",
         "variable": "APPLICATION_VERSION",
         "subdir": 1,
-        "extra_match": "define('APPLICATION', 'Vanilla');"
-      }
-    ]
-  },
-  {
-    "name": "Vanilla2",
-    "url": "http://vanillaforums.com/",
-    "safe": "2.1.3",
-    "vuln": "http://vanillaforums.org/discussion/27822/vanilla-2-1-3-security-release",
-    "detection": [
+        "extra_match": "define('APPLICATION', 'Vanilla');",
+        "note": "1.x"
+      },
       {
         "file": "index.php",
+        "variable": "APPLICATION_VERSION",
+        "subdir": 0,
+        "extra_match": "define('APPLICATION', 'Vanilla');",
+        "note": "2.x"
+      },
+      {
+        "file": "environment.php",
         "variable": "APPLICATION_VERSION",
         "subdir": 0,
         "extra_match": "define('APPLICATION', 'Vanilla');"
