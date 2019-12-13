@@ -50,9 +50,9 @@
   },
   {
     "name": "UseBB",
-    "url": "http://www.usebb.net/",
-    "safe": "1.0.12",
-    "vuln": "CVE-2011-3611",
+    "url": "https://github.com/usebb/UseBB",
+    "safe": "",
+    "vuln": "https://github.com/usebb/UseBB/commit/403718a1c34b0906b0c2b874794b1456c81c4a63",
     "latest": "1.0.16",
     "detection": [
       {
@@ -91,7 +91,7 @@
     ]
   },
   {
-    "name": "Simple_Machines_Forum",
+    "name": "SimpleMachinesForum",
     "url": "http://www.simplemachines.org/",
     "safe": "2.0.5",
     "vuln": "CVE-2018-10305",
@@ -106,10 +106,9 @@
   },
   {
     "name": "MyBB",
-    "url": "http://www.mybboard.net/",
-    "safe": "1.8.3",
-    "old_safe": "1.6.16",
-    "vuln": "http://blog.mybb.com/2014/11/20/mybb-1-8-3-1-6-16-released-security-releases/",
+    "url": "https://mybb.com/",
+    "safe": "1.8.21",
+    "vuln": "CVE-2019-12831",
     "detection": [
       {
         "file": "class_core.php",
@@ -120,7 +119,7 @@
   },
   {
     "name": "Phorum",
-    "url": "http://www.phorum.org/",
+    "url": "https://www.phorum.org/",
     "safe": "5.2.21",
     "vuln": "https://voidsec.com/wp-content/uploads/2016/04/Phorum-v.5.2.20-VoidSec.pdf",
     "latest": "5.2.23",
