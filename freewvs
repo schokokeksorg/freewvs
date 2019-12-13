@@ -109,17 +109,19 @@ for fdir in opts.dirs:
                         mfile = os.path.join(root, filename)
                         try:
                             file = open(mfile, errors='replace')
-                        except Exception:
+                        except IOError:
                             continue
                         filestr = file.read()
                         file.close()
 
                         if (('extra_match' in det
-                           and det['extra_match'] not in filestr)
-                           or ('extra_nomatch' in det
-                           and det['extra_nomatch'] in filestr)
-                           or ('path_match' in det
-                           and not root.endswith(det['path_match']))):
+                             and det['extra_match'] not in filestr)
+                                or ('extra_nomatch' in det
+                                    and det['extra_nomatch'] in filestr)):
+                            continue
+
+                        if ('path_match' in det
+                                and (not root.endswith(det['path_match']))):
                             continue
 
                         findversion = re.search(re.escape(det['variable'])
@@ -137,9 +139,10 @@ for fdir in opts.dirs:
                                                   + int(det['add_minor']))
                             findversion = '.'.join(findversion)
 
-                        if (not versioncompare(item['safe'], findversion)
-                           or ('old_safe' in item
-                           and findversion in item['old_safe'].split(','))):
+                        if ((not versioncompare(item['safe'], findversion))
+                                or ('old_safe' in item
+                                    and findversion in
+                                    item['old_safe'].split(','))):
                             if opts.all:
                                 vulnprint(item['name'], findversion, "ok", "",
                                           mfile, det['subdir'], opts.xml)
