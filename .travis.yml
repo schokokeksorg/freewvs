@@ -5,6 +5,9 @@ python:
   - "3.7"
   - "3.8"
   - "nightly"  # nightly build
+env:
+  global:
+    - FREEWVS_ONLINETESTS=1
 install:
   - pip install pycodestyle pyflakes
 script:
