@@ -15,7 +15,6 @@ class TestFreewvsData(unittest.TestCase):
                          "Not running online tests")
     def test_freewvs_testdata(self):
         tmp = tempfile.mkdtemp(prefix="freewvs-testdata")
-        print(tmp)
         if os.environ.get("FREEWVS_TESTDATA_REPOSITORY"):
             os.symlink(os.environ.get("FREEWVS_TESTDATA_REPOSITORY"),
                        tmp + "/freewvs-testdata")
