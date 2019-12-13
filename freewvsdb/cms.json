@@ -35,8 +35,8 @@
   {
     "name": "Drupal",
     "url": "https://www.drupal.org/",
-    "safe": "8.7.4",
-    "old_safe": "8.6.16,7.67",
+    "safe": "8.7.5",
+    "old_safe": "8.6.18,7.68,7.67",
     "vuln": "CVE-2019-6342",
     "latest": "7.67",
     "detection": [
