@@ -134,7 +134,7 @@ for fdir in opts.dirs:
                         if 'add_minor' in det:
                             findversion = findversion.split('.')
                             findversion[-1] = str(int(findversion[-1])
-                                                  + int(item['add_minor']))
+                                                  + int(det['add_minor']))
                             findversion = '.'.join(findversion)
 
                         if (not versioncompare(item['safe'], findversion)
