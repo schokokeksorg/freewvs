@@ -43,55 +43,41 @@
     ]
   },
   {
-    "name": "TikiWiki",
-    "url": "http://tikiwiki.org/",
-    "safe": "5.3",
-    "old_safe": "3.8",
-    "vuln": "CVE-2010-4239",
-    "detection": [
-      {
-        "file": "twversion.class.php",
-        "variable": "$this->version",
-        "subdir": 2
-      }
-    ]
-  },
-  {
-    "name": "TikiWiki-old",
-    "url": "http://tikiwiki.org/",
-    "safe": "5.3",
-    "old_safe": "3.8",
-    "vuln": "CVE-2010-4239",
+    "name": "Tiki",
+    "url": "https://tiki.org/",
+    "safe": "20.1",
+    "vuln": "https://tiki.org/article464-Tiki-20-1-Released",
     "detection": [
       {
         "file": "README",
         "variable": "version",
         "subdir": 0,
-        "extra_match": "Tiki! The wiki"
+        "extra_match": "Tiki! The wiki",
+        "extra_nomatch": "version 2",
+        "note": "1.x"
+      },
+      {
+        "file": "twversion.class.php",
+        "variable": "$this->version",
+        "subdir": 2,
+        "note": "2.x and above"
       }
     ]
   },
   {
     "name": "phpwiki",
     "url": "http://phpwiki.sourceforge.net/",
-    "safe": "1.3.14",
-    "vuln": "CVE-2007-3193",
-    "detection": [
-      {
-        "file": "prepend.php",
-        "variable": "PHPWIKI_VERSION",
-        "subdir": 1
-      }
-    ]
-  },
-  {
-    "name": "phpwiki-legacy",
-    "url": "http://phpwiki.sourceforge.net/",
-    "safe": "1.3.14",
-    "vuln": "CVE-2007-3193",
+    "safe": "",
+    "vuln": "https://www.exploit-db.com/exploits/38027",
     "detection": [
       {
         "file": "config.php",
+        "variable": "PHPWIKI_VERSION",
+        "subdir": 1,
+        "note": "1.2.x"
+      },
+      {
+        "file": "prepend.php",
         "variable": "PHPWIKI_VERSION",
         "subdir": 1
       }

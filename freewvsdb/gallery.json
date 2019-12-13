@@ -13,24 +13,18 @@
     ]
   },
   {
-    "name": "Gallery2",
-    "url": "http://gallery.menalto.com/",
-    "safe": "2.3.2",
-    "vuln": "CVE-2012-1113",
+    "name": "Gallery",
+    "url": "http://galleryproject.org/",
+    "safe": "3.0.9",
+    "old_safe": "2.3.2",
+    "vuln": "http://galleryproject.org/gallery_3_0_9",
     "detection": [
       {
         "file": "module.inc",
         "variable": "setGalleryVersion",
-        "subdir": 2
-      }
-    ]
-  },
-  {
-    "name": "Gallery3",
-    "url": "http://gallery.menalto.com/",
-    "safe": "3.0.9",
-    "vuln": "http://galleryproject.org/gallery_3_0_9",
-    "detection": [
+        "subdir": 2,
+        "note": "2.x, earlier vulnerable to CVE-2012-1113"
+      },
       {
         "file": "gallery.php",
         "variable": "const VERSION",

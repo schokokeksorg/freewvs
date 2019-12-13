@@ -514,24 +514,17 @@
     "vuln": "https://owncloud.org/security/advisories/possibility-to-extend-internal-share-permissions-using-the-api/",
     "detection": [
       {
+        "file": "util.php",
+        "variable": "return '",
+        "subdir": 1,
+        "extra_match": "class OC_Util",
+        "note": "5.x and earlier"
+      },
+      {
         "file": "version.php",
         "variable": "$OC_VersionString",
         "subdir": 0,
         "extra_nomatch": "nextcloud"
-      }
-    ]
-  },
-  {
-    "name": "owncloud5",
-    "url": "https://owncloud.org/",
-    "safe": "10.2.1",
-    "vuln": "https://owncloud.org/security/advisories/possibility-to-extend-internal-share-permissions-using-the-api/",
-    "detection": [
-      {
-        "file": "util.php",
-        "variable": "return '",
-        "subdir": 1,
-        "extra_match": "class OC_Util"
       }
     ]
   },
