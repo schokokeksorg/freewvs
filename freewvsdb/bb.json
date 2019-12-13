@@ -94,8 +94,7 @@
     "name": "Simple_Machines_Forum",
     "url": "http://www.simplemachines.org/",
     "safe": "2.0.5",
-    "old_safe": "1.1.16",
-    "vuln": "http://www.simplemachines.org/community/index.php?topic=509417.0",
+    "vuln": "CVE-2018-10305",
     "detection": [
       {
         "file": "index.php",
@@ -122,9 +121,9 @@
   {
     "name": "Phorum",
     "url": "http://www.phorum.org/",
-    "safe": "5.2.19",
-    "vuln": "http://www.phorum.org/phorum5/read.php?64,151943",
-    "latest": "5.2.19",
+    "safe": "5.2.21",
+    "vuln": "https://voidsec.com/wp-content/uploads/2016/04/Phorum-v.5.2.20-VoidSec.pdf",
+    "latest": "5.2.23",
     "detection": [
       {
         "file": "common.php",
@@ -161,7 +160,7 @@
     ]
   },
   {
-    "name": "FluxBB12",
+    "name": "FluxBB",
     "url": "https://fluxbb.org/",
     "safe": "1.5.11",
     "vuln": "https://fluxbb.org/forums/viewtopic.php?id=9472",
@@ -169,16 +168,9 @@
       {
         "file": "install.php",
         "variable": "$fluxbb_version",
-        "subdir": 1
-      }
-    ]
-  },
-  {
-    "name": "FluxBB",
-    "url": "https://fluxbb.org/",
-    "safe": "1.5.11",
-    "vuln": "https://fluxbb.org/forums/viewtopic.php?id=9472",
-    "detection": [
+        "subdir": 1,
+        "note": "2.x and earlier"
+      },
       {
         "file": "common.php",
         "variable": "FORUM_VERSION",
@@ -190,8 +182,8 @@
   {
     "name": "vBulletin",
     "url": "https://www.vbulletin.com/",
-    "safe": "4.2.2",
-    "vuln": "CVE-2013-6129",
+    "safe": "5.5.5",
+    "vuln": "CVE-2019-17271",
     "detection": [
       {
         "file": "class_core.php",
