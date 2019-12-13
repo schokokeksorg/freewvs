@@ -274,32 +274,22 @@
   {
     "name": "contao",
     "url": "https://contao.org/",
-    "safe": "3.2.5",
-    "old_safe": "2.11.14",
-    "vuln": "CVE-2014-1860",
-    "latest": "3.2.5",
-    "detection": [
-      {
-        "file": "CHANGELOG.md",
-        "variable": "Version",
-        "subdir": 0,
-        "extra_match": "Contao Open Source CMS"
-      }
-    ]
-  },
-  {
-    "name": "contao-old",
-    "url": "https://contao.org/",
-    "safe": "3.2.5",
-    "old_safe": "2.11.14",
-    "vuln": "CVE-2014-1860",
-    "latest": "3.2.5",
+    "safe": "4.7.5",
+    "old_safe": "4.4.39",
+    "vuln": "CVE-2019-11512",
     "detection": [
       {
         "file": "CHANGELOG.txt",
         "variable": "Version",
         "subdir": 0,
-        "extra_match": "Contao Open Source CMS Changelog"
+        "extra_match": "Contao Open Source CMS Changelog",
+        "note": "very old versions"
+      },
+      {
+        "file": "CHANGELOG.md",
+        "variable": "Version",
+        "subdir": 0,
+        "extra_match": "Contao Open Source CMS"
       }
     ]
   },
