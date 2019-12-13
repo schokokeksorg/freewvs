@@ -13,29 +13,29 @@
     ]
   },
   {
-    "name": "Magento-old",
-    "url": "http://www.magentocommerce.com/",
-    "safe": "1.9.2.2",
-    "vuln": "CVE-2015-5161",
+    "name": "Magento",
+    "url": "https://magento.com/",
+    "safe": "2.3.3",
+    "vuln": "https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-3-open-source.html",
     "detection": [
       {
         "file": "Mage.php",
         "variable": "return '",
-        "subdir": 1
-      }
-    ]
-  },
-  {
-    "name": "Magento",
-    "url": "http://www.magentocommerce.com/",
-    "safe": "1.9.2.2",
-    "vuln": "CVE-2015-5161",
-    "note": "This does not reliably give correct version numbers, but it works for the latest versions",
-    "detection": [
+        "subdir": 1,
+        "note": "old 1.x"
+      },
       {
         "file": "RELEASE_NOTES.txt",
         "variable": "====",
-        "subdir": 0
+        "subdir": 0,
+        "note": "1.9.x"
+      },
+      {
+        "file": "composer.json",
+        "variable": "\"version\":",
+        "subdir": 0,
+        "extra_match": "\"name\": \"magento/magento2ce\",",
+        "note": "2.x"
       }
     ]
   },
