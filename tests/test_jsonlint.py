@@ -17,12 +17,11 @@ class TestJsonLint(unittest.TestCase):
             fp.close()
             tmp = json.loads(orig)
             new = json.dumps(tmp, indent=2)
-            if (orig != new):
+            if orig != new:
                 print("json %s not valid" % f)
                 sys.stdout.writelines(difflib.unified_diff(orig, new))
                 valid = False
-        if not valid:
-            raise Exception("Unlinted json files found")
+        self.assertTrue(valid)
 
 
 if __name__ == '__main__':

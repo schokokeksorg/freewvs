@@ -24,16 +24,16 @@ class TestFreewvsData(unittest.TestCase):
                             tmp + "/freewvs-testdata"],
                            check=True)
 
-        for dir in glob.glob(tmp + "/freewvs-testdata/webapps/*"):
-            bdir = os.path.basename(dir)
-            for tarball in glob.glob(dir + "/dist/*"):
+        for tdir in glob.glob(tmp + "/freewvs-testdata/webapps/*"):
+            bdir = os.path.basename(tdir)
+            for tarball in glob.glob(tdir + "/dist/*"):
                 shutil.unpack_archive(tarball, "%s/%s/%s-src"
                                       % (tmp, bdir, os.path.basename(tarball)))
             fwrun = subprocess.run(["./freewvs", "-a", tmp + "/" + bdir],
                                    stdout=subprocess.PIPE, check=True)
             fwdata = re.sub(tmp, "[dir]", fwrun.stdout.decode("utf-8"))
             fwclean = re.sub(r' \(.* ', " ", fwdata)
-            f = open(dir + "/refdata-a.txt")
+            f = open(tdir + "/refdata-a.txt")
             refdata = f.read()
             f.close()
             refclean = re.sub(r' \(.* ', " ", refdata)
