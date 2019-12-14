@@ -283,8 +283,8 @@
   {
     "name": "Wordpress-GoogleAnalyticsbyMonsterInsights",
     "url": "https://wordpress.org/plugins/google-analytics-for-wordpress/changelog/",
-    "safe": "5.4.5",
-    "vuln": "https://wordpress.org/plugins/google-analytics-for-wordpress/changelog/",
+    "safe": "7.2.0",
+    "vuln": "https://wpvulndb.com/vulnerabilities/9157/",
     "detection": [
       {
         "file": "googleanalytics.php",
@@ -302,6 +302,60 @@
       {
         "file": "captcha.php",
         "variable": "Version:",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-ContactForm7",
+    "url": "https://contactform7.com/",
+    "safe": "5.0.4",
+    "vuln": "CVE-2018-20152",
+    "detection": [
+      {
+        "file": "wp-contact-form-7.php",
+        "variable": "WPCF7_VERSION",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-ACF",
+    "url": "https://www.advancedcustomfields.com/",
+    "safe": "5.7.12",
+    "vuln": "https://wpvulndb.com/vulnerabilities/9347",
+    "detection": [
+      {
+        "file": "acf.php",
+        "variable": "$version",
+        "extra_match": "Advanced Custom Fields",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-Updraftplus",
+    "url": "https://updraftplus.com/",
+    "safe": "1.13.5",
+    "vuln": "CVE-2017-18593",
+    "detection": [
+      {
+        "file": "updraftplus.php",
+        "variable": "Version:",
+        "subdir": 0
+      }
+    ]
+  },
+  {
+    "name": "Wordpress-GoogleXMLSitemaps",
+    "url": "https://de.wordpress.org/plugins/google-sitemap-generator/",
+    "safe": "4.1.0",
+    "vuln": "CVE-2018-16204",
+    "detection": [
+      {
+        "file": "sitemap.php",
+        "variable": "Version:",
+        "extra_match": "Google XML Sitemaps Generator for WordPress",
         "subdir": 0
       }
     ]
