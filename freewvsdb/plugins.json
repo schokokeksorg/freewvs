@@ -327,7 +327,7 @@
     "detection": [
       {
         "file": "acf.php",
-        "variable": "$version",
+        "variable": "Version:",
         "extra_match": "Advanced Custom Fields",
         "subdir": 0
       }
