@@ -87,7 +87,7 @@
   },
   {
     "name": "SimpNews",
-    "url": "http://www.boesch-it.de",
+    "url": "https://web.archive.org/web/20110228171938/http://www.boesch-it.de/",
     "safe": "2.48",
     "vuln": "CVE-2010-2858",
     "detection": [
@@ -101,7 +101,7 @@
   },
   {
     "name": "calendarix",
-    "url": "http://www.calendarix.com/",
+    "url": "https://web.archive.org/web/20120430200920/http://www.calendarix.com/",
     "safe": "",
     "vuln": "CVE-2007-3183",
     "detection": [
@@ -143,8 +143,8 @@
   {
     "name": "Ampache",
     "url": "http://ampache.org/",
-    "safe": "3.5.3",
-    "vuln": "http://ampache.org/2009/12/20/3-5-3-security-release/",
+    "safe": "4.0.0",
+    "vuln": "CVE-2019-12385",
     "detection": [
       {
         "file": "init.php",
@@ -216,9 +216,9 @@
   {
     "name": "Moodle",
     "url": "https://moodle.org/",
-    "safe": "3.2.2",
-    "old_safe": "3.1.5,3.0.9,2.7.19",
-    "vuln": "CVE-2017-2641",
+    "safe": "3.7.1",
+    "old_safe": "3.6.5,3.5.7",
+    "vuln": "CVE-2019-10189",
     "detection": [
       {
         "file": "version.php",
@@ -231,8 +231,8 @@
   {
     "name": "cacti",
     "url": "http://www.cacti.net/",
-    "safe": "0.8.7",
-    "vuln": "CVE-2007-6035",
+    "safe": "1.2.8",
+    "vuln": "CVE-2019-17357",
     "detection": [
       {
         "file": "global.php",
@@ -344,8 +344,8 @@
   {
     "name": "awstats",
     "url": "http://awstats.sourceforge.net/",
-    "safe": "7.1",
-    "vuln": "CVE-2012-4547",
+    "safe": "7.7",
+    "vuln": "CVE-2017-1000501",
     "detection": [
       {
         "file": "awstats.pl",
@@ -356,9 +356,9 @@
   },
   {
     "name": "phpMyFAQ",
-    "url": "http://www.phpmyfaq.de/",
-    "safe": "2.5.5",
-    "vuln": "http://www.phpmyfaq.de/advisory_2009-12-01.php",
+    "url": "https://www.phpmyfaq.de/",
+    "safe": "2.9.11",
+    "vuln": "CVE-2018-16650",
     "detection": [
       {
         "file": "phpmyfaq.spec",
@@ -411,10 +411,10 @@
   },
   {
     "name": "webtrees",
-    "url": "http://webtrees.net/",
+    "url": "https://www.webtrees.net/",
     "safe": "1.2.4",
-    "vuln": "http://webtrees.net/en/forums/2-open-discussion/16423-webtrees-124",
-    "latest": "1.2.4",
+    "vuln": "CVE-2014-100006",
+    "latest": "1.5.2",
     "detection": [
       {
         "file": "session.php",
@@ -572,10 +572,11 @@
   },
   {
     "name": "osTicket",
-    "url": "http://osticket.com/",
-    "safe": "1.8.12",
-    "vuln": "https://github.com/osTicket/osTicket-1.8/releases/tag/v1.8.12",
-    "latest": "1.9.12",
+    "url": "https://osticket.com/",
+    "safe": "1.12.1",
+    "old_safe": "1.10.7",
+    "vuln": "CVE-2019-14750",
+    "latest": "1.14.1",
     "detection": [
       {
         "file": "bootstrap.php",
