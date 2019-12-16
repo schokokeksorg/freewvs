@@ -58,9 +58,8 @@
   {
     "name": "b2evolution",
     "url": "https://b2evolution.net/",
-    "safe": "1.9.2",
-    "old_safe": "1.8.7",
-    "vuln": "CVE-2007-0175",
+    "safe": "6.8.11",
+    "vuln": "CVE-2017-1000423",
     "detection": [
       {
         "file": "_application.php",
@@ -129,14 +128,21 @@
   },
   {
     "name": "DotClear",
-    "url": "http://www.dotclear.net/",
-    "safe": "2.2.3",
-    "vuln": "CVE-2011-1584",
+    "url": "https://dotclear.org/",
+    "safe": "2.14.2",
+    "vuln": "CVE-2018-16358",
     "detection": [
       {
         "file": "LISEZMOI.txt",
         "variable": "DotClear",
-        "subdir": 0
+        "subdir": 0,
+        "note": "older"
+      },
+      {
+        "file": "prepend.php",
+        "variable": "DC_VERSION",
+        "extra_match": "Dotclear",
+        "subdir": 1
       }
     ]
   }
