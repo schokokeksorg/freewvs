@@ -41,10 +41,10 @@
   },
   {
     "name": "SimpleGroupware",
-    "url": "http://www.simple-groupware.de/",
-    "safe": "0.607",
-    "vuln": "http://www.simple-groupware.de/cms/Release-0-607",
-    "latest": "0.724",
+    "url": "https://web.archive.org/web/20130810201721/http://www.simple-groupware.de/",
+    "safe": "0.742",
+    "vuln": "CVE-2012-1028",
+    "latest": "0.745",
     "detection": [
       {
         "file": "setup.php",

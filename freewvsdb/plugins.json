@@ -166,7 +166,7 @@
     "name": "Wordpress-CustomContact",
     "url": "https://wordpress.org/plugins/custom-contact-forms/",
     "safe": "5.1.0.4",
-    "vuln": "http://blog.sucuri.net/2014/08/database-takeover-in-custom-contact-forms.html",
+    "vuln": "https://blog.sucuri.net/2014/08/database-takeover-in-custom-contact-forms.html",
     "detection": [
       {
         "file": "custom-contact-forms.php",
@@ -231,8 +231,8 @@
   {
     "name": "Wordpress-DownloadManager",
     "url": "https://wordpress.org/plugins/download-manager/",
-    "safe": "2.7.5",
-    "vuln": "http://blog.sucuri.net/2014/12/security-advisory-high-severity-wordpress-download-manager.html",
+    "safe": "2.9.61",
+    "vuln": "https://www.exploit-db.com/exploits/43487",
     "detection": [
       {
         "file": "download-manager.php",
@@ -258,7 +258,7 @@
     "name": "Joomla-Googlemaps",
     "url": "http://joomlacode.org/gf/project/mambot_google1/",
     "safe": "3.1",
-    "vuln": "http://joomlacode.org/gf/project/mambot_google1/news/?id=4119",
+    "vuln": "CVE-2013-7428",
     "detection": [
       {
         "file": "plugin_googlemap3.perm",

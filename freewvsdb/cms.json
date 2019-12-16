@@ -192,15 +192,20 @@
   {
     "name": "Contenido",
     "url": "https://www.contenido.org/",
-    "safe": "4.8.15",
-    "vuln": "http://www.contenido.org/de/front_content.php?idcat=107&idart=1789&client=6&lang=3",
-    "latest": "4.8.15",
+    "safe": "4.9.12",
+    "vuln": "https://devwerks.net/advisories/DW-2016-008_CONTENIDO_XSS.txt",
+    "latest": "4.10.1",
     "detection": [
       {
         "file": "config.misc.php",
         "variable": "$cfg['version']",
         "subdir": 1,
         "extra_match": "Contenido Misc Configurations"
+      },
+      {
+        "file": "startup.php",
+        "variable": "CON_VERSION",
+        "subdir": 1
       }
     ]
   },
@@ -221,8 +226,8 @@
   {
     "name": "CMSMadeSimple",
     "url": "https://www.cmsmadesimple.org/",
-    "safe": "1.11.13",
-    "vuln": "http://www.cmsmadesimple.org/2015/02/Announcing-CMS-Made-Simple-1-11-13-Security-Release/",
+    "safe": "2.2.12",
+    "vuln": "CVE-2019-17226",
     "detection": [
       {
         "file": "version.php",
@@ -247,9 +252,9 @@
   {
     "name": "SPIP",
     "url": "https://www.spip.net/",
-    "safe": "2.1.13",
-    "old_safe": "2.0.18",
-    "vuln": "http://archives.rezo.net/archives/spip-en.mbox/U5QUZ6WJRAJC7H5BR7W5SQG6WCD3PXL7/",
+    "safe": "3.2.5",
+    "old_safe": "3.1.11",
+    "vuln": "CVE-2019-16392",
     "detection": [
       {
         "file": "inc_version.php",

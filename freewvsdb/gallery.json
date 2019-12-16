@@ -17,7 +17,7 @@
     "url": "http://galleryproject.org/",
     "safe": "3.0.9",
     "old_safe": "2.3.2",
-    "vuln": "http://galleryproject.org/gallery_3_0_9",
+    "vuln": "CVE-2013-2241",
     "detection": [
       {
         "file": "module.inc",

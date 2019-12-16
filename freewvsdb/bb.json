@@ -135,7 +135,7 @@
     "name": "wBB",
     "url": "http://www.woltlab.com/",
     "safe": "3.0.9",
-    "vuln": "http://www.securityfocus.com/archive/1/503867/30/60/threaded",
+    "vuln": "https://www.securityfocus.com/archive/1/503867/30/60/threaded",
     "detection": [
       {
         "file": "config.inc.php",
@@ -148,7 +148,7 @@
     "name": "WBBLite",
     "url": "http://wbblite.com/",
     "safe": "2.1",
-    "vuln": "http://www.securityfocus.com/archive/1/503867/30/60/threaded",
+    "vuln": "https://www.securityfocus.com/archive/1/503867/30/60/threaded",
     "detection": [
       {
         "file": "package.xml",

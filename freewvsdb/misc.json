@@ -370,12 +370,18 @@
   {
     "name": "Horde-webmail",
     "url": "http://www.horde.org/",
-    "safe": "1.2.7",
-    "vuln": "http://secunia.com/advisories/39860",
+    "safe": "",
+    "vuln": "CVE-2019-12094",
     "detection": [
       {
         "file": "bundle.php",
         "variable": "BUNDLE_VERSION",
+        "subdir": 1,
+        "extra_match": "'Horde Groupware Webmail Edition'"
+      },
+      {
+        "file": "Bundle.php",
+        "variable": "VERSION",
         "subdir": 1,
         "extra_match": "'Horde Groupware Webmail Edition'"
       }
@@ -532,7 +538,7 @@
     "name": "videodb",
     "url": "http://www.videodb.net/",
     "safe": "4.0",
-    "vuln": "http://www.exploit-db.com/exploits/17660/",
+    "vuln": "https://www.exploit-db.com/exploits/17660",
     "detection": [
       {
         "file": "constants.php",
@@ -546,7 +552,7 @@
     "name": "OpenX",
     "url": "http://www.openx.com/",
     "safe": "",
-    "vuln": "http://www.kreativrauschen.com/blog/2013/12/18/zero-day-vulnerability-in-openx-source-2-8-11-and-revive-adserver-3-0-1/",
+    "vuln": "https://www.kreativrauschen.com/blog/2013/12/18/zero-day-vulnerability-in-openx-source-2-8-11-and-revive-adserver-3-0-1/",
     "detection": [
       {
         "file": "constants.php",
