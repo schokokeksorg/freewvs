@@ -1,7 +1,7 @@
 [
   {
     "name": "Horde-groupware",
-    "url": "http://www.horde.org/",
+    "url": "https://www.horde.org/",
     "safe": "1.2.5",
     "vuln": "CVE-2009-3701",
     "detection": [
@@ -14,22 +14,29 @@
     ]
   },
   {
-    "name": "eGroupWare",
-    "url": "http://www.egroupware.org/",
-    "safe": "1.8.006",
-    "vuln": "CVE-2014-2027",
+    "name": "EGroupware",
+    "url": "https://www.egroupware.org/",
+    "safe": "16.1.20170922",
+    "vuln": "CVE-2017-14920",
     "detection": [
       {
         "file": "setup.inc.php",
         "variable": "$setup_info['phpgwapi']['version']",
         "subdir": 2
+      },
+      {
+        "file": "composer.json",
+        "variable": "version",
+        "extra_match": "\"name\": \"egroupware/egroupware\"",
+        "subdir": 0
       }
     ]
   },
   {
     "name": "more.groupware",
-    "url": "http://www.moregroupware.com/",
+    "url": "https://web.archive.org/web/20070310040146/http://www.moregroupware.com/",
     "safe": "",
+    "latest": "0.7.4",
     "vuln": "CVE-2006-4906",
     "detection": [
       {
