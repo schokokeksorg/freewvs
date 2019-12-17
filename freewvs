@@ -1,8 +1,8 @@
 #!/usr/bin/python3 -O
 
-# freewvs 0.1 - the free web vulnerability scanner
+# freewvs - a free web vulnerability scanner
 #
-# https://source.schokokeks.org/freewvs/
+# https://freewvs.schokokeks.org/
 #
 # Written by schokokeks.org Hosting, https://schokokeks.org
 #
