@@ -156,7 +156,7 @@
   },
   {
     "name": "SiteBar",
-    "url": "http://sitebar.org/",
+    "url": "https://sitebar.org/",
     "safe": "3.3.9",
     "vuln": "CVE-2007-5492",
     "detection": [
@@ -230,7 +230,7 @@
   },
   {
     "name": "cacti",
-    "url": "http://www.cacti.net/",
+    "url": "https://cacti.net/",
     "safe": "1.2.8",
     "vuln": "CVE-2019-17357",
     "detection": [
@@ -343,7 +343,7 @@
   },
   {
     "name": "awstats",
-    "url": "http://awstats.sourceforge.net/",
+    "url": "https://awstats.sourceforge.io/",
     "safe": "7.7",
     "vuln": "CVE-2017-1000501",
     "detection": [
@@ -389,7 +389,7 @@
   },
   {
     "name": "ResourceSpace",
-    "url": "http://www.resourcespace.org/",
+    "url": "https://www.resourcespace.com/",
     "safe": "4.2.2833",
     "vuln": "CVE-2011-4311",
     "latest": "4.3.2912",
@@ -432,7 +432,7 @@
   {
     "name": "PhpGedView",
     "url": "http://phpgedview.sourceforge.net/",
-    "safe": "",
+    "safe": "4.2.4",
     "vuln": "CVE-2011-0405",
     "detection": [
       {
