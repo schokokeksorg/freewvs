@@ -35,9 +35,9 @@
   {
     "name": "Drupal",
     "url": "https://www.drupal.org/",
-    "safe": "8.7.5",
-    "old_safe": "8.6.18,7.68,7.67",
-    "vuln": "CVE-2019-6342",
+    "safe": "8.8.1",
+    "old_safe": "8.7.11,7.69",
+    "vuln": "https://www.drupal.org/sa-core-2019-012",
     "latest": "7.67",
     "detection": [
       {
@@ -98,8 +98,8 @@
   {
     "name": "Joomla",
     "url": "https://www.joomla.org/",
-    "safe": "3.9.13",
-    "vuln": "CVE-2019-18674",
+    "safe": "3.9.14",
+    "vuln": "CVE-2019-19846",
     "detection": [
       {
         "file": "CHANGELOG.php",
