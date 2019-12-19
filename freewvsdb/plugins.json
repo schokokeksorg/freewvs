@@ -348,7 +348,7 @@
   },
   {
     "name": "Wordpress-GoogleXMLSitemaps",
-    "url": "https://de.wordpress.org/plugins/google-sitemap-generator/",
+    "url": "https://wordpress.org/plugins/google-sitemap-generator/",
     "safe": "4.1.0",
     "vuln": "CVE-2018-16204",
     "detection": [
