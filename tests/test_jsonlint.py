@@ -46,6 +46,9 @@ class TestJsonLint(unittest.TestCase):
                             or item['vuln'].startswith("https://"),
                             msg="%s: Invalid vuln %s" %
                             (item['name'], item['vuln']))
+            for det in item['detection']:
+                self.assertTrue(type(det['subdir']) == int,
+                                msg="%s: subdir not int" % item['name'])
 
 
 if __name__ == '__main__':
