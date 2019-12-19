@@ -359,5 +359,18 @@
         "subdir": 0
       }
     ]
+  },
+  {
+    "name": "Wordpress-DuplicatePost",
+    "url": "https://wordpress.org/plugins/duplicate-post/",
+    "safe": "3.2.4",
+    "vuln": "https://packetstormsecurity.com/files/154622/Duplicate-Post-3.2.3-Cross-Site-Scripting.html",
+    "detection": [
+      {
+        "file": "duplicate-post.php",
+        "variable": "DUPLICATE_POST_CURRENT_VERSION",
+        "subdir": 0
+      }
+    ]
   }
 ]
