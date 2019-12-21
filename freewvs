@@ -72,6 +72,13 @@ parser.add_argument("-3", "--thirdparty", action="store_true",
                     help="Scan for third-party components like jquery")
 opts = parser.parse_args()
 
+# Warn people with old-style freewvsdb dirs,
+# should be removed in a few months
+for d in ["/usr/share/freewvs", "/usr/local/share/freewvs"]:
+    if os.path.isdir(d):
+        print("WARNING: Obsolete freewvs data in %s, removal recommended" % d,
+              file=sys.stderr)
+
 jdir = False
 for p in [os.path.dirname(sys.argv[0]) + '/freewvsdb', '/var/lib/freewvs']:
     if os.path.isdir(p):
