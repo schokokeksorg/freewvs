@@ -10,7 +10,9 @@ class TestCodingstyle(unittest.TestCase):
         subprocess.run(["pycodestyle", "--ignore=W503"]
                        + pyfiles, check=True)
         subprocess.run(["pyflakes"] + pyfiles, check=True)
-        subprocess.run(["pylint", "--disable=missing-docstring,invalid-name"]
+
+        pylint_disable = "missing-docstring,invalid-name,too-many-arguments"
+        subprocess.run(["pylint", "--disable=%s" % pylint_disable]
                        + pyfiles, check=True)
 
 
