@@ -35,4 +35,4 @@ freewvs was developed by [schokokeks.org hosting](https://schokokeks.org/).
 
 It's licensed as CC0.
 
-[https://source.schokokeks.org/freewvs/](https://source.schokokeks.org/freewvs/)
+https://freewvs.schokokeks.org
