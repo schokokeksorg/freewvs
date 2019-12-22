@@ -41,7 +41,8 @@ class TestFreewvsData(unittest.TestCase):
             refclean = sorted(refclean.split("\n"))
             if refclean != fwclean:
                 print("\n".join(difflib.ndiff(refclean, fwclean)))
-                raise Exception("Output in %s does not match" % bdir)
+            self.assertEqual(refclean, fwclean,
+                             msg="Output in %s does not match" % bdir)
 
 
 if __name__ == '__main__':
