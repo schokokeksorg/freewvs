@@ -6,6 +6,12 @@ import difflib
 import re
 
 
+def versioncompare(safe_version, find_version):
+    safe_version_tup = [int(x) for x in safe_version.split(".")]
+    find_version_tup = [int(x) for x in find_version.split(".")]
+    return find_version_tup < safe_version_tup
+
+
 class TestJsonLint(unittest.TestCase):
 
     @unittest.skipIf(sys.version_info < (3, 6, 0),
@@ -46,8 +52,19 @@ class TestJsonLint(unittest.TestCase):
                             or item['vuln'].startswith("https://"),
                             msg="%s: Invalid vuln %s" %
                             (item['name'], item['vuln']))
+
+            # make sure old_safe is properly sorted
+            if 'old_safe' in item:
+                old_safe = item['old_safe'].split(',')
+                for i in range(1, len(old_safe)):
+                    self.assertTrue(versioncompare(old_safe[i - 1],
+                                                   old_safe[i]),
+                                    msg="%s: Invalid old_safe ordering %s" %
+                                    (item['name'], item['old_safe']))
+
+            # subdir needs to be integer
             for det in item['detection']:
-                self.assertTrue(type(det['subdir']) == int,
+                self.assertTrue(isinstance(det['subdir'], int),
                                 msg="%s: subdir not int" % item['name'])
 
 
