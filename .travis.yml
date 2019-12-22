@@ -4,11 +4,11 @@ python:
   - "3.6"
   - "3.7"
   - "3.8"
-  - "nightly"  # nightly build
+  - "nightly"
 env:
   global:
     - FREEWVS_ONLINETESTS=1
 install:
-  - pip install pycodestyle pyflakes
+  - pip install pycodestyle pyflakes pylint
 script:
   - python3 -m unittest
