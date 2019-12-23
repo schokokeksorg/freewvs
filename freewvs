@@ -29,6 +29,7 @@ import re
 import argparse
 import sys
 import json
+import pathlib
 from xml.sax.saxutils import escape
 
 
@@ -80,9 +81,11 @@ for d in ["/usr/share/freewvs", "/usr/local/share/freewvs"]:
               file=sys.stderr)
 
 jdir = False
-for p in [os.path.dirname(sys.argv[0]) + '/freewvsdb', '/var/lib/freewvs']:
+for p in [os.path.dirname(sys.argv[0]) + '/freewvsdb', '/var/lib/freewvs',
+          str(pathlib.Path.home()) + "/.cache/freewvs/"]:
     if os.path.isdir(p):
         jdir = p
+        break
 if not jdir:
     print("Can't find freewvs json db")
     sys.exit(1)
