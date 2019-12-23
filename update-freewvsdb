@@ -1,0 +1,44 @@
+#!/usr/bin/python3
+
+import os
+import pathlib
+import sys
+import urllib.request
+import io
+import tarfile
+
+
+DBURL = "https://freewvsdb.schokokeks.org/"
+dbpaths = ['/var/lib/freewvs/', str(pathlib.Path.home()) + "/.cache/freewvs/"]
+
+target = False
+for dbpath in dbpaths:
+    if not os.path.isdir(dbpath):
+        try:
+            os.makedirs(dbpath)
+        except PermissionError:
+            continue
+    if os.access(dbpath, os.W_OK):
+        target = dbpath
+        break
+
+if not target:
+    sys.exit("Can't write to " + " or ".join(dbpaths))
+
+old = 0
+if os.path.isfile(target + "timestamp"):
+    with open(target + "timestamp", "r") as f:
+        old = int(f.read())
+
+new = int(urllib.request.urlopen(DBURL + "freewvsdb.timestamp").read())
+
+if new == old:
+    # nothing to do
+    sys.exit()
+
+tarball = urllib.request.urlopen(DBURL + str(new) + ".tar.xz").read()
+
+tf = tarfile.open(fileobj=io.BytesIO(tarball))
+tf.extractall(path=target)
+with open(target + "timestamp", "w") as f:
+    f.write(str(new))
