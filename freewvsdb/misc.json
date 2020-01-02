@@ -458,8 +458,8 @@
   {
     "name": "limesurvey",
     "url": "https://www.limesurvey.org/",
-    "safe": "3.17.14",
-    "vuln": "CVE-2019-16174",
+    "safe": "3.21.3",
+    "vuln": "https://www.limesurvey.org/de/limesurvey-updates/2206-limesurvey-3-21-3-build-191219-released",
     "detection": [
       {
         "file": "common.php",
