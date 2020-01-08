@@ -2,8 +2,9 @@
   {
     "name": "phpMyAdmin",
     "url": "https://www.phpmyadmin.net/",
-    "safe": "4.9.2",
-    "vuln": "CVE-2019-18622",
+    "safe": "5.0.1",
+    "old_safe": "4.9.4",
+    "vuln": "CVE-2020-5504",
     "detection": [
       {
         "file": "Config.class.php",
