@@ -15,8 +15,8 @@
   {
     "name": "Magento",
     "url": "https://magento.com/",
-    "safe": "2.3.3",
-    "vuln": "https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-3-open-source.html",
+    "safe": "2.3.4",
+    "vuln": "CVE-2020-3716",
     "detection": [
       {
         "file": "Mage.php",
