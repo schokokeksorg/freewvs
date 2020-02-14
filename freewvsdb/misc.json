@@ -495,9 +495,9 @@
   {
     "name": "nextcloud",
     "url": "https://nextcloud.com",
-    "safe": "15.0.1",
-    "old_safe": "14.0.5,13.0.9",
-    "vuln": "CVE-2019-5449",
+    "safe": "17.0.2",
+    "old_safe": "16.0.7,15.0.14",
+    "vuln": "CVE-2019-15613",
     "detection": [
       {
         "file": "version.php",
