@@ -284,8 +284,8 @@
   {
     "name": "phplist",
     "url": "https://www.phplist.org/",
-    "safe": "3.4.3",
-    "vuln": "https://www.phplist.org/newslist/phplist-3-4-3-release-notes/",
+    "safe": "3.5.1",
+    "vuln": "CVE-2020-8547",
     "detection": [
       {
         "file": "connect.php",
