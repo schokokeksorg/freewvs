@@ -107,8 +107,8 @@
   {
     "name": "MyBB",
     "url": "https://mybb.com/",
-    "safe": "1.8.21",
-    "vuln": "CVE-2019-12831",
+    "safe": "1.8.22",
+    "vuln": "https://blog.mybb.com/2019/12/30/mybb-1-8-22-released-security-maintenance-release/",
     "detection": [
       {
         "file": "class_core.php",
