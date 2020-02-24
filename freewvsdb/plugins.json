@@ -372,5 +372,18 @@
         "subdir": 0
       }
     ]
+  },
+  {
+    "name": "Wordpress-ThemegrillDemoImporter",
+    "url": "https://wordpress.org/plugins/themegrill-demo-importer/",
+    "safe": "1.6.3",
+    "vuln": "https://www.openwall.com/lists/oss-security/2020/02/19/1",
+    "detection": [
+      {
+        "file": "class-themegrill-demo-importer.php",
+        "variable": "$version",
+        "subdir": 1
+      }
+    ]
   }
 ]
