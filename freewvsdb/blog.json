@@ -31,8 +31,8 @@
   {
     "name": "ClassicPress",
     "url": "https://www.classicpress.net/",
-    "safe": "1.1.1",
-    "vuln": "CVE-2019-17672",
+    "safe": "1.1.2",
+    "vuln": "https://github.com/ClassicPress/ClassicPress-release/releases/tag/1.1.2",
     "detection": [
       {
         "file": "version.php",
