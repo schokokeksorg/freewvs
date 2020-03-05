@@ -51,5 +51,18 @@
         "subdir": 3
       }
     ]
+  },
+  {
+    "name": "litecart",
+    "url": "https://www.litecart.net/",
+    "safe": "2.2.2",
+    "vuln": "CVE-2020-9018",
+    "detection": [
+      {
+        "file": "app_header.inc.php",
+        "variable": "PLATFORM_VERSION",
+        "subdir": 1
+      }
+    ]
   }
 ]
