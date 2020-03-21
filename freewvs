@@ -30,7 +30,7 @@ import argparse
 import sys
 import json
 import pathlib
-from xml.sax.saxutils import escape
+from xml.sax.saxutils import escape  # noqa: DUO107
 
 
 def versioncompare(safe_version, find_version):
