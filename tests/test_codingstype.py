@@ -17,6 +17,8 @@ class TestCodingstyle(unittest.TestCase):
         subprocess.run(["pylint", "--disable=%s" % pylint_disable]
                        + pyfiles, check=True)
 
+        subprocess.run(["flake8", "--select=DUO"] + pyfiles, check=True)
+
 
 if __name__ == '__main__':
     unittest.main()

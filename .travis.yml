@@ -9,6 +9,6 @@ env:
   global:
     - FREEWVS_ONLINETESTS=1
 install:
-  - pip install pycodestyle pyflakes pylint
+  - pip install pycodestyle pyflakes pylint dlint
 script:
   - python3 -m unittest
