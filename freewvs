@@ -109,7 +109,7 @@ if opts.xml:
 # start the search
 
 for fdir in opts.dirs:
-    for root, NULL, files in os.walk(fdir):
+    for root, _, files in os.walk(fdir):
         for filename in scanfiles.intersection(files):
             for item in jconfig:
                 if not opts.thirdparty and 'thirdparty' in item:
