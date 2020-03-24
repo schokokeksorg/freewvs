@@ -62,6 +62,13 @@ class TestJsonLint(unittest.TestCase):
                                     msg="%s: Invalid old_safe ordering %s" %
                                     (item['name'], item['old_safe']))
 
+            # make sure latest is not outdated
+            if 'latest' in item and item['safe'] != "":
+                self.assertTrue(not versioncompare(item['safe'],
+                                                   item['latest']),
+                                msg="%s: Safe version %s newer than latest %s"
+                                % (item['name'], item['safe'], item['latest']))
+
             # subdir needs to be integer
             for det in item['detection']:
                 self.assertTrue(isinstance(det['subdir'], int),
