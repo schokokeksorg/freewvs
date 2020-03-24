@@ -385,5 +385,18 @@
         "subdir": 1
       }
     ]
+  },
+  {
+    "name": "Wordpress-WooCommerce",
+    "url": "https://woocommerce.com/",
+    "safe": "3.9.2",
+    "vuln": "https://woocommerce.wordpress.com/2020/02/13/woocommerce-3-9-2-security-release/",
+    "detection": [
+      {
+        "file": "woocommerce.php",
+        "variable": "Version:",
+        "subdir": 0
+      }
+    ]
   }
 ]
