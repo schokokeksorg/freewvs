@@ -25,7 +25,7 @@
     "safe": "4.3.1",
     "old_safe": "3.4.1",
     "vuln": "CVE-2019-8331",
-    "latest": "3.4.1",
+    "latest": "4.4.1",
     "thirdparty": "yes",
     "detection": [
       {
