@@ -398,5 +398,18 @@
         "subdir": 0
       }
     ]
+  },
+  {
+    "name": "Wordpress-AllinoneWPMigration",
+    "url": "https://wordpress.org/plugins/all-in-one-wp-migration/",
+    "safe": "7.15",
+    "vuln": "https://vavkamil.cz/2020/03/25/all-in-one-wp-migration/",
+    "detection": [
+      {
+        "file": "constants.php",
+        "variable": "AI1WM_VERSION",
+        "subdir": 0
+      }
+    ]
   }
 ]
