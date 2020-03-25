@@ -217,9 +217,9 @@
   {
     "name": "Moodle",
     "url": "https://moodle.org/",
-    "safe": "3.8.1",
-    "old_safe": "3.7.3,3.6.7,3.5.9",
-    "vuln": "CVE-2020-1691",
+    "safe": "3.8.2",
+    "old_safe": "3.7.5,3.6.9,3.5.11",
+    "vuln": "CVE-2020-1754",
     "detection": [
       {
         "file": "version.php",
