@@ -496,7 +496,7 @@
     "name": "nextcloud",
     "url": "https://nextcloud.com",
     "safe": "18.0.1",
-    "old_safe": "17.0.4,16.0.10",
+    "old_safe": "17.0.5,17.0.4,16.0.10",
     "vuln": "https://nextcloud.com/security/advisory/?id=NC-SA-2020-015",
     "detection": [
       {
