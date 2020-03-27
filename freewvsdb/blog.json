@@ -2,8 +2,8 @@
   {
     "name": "Serendipity",
     "url": "https://docs.s9y.org/",
-    "safe": "2.3.3",
-    "vuln": "https://github.com/s9y/Serendipity/issues/674",
+    "safe": "2.3.4",
+    "vuln": "https://github.com/s9y/Serendipity/releases/tag/2.3.4",
     "detection": [
       {
         "file": "serendipity_config.inc.php",
