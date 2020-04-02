@@ -411,5 +411,18 @@
         "subdir": 0
       }
     ]
+  },
+  {
+    "name": "Wordpress-SEO-by-Rank-Math",
+    "url": "https://rankmath.com/",
+    "safe": "1.0.41",
+    "vuln": "https://www.wordfence.com/blog/2020/03/critical-vulnerabilities-affecting-over-200000-sites-patched-in-rank-math-seo-plugin/",
+    "detection": [
+      {
+        "file": "rank-math.php",
+        "variable": "$version",
+        "subdir": 0
+      }
+    ]
   }
 ]
