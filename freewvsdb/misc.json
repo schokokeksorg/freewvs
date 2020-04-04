@@ -302,9 +302,9 @@
   {
     "name": "Matomo",
     "url": "https://matomo.org/",
-    "safe": "3.13.1",
-    "vuln": "https://matomo.org/changelog/matomo-3-13-1/",
-    "latest": "3.13.1",
+    "safe": "3.13.4",
+    "vuln": "https://matomo.org/changelog/matomo-3-13-4/",
+    "latest": "3.13.4",
     "detection": [
       {
         "file": "Version.php",
