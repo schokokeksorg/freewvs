@@ -23,7 +23,6 @@
         "file": "version.php",
         "variable": "$wp_version",
         "subdir": 1,
-        "extra_match": "The WordPress version string",
         "extra_nomatch": "$cp_version"
       }
     ]
