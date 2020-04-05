@@ -510,8 +510,9 @@
   {
     "name": "owncloud",
     "url": "https://owncloud.org/",
-    "safe": "10.2.1",
-    "vuln": "https://owncloud.org/security/advisories/possibility-to-extend-internal-share-permissions-using-the-api/",
+    "safe": "10.3.2",
+    "latest": "10.4.0",
+    "vuln": "https://owncloud.org/security/advisories/ssrf-in-add-to-your-owncloud-functionality/",
     "detection": [
       {
         "file": "util.php",
