@@ -452,8 +452,8 @@
   {
     "name": "limesurvey",
     "url": "https://www.limesurvey.org/",
-    "safe": "3.21.3",
-    "vuln": "https://www.limesurvey.org/de/limesurvey-updates/2206-limesurvey-3-21-3-build-191219-released",
+    "safe": "4.1.15",
+    "vuln": "https://www.limesurvey.org/limesurvey-updates/2234-limesurvey-4-1-15-build-200402-released",
     "detection": [
       {
         "file": "common.php",
