@@ -604,7 +604,7 @@
     "name": "reveal.js",
     "url": "https://revealjs.com/",
     "safe": "3.9.2",
-    "vuln": "https://github.com/hakimel/reveal.js/releases/tag/3.9.2",
+    "vuln": "CVE-2020-8127",
     "latest": "3.9.2",
     "detection": [
       {
