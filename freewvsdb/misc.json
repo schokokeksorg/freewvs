@@ -599,5 +599,19 @@
         "subdir": 3
       }
     ]
+  },
+  {
+    "name": "reveal.js",
+    "url": "https://revealjs.com/",
+    "safe": "3.9.2",
+    "vuln": "https://github.com/hakimel/reveal.js/releases/tag/3.9.2",
+    "latest": "3.9.2",
+    "detection": [
+      {
+        "file": "reveal.js",
+        "variable": "var VERSION",
+        "subdir": 1
+      }
+    ]
   }
 ]
