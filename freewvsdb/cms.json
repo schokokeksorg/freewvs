@@ -90,8 +90,16 @@
       },
       {
         "file": "SystemEnvironmentBuilder.php",
+        "extra_nomatch": "TYPO3\\CMS\\Core\\Utility\\PathUtility",
         "variable": "define('TYPO3_version",
-        "subdir": 4
+        "subdir": 4,
+        "note": "6.x to 8.x"
+      },
+      {
+        "file": "Typo3Version.php",
+        "variable": "VERSION =",
+        "subdir": 4,
+        "note": "9.x and newer"
       }
     ]
   },
