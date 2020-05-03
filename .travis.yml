@@ -5,7 +5,7 @@ python:
   - "nightly"
 env:
   global:
-    - FREEWVS_ONLINETESTS=1
+    - RUN_ONLINETESTS=1
 install:
   - pip install pycodestyle pyflakes pylint dlint
 script:

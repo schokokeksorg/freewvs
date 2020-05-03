@@ -11,20 +11,20 @@ TESTDATA_REPO = "https://github.com/schokokeksorg/freewvs-testdata"
 
 
 class TestFreewvsData(unittest.TestCase):
-    @unittest.skipUnless(os.environ.get("FREEWVS_ONLINETESTS"),
+    @unittest.skipUnless(os.environ.get("RUN_ONLINETESTS"),
                          "Not running online tests")
     def test_freewvs_testdata(self):
-        tmp = tempfile.mkdtemp(prefix="freewvs-testdata")
-        if os.environ.get("FREEWVS_TESTDATA_REPOSITORY"):
-            os.symlink(os.environ.get("FREEWVS_TESTDATA_REPOSITORY"),
-                       tmp + "/freewvs-testdata")
+        tmp = tempfile.mkdtemp(prefix="testdata")
+        if os.environ.get("TESTDATA_REPOSITORY"):
+            os.symlink(os.environ.get("TESTDATA_REPOSITORY"),
+                       tmp + "/testdata")
         else:
             subprocess.run(["git", "clone", "--depth=1",
                             TESTDATA_REPO,
-                            tmp + "/freewvs-testdata"],
+                            tmp + "/testdata"],
                            check=True)
 
-        for tdir in glob.glob(tmp + "/freewvs-testdata/webapps/*"):
+        for tdir in glob.glob(tmp + "/testdata/webapps/*"):
             bdir = os.path.basename(tdir)
             for tarball in glob.glob(tdir + "/dist/*"):
                 shutil.unpack_archive(tarball, "%s/%s/%s-src"
