@@ -11,6 +11,11 @@
         "file": "DefaultSettings.php",
         "variable": "$wgVersion",
         "subdir": 1
+      },
+      {
+        "file": "Defines.php",
+        "variable": "MW_VERSION",
+        "subdir": 1
       }
     ]
   },
