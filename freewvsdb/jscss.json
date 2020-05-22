@@ -2,9 +2,9 @@
   {
     "name": "jquery",
     "url": "https://jquery.com/",
-    "safe": "3.5.0",
-    "vuln": "https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/",
-    "latest": "3.5.0",
+    "safe": "3.5.1",
+    "vuln": "CVE-2020-11022",
+    "latest": "3.5.1",
     "thirdparty": "yes",
     "detection": [
       {
