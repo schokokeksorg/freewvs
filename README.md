@@ -29,6 +29,10 @@ No, as freewvs only checks for the latest vulnerabilities. There may be other vu
 
 It means your web application has not released a security update. Often this means the software is no longer developed.
 
+## contributions
+
+See (CONTRIBUTIONS.md)[CONTRIBUTIONS.md].
+
 ## misc
 
 freewvs was developed by [schokokeks.org hosting](https://schokokeks.org/).
