@@ -424,5 +424,18 @@
         "subdir": 0
       }
     ]
+  },
+  {
+    "name": "bbPress",
+    "url": "https://bbpress.org/",
+    "safe": "2.6.5",
+    "vuln": "CVE-2020-13693",
+    "detection": [
+      {
+        "file": "bbpress.php",
+        "variable": "$this->version",
+        "subdir": 0
+      }
+    ]
   }
 ]
