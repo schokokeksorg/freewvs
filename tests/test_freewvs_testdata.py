@@ -44,6 +44,10 @@ class TestFreewvsData(unittest.TestCase):
             self.assertEqual(refclean, fwclean,
                              msg="Output in %s does not match" % bdir)
 
+        # misc tests, for read errors, garbage data etc.
+        subprocess.run(["./freewvs", "-a", tmp + "/testdata/misc/" + bdir],
+                       stdout=subprocess.PIPE, check=True)
+
 
 if __name__ == '__main__':
     unittest.main()
