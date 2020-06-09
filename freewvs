@@ -123,7 +123,7 @@ for fdir in opts.dirs:
                         mfile = os.path.join(root, filename)
                         try:
                             file = open(mfile, errors='replace')
-                        except IOError:
+                        except OSError:
                             continue
                         filestr = file.read()
                         file.close()
