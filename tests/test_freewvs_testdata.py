@@ -24,8 +24,7 @@ class TestFreewvsData(unittest.TestCase):
                             tmp + "/testdata"],
                            check=True)
 
-        #for tdir in glob.glob(tmp + "/testdata/webapps/*"):
-        if 0:
+        for tdir in glob.glob(tmp + "/testdata/webapps/*"):
             bdir = os.path.basename(tdir)
             for tarball in glob.glob(tdir + "/dist/*"):
                 shutil.unpack_archive(tarball, "%s/%s/%s-src"
