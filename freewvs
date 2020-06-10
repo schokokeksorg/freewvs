@@ -125,7 +125,7 @@ for fdir in opts.dirs:
                             file = open(mfile, errors='replace')
                         except OSError:
                             continue
-                        filestr = file.read()
+                        filestr = file.read(200000)
                         file.close()
 
                         if (('extra_match' in det
