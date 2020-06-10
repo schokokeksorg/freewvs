@@ -7,6 +7,6 @@ env:
   global:
     - RUN_ONLINETESTS=1
 install:
-  - pip install pycodestyle pyflakes pylint dlint
+  - pip install pycodestyle pyflakes pylint dlint pyupgrade
 script:
   - python3 -m unittest
