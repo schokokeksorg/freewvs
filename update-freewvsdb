@@ -27,7 +27,7 @@ if not target:
 
 old = 0
 if os.path.isfile(target + "timestamp"):
-    with open(target + "timestamp", "r") as f:
+    with open(target + "timestamp") as f:
         old = int(f.read())
 
 new = int(urllib.request.urlopen(DBURL + "freewvsdb.timestamp").read())

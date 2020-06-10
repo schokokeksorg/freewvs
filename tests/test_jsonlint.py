@@ -19,7 +19,7 @@ class TestJsonLint(unittest.TestCase):
     def test_json_lint(self):
         valid = True
         for f in glob.glob("freewvsdb/*.json"):
-            fp = open(f, "r")
+            fp = open(f)
             orig = fp.read()
             fp.close()
             tmp = json.loads(orig)
@@ -36,7 +36,7 @@ class TestJsonLint(unittest.TestCase):
             with open(cfile) as json_file:
                 jconfig += json.load(json_file)
 
-        mkeys = set(['name', 'url', 'safe', 'vuln', 'detection'])
+        mkeys = {'name', 'url', 'safe', 'vuln', 'detection'}
         for item in jconfig:
 
             # check for all mandatory keys
