@@ -78,9 +78,9 @@
   {
     "name": "TYPO3",
     "url": "https://typo3.org/",
-    "safe": "9.5.8",
-    "old_safe": "8.7.27",
-    "vuln": "CVE-2019-12747",
+    "safe": "10.4.2",
+    "old_safe": "9.5.17",
+    "vuln": "CVE-2020-11069",
     "detection": [
       {
         "file": "config_default.php",
