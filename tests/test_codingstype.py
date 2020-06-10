@@ -18,6 +18,8 @@ class TestCodingstyle(unittest.TestCase):
                        + pyfiles, check=True)
 
         subprocess.run(["flake8", "--select=DUO"] + pyfiles, check=True)
+        subprocess.run(["pyupgrade", "--keep-percent-format", "--py38-plus"]
+                       + pyfiles, check=True)
 
 
 if __name__ == '__main__':
