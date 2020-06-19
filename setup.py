@@ -1,32 +1,8 @@
 #!/usr/bin/python3
 
 import os
-import glob
-import pathlib
-import shutil
 import setuptools
 import setuptools.command.install
-
-
-class install_freewvsdb(setuptools.command.install.install):
-    def run(self):
-        dbpaths = ['/var/lib/freewvs/',
-                   str(pathlib.Path.home()) + "/.cache/freewvs/"]
-
-        target = False
-        for dbpath in dbpaths:
-            if not os.path.isdir(dbpath):
-                try:
-                    os.makedirs(dbpath)
-                except PermissionError:
-                    continue
-            if os.access(dbpath, os.W_OK):
-                target = dbpath
-                break
-        for j in glob.glob("freewvsdb/*.json"):
-            shutil.copy(j, target)
-        setuptools.command.install.install.run(self)
-
 
 f = open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'README.md'))
 readme = f.read()
@@ -55,8 +31,5 @@ setuptools.setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
-    ],
-    cmdclass={
-        'install': install_freewvsdb
-    }
+    ]
 )
