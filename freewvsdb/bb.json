@@ -181,9 +181,8 @@
   {
     "name": "vBulletin",
     "url": "https://www.vbulletin.com/",
-    "safe": "5.5.6",
-    "vuln": "CVE-2020-16759",
-    "note": "FIXME: this is not ideal, it needs patch level 1 for a fix",
+    "safe": "5.6.2",
+    "vuln": "CVE-2020-12720",
     "detection": [
       {
         "file": "class_core.php",
