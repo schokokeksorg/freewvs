@@ -437,5 +437,18 @@
         "subdir": 0
       }
     ]
+  },
+  {
+    "name": "Wordpress-File-Manager",
+    "url": "https://wordpress.org/plugins/wp-file-manager/",
+    "safe": "6.9",
+    "vuln": "https://seravo.com/blog/0-day-vulnerability-in-wp-file-manager/",
+    "detection": [
+      {
+        "file": "file_folder_manager.php",
+        "variable": "$ver",
+        "subdir": 0
+      }
+    ]
   }
 ]
