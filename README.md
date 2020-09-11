@@ -31,7 +31,7 @@ It means your web application has not released a security update. Often this mea
 
 ## contributions
 
-See (CONTRIBUTIONS.md)[CONTRIBUTIONS.md].
+See [CONTRIBUTIONS.md](CONTRIBUTIONS.md).
 
 ## misc
 
