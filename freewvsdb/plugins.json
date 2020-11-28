@@ -231,8 +231,8 @@
   {
     "name": "Wordpress-DownloadManager",
     "url": "https://wordpress.org/plugins/download-manager/",
-    "safe": "2.9.61",
-    "vuln": "https://www.exploit-db.com/exploits/43487",
+    "safe": "3.1.07",
+    "vuln": "https://de.wordpress.org/plugins/download-manager/#developers",
     "detection": [
       {
         "file": "download-manager.php",
