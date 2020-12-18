@@ -309,8 +309,8 @@
   {
     "name": "Wordpress-ContactForm7",
     "url": "https://contactform7.com/",
-    "safe": "5.0.4",
-    "vuln": "CVE-2018-20152",
+    "safe": "5.3.2",
+    "vuln": "CVE-2020-35489",
     "detection": [
       {
         "file": "wp-contact-form-7.php",
