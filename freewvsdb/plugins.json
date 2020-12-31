@@ -450,5 +450,25 @@
         "subdir": 0
       }
     ]
+  },
+  {
+    "name": "Roundcube-RCMCardDAV",
+    "url": "https://github.com/mstilkerich/rcmcarddav",
+    "safe": "4.0.0",
+    "vuln": "https://github.com/mstilkerich/rcmcarddav/releases/tag/v4.0.0-alpha1",
+    "detection": [
+      {
+        "file": "carddav.php",
+        "variable": "const PLUGIN_VERSION",
+        "subdir": 0,
+        "note": "4.0.0 and above"
+      },
+      {
+        "file": "carddav_common.php",
+        "variable": "RCM CardDAV plugin/",
+        "subdir": 0,
+        "note": "3.x"
+      }
+    ]
   }
 ]
