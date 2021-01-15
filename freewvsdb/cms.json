@@ -106,8 +106,8 @@
   {
     "name": "Joomla",
     "url": "https://www.joomla.org/",
-    "safe": "3.9.23",
-    "vuln": "https://developer.joomla.org/security-centre/834-20201107-core-write-acl-violation-in-multiple-core-views.html",
+    "safe": "3.9.24",
+    "vuln": "CVE-2021-23125",
     "detection": [
       {
         "file": "CHANGELOG.php",
