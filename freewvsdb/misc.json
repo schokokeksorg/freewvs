@@ -199,10 +199,10 @@
   {
     "name": "RoundCube",
     "url": "https://roundcube.net",
-    "safe": "1.4.10",
+    "safe": "1.4.11",
     "old_safe": "1.3.16,1.2.13",
     "latest": "1.4.10",
-    "vuln": "CVE-2020-35730",
+    "vuln": "CVE-2021-26925",
     "detection": [
       {
         "file": "index.php",
