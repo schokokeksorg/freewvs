@@ -106,8 +106,8 @@
   {
     "name": "Joomla",
     "url": "https://www.joomla.org/",
-    "safe": "3.9.25",
-    "vuln": "CVE-2021-23129",
+    "safe": "3.9.26",
+    "vuln": "CVE-2021-26031",
     "detection": [
       {
         "file": "CHANGELOG.php",
