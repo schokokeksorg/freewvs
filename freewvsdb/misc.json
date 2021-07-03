@@ -513,9 +513,9 @@
   {
     "name": "owncloud",
     "url": "https://owncloud.org/",
-    "safe": "10.3.2",
-    "latest": "10.4.0",
-    "vuln": "https://owncloud.org/security/advisories/ssrf-in-add-to-your-owncloud-functionality/",
+    "safe": "10.7.0",
+    "latest": "10.7.0",
+    "vuln": "CVE-2021-29659",
     "detection": [
       {
         "file": "util.php",
