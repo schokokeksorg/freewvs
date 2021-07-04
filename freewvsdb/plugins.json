@@ -96,9 +96,9 @@
   {
     "name": "WP Super Cache",
     "url": "https://wordpress.org/plugins/wp-super-cache/",
-    "safe": "1.6.9",
-    "vuln": "https://odd.blog/2019/07/25/wp-super-cache-1-6-9-security-update/",
-    "latest": "1.7.0",
+    "safe": "1.7.3",
+    "vuln": "CVE-2021-24329",
+    "latest": "1.7.3",
     "detection": [
       {
         "file": "wp-cache.php",
