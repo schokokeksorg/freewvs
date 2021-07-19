@@ -111,8 +111,8 @@
   {
     "name": "W3 Total Cache",
     "url": "https://wordpress.org/plugins/w3-total-cache/",
-    "safe": "0.9.7.4",
-    "vuln": "https://www.cybersecurity-help.cz/vdb/SB2019050701",
+    "safe": "2.1.3",
+    "vuln": "https://wordpress.org/plugins/w3-total-cache/#developers",
     "detection": [
       {
         "file": "w3-total-cache.php",
