@@ -30,8 +30,8 @@
   {
     "name": "SquirrelMail",
     "url": "https://squirrelmail.org/",
-    "safe": "1.4.22",
-    "vuln": "CVE-2010-4554",
+    "safe": "",
+    "vuln": "CVE-2020-14933",
     "detection": [
       {
         "file": "strings.php",
@@ -44,8 +44,8 @@
   {
     "name": "Mantis",
     "url": "https://mantisbt.org/",
-    "safe": "2.24.4",
-    "vuln": "CVE-2020-28413",
+    "safe": "2.25.2",
+    "vuln": "CVE-2021-33557",
     "detection": [
       {
         "file": "config_defaults_inc.php",
