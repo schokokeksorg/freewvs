@@ -50,8 +50,8 @@
   {
     "name": "Tiki",
     "url": "https://tiki.org/",
-    "safe": "20.1",
-    "vuln": "https://tiki.org/article464-Tiki-20-1-Released",
+    "safe": "21.3",
+    "vuln": "CVE-2020-29254",
     "detection": [
       {
         "file": "README",
