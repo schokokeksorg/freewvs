@@ -4,7 +4,8 @@ import os
 import setuptools
 import setuptools.command.install
 
-f = open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'README.md'))
+f = open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'README.md'),
+         encoding="ascii")
 readme = f.read()
 f.close()
 

@@ -33,7 +33,7 @@ class TestFreewvsData(unittest.TestCase):
                                    stdout=subprocess.PIPE, check=True)
             fwdata = re.sub(tmp, "[dir]", fwrun.stdout.decode("utf-8"))
             fwclean = re.sub(r' \(.* ', " ", fwdata)
-            f = open(tdir + "/refdata-a.txt")
+            f = open(tdir + "/refdata-a.txt", encoding="ascii")
             refdata = f.read()
             f.close()
             refclean = re.sub(r' \(.* ', " ", refdata)

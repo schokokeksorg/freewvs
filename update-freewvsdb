@@ -27,7 +27,7 @@ if not target:
 
 old = 0
 if os.path.isfile(target + "timestamp"):
-    with open(target + "timestamp") as f:
+    with open(target + "timestamp", encoding="ascii") as f:
         old = int(f.read())
 
 new = int(urllib.request.urlopen(DBURL + "freewvsdb.timestamp").read())
@@ -40,5 +40,5 @@ tarball = urllib.request.urlopen(DBURL + str(new) + ".tar.xz").read()
 
 tf = tarfile.open(fileobj=io.BytesIO(tarball))
 tf.extractall(path=target)
-with open(target + "timestamp", "w") as f:
+with open(target + "timestamp", "w", encoding="ascii") as f:
     f.write(str(new))

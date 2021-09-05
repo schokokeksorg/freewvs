@@ -85,7 +85,7 @@ if not jdir:
 
 jconfig = []
 for cfile in glob.glob(jdir + '/*.json'):
-    with open(cfile) as json_file:
+    with open(cfile, encoding="ascii") as json_file:
         data = json.load(json_file)
         jconfig += data
 
@@ -115,7 +115,8 @@ for fdir in opts.dirs:
                     if filename == det['file']:
                         mfile = os.path.join(root, filename)
                         try:
-                            file = open(mfile, errors='replace')
+                            file = open(mfile, encoding='ascii',
+                                        errors='replace')
                         except OSError:
                             continue
                         filestr = file.read(200000)
@@ -146,7 +147,7 @@ for fdir in opts.dirs:
                                                   + int(det['add_minor']))
                             findversion = '.'.join(findversion)
 
-                        if ((not versioncompare(item['safe'], findversion))
+                        if (not versioncompare(item['safe'], findversion)
                                 or ('old_safe' in item
                                     and findversion in
                                     item['old_safe'].split(','))):
