@@ -219,10 +219,10 @@
   {
     "name": "Moodle",
     "url": "https://moodle.org/",
-    "safe": "3.11.1",
-    "old_safe": "3.10.5,3.9.8",
-    "latest": "3.11.1",
-    "vuln": "https://docs.moodle.org/dev/Moodle_3.11.1_release_notes",
+    "safe": "3.11.3",
+    "old_safe": "3.10.7,3.9.10",
+    "latest": "3.11.3",
+    "vuln": "https://docs.moodle.org/dev/Moodle_3.11.3_release_notes",
     "detection": [
       {
         "file": "version.php",
