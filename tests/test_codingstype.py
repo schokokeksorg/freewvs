@@ -13,7 +13,8 @@ class TestCodingstyle(unittest.TestCase):
         subprocess.run(["pyflakes"] + pyfiles, check=True)
 
         pylint_disable = "missing-docstring,invalid-name,duplicate-code," \
-                         + "too-many-arguments,consider-using-with"
+                         + "too-many-arguments,consider-using-with," \
+                         + "consider-using-f-string"
         subprocess.run(["pylint", "--disable=%s" % pylint_disable]
                        + pyfiles, check=True)
 
