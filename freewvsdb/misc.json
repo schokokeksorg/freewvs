@@ -484,8 +484,8 @@
   {
     "name": "webcalendar",
     "url": "http://www.k5n.us/webcalendar.php",
-    "safe": "1.2.7",
-    "vuln": "CVE-2013-1422",
+    "safe": "1.3.0",
+    "vuln": "CVE-2016-10033",
     "detection": [
       {
         "file": "config.php",
