@@ -4,7 +4,7 @@
     "url": "https://www.phpmyadmin.net/",
     "safe": "5.0.3",
     "old_safe": "4.9.6",
-    "vuln": "https://www.phpmyadmin.net/security/PMASA-2020-6/",
+    "vuln": "CVE-2020-26935",
     "detection": [
       {
         "file": "Config.class.php",
@@ -20,10 +20,10 @@
         "note": "4.6.x/4.7.x"
       },
       {
-        "file": "Config.php",
-        "variable": "PMA_VERSION",
-        "subdir": 2,
-        "extra_match": "namespace PhpMyAdmin;"
+        "file": "package.json",
+        "variable": "version",
+        "subdir": 0,
+        "extra_match": "A web interface for MySQL and MariaDB"
       }
     ]
   },
