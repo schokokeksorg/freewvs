@@ -107,7 +107,7 @@
     "name": "Joomla",
     "url": "https://www.joomla.org/",
     "safe": "4.0.1",
-    "old_safe": "3.10.2",
+    "old_safe": "3.10.3,3.10.2",
     "vuln": "CVE-2021-26040",
     "detection": [
       {
