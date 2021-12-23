@@ -305,9 +305,9 @@
   {
     "name": "Matomo",
     "url": "https://matomo.org/",
-    "safe": "3.13.4",
-    "vuln": "https://matomo.org/changelog/matomo-3-13-4/",
-    "latest": "3.13.4",
+    "safe": "4.6.0",
+    "vuln": "https://matomo.org/changelog/matomo-4-6-0/",
+    "latest": "4.6.2",
     "detection": [
       {
         "file": "Version.php",
