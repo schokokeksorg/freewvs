@@ -601,6 +601,12 @@
         "file": "footer.twig",
         "variable": "Powered by",
         "subdir": 3
+      },
+      {
+        "file": "installed.php",
+        "variable": "pretty_version",
+        "subdir": 2,
+        "extra_match": "klaussilveira/gitlist"
       }
     ]
   },
