@@ -11,7 +11,7 @@ f.close()
 
 setuptools.setup(
     name='freewvs',
-    version="0.1.1",
+    version="0.1.2",
     description="A free web vulnerability scanner",
     long_description=readme,
     long_description_content_type='text/markdown',
