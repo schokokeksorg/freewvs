@@ -25,7 +25,7 @@ class TestJsonLint(unittest.TestCase):
             tmp = json.loads(orig)
             new = json.dumps(tmp, indent=2)
             if orig != new:
-                print("json %s not valid" % f)
+                print(f"json {f} not valid")
                 sys.stdout.writelines(difflib.unified_diff(orig, new))
                 valid = False
         self.assertTrue(valid)
@@ -41,17 +41,16 @@ class TestJsonLint(unittest.TestCase):
 
             # check for all mandatory keys
             self.assertEqual(mkeys.intersection(item.keys()), mkeys,
-                             msg="Missing key in %s" % item['name'])
+                             msg=f"Missing key in {item['name']}")
 
             # check we have at least one detection
             self.assertTrue(len(item['detection']) >= 1,
-                            msg="No detection in %s" % item['name'])
+                            msg=f"No detection in {item['name']}")
 
             # vuln needs to be CVE or HTTPS URL
             self.assertTrue(re.match("^CVE-[0-9]*-[0-9]*$", item['vuln'])
                             or item['vuln'].startswith("https://"),
-                            msg="%s: Invalid vuln %s" %
-                            (item['name'], item['vuln']))
+                            msg=f"{item['name']}: Invalid vuln {item['vuln']}")
 
             # make sure old_safe is properly sorted
             if 'old_safe' in item:
@@ -59,20 +58,21 @@ class TestJsonLint(unittest.TestCase):
                 for i in range(1, len(old_safe)):
                     self.assertTrue(versioncompare(old_safe[i - 1],
                                                    old_safe[i]),
-                                    msg="%s: Invalid old_safe ordering %s" %
-                                    (item['name'], item['old_safe']))
+                                    msg=f"{item['name']}: Invalid old_safe"
+                                        " ordering {item['old_safe']}")
 
             # make sure latest is not outdated
             if 'latest' in item and item['safe'] != "":
                 self.assertTrue(not versioncompare(item['safe'],
                                                    item['latest']),
-                                msg="%s: Safe version %s newer than latest %s"
-                                % (item['name'], item['safe'], item['latest']))
+                                msg=f"{item['name']}: Safe version "
+                                    "{item['safe']} newer than latest"
+                                    " {item['latest']}")
 
             # subdir needs to be integer
             for det in item['detection']:
                 self.assertTrue(isinstance(det['subdir'], int),
-                                msg="%s: subdir not int" % item['name'])
+                                msg=f"{item['name']}: subdir not int")
 
 
 if __name__ == '__main__':

@@ -27,8 +27,9 @@ class TestFreewvsData(unittest.TestCase):
         for tdir in glob.glob(tmp + "/testdata/webapps/*"):
             bdir = os.path.basename(tdir)
             for tarball in glob.glob(tdir + "/dist/*"):
-                shutil.unpack_archive(tarball, "%s/%s/%s-src"
-                                      % (tmp, bdir, os.path.basename(tarball)))
+                tname = os.path.basename(tarball)
+                shutil.unpack_archive(tarball,
+                                      f"{tmp}/{bdir}/{tname}-src")
             fwrun = subprocess.run(["./freewvs", "-a", tmp + "/" + bdir],
                                    stdout=subprocess.PIPE, check=True)
             fwdata = re.sub(tmp, "[dir]", fwrun.stdout.decode("utf-8"))
@@ -42,7 +43,7 @@ class TestFreewvsData(unittest.TestCase):
             if refclean != fwclean:
                 print("\n".join(difflib.ndiff(refclean, fwclean)))
             self.assertEqual(refclean, fwclean,
-                             msg="Output in %s does not match" % bdir)
+                             msg=f"Output in {bdir} does not match")
 
         # misc tests, for read errors, garbage data etc.
         subprocess.run(["./freewvs", "-a", tmp + "/testdata/misc/"],
