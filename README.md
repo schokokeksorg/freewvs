@@ -10,25 +10,33 @@ Install
 
 You can install [freewvs via pip](https://pypi.org/project/freewvs/):
 
- pip install freewvs
+```
+pip install freewvs
+```
 
 Alternatively you can run freewvs directly from the git source.
 
 If you install via pip you need to update the freewvs database first:
 
- update-freewvsdb
+```
+update-freewvsdb
+```
 
 ## usage
 
 Just run freewvs with a path, e.g.:
 
+```
 freewvs /var/www
+```
 
 The output will be something like this:
 
- Joomla 3.9.11 (3.9.14) CVE-2019-19846 /var/www/example.org
- nextcloud 14.0.1 (14.0.5) CVE-2019-5449 /var/www/cloud.example.org
- MediaWiki 1.31.1 (1.31.6) CVE-2019-19709 /var/www/wiki.example.org
+```
+Joomla 3.9.11 (3.9.14) CVE-2019-19846 /var/www/example.org
+nextcloud 14.0.1 (14.0.5) CVE-2019-5449 /var/www/cloud.example.org
+MediaWiki 1.31.1 (1.31.6) CVE-2019-19709 /var/www/wiki.example.org
+```
 
 ## faq
 
