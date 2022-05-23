@@ -23,7 +23,7 @@ class TestJsonLint(unittest.TestCase):
             orig = fp.read()
             fp.close()
             tmp = json.loads(orig)
-            new = json.dumps(tmp, indent=2)
+            new = json.dumps(tmp, indent=2) + "\n"
             if orig != new:
                 print(f"json {f} not valid")
                 sys.stdout.writelines(difflib.unified_diff(orig, new))
