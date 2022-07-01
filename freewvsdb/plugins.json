@@ -336,8 +336,8 @@
   {
     "name": "Wordpress-Updraftplus",
     "url": "https://updraftplus.com/",
-    "safe": "1.13.5",
-    "vuln": "CVE-2017-18593",
+    "safe": "1.22.9",
+    "vuln": "CVE-2022-0864",
     "detection": [
       {
         "file": "updraftplus.php",
