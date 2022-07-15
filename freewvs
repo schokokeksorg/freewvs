@@ -41,6 +41,23 @@ def versioncompare(safe_version, find_version):
     return find_version_tup < safe_version_tup
 
 
+def checkoldsafe(old_safe, find_version):
+    find_version_tup = [int(x) for x in find_version.split(".")]
+    for oldver in old_safe.split(","):
+        oldver_tup = [int(x) for x in oldver.split(".")]
+
+        if find_version_tup == oldver_tup:
+            return True
+        # handle special case where minor version is larger
+        if (
+            len(find_version_tup) >= 2
+            and find_version_tup[:-1] == oldver_tup[:-1]
+            and find_version_tup[-1] > oldver_tup[-1]
+        ):
+            return True
+    return False
+
+
 def vulnprint(appname, version, safeversion, vuln, vfilename, subdir,
               xml):
     appdir = '/'.join(os.path.abspath(vfilename).split('/')[:-1 - subdir])
@@ -148,8 +165,8 @@ for fdir in opts.dirs:
 
                         if (not versioncompare(item['safe'], findversion)
                                 or ('old_safe' in item
-                                    and findversion in
-                                    item['old_safe'].split(','))):
+                                    and checkoldsafe(item['old_safe'],
+                                                     findversion))):
                             if opts.all:
                                 vulnprint(item['name'], findversion, "ok", "",
                                           mfile, det['subdir'], opts.xml)
