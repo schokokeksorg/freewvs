@@ -9,7 +9,7 @@ import tarfile
 
 
 DBURL = "https://freewvsdb.schokokeks.org/"
-dbpaths = ['/var/lib/freewvs/', str(pathlib.Path.home()) + "/.cache/freewvs/"]
+dbpaths = ["/var/lib/freewvs/", str(pathlib.Path.home()) + "/.cache/freewvs/"]
 
 target = False
 for dbpath in dbpaths:

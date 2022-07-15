@@ -58,40 +58,48 @@ def checkoldsafe(old_safe, find_version):
     return False
 
 
-def vulnprint(appname, version, safeversion, vuln, vfilename, subdir,
-              xml):
-    appdir = '/'.join(os.path.abspath(vfilename).split('/')[:-1 - subdir])
+def vulnprint(appname, version, safeversion, vuln, vfilename, subdir, xml):
+    appdir = "/".join(os.path.abspath(vfilename).split("/")[: -1 - subdir])
     if not xml:
         print(f"{appname} {version} ({safeversion}) {vuln} {appdir}")
     else:
-        state = 'vulnerable'
-        if safeversion == 'ok':
-            state = 'ok'
+        state = "vulnerable"
+        if safeversion == "ok":
+            state = "ok"
         print(f'  <app state="{state}">')
-        print(f'    <appname>{escape(appname)}</appname>')
-        print(f'    <version>{escape(version)}</version>')
-        print(f'    <directory>{escape(appdir)}</directory>')
-        if state == 'vulnerable':
-            print(f'    <safeversion>{escape(safeversion)}</safeversion>')
-            print(f'    <vulninfo>{escape(vuln)}</vulninfo>')
-        print('  </app>')
+        print(f"    <appname>{escape(appname)}</appname>")
+        print(f"    <version>{escape(version)}</version>")
+        print(f"    <directory>{escape(appdir)}</directory>")
+        if state == "vulnerable":
+            print(f"    <safeversion>{escape(safeversion)}</safeversion>")
+            print(f"    <vulninfo>{escape(vuln)}</vulninfo>")
+        print("  </app>")
 
 
 # Command-line options
 parser = argparse.ArgumentParser()
-parser.add_argument("dirs", nargs="*",
-                    help="Directories to scan")
-parser.add_argument("-a", "--all", action="store_true",
-                    help="Show all webapps found, not just vulnerable")
-parser.add_argument("-x", "--xml", action="store_true",
-                    help="Output results as XML")
-parser.add_argument("-3", "--thirdparty", action="store_true",
-                    help="Scan for third-party components like jquery")
+parser.add_argument("dirs", nargs="*", help="Directories to scan")
+parser.add_argument(
+    "-a",
+    "--all",
+    action="store_true",
+    help="Show all webapps found, not just vulnerable",
+)
+parser.add_argument("-x", "--xml", action="store_true", help="Output results as XML")
+parser.add_argument(
+    "-3",
+    "--thirdparty",
+    action="store_true",
+    help="Scan for third-party components like jquery",
+)
 opts = parser.parse_args()
 
 jdir = False
-for p in [os.path.dirname(sys.argv[0]) + '/freewvsdb', '/var/lib/freewvs',
-          str(pathlib.Path.home()) + "/.cache/freewvs/"]:
+for p in [
+    os.path.dirname(sys.argv[0]) + "/freewvsdb",
+    "/var/lib/freewvs",
+    str(pathlib.Path.home()) + "/.cache/freewvs/",
+]:
     if os.path.isdir(p):
         jdir = p
         break
@@ -100,20 +108,20 @@ if not jdir:
     sys.exit(1)
 
 jconfig = []
-for cfile in glob.glob(jdir + '/*.json'):
+for cfile in glob.glob(jdir + "/*.json"):
     with open(cfile, encoding="ascii") as json_file:
         data = json.load(json_file)
         jconfig += data
 
 scanfiles = set()
 for app in jconfig:
-    for det in app['detection']:
-        scanfiles.add(det['file'])
+    for det in app["detection"]:
+        scanfiles.add(det["file"])
 
 
 if opts.xml:
     print('<?xml version="1.0" ?>')
-    print('<freewvs>')
+    print("<freewvs>")
 
 # start the search
 
@@ -125,61 +133,78 @@ for fdir in opts.dirs:
             del dirs[:]
         for filename in scanfiles.intersection(files):
             for item in jconfig:
-                if not opts.thirdparty and 'thirdparty' in item:
+                if not opts.thirdparty and "thirdparty" in item:
                     continue
-                for det in item['detection']:
-                    if filename == det['file']:
+                for det in item["detection"]:
+                    if filename == det["file"]:
                         mfile = os.path.join(root, filename)
                         try:
-                            file = open(mfile, encoding='ascii',
-                                        errors='replace')
+                            file = open(mfile, encoding="ascii", errors="replace")
                         except OSError:
                             continue
                         filestr = file.read(200000)
                         file.close()
 
-                        if (('extra_match' in det
-                             and det['extra_match'] not in filestr)
-                                or ('extra_nomatch' in det
-                                    and det['extra_nomatch'] in filestr)):
+                        if (
+                            "extra_match" in det and det["extra_match"] not in filestr
+                        ) or (
+                            "extra_nomatch" in det and det["extra_nomatch"] in filestr
+                        ):
                             continue
 
-                        if ('path_match' in det
-                                and (not root.endswith(det['path_match']))):
+                        if "path_match" in det and (
+                            not root.endswith(det["path_match"])
+                        ):
                             continue
 
-                        findversion = re.search(re.escape(det['variable'])
-                                                + r"[^0-9\n\r]*[.]*"
-                                                "([0-9.]*[0-9])[^0-9.]",
-                                                filestr)
+                        findversion = re.search(
+                            re.escape(det["variable"]) + r"[^0-9\n\r]*[.]*"
+                            "([0-9.]*[0-9])[^0-9.]",
+                            filestr,
+                        )
                         if not findversion:
                             continue
                         findversion = findversion.group(1)
 
                         # Very ugly phpbb workaround
-                        if 'add_minor' in det:
-                            findversion = findversion.split('.')
-                            findversion[-1] = str(int(findversion[-1])
-                                                  + int(det['add_minor']))
-                            findversion = '.'.join(findversion)
+                        if "add_minor" in det:
+                            findversion = findversion.split(".")
+                            findversion[-1] = str(
+                                int(findversion[-1]) + int(det["add_minor"])
+                            )
+                            findversion = ".".join(findversion)
 
-                        if (not versioncompare(item['safe'], findversion)
-                                or ('old_safe' in item
-                                    and checkoldsafe(item['old_safe'],
-                                                     findversion))):
+                        if not versioncompare(item["safe"], findversion) or (
+                            "old_safe" in item
+                            and checkoldsafe(item["old_safe"], findversion)
+                        ):
                             if opts.all:
-                                vulnprint(item['name'], findversion, "ok", "",
-                                          mfile, det['subdir'], opts.xml)
+                                vulnprint(
+                                    item["name"],
+                                    findversion,
+                                    "ok",
+                                    "",
+                                    mfile,
+                                    det["subdir"],
+                                    opts.xml,
+                                )
                             continue
 
-                        safev = item['safe']
-                        if 'old_safe' in item:
-                            for ver in item['old_safe'].split(','):
+                        safev = item["safe"]
+                        if "old_safe" in item:
+                            for ver in item["old_safe"].split(","):
                                 if versioncompare(ver, findversion):
                                     safev = ver
 
-                        vulnprint(item['name'], findversion, safev,
-                                  item['vuln'], mfile, det['subdir'], opts.xml)
+                        vulnprint(
+                            item["name"],
+                            findversion,
+                            safev,
+                            item["vuln"],
+                            mfile,
+                            det["subdir"],
+                            opts.xml,
+                        )
 
 if opts.xml:
-    print('</freewvs>')
+    print("</freewvs>")
