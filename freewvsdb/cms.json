@@ -311,9 +311,9 @@
   {
     "name": "textpattern",
     "url": "https://textpattern.com/",
-    "safe": "4.7.0",
-    "vuln": "CVE-2018-7474",
-    "latest": "4.7.3",
+    "safe": "4.8.8",
+    "vuln": "CVE-2021-44082",
+    "latest": "4.8.8",
     "detection": [
       {
         "file": "index.php",
