@@ -498,10 +498,10 @@
   {
     "name": "nextcloud",
     "url": "https://nextcloud.com",
-    "safe": "24.0.1",
-    "old_safe": "23.0.5,22.2.8",
+    "safe": "24.0.2",
+    "old_safe": "23.0.6,22.2.9",
     "latest": "24.0.2",
-    "vuln": "CVE-2022-31014",
+    "vuln": "CVE-2022-31118",
     "detection": [
       {
         "file": "version.php",
