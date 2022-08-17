@@ -71,6 +71,6 @@ See [CONTRIBUTIONS.md](CONTRIBUTIONS.md).
 
 freewvs was developed by [schokokeks.org hosting](https://schokokeks.org/).
 
-It's licensed as CC0.
+It's licensed under the 0BSD license.
 
 https://freewvs.schokokeks.org
