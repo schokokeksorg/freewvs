@@ -73,4 +73,4 @@ freewvs was developed by [schokokeks.org hosting](https://schokokeks.org/).
 
 It's licensed under the 0BSD license.
 
-https://freewvs.schokokeks.org
+[https://freewvs.schokokeks.org](https://freewvs.schokokeks.org)
