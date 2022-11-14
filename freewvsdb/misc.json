@@ -623,5 +623,19 @@
         "subdir": 1
       }
     ]
+  },
+  {
+    "name": "YOURLS",
+    "url": "https://yourls.org/",
+    "safe": "1.9",
+    "vuln": "https://github.com/YOURLS/YOURLS/releases/tag/1.9",
+    "latest": "1.9.1",
+    "detection": [
+      {
+        "file": "version.php",
+        "variable": "YOURLS_VERSION",
+        "subdir": 1
+      }
+    ]
   }
 ]
