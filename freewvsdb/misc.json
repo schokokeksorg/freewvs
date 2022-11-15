@@ -219,10 +219,10 @@
   {
     "name": "Moodle",
     "url": "https://moodle.org/",
-    "safe": "4.0.3",
-    "old_safe": "3.11.9,3.9.16",
-    "latest": "4.0.3",
-    "vuln": "CVE-2022-0323",
+    "safe": "4.0.5",
+    "old_safe": "3.11.11,3.9.18",
+    "latest": "4.0.5",
+    "vuln": "CVE-2022-45149",
     "detection": [
       {
         "file": "version.php",
