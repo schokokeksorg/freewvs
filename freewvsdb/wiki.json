@@ -4,7 +4,7 @@
     "url": "https://www.mediawiki.org/",
     "safe": "1.39.1",
     "old_safe": "1.38.5,1.35.9",
-    "vuln": "https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/UEMW64LVEH3BEXCJV43CVS6XPYURKWU3/",
+    "vuln": "CVE-2022-47927",
     "latest": "1.39.1",
     "detection": [
       {
