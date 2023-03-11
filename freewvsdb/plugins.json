@@ -322,7 +322,8 @@
   {
     "name": "Wordpress-ACF",
     "url": "https://www.advancedcustomfields.com/",
-    "safe": "6.0.3,5.12.4",
+    "safe": "6.0.3",
+    "old_safe": "5.12.4",
     "vuln": "https://www.advancedcustomfields.com/blog/acf-6-0-3-release-security-changes-to-the-acf-shortcode-and-ui-improvements/#acf-shortcode",
     "detection": [
       {

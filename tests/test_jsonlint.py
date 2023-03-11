@@ -38,7 +38,6 @@ class TestJsonLint(unittest.TestCase):
 
         mkeys = {"name", "url", "safe", "vuln", "detection"}
         for item in jconfig:
-
             # check for all mandatory keys
             self.assertEqual(
                 mkeys.intersection(item.keys()),
@@ -57,6 +56,15 @@ class TestJsonLint(unittest.TestCase):
                 or item["vuln"].startswith("https://"),
                 msg=f"{item['name']}: Invalid vuln {item['vuln']}",
             )
+
+            # make sure safe is a version
+            if item["safe"] != "":
+                # we have a theoretical reDoS here, but
+                # this is no external data, therefore ok
+                self.assertTrue(
+                    re.match(r'^([0-9]+\.)*[0-9]+$', item["safe"]),  # noqa: DUO138
+                    msg=f"{item['name']}: Invalid safe version {item['safe']}",
+                )
 
             # make sure old_safe is properly sorted
             if "old_safe" in item:

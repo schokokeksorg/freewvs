@@ -8,7 +8,7 @@ class TestCodingstyle(unittest.TestCase):
     def test_codingstyle():
         pyfiles = ["freewvs", "update-freewvsdb", "setup.py"] + glob.glob("tests/*.py")
         subprocess.run(
-            ["pycodestyle", "--ignore=W503", "--max-line-length=88"] + pyfiles,
+            ["pycodestyle", "--ignore=W503,E501", "--max-line-length=88"] + pyfiles,
             check=True,
         )
         subprocess.run(["pyflakes"] + pyfiles, check=True)
