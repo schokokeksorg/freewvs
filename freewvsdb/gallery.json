@@ -34,9 +34,9 @@
   },
   {
     "name": "Coppermine",
-    "url": "http://coppermine-gallery.net/",
-    "safe": "1.5.28",
-    "vuln": "CVE-2014-4612",
+    "url": "https://coppermine-gallery.net/",
+    "safe": "1.5.48",
+    "vuln": "CVE-2018-14478",
     "detection": [
       {
         "file": "versioncheck.php",
