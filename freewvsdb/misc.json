@@ -4,7 +4,7 @@
     "url": "https://www.phpmyadmin.net/",
     "safe": "5.2.1",
     "old_safe": "4.9.11",
-    "vuln": "https://www.phpmyadmin.net/security/PMASA-2023-1/",
+    "vuln": "CVE-2023-25727",
     "detection": [
       {
         "file": "Config.class.php",
