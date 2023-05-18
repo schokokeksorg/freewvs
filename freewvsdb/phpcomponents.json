@@ -13,5 +13,20 @@
         "subdir": 1
       }
     ]
+  },
+  {
+    "name": "PHPMailer",
+    "url": "https://github.com/PHPMailer/PHPMailer",
+    "safe": "6.5.0",
+    "vuln": "CVE-2021-3603",
+    "latest": "6.8.0",
+    "thirdparty": "yes",
+    "detection": [
+      {
+        "file": "PHPMailer.php",
+        "variable": "VERSION",
+        "subdir": 1
+      }
+    ]
   }
 ]
