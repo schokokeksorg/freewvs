@@ -15,9 +15,9 @@
   {
     "name": "Wordpress",
     "url": "https://wordpress.org/",
-    "safe": "6.0.3",
-    "latest": "6.0.3",
-    "vuln": "https://wordpress.org/support/wordpress-version/version-6-0-3/",
+    "safe": "6.2.2",
+    "latest": "6.2.2",
+    "vuln": "https://wordpress.org/news/2023/05/wordpress-6-2-2-security-release/",
     "detection": [
       {
         "file": "version.php",
