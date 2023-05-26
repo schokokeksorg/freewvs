@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8, 3.x, 3.12-dev]
+        # disable 3.12-dev until this is fixed:
+        # https://github.com/PyCQA/pycodestyle/issues/1142
+        python-version: [3.8, 3.x]
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
