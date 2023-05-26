@@ -39,6 +39,9 @@ if new == old:
 tarball = urllib.request.urlopen(DBURL + str(new) + ".tar.xz").read()
 
 tf = tarfile.open(fileobj=io.BytesIO(tarball))
-tf.extractall(path=target)
+if sys.version_info < (3, 11, 4):
+    tf.extractall(path=target)
+else:
+    tf.extractall(path=target, filter="data")
 with open(target + "timestamp", "w", encoding="ascii") as f:
     f.write(str(new))
