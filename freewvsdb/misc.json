@@ -199,9 +199,9 @@
   {
     "name": "RoundCube",
     "url": "https://roundcube.net",
-    "safe": "1.6.3",
-    "latest": "1.6.3",
-    "vuln": "https://roundcube.net/news/2023/09/15/security-update-1.6.3-released",
+    "safe": "1.6.4",
+    "latest": "1.6.4",
+    "vuln": "https://roundcube.net/news/2023/10/16/security-update-1.6.4-released",
     "detection": [
       {
         "file": "index.php",
