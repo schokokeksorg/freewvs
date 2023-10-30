@@ -6,6 +6,7 @@ import tempfile
 import shutil
 import re
 import difflib
+import sys
 
 TESTDATA_REPO = "https://github.com/schokokeksorg/freewvs-testdata"
 
@@ -26,7 +27,12 @@ class TestFreewvsData(unittest.TestCase):
             bdir = os.path.basename(tdir)
             for tarball in glob.glob(tdir + "/dist/*"):
                 tname = os.path.basename(tarball)
-                shutil.unpack_archive(tarball, f"{tmp}/{bdir}/{tname}-src")
+                if sys.version_info < (3, 12) or tarball.endswith(".zip"):
+                    shutil.unpack_archive(tarball, f"{tmp}/{bdir}/{tname}-src")
+                else:
+                    shutil.unpack_archive(
+                        tarball, f"{tmp}/{bdir}/{tname}-src", filter="data"
+                    )
             fwrun = subprocess.run(
                 ["./freewvs", "-a", tmp + "/" + bdir],
                 stdout=subprocess.PIPE,
