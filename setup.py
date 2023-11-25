@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import os
+
 import setuptools
 import setuptools.command.install
 

@@ -1,12 +1,12 @@
-import unittest
-import subprocess
+import difflib
 import glob
 import os
-import tempfile
-import shutil
 import re
-import difflib
+import shutil
+import subprocess
 import sys
+import tempfile
+import unittest
 
 TESTDATA_REPO = "https://github.com/schokokeksorg/freewvs-testdata"
 

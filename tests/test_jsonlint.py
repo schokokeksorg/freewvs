@@ -1,9 +1,9 @@
-import unittest
+import difflib
 import glob
 import json
-import sys
-import difflib
 import re
+import sys
+import unittest
 
 
 def versioncompare(safe_version, find_version):
