@@ -62,7 +62,7 @@ class TestJsonLint(unittest.TestCase):
                 # we have a theoretical reDoS here, but
                 # this is no external data, therefore ok
                 self.assertTrue(
-                    re.match(r'^([0-9]+\.)*[0-9]+$', item["safe"]),  # noqa: DUO138
+                    re.match(r"^([0-9]+\.)*[0-9]+$", item["safe"]),  # noqa: DUO138
                     msg=f"{item['name']}: Invalid safe version {item['safe']}",
                 )
 
