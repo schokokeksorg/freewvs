@@ -513,9 +513,9 @@
   {
     "name": "owncloud",
     "url": "https://owncloud.org/",
-    "safe": "10.10.0",
-    "latest": "10.10.0",
-    "vuln": "CVE-2022-31649",
+    "safe": "10.13.1",
+    "latest": "10.13.3",
+    "vuln": "CVE-2023-49105",
     "detection": [
       {
         "file": "util.php",
