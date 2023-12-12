@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 
+import io
 import os
 import pathlib
 import sys
-import urllib.request
-import io
 import tarfile
-
+import urllib.request
 
 DBURL = "https://freewvsdb.schokokeks.org/"
 dbpaths = ["/var/lib/freewvs/", str(pathlib.Path.home()) + "/.cache/freewvs/"]
