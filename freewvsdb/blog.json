@@ -2,8 +2,8 @@
   {
     "name": "Serendipity",
     "url": "https://docs.s9y.org/",
-    "safe": "2.3.4",
-    "vuln": "https://github.com/s9y/Serendipity/releases/tag/2.3.4",
+    "safe": "2.5.0",
+    "vuln": "CVE-2023-43655",
     "detection": [
       {
         "file": "serendipity_config.inc.php",
