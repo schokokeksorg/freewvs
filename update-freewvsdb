@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import argparse
 import io
 import os
 import pathlib
@@ -9,6 +10,10 @@ import urllib.request
 
 DBURL = "https://freewvsdb.schokokeks.org/"
 dbpaths = ["/var/lib/freewvs/", str(pathlib.Path.home()) + "/.cache/freewvs/"]
+
+ap = argparse.ArgumentParser()
+ap.add_argument("-f", "--force", action="store_true", help="Force update")
+args = ap.parse_args()
 
 target = False
 for dbpath in dbpaths:
@@ -31,7 +36,7 @@ if os.path.isfile(target + "timestamp"):
 
 new = int(urllib.request.urlopen(DBURL + "freewvsdb.timestamp").read())
 
-if new == old:
+if new == old and not args.force:
     # nothing to do
     sys.exit()
 
