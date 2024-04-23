@@ -1,7 +1,7 @@
 Some known issues:
 
 * phpBB-detection works only based on the CHANGELOG, which is part of the doc (and could be deleted in a live installation).
-  Found no better way to do it, still is an ugly workaround. The other "method" of detection the versoin would be the SQL-files,
+  Found no better way to do it, still is an ugly workaround. The other "method" of detecting the version would be the SQL-files,
   but they're even more likely to be deleted in live installations. Only reliable method would probably be checking the database
   itself, but that's outside the scope of this tool.
 
