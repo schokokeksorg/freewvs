@@ -199,9 +199,9 @@
   {
     "name": "RoundCube",
     "url": "https://roundcube.net",
-    "safe": "1.6.6",
-    "latest": "1.6.6",
-    "vuln": "CVE-2023-48219",
+    "safe": "1.6.7",
+    "latest": "1.5.7",
+    "vuln": "https://roundcube.net/news/2024/05/19/security-updates-1.6.7-and-1.5.7",
     "detection": [
       {
         "file": "index.php",
