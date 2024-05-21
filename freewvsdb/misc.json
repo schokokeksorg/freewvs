@@ -200,7 +200,8 @@
     "name": "RoundCube",
     "url": "https://roundcube.net",
     "safe": "1.6.7",
-    "latest": "1.5.7",
+    "old_safe": "1.5.7",
+    "latest": "1.6.7",
     "vuln": "https://roundcube.net/news/2024/05/19/security-updates-1.6.7-and-1.5.7",
     "detection": [
       {
