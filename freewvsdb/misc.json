@@ -501,7 +501,7 @@
     "safe": "28.0.4",
     "old_safe": "27.1.8,26.0.13",
     "latest": "29.0.4",
-    "vuln": " CVE-2024-37884",
+    "vuln": "CVE-2024-37884",
     "detection": [
       {
         "file": "version.php",
