@@ -221,7 +221,7 @@
     "url": "https://moodle.org/",
     "safe": "4.4.2",
     "old_safe": "4.3.6,4.2.9,4.1.12",
-    "latest": "4.4.2,
+    "latest": "4.4.2",
     "vuln": "CVE-2024-43425",
     "detection": [
       {
