@@ -44,8 +44,8 @@
   {
     "name": "Mantis",
     "url": "https://mantisbt.org/",
-    "safe": "2.26.2",
-    "vuln": "CVE-2024-34077",
+    "safe": "2.26.4",
+    "vuln": "CVE-2024-45792",
     "detection": [
       {
         "file": "config_defaults_inc.php",
