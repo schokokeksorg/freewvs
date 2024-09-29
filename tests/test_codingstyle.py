@@ -15,7 +15,7 @@ class TestCodingstyle(unittest.TestCase):
 
         pylint_disable = (
             "missing-docstring,invalid-name,duplicate-code,"
-            + "too-many-arguments,consider-using-with"
+            + "too-many-arguments,consider-using-with,too-many-positional-arguments"
         )
         subprocess.run(["pylint", f"--disable={pylint_disable}"] + pyfiles, check=True)
 
