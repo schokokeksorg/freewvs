@@ -323,9 +323,8 @@
   {
     "name": "Wordpress-ACF",
     "url": "https://www.advancedcustomfields.com/",
-    "safe": "6.1.8",
-    "old_safe": "5.12.6",
-    "vuln": "https://www.advancedcustomfields.com/blog/acf-6-1-8/",
+    "safe": "6.3.8",
+    "vuln": "https://www.advancedcustomfields.com/blog/acf-6-3-8-security-release/",
     "detection": [
       {
         "file": "acf.php",
