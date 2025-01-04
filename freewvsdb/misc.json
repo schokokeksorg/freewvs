@@ -637,5 +637,20 @@
         "subdir": 1
       }
     ]
+  },
+  {
+    "name": "PrivateBin",
+    "url": "https://privatebin.info/",
+    "safe": "1.7.4",
+    "vuln": "CVE-2024-39899",
+    "latest": "1.7.5",
+    "detection": [
+      {
+        "file": "Controller.php",
+        "variable": "const VERSION",
+        "extra_match": "namespace PrivateBin;",
+        "subdir": 1
+      }
+    ]
   }
 ]
