@@ -235,8 +235,8 @@
   {
     "name": "CMSMadeSimple",
     "url": "https://www.cmsmadesimple.org/",
-    "safe": "2.2.12",
-    "vuln": "CVE-2019-17226",
+    "safe": "2.2.15",
+    "vuln": "CVE-2024-1527",
     "detection": [
       {
         "file": "version.php",
