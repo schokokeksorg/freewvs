@@ -2,8 +2,8 @@
   {
     "name": "phpBB",
     "url": "https://www.phpbb.com",
-    "safe": "3.2.9",
-    "vuln": "CVE-2020-5501",
+    "safe": "3.3.11",
+    "vuln": "CVE-2023-5917",
     "detection": [
       {
         "file": "CHANGELOG.html",
