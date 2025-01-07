@@ -1,0 +1,36 @@
+#!/bin/bash
+#
+# This script is used to generate the update files for freewvs.
+# You do not need it if you merely want to use freewvs.
+#
+# SPDX-License-Identifier: 0BSD
+
+TARGETDIR="$HOME/websites/freewvsdb.schokokeks.org/htdocs/"
+GITDIR="$HOME/gitmirror/freewvs/"
+
+TIMESTAMP=$(git --git-dir $GITDIR.git --no-pager log --format=%ct -1)
+
+TIMESTAMP_OLD=0
+if [ -e "$TARGETDIR/freewvsdb.timestamp" ]; then
+	TIMESTAMP_OLD=$(cat "$TARGETDIR/freewvsdb.timestamp")
+fi
+
+if [ "$TIMESTAMP" -lt "$TIMESTAMP_OLD" ]; then
+	echo "ERROR: New timestamp is smaller than old timestamp"
+	exit 1
+fi
+
+if [ "$TIMESTAMP" -eq "$TIMESTAMP_OLD" ]; then
+	# nothing to do
+	exit 0
+fi
+
+# We try to be as reproducible as possible, see
+# https://h2.jaguarpaw.co.uk/posts/reproducible-tar/
+pushd $GITDIR/freewvsdb >/dev/null
+tar --sort=name --mtime="@$TIMESTAMP" --owner=0 --group=0 --numeric-owner \
+	--strip-components=99 \
+	-cJf $TARGETDIR/$TIMESTAMP.tar.xz \
+	*.json
+popd >/dev/null
+echo -n $TIMESTAMP >$TARGETDIR/freewvsdb.timestamp
