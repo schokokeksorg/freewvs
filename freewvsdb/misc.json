@@ -202,7 +202,7 @@
     "safe": "1.6.11",
     "old_safe": "1.5.10",
     "latest": "1.6.11",
-    "vuln": "https://roundcube.net/news/2025/06/01/security-updates-1.6.11-and-1.5.10",
+    "vuln": "CVE-2025-49113",
     "detection": [
       {
         "file": "index.php",
