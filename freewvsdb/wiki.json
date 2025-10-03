@@ -2,10 +2,10 @@
   {
     "name": "MediaWiki",
     "url": "https://www.mediawiki.org/",
-    "safe": "1.43.2",
-    "old_safe": "1.42.7,1.39.13",
-    "vuln": "CVE-2025-6594",
-    "latest": "1.43.3",
+    "safe": "1.44.1",
+    "old_safe": "1.43.4,1.39.14",
+    "vuln": "CVE-2025-61634",
+    "latest": "1.44.1",
     "detection": [
       {
         "file": "DefaultSettings.php",
