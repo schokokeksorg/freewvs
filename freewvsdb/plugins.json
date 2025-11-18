@@ -453,6 +453,19 @@
     ]
   },
   {
+    "name": "Wordpress-simple-tags",
+    "url": "https://wordpress.org/plugins/simple-tags/",
+    "safe": "3.40.1",
+    "vuln": "https://wordpress.org/plugins/simple-tags/#developers",
+    "detection": [
+      {
+        "file": "simple-tags.php",
+        "variable": "STAGS_VERSION",
+        "subdir": 0
+      }
+    ]
+  },
+  {
     "name": "Roundcube-RCMCardDAV",
     "url": "https://github.com/mstilkerich/rcmcarddav",
     "safe": "4.0.0",
