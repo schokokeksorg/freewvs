@@ -1,5 +1,19 @@
 [
   {
+    "name": "Gambio",
+    "url": "https://www.gambio.com/",
+    "safe": "4.9.4.1",
+    "vuln": "CVE-2024-23759",
+    "detection": [
+      {
+        "file": "Application.php",
+        "variable": "public const VERSION",
+        "subdir": 2,
+        "extra_match": "Gambio\\Core\\Application"
+      }
+    ]
+  },
+  {
     "name": "FreeWebshop",
     "url": "http://www.freewebshop.org/",
     "safe": "2.2.7",
