@@ -138,9 +138,8 @@
   {
     "name": "Wordpress-Jetpack",
     "url": "https://jetpack.com/",
-    "safe": "12.1.1",
-    "old_safe": "12.0.1,11.9.2,11.8.5,11.7.2,11.6.1,11.5.2,11.4.1,11.3.3,11.2.1,11.1.3,11.0.1,10.9.2,10.8.1,10.7.1,10.6.2",
-    "vuln": "https://jetpack.com/blog/jetpack-12-1-1-critical-security-update/",
+    "safe": "14.1",
+    "vuln": "CVE-2024-10858",
     "detection": [
       {
         "file": "jetpack.php",
