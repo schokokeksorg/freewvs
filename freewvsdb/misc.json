@@ -199,10 +199,10 @@
   {
     "name": "RoundCube",
     "url": "https://roundcube.net",
-    "safe": "1.6.11",
-    "old_safe": "1.5.10",
-    "latest": "1.6.11",
-    "vuln": "CVE-2025-49113",
+    "safe": "1.6.12",
+    "old_safe": "1.5.12",
+    "latest": "1.6.12",
+    "vuln": "https://roundcube.net/news/2025/12/13/security-updates-1.6.12-and-1.5.12",
     "detection": [
       {
         "file": "index.php",
