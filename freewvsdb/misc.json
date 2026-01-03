@@ -652,5 +652,20 @@
         "subdir": 1
       }
     ]
+  },
+  {
+    "name": "Kanboard",
+    "url": "https://kanboard.org/",
+    "safe": "1.2.47",
+    "vuln": "CVE-2025-55011",
+    "latest": "1.2.48",
+    "detection": [
+      {
+        "file": "constants.php",
+        "variable": "defined('APP_VERSION')",
+        "extra_match": "kanboard",
+        "subdir": 1
+      }
+    ]
   }
 ]
