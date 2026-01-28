@@ -27,8 +27,9 @@ fi
 
 # We try to be as reproducible as possible, see
 # https://h2.jaguarpaw.co.uk/posts/reproducible-tar/
+# https://reproducible-builds.org/docs/archives/
 pushd $GITDIR/freewvsdb >/dev/null
-tar --sort=name --mtime="@$TIMESTAMP" --owner=0 --group=0 --numeric-owner \
+tar --mtime="@$TIMESTAMP" --owner=0 --group=0 --numeric-owner -sort=name --format=ustar \
 	--strip-components=99 \
 	-cJf $TARGETDIR/$TIMESTAMP.tar.xz \
 	*.json
