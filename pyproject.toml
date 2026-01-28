@@ -1,6 +1,6 @@
 [project]
 name = "freewvs"
-version = "0.1.4"
+version = "0.1.5"
 description = "Search webroots for known vulnerable versions of web applications"
 readme = "README.md"
 authors = [{ name = "Hanno Böck" }]
