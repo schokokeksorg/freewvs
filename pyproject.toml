@@ -1,0 +1,36 @@
+[project]
+name = "freewvs"
+version = "0.1.4"
+description = "Search webroots for known vulnerable versions of web applications"
+readme = "README.md"
+authors = [{ name = "Hanno Böck" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: System Administrators",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
+license = "0BSD"
+keywords = ["security", "vulnerability", "web"]
+
+[tool.setuptools_scm]
+
+[tool.setuptools]
+packages = []
+script-files = ["freewvs", "update-freewvsdb"]
+
+[project.urls]
+"Homepage" = "https://freewvs.schokokeks.org/"
+"Source" = "https://git.schokokeks.org/freewvs.git"
+"Bug Tracker" = "https://github.com/schokokeksorg/freewvs/issues"
+
+[build-system]
+requires = ["setuptools >= 61.0.0", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
