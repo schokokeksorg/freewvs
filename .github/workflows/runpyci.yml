@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: 0BSD
-# last update: 2026-01-07
+# last update: 2026-02-04
 # https://github.com/hannob/codingstyle
 ---
 name: runpyci
@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies and linters
         run: |
           [ -e requirements.txt ] && pip install -r requirements.txt
-          pip install pycodestyle pyupgrade pyflakes dlint pylint ruff
+          pip install dlint pycodestyle pyflakes pylint pyproject pyupgrade ruff
       - name: Run tests
         env:
           RUN_ONLINETESTS: 1
