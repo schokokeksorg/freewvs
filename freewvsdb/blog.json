@@ -30,8 +30,8 @@
   {
     "name": "ClassicPress",
     "url": "https://www.classicpress.net/",
-    "safe": "1.1.3",
-    "vuln": "https://forums.classicpress.net/t/classicpress-1-1-3-release-notes/2301",
+    "safe": "2.6.0",
+    "vuln": "https://forums.classicpress.net/t/classicpress-2-6-0-release-notes/6360",
     "detection": [
       {
         "file": "version.php",
