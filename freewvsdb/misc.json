@@ -341,8 +341,8 @@
   {
     "name": "awstats",
     "url": "https://awstats.sourceforge.io/",
-    "safe": "7.7",
-    "vuln": "CVE-2017-1000501",
+    "safe": "7.9",
+    "vuln": "CVE-2020-35176",
     "detection": [
       {
         "file": "awstats.pl",
