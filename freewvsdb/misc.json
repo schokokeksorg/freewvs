@@ -656,9 +656,9 @@
   {
     "name": "Kanboard",
     "url": "https://kanboard.org/",
-    "safe": "1.2.47",
-    "vuln": "CVE-2025-55011",
-    "latest": "1.2.48",
+    "safe": "1.2.51",
+    "vuln": "CVE-2026-33058",
+    "latest": "1.2.52",
     "detection": [
       {
         "file": "constants.php",
