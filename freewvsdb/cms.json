@@ -35,10 +35,10 @@
   {
     "name": "Drupal",
     "url": "https://www.drupal.org/",
-    "safe": "11.2.8",
-    "old_safe": "11.1.9,10.5.6,10.4.8,7.102",
-    "vuln": "CVE-2025-13083",
-    "latest": "11.2.9",
+    "safe": "11.3.10",
+    "old_safe": "11.2.12,11.1.10,7.102",
+    "vuln": "CVE-2026-9082",
+    "latest": "11.3.10",
     "detection": [
       {
         "file": "system.module",
