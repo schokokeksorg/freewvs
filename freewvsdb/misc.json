@@ -499,9 +499,10 @@
   {
     "name": "nextcloud",
     "url": "https://nextcloud.com",
-    "safe": "32.0.3",
+    "safe": "33.0.3",
+    "old_safe": "32.0.9",
     "latest": "33.0.3",
-    "vuln": "CVE-2025-66512",
+    "vuln": "CVE-2026-45690",
     "detection": [
       {
         "file": "version.php",
