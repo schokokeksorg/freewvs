@@ -15,8 +15,8 @@
   {
     "name": "Wordpress",
     "url": "https://wordpress.org/",
-    "safe": "7.1.2",
-    "vuln": "CVE-2026-87902",
+    "safe": "7.1.3",
+    "vuln": "CVE-2026-66666",
     "detection": [
       {
         "file": "version.php",
