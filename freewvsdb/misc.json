@@ -221,7 +221,7 @@
     "url": "https://moodle.org/",
     "safe": "5.2.3",
     "old_safe": "5.1.7,5.0.10,4.5.14",
-    "latest": "4.4.2",
+    "latest": "5.3",
     "vuln": "https://moodle.org/mod/forum/discuss.php?d=482607",
     "detection": [
       {
