@@ -52,7 +52,7 @@ class TestJsonLint(unittest.TestCase):
 
             # vuln needs to be CVE or HTTPS URL
             self.assertTrue(
-                re.match("^CVE-[0-9]*-[0-9]*$", item["vuln"])
+                re.match(r"^CVE-[0-9]*-[0-9]*$", item["vuln"])
                 or item["vuln"].startswith("https://"),
                 msg=f"{item['name']}: Invalid vuln {item['vuln']}",
             )
