@@ -502,7 +502,7 @@
     "safe": "34.0.1",
     "old_safe": "33.0.6,32.0.12",
     "latest": "35.0.1",
-    "vuln": " CVE-2026-68493",
+    "vuln": "CVE-2026-68493",
     "detection": [
       {
         "file": "version.php",
