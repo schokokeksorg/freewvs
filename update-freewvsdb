@@ -31,8 +31,7 @@ if not target:
 
 old = 0
 if os.path.isfile(target + "timestamp"):
-    with open(target + "timestamp", encoding="ascii") as f:
-        old = int(f.read())
+    old = int(pathlib.Path(target + "timestamp").read_text(encoding="ascii"))
 
 new = int(urllib.request.urlopen(DBURL + "freewvsdb.timestamp").read())
 
@@ -43,9 +42,5 @@ if new == old and not args.force:
 tarball = urllib.request.urlopen(DBURL + str(new) + ".tar.xz").read()
 
 tf = tarfile.open(fileobj=io.BytesIO(tarball))
-if sys.version_info < (3, 11, 4):
-    tf.extractall(path=target)
-else:
-    tf.extractall(path=target, filter="data")
-with open(target + "timestamp", "w", encoding="ascii") as f:
-    f.write(str(new))
+tf.extractall(path=target, filter="data")
+pathlib.Path(target + "timestamp").write_text(str(new), encoding="ascii")
