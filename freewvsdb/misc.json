@@ -199,10 +199,10 @@
   {
     "name": "RoundCube",
     "url": "https://roundcube.net",
-    "safe": "1.7.4",
-    "old_safe": "1.6.19",
-    "latest": "1.7.4",
-    "vuln": "https://roundcube.net/news/2026/09/06/security-updates-1.6.19-and-1.7.4",
+    "safe": "1.7.5",
+    "old_safe": "1.6.20",
+    "latest": "1.7.5",
+    "vuln": "https://roundcube.net/news/2026/10/19/security-updates-1.6.20-and-1.7.5",
     "detection": [
       {
         "file": "index.php",
