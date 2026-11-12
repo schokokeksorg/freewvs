@@ -657,9 +657,9 @@
   {
     "name": "Kanboard",
     "url": "https://kanboard.org/",
-    "safe": "1.2.54",
-    "vuln": "https://kanboard.org/releases/kanboard/v1.2.54.html",
-    "latest": "1.2.54",
+    "safe": "1.2.57",
+    "vuln": "https://kanboard.org/releases/kanboard/v1.2.57.html",
+    "latest": "1.2.57",
     "detection": [
       {
         "file": "constants.php",
