@@ -467,8 +467,8 @@
   {
     "name": "Roundcube-RCMCardDAV",
     "url": "https://github.com/mstilkerich/rcmcarddav",
-    "safe": "4.0.0",
-    "vuln": "https://github.com/mstilkerich/rcmcarddav/releases/tag/v4.0.0-alpha1",
+    "safe": "5.1.5",
+    "vuln": "https://github.com/mstilkerich/rcmcarddav/releases/tag/v5.1.5",
     "detection": [
       {
         "file": "carddav.php",
